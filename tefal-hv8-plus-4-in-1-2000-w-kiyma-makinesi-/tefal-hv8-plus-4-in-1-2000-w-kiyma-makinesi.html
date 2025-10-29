@@ -1,0 +1,345 @@
+<div class="ccw-widget-iu">
+<style type="text/css">.ccw-widget-iu {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 60px 5px;
+      box-sizing: border-box;
+    }
+
+    .ccw-wrap-iu {
+      position: relative !important;
+      width: 600px;
+      height: 600px;
+      max-width: 100%;
+      margin: 0 auto;
+      overflow: visible !important;
+    }
+
+
+    .ccw-center-iu {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      width: 360px;
+      height: 360px;
+      border-radius: 50%;
+      transform: translate(-50%, -50%);
+      background: url("/Content/UploadFiles/33ab9171-tefal-hv8-plus-4-in-1-2000-w-kiyma-makinesi-.png") center/cover no-repeat;
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 18px;
+      box-sizing: border-box;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .ccw-center-iu::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(255, 255, 255, 0.85);
+      z-index: 1;
+    }
+
+    .ccw-center-iu h4,
+    .ccw-center-iu img,
+    .ccw-center-iu p {
+      position: relative;
+      z-index: 2;
+    }
+
+    .ccw-center-iu h4 {
+      margin: 4px 0 !important;
+      font-size: 18px !important;
+      color: #3a3e54;
+      font-weight: 700;
+    }
+
+    .ccw-center-iu img {
+      width: 135px;
+      height: 135px;
+      object-fit: cover;
+      border-radius: 50%;
+      margin-bottom: 10px;
+      display: none;
+    }
+
+    .ccw-center-iu p {
+      margin: 0;
+      font-size: 14px !important;
+      color: #3a3e54;
+      line-height: 1.4 !important;
+      display: none;
+      max-width: 260px;
+    }
+
+    .ccw-small-iu {
+      position: absolute;
+      width: 160px;
+      height: 160px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      transform-origin: center;
+    }
+
+    .ccw-dot-iu {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      background: #ffffff00;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+      transition: all 0.25s ease;
+      cursor: pointer;
+    }
+
+    .ccw-dot-iu img {
+      width: 90px;
+      height: 90px;
+      object-fit: contain;
+      border-radius: 50%;
+    }
+
+    .ccw-label-iu {
+      margin-top: 20px;
+      font-size: 13px;
+      color: #3a3e54;
+      text-align: center;
+      opacity: 0.95;
+      transition: all 0.22s ease;
+    }
+
+    .ccw-small-iu.active .ccw-dot-iu {
+      transform: scale(1.22);
+      background: #ffffff;
+      color: #589dd2;
+      box-shadow: 0 8px 24px rgba(0, 95, 164, 0.18);
+      border: 2px solid rgba(0, 95, 164, 0.15);
+    }
+
+    .ccw-small-iu.active .ccw-label-iu {
+      transform: translateY(-6px);
+      font-weight: 700;
+      color: #589dd2;
+    }
+
+  @media (max-width: 520px) {
+
+      .ccw-wrap-iu {
+        width: 320px;
+        height: 320px;
+      }
+
+      .ccw-center-iu {
+        width: 240px;
+        height: 240px;
+        padding: 10px;
+      }
+
+      .ccw-center-iu h4 {
+        font-size: 12px !important;
+        margin: 2px 0;
+        line-height: 1.3 !important;
+      }
+
+      .ccw-center-iu p {
+        font-size: 12px !important;
+        max-width: 200px;
+        line-height: 1.25 !important;
+      }
+
+      .ccw-center-iu img {
+        width: 70px;
+        height: 70px;
+        margin-bottom: 5px;
+      }
+
+      .ccw-small-iu {
+        width: 80px;
+        height: 100px;
+      }
+
+      .ccw-dot-iu {
+        width: 60px;
+        height: 60px;
+      }
+
+      .ccw-dot-iu img {
+        width: 55px;
+        height: 55px;
+      }
+
+      .ccw-label-iu {
+        font-size: 11px;
+        margin-top: 15px;
+        line-height: 1.1;
+        width: 80px !important;
+      }
+    }
+
+    @media (max-width: 420px) {
+    .ccw-wrap-iu {
+      width: 280px;
+      height: 280px;
+    }
+
+    .ccw-center-iu {
+      width: 200px;
+      height: 200px;
+      padding: 10px;
+    }
+
+    .ccw-center-iu h4 {
+      font-size: 9px !important;
+      margin: 2px 0;
+      line-height: 1.2 !important;
+    }
+
+    .ccw-center-iu p {
+      font-size: 9px !important;
+      max-width: 170px;
+      line-height: 1.25 !important;
+    }
+
+    .ccw-center-iu img {
+      width: 60px;
+      height: 60px;
+      margin-bottom: 5px;
+    }
+
+    .ccw-small-iu {
+      width: 70px;
+      height: 90px;
+    }
+
+    .ccw-dot-iu {
+      width: 55px;
+      height: 55px;
+    }
+
+    .ccw-dot-iu img {
+      width: 50px;
+      height: 50px;
+    }
+
+    .ccw-label-iu {
+      font-size: 11px;
+      margin-top: 12px;
+      line-height: 1;
+      width: 70px !important;
+    }
+    }
+</style>
+<div class="ccw-wrap-iu" id="ccw-wrap-iu">
+<div class="ccw-center-iu" id="ccw-center-iu">
+<h4 id="ccw-center-title-iu">Tefal HV8 Plus 4in1 2000 W Kıyma Makinesi</h4>
+<img alt="" id="ccw-center-img-iu" src="" />
+<p id="ccw-center-text-iu">&nbsp;</p>
+</div>
+
+<div class="ccw-small-iu" data-img="/Content/UploadFiles/358d3338-1.png" data-text="Güçlü ve dayanıklı 2000W güçlü motor ile dakikada 2.6 kg'ya kadar hızlı ve mükemmel kıyma performansı." data-title="Yıllarca Üstün Performans">&nbsp;</div>
+
+<div class="ccw-small-iu" data-img="/Content/UploadFiles/0c768e59-2.png" data-text="4 aksesuar: 2 farklı kıyma sonucu için 2 paslanmaz çelik ızgara: ev yapımı hamburgerler için kalın ızgara, köfte ve bolonez sos için ince ızgara. Kebbe ve sosis aksesuarları ise yemeklerinize kolayca şekil vermenizi sağlar." data-title="Farklı Yemek Çeşitliliği">&nbsp;</div>
+
+<div class="ccw-small-iu" data-img="/Content/UploadFiles/699dcaf6-3.png" data-text="Ters kıyma işlemi ürün kapalı konuma geçmeden asla yanlışlıkla durmaz." data-title="Güvenli Ters Kıyma Sistemi">&nbsp;</div>
+
+<div class="ccw-small-iu" data-img="/Content/UploadFiles/9e0a04b5-4.png" data-text="Kıyma ünitesi ve motor bloğu arasındaki metal bağlantı ile uzun süreli kullanım." data-title="Metal Bağlantı Sayesinde Ekstra Dayanıklı">&nbsp;</div>
+
+<div class="ccw-small-iu" data-img="/Content/UploadFiles/15df549e-5.png" data-text="Geniş saplar ile taşıma ve saklamada kolaylık" data-title="Kolay Kullanım">&nbsp;</div>
+
+<div class="ccw-small-iu" data-img="/Content/UploadFiles/240dc724-6.png" data-text="Bıçak, ızgaralar, sosis ve içli köfte aksesuarları ürün gövdesinin içinde saklanabilir." data-title="Kolay Saklama">&nbsp;</div>
+
+<div class="ccw-small-iu" data-img="/Content/UploadFiles/896daf93-7.png" data-text="Tefal'in kıyma makinelerinde olan 60 yıllık deneyimi sayesinde güvenilir yüksek kalite." data-title="60 Yıllık Tefal Deneyimi">&nbsp;</div>
+</div>
+<script>
+    window.addEventListener('load', function() {
+    (function(){
+      const wrap = document.getElementById('ccw-wrap-iu');
+      const center = document.getElementById('ccw-center-iu');
+      const centerTitle = document.getElementById('ccw-center-title-iu');
+      const centerImg = document.getElementById('ccw-center-img-iu');
+      const centerText = document.getElementById('ccw-center-text-iu');
+      const smalls = Array.from(wrap.querySelectorAll('.ccw-small-iu'));
+
+        function positionSmalls(){
+        const wrapW = wrap.clientWidth;
+        const wrapH = wrap.clientHeight;
+        
+        wrap.style.height = wrap.clientWidth + 'px';
+        
+        let orbit;
+        if (window.innerWidth <= 390) {
+            orbit = Math.min(wrapW, wrapH) / 2 + 8; 
+        } else if (window.innerWidth <= 520) {
+            orbit = Math.min(wrapW, wrapH) / 2 + 15;
+        } else {
+            orbit = Math.min(wrapW, wrapH) / 2 - 20;
+        }
+
+        smalls.forEach((el, i) => {
+            const angle = (i / smalls.length) * Math.PI * 2 - Math.PI/2;
+            const x = (wrapW / 2) + orbit * Math.cos(angle);
+            const y = (wrapH / 2) + orbit * Math.sin(angle);
+            el.style.left = `${x - el.clientWidth / 2}px`;
+            el.style.top = `${y - el.clientHeight / 2}px`;
+        });
+        }
+
+      positionSmalls();
+
+      function activate(target){
+        smalls.forEach(s => s.classList.remove('active'));
+        target.classList.add('active');
+
+        const imgUrl = target.dataset.img;
+        const title = target.dataset.title;
+        const text = target.dataset.text;
+
+        if(imgUrl){
+          centerImg.src = imgUrl;
+          centerImg.style.display = 'block';
+        }
+        centerTitle.textContent = title;
+        centerText.textContent = text;
+        centerText.style.display = 'block';
+      }
+
+      smalls.forEach(s => {
+        s.innerHTML = `
+          <div class="ccw-dot-iu"><img src="${s.dataset.img}" alt=""></div>
+          <div class="ccw-label-iu">${s.dataset.title}</div>
+        `;
+        s.addEventListener('click', () => activate(s));
+      });
+
+      centerImg.style.display = 'none';
+      centerText.style.display = 'none';
+
+      wrap.addEventListener('click', (e) => {
+        if (!e.target.closest('.ccw-small-iu')) {
+
+          smalls.forEach(s => s.classList.remove('active'));
+          centerTitle.textContent = "Tefal Morning Ekmek Kızartma Makinesi";
+          centerImg.style.display = 'none';
+          centerText.style.display = 'none';
+        }
+      });
+
+      window.addEventListener('resize', () => {
+        positionSmalls();
+        const active = smalls.find(s => s.classList.contains('active'));
+        if(active) activate(active);
+      });
+    })();
+  });
+  </script></div>

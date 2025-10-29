@@ -1,0 +1,197 @@
+<style>
+.section-mb-iu {
+  max-width: 1300px;
+  margin: 80px auto;
+  padding: 50px 30px;
+  background: linear-gradient(180deg, #f7fafd 0%, #eef4f9 100%);
+  border-radius: 20px;
+  color: #333;
+  overflow: hidden;
+}
+
+.product-item-iu {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 60px;
+  margin-bottom: 70px;
+  padding: 40px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 12px 40px rgba(0, 60, 120, 0.08);
+  transition: all 0.6s ease;
+  opacity: 0;
+  transform: translateY(60px);
+}
+
+.product-item-iu.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.product-item-iu:hover {
+  box-shadow: 0 20px 45px rgba(230, 204, 185, 0.2);
+  transform: translateY(-8px) scale(1.02);
+}
+
+.content-left-iu picture,
+.content-right-iu picture {
+  display: block;
+  width: 500px;
+  height: 400px;
+  border-radius: 18px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.content-left-iu img,
+.content-right-iu img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* oran korunur */
+  transition: transform 0.5s ease;
+  background-color: #fff;
+}
+.product-item-iu:hover img {
+  transform: scale(1.05);
+}
+
+.content-right-iu h5,
+.content-left-iu h5 {
+  font-size: 26px;
+  font-weight: 600;
+  color: #1e2a44;
+  margin-bottom: 18px;
+  position: relative;
+  transition: color 0.4s ease;
+}
+
+.content-right-iu h5::after,
+.content-left-iu h5::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 3px;
+  margin-top: 8px;
+  background: linear-gradient(90deg, #ec6907, #eb7c27);
+  border-radius: 3px;
+  transition: all 0.3s ease;
+}
+
+.product-item-iu:hover h5 {
+  color: #2a2e44;
+}
+
+.product-item-iu:hover h5::after {
+  width: 80px;
+}
+
+@media (max-width: 992px) {
+  .product-item-iu {
+    flex-direction: column !important;
+    text-align: center;
+    padding: 30px;
+  }
+
+  .content-left-iu picture,
+  .content-right-iu picture {
+    width: 100%;
+    height: auto;
+    max-width: 90vw; /* ekrana göre genişlik */
+  }
+
+  .content-left-iu img,
+  .content-right-iu img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+}
+</style>
+</head>
+
+<body>
+<div class="section-mb-iu">
+
+  <div class="product-item-iu">
+    <div class="content-right-iu">
+      <h5>Beko 970477 MB ile Geniş Hacimli ve Pratik No Frost Buzdolabı Deneyimi</h5>
+      <p>Beko 970477 MB buzdolabı, geniş iç hacmi ve akıllı raf düzeniyle mutfakta maksimum depolama alanı sunar. No Frost teknolojisi sayesinde buzlanma yapmadan gıdalarınızı uzun süre taze tutar. İnverter motor teknolojisi, sessiz çalışma performansı ve düşük enerji tüketimiyle öne çıkar. Şık ve modern tasarımı mutfağınıza estetik bir görünüm kazandırırken, dayanıklı malzeme kalitesiyle uzun ömürlü bir kullanım sunar.</p>
+    </div>
+  </div>
+
+  <div class="product-item-iu">
+    <div class="content-left-iu"><picture><img src="1.jpg" alt=""></picture></div>
+    <div class="content-right-iu">
+      <h5>970477 MB Modeli ile Geniş Depolama Alanı</h5>
+      <p>Geniş iç hacim, ayarlanabilir raflar ve ferah sebzelik bölmesiyle 970477 MB buzdolabı, günlük ihtiyaçlarınızı mükemmel şekilde karşılar. Kapı içi bölmeleri süt, yumurta ve şişeler için ekstra alan sunar. Nem kontrolüyle donatılmış sebzelik bölmesi, meyve ve sebzelerin tazeliğini uzun süre korur.</p>
+    </div>
+  </div>
+
+  <div class="product-item-iu">
+    <div class="content-right-iu">
+      <h5>No Frost Teknolojisiyle Buzsuz, Zahmetsiz Soğutma</h5>
+      <p>No Frost sistemi, dolap içindeki hava sirkülasyonunu optimize ederek buzlanmayı tamamen ortadan kaldırır. Yiyeceklerin her zaman taze kalmasını sağlar ve manuel buz çözme zahmetini ortadan kaldırır. Böylece hem zamandan kazanır hem de dolabın iç hacmini en verimli şekilde kullanabilirsiniz.</p>
+    </div>
+    <div class="content-left-iu"><picture><img src="2.jpg" alt=""></picture></div>
+  </div>
+
+  <div class="product-item-iu">
+    <div class="content-left-iu"><picture><img src="3.jpg" alt=""></picture></div>
+    <div class="content-right-iu">
+      <h5>Şık ve Dayanıklı Tasarım: Beko 970477 MB’nin Dış Görünümü</h5>
+      <p>Modern gri tonlardaki dış tasarımı, çizilmeye karşı dayanıklı kaplaması ve parmak izi tutmayan yüzeyiyle mutfağınıza estetik bir hava katar. Paslanmaz çelik yapısı sayesinde uzun yıllar boyunca ilk günkü şıklığını korur.</p>
+    </div>
+  </div>
+
+  <div class="product-item-iu">
+    <div class="content-right-iu"><picture><img src="5.jpg" alt=""></picture></div>
+    <div class="content-left-iu">
+      <h5>E Enerji Sınıfı ile Tasarruf Sağlayan Performans</h5>
+      <p>Inverter motor teknolojisiyle donatılan Beko 970477 MB, E enerji sınıfında yüksek verimlilik sunar. Sessiz çalışmasının yanı sıra enerji tüketimini azaltarak faturalarınızda tasarruf sağlar ve çevre dostu bir kullanım deneyimi sunar.</p>
+    </div>
+  </div>
+
+  <div class="product-item-iu">
+    <div class="content-left-iu"><picture><img src="4.jpg" alt=""></picture></div>
+    <div class="content-right-iu">
+      <h5>Jebinde ile Güvenilir Teslimat ve Yetkili Satıcı Avantajı</h5>
+      <p>Beko ürünlerini Jebinde üzerinden güvenle satın alabilirsiniz. Yetkili satıcı garantisiyle orijinal ürün, hızlı teslimat ve satış sonrası destek avantajlarından faydalanarak alışverişinizi gönül rahatlığıyla tamamlayabilirsiniz.</p>
+    </div>
+  </div>
+
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const items = document.querySelectorAll('.product-item-iu');
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.2 });
+
+  items.forEach((item) => observer.observe(item));
+
+  items.forEach((item) => {
+    item.addEventListener('mousemove', (e) => {
+      const rect = item.getBoundingClientRect();
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
+      item.style.background = `
+        radial-gradient(circle at ${x}px ${y}px, rgba(0,120,255,0.08), rgba(255,255,255,0.7))
+      `;
+    });
+    item.addEventListener('mouseleave', () => {
+      item.style.background = 'rgba(255, 255, 255, 0.6)';
+    });
+  });
+});
+</script>
+</body>

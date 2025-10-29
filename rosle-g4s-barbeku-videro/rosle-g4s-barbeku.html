@@ -1,0 +1,240 @@
+<style type="text/css">.product-container-iu {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  color: #1e2a44;
+  line-height: 1.5;
+}
+
+.header-iu {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  padding-bottom: 15px;
+  position: relative;
+}
+
+.header-iu::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, #f07b10, #ff9a44);
+}
+
+.header-logo-iu {
+  height: 60px;
+  width: auto;
+  max-height: 60px;
+  max-width: 200px;
+  object-fit: contain;
+  display: block;
+}
+.title-iu {
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+.techspecs-iu {
+  position: relative;
+  border-radius: 10px;
+  margin-top: 25px;
+  padding: 30px 20px;
+  color: #fff;
+  overflow: hidden;
+  background: url('rosle-barbeku-1.jpg') center/cover no-repeat; 
+}
+.techspecs-overlay-iu {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(66, 66, 66, 0.55);
+  z-index: 1;
+}
+.techspecs-content-iu {
+  position: relative;
+  z-index: 2;
+  text-align: right;
+}
+.techspecs-content-iu h3 {
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+  border-bottom: 2px solid rgba(255,255,255,0.4);
+  display: inline-block;
+  padding-bottom: 5px;
+}
+.techspecs-content-iu ul {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 10px;
+}
+.techspecs-content-iu li {
+  margin: 4px 0;
+}
+
+.features-iu {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+  margin-top: 30px;
+}
+
+.feature-card-iu {
+  background: #fff;
+  border-radius: 12px;
+  padding: 15px;
+  text-align: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+}
+
+.feature-card-iu:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 14px #eb8b3233;
+}
+
+.feature-image-iu {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.no-hover {
+  transform: none !important;
+  box-shadow: none !important;
+  transition: none !important;
+  pointer-events: none;
+  background: none !important;
+}
+
+.image-wrapper-iu {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.image-wrapper-iu img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  display: block;
+  border-radius: 10px;
+}
+
+.feature-card-iu h4 {
+  font-weight: 600;
+  margin: 10px 0 5px 0;
+  color: #1e2a44;
+}
+
+.feature-card-iu p {
+  font-size: 0.80rem !important;
+  line-height: 1.8em !important;
+  color: #444;
+}
+
+.feature-card-iu h4::after {
+  content: "";
+  display: block;
+  width: 40px;
+  height: 3px;
+  background: linear-gradient(90deg, #f07b10, #ff9a44);
+  margin: 6px auto 0 auto;
+  border-radius: 2px;
+  transition: width 0.3s ease;
+}
+
+.feature-card-iu:hover h4::after {
+  width: 100px; 
+}
+
+@media (max-width: 768px) {
+  .header-iu { justify-content: center; text-align: center; }
+  .bottom-iu { flex-direction: column; align-items: flex-start; }
+    .feature-card-iu {
+    height: auto;
+  }
+}
+</style>
+<div class="product-container-iu">
+<div class="header-iu"><img alt="" class="header-logo-iu" src="1.jpg" />
+<div class="title-iu">25532 | Videro G6-S Vario Gazlı Barbek&uuml;</div>
+</div>
+
+<div class="techspecs-iu">
+<div class="techspecs-overlay-iu">&nbsp;</div>
+
+<div class="techspecs-content-iu">
+<h3>Teknik &Ouml;zellikler</h3>
+
+<ul>
+	<li>En: 138 cm | Boy: 118 cm | Derinlik: 58 cm</li>
+	<li>Ağırlık: 53 kg</li>
+	<li>Izgara &ouml;l&ccedil;&uuml;s&uuml;: 70 &times; 45 cm</li>
+	<li>Sıcak tutma ızgarası: 70 &times; 16 cm</li>
+	<li>Ana br&uuml;l&ouml;r gaz g&uuml;c&uuml;: 11,942 BTU</li>
+	<li>Yan br&uuml;l&ouml;r gaz g&uuml;c&uuml;: 10,236 BTU</li>
+	<li>Materyal: 18/10 paslanmaz &ccedil;elik, d&ouml;k&uuml;m ızgara</li>
+	<li><strong>PrimeZone 3.5 kW (11,942 BTU)</strong> g&uuml;ce sahiptir.</li>
+</ul>
+</div>
+</div>
+
+<div class="features-iu">
+<div class="feature-card-iu">
+<h4>Termometreli Cam Kapak</h4>
+
+<p>Cam kapak sayesinde pişme durumunu izleyebilirsiniz. Termometre &deg;C ve &deg;F g&ouml;sterir.</p>
+<img alt="Termometreli Cam Kapak" class="feature-image-iu" src="2.jpg" /></div>
+
+<div class="feature-card-iu no-hover">
+<div class="image-wrapper-iu"><img alt="" class="feature-image-iu" src="3.jpg" /></div>
+</div>
+
+<div class="feature-card-iu">
+<h4>Aydınlatmalı Kontrol Paneli</h4>
+
+<p>Işıklı panel ile kontrol sizde. Kırmızı: A&ccedil;ık | Mavi: Kapalı.</p>
+<img alt="Aydınlatmalı Kontrol Paneli" class="feature-image-iu" src="4.jpg" /></div>
+
+<div class="feature-card-iu">
+<h4>Depolama Alanı</h4>
+
+<p>11 kg gaz t&uuml;p&uuml; i&ccedil;in geniş depolama alanı.</p>
+<img alt="Depolama Alanı" class="feature-image-iu" src="7.jpg" /></div>
+
+<div class="feature-card-iu">
+<h4>Paslanmaz &Ccedil;elik Br&uuml;l&ouml;rler</h4>
+
+<p>Her biri 3.5 kW g&uuml;c&uuml;nde 3 ana, 1 PrimeZone br&uuml;l&ouml;r i&ccedil;erir. 3 kW (10,236 BTU) g&uuml;c&uuml;nde entegre yan br&uuml;l&ouml;r. Her iki yanda katlanabilir yan br&uuml;l&ouml;r ve PrimeZone bulunur. 800&deg;C&#39;ye kadar ısınabilen PrimeZone ile yiyecekleriniz istediğiniz &ccedil;ıtırlıkta olsun.</p>
+<img alt="Paslanmaz Çelik Brülörler" class="feature-image-iu" src="6.jpg" /></div>
+
+<div class="feature-card-iu">
+<h4>Tekerlekler</h4>
+
+<p>Bah&ccedil;enizde kolay taşıma ve konumlandırma imkanı sağlar.</p>
+<img alt="Tekerlekler" class="feature-image-iu" src="5.jpg" /></div>
+</div>
+</div>
+<script>
+document.querySelectorAll('.feature-card-iu').forEach(card => {
+  card.addEventListener('mouseenter', () => card.style.background = '#ffedde');
+  card.addEventListener('mouseleave', () => card.style.background = '#fafafa');
+});
+</script>

@@ -1,0 +1,184 @@
+<style type="text/css">body {
+  margin: 0;
+  background-color: #fff;
+  color: #222;
+}
+
+.product-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  padding: 40px 60px;
+  align-items: center;
+}
+
+.product-info {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.product-info h2 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.product-info h3 {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #444;
+  margin-top: -5px;
+}
+
+.product-info ul {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+}
+
+.product-info ul li {
+  margin-bottom: 8px;
+  font-size: 0.95rem;
+  position: relative;
+  padding-left: 20px;
+}
+
+.product-info ul li::before {
+  content: "✔";
+  color: #cac9d1;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.product-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.product-image img {
+  width: 100%;
+  max-width: 450px;
+  border-radius: 10px;
+}
+
+.product-gallery {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+  text-align: center;
+  padding: 30px 60px;
+}
+
+.product-gallery div{
+    flex:1;
+}
+
+.product-gallery img {
+  width: 120px;
+  height: auto;
+}
+
+.product-gallery p {
+  text-align: center;
+  font-size: 0.8rem;
+  margin-top: 6px;
+}
+
+.footer-bar {
+  background-color: #efeef3;
+  padding: 10px 60px;
+  color: #fff;
+  font-weight: 600;
+  letter-spacing: 1px;
+  font-size: 1rem;
+}
+
+.product-wrapper {
+  background-color: #fff;
+  border: 2px solid #e0e0e0; 
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08); 
+  max-width: 1100px;         
+  margin: 40px auto;         
+  overflow: hidden;          
+}
+
+@media (max-width: 800px) {
+  .product-section {
+    grid-template-columns: 1fr;
+    padding: 20px;
+  }
+
+  .product-gallery {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    justify-items: center;
+  }
+
+  .product-gallery img {
+    width: 100%;
+    max-width: 150px;
+  }
+
+  .footer-bar {
+    text-align: center;
+    padding: 15px;
+  }
+}
+</style>
+<div class="product-wrapper">
+<section class="product-section">
+<div class="product-info">
+<h2>Ariete Moderna Beyaz Mutfak Şefi</h2>
+
+<h3>1589/01</h3>
+
+<ul>
+	<li>1600 Watt</li>
+	<li>Maksimum G&uuml;&ccedil;te 3200 Watt&#39;a Ulaşan Kilitli Motor</li>
+	<li>D&ouml;k&uuml;m Al&uuml;minyum G&ouml;vde ile Daha G&uuml;&ccedil;l&uuml; ve Dayanıklı</li>
+	<li>Hamur Kancası, &Ccedil;ırpma ve Karıştırma Aparatı</li>
+	<li>Paslanmaz &Ccedil;elik 5,5 L Hazne</li>
+	<li>11 Kademeli Hız Ayarı</li>
+	<li>Sı&ccedil;rama &Ouml;nleyici Kapak</li>
+	<li>Kaydırmaz Ayaklar</li>
+	<li>Y&ouml;r&uuml;ngesel Karıştırma</li>
+	<li>Sessiz &Ccedil;alışma 65 dbA</li>
+</ul>
+</div>
+
+<div class="product-image"><img alt="" src="7.jpg" /></div>
+</section>
+
+<section class="product-gallery">
+<div><img alt="" src="1.jpg" />
+<p>G&uuml;&ccedil;l&uuml; &ccedil;ırpma teli ile m&uuml;kkemmel sonu&ccedil;lar</p>
+</div>
+
+<div><img alt="" src="2.jpg" />
+<p>Karıştırma Aparatı</p>
+</div>
+
+<div><img alt="" src="3.jpg" />
+<p>Hamur kancası ile en ağır hamurları yoğurma</p>
+</div>
+
+<div><img alt="" src="4.jpg" />
+<p>11 kademeli hız ayarı</p>
+</div>
+
+<div><img alt="" src="5.jpg" />
+<p>5,5 L paslanmaz &ccedil;elik hazne ve d&ouml;k&uuml;m al&uuml;minyum g&ouml;vde ile daha g&uuml;&ccedil;l&uuml; ve dayanıklı</p>
+</div>
+
+<div><img alt="" src="6.jpg" />
+<p>İhtiyacınız olan t&uuml;m aparatlar</p>
+</div>
+</section>
+
+<div class="footer-bar">&nbsp;</div>
+</div>

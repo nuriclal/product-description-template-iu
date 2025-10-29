@@ -1,0 +1,217 @@
+<style type="text/css">.product-section {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 35px;
+}
+
+.product {
+  border-radius: 16px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+  transition: all 0.35s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+}
+
+.product:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+}
+
+.product-img {
+  width: 100%;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 25px;
+  transition: all 0.3s ease;
+}
+
+.product:hover .product-img img {
+  transform: scale(1.05);
+  transition: transform 0.4s ease;
+}
+
+.product-img img {
+  width: 85%;
+  height: auto;
+  object-fit: contain;
+  border-radius: 10px;
+}
+
+.product-description {
+  width: 100%;
+  text-align: center;
+  padding: 20px 15px 30px;
+}
+
+.product-description h4 {
+  font-size: 1.15rem;
+  margin: 0 0 10px;
+  font-weight: 600;
+}
+
+.product-description p {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  opacity: 0;
+  max-height: 0;
+  transition: all 0.4s ease;
+  overflow: hidden;
+}
+
+.product:hover .product-description p {
+  opacity: 1;
+  max-height: 200px;
+  margin-top: 10px;
+}
+
+@media (max-width: 1200px) {
+  .product-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 800px) {
+  .product-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 500px) {
+  .product-grid {
+    grid-template-columns: 1fr;
+  }
+}
+</style>
+<section class="product-section">
+<div class="product-grid">
+<div class="product">
+<div class="product-img"><img alt="" src="1.jpg" /></div>
+
+<div class="product-description">
+<h4>Ingenio: Mutfağınızda Yer A&ccedil;ın</h4>
+
+<p>Ocaktan, fırına, sofraya, buzdolabına* ve bulaşık makinesine, ideal saklama &ouml;zelliğine sahiptir. (*Asitli yiyecekleri uzun s&uuml;re saklamayın.)</p>
+</div>
+</div>
+
+<div class="product">
+<div class="product-img"><img alt="" src="2.jpg" /></div>
+
+<div class="product-description">
+<h4>&Ccedil;ıkarılabilir Sap</h4>
+
+<p>Patentli, g&uuml;venli ve &ccedil;ıkarılabilen sapı 10 kg&rsquo;ya kadar ağırlığı kaldırabilir**</p>
+</div>
+</div>
+
+<div class="product">
+<div class="product-img"><img alt="" src="3.jpg" /></div>
+
+<div class="product-description">
+<h4>G&uuml;venli Yapışmaz Kaplama</h4>
+
+<p>G&uuml;venli yapışmaz kaplama, PFOA, kurşun ve kadmiyum i&ccedil;ermez****</p>
+</div>
+</div>
+
+<div class="product">
+<div class="product-img"><img alt="" src="4.jpg" /></div>
+
+<div class="product-description">
+<h4>Titanyum Yapışmaz Kaplama</h4>
+
+<p>Titanium 3X kaplama standart Tefal kaplamalarına g&ouml;re 6 kata kadar daha dayanıklıdır.</p>
+</div>
+</div>
+
+<div class="product">
+<div class="product-img"><img alt="" src="5.jpg" /></div>
+
+<div class="product-description">
+<h4>Thermo-Signal&trade; teknolojisi</h4>
+
+<p>Tavanız pişirmeye hazır olduğunda tamamen kırmızıya d&ouml;ner ve ideal zamanı size g&ouml;sterir</p>
+</div>
+</div>
+
+<div class="product">
+<div class="product-img"><img alt="" src="6.jpg" /></div>
+
+<div class="product-description">
+<h4>Kolay Temizlik</h4>
+
+<p>Hem i&ccedil; hem dış y&uuml;zeyde kolay temizlenebilir kaplama bulunur. Yemek sonrası temizlik zahmetsiz hale gelir, bulaşık makinesinde de g&uuml;venle yıkanabilir.</p>
+</div>
+</div>
+
+<div class="product">
+<div class="product-img"><img alt="" src="7.jpg" /></div>
+
+<div class="product-description">
+<h4>Ocak Uyumu</h4>
+
+<p>İnd&uuml;ksiyon dahil t&uuml;m ocaklarla uyumludur-gaz, elektrik ve seramik.</p>
+</div>
+</div>
+
+<div class="product">
+<div class="product-img"><img alt="" src="8.jpg" /></div>
+
+<div class="product-description">
+<h4>Fransa&#39;da &Uuml;retilmiştir</h4>
+
+<p>Fransa&rsquo;da, y&uuml;ksek kalite standartlarına g&ouml;re &uuml;retilmiştir. Homojen pişirme performansı ve uzun &ouml;m&uuml;rl&uuml; dayanıklılığıyla &ouml;ne &ccedil;ıkar.</p>
+</div>
+</div>
+
+<div class="product">
+<div class="product-img"><img alt="" src="9.jpg" /></div>
+
+<div class="product-description">
+<h4>12 Par&ccedil;a Set İ&ccedil;eriği</h4>
+
+<p>Set i&ccedil;eriğinde; 26/28 cm Tava, 26cm Wok tava, 24cm kısa tencere, 20cm derin tencere, 2 adet &ccedil;ıkarılabilir sap, 20/24cm plastik kapak, 20/24/28 cm cam kapak bulunur. Eksiksiz donanımıyla mutfakta t&uuml;m ihtiya&ccedil;larınıza yanıt verir.</p>
+</div>
+</div>
+
+<div class="product">
+<div class="product-img"><img alt="" src="10.jpg" /></div>
+
+<div class="product-description">
+<h4>Lezzetli Yemekler</h4>
+
+<p>Ingenio ile yemek pişirmek sadece pratik değil, aynı zamanda eğlenceli! Mutfakta yaratıcılığınızı artıran fonksiyonel yapısı sayesinde her &ouml;ğ&uuml;n &ouml;zel hale gelir.</p>
+</div>
+</div>
+
+<div class="product">
+<div class="product-img"><img alt="" src="11.jpg" /></div>
+
+<div class="product-description">
+<h4>Keyifli Pişirme Deneyimi</h4>
+
+<p>&Ccedil;ıkarılabilir sap, ısıya dayanıklı y&uuml;zey ve m&uuml;kemmel ısı dağılımı bir araya gelerek pişirmeyi keyifli hale getirir. Her seferinde profesyonel sonu&ccedil;lar elde etmenizi sağlar.</p>
+</div>
+</div>
+
+<div class="product">
+<div class="product-img"><img alt="" src="12.jpg" /></div>
+
+<div class="product-description">
+<h4>Kolay Kullanım</h4>
+
+<p>Ingenio serisi, her pişirme adımında kolaylık sunar.Tavadan fırına, sofradan buzdolabına kadar tek kapla ge&ccedil;iş yapabilme &ouml;zg&uuml;rl&uuml;ğ&uuml; sağlar.</p>
+</div>
+</div>
+</div>
+</section>

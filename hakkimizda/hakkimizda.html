@@ -1,0 +1,266 @@
+<style>
+:root {
+  --navy: #3a3e54;
+  --orange: #EC6907;
+  --green: #93CFC5;
+  --border: #DBDBED;
+  --label: #9999ab;
+  --lightnavy: #727AA7;
+  --bg: #f4f6ff;
+  --overlay: rgba(52, 62, 84, 0.6);
+  --darkborder: #C9C9DA;
+  --white: #fff;
+  --cubic: all .55s cubic-bezier(.785, .135, .15, .86);
+  --ease: all .2s ease;
+  --shadow: 0 0 15px 0 rgba(50, 60, 81, 0.15);
+}
+
+/* GENEL */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font-family: 'CentraNo2';
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: var(--navy);
+  background-color: #fff;
+  width: 100%;
+  overflow-x: hidden;
+}
+div {
+  display: block;
+  unicode-bidi: isolate;
+}
+
+/* SAYFA YAPISI */
+.page-content-area .container {
+  display: grid;
+  grid-template-columns: 1fr 300px;
+  column-gap: 30px;
+  align-items: flex-start;
+}
+.container {
+  width: min(100vw - 120px, 1280px);
+  margin: 0 auto;
+}
+.staticpage-left,
+.staticpage-right {
+  float: left;
+  width: 100%;
+}
+.staticpage-right {
+  border: 1px solid var(--border);
+  border-radius: 5px;
+  padding: 20px;
+  position: sticky;
+  top: 30px;
+}
+
+/* PD-INFO BLOKLARI */
+.pd-info-template-1 .item {
+  display: flex;
+  align-items: flex-start;
+  gap: 30px;
+  flex-wrap: nowrap;
+}
+.pd-info-template-1 .j-left {
+  flex: 0 0 40%;
+  max-width: 40%;
+}
+.pd-info-template-1 .j-right {
+  flex: 1 1 60%;
+  max-width: 60%;
+}
+.pd-info-template-1 .j-left img,
+.pd-info-template-1 .j-left picture,
+.pd-info-template-1 .j-left video {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+/* SOSYAL MEDYA BUTONLARI */
+.social-buttons {
+  display: flex;
+  gap: 25px;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: stretch;
+  margin: 20px 0;
+}
+.social-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 240px;
+  height: 240px;
+  border-radius: 50%;
+  min-width: 80px;
+  min-height: 80px;
+  transition: transform 0.2s, box-shadow 0.2s;
+  overflow: hidden;
+  background: transparent;
+}
+.social-btn img {
+  width: 70%;
+  height: 70%;
+  object-fit: contain;
+}
+.social-btn:hover {
+  transform: scale(1.2);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+/* GÖRSEL - TAM GENİŞLİK */
+.mobile-big-img {
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+  height: auto;
+}
+
+/* VİDEO */
+.video-container {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.video-container iframe {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  height: auto;
+}
+
+/* ---- MEDİA QUERIES ---- */
+@media (max-width: 768px) {
+  .pd-info-template-1 .item {
+    flex-direction: column;
+    gap: 16px;
+    align-items: center;
+    text-align: center;
+  }
+  .pd-info-template-1 .j-left,
+  .pd-info-template-1 .j-right {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+  .pd-info-template-1 .j-left img {
+    max-width: 90%;
+  }
+
+  .mobile-big-img {
+    width: 90vw;
+  }
+
+  .social-buttons {
+    flex-direction: column;
+    gap: 16px;
+    align-items: center;
+  }
+  .social-btn {
+    width: 120px;
+    height: 120px;
+    border-radius: 12px;
+  }
+  .social-btn img {
+    width: 36px;
+    height: 36px;
+  }
+}
+</style>
+
+<!-- HTML BAŞLANGIÇ -->
+<section class="page-content-area">
+  <div class="container">
+    <div class="staticpage-left">
+      <h1>Hakkımızda</h1>
+      <p><img alt="" src="aaa566d2-hakkımızda-1.png"></p>
+
+      <section class="pd-info-template-1">
+        <div class="item">
+          <div class="j-left">
+            <img alt="" src="05976e92-hakkımızda2.png" style="width: 500px; height: 500px;">
+          </div>
+          <div class="j-right">
+            <h1><strong>Jebinde Kimdir?</strong></h1>
+            <p>Jebinde yolculuğuna, herkesin hayatını kolaylaştıracak kaliteli ürünlere kolayca ulaşmasını sağlamak amacıyla başladı...</p>
+            <h2><strong>Tarihçemiz</strong></h2>
+            <p>Jebinde, bir fikirle doğdu ve bugün 75’ten fazla çalışanımızla büyüyen bir aileye dönüştü...</p>
+          </div>
+        </div>
+      </section>
+
+      <p style="text-align: center;">
+        <img class="mobile-big-img" src="a3cbbf39-hak4-v4.png">
+      </p>
+
+      <section class="pd-info-template-1">
+        <div class="item">
+          <div class="j-left">
+            <picture><img alt="" src="bf542635-guvenilir.png"></picture>
+          </div>
+          <div class="j-right">
+            <h3><strong>Bizi Neden Tercih Etmelisiniz?</strong></h3>
+            <p>Müşteri memnuniyeti, Jebinde’nin temel taşıdır...</p>
+            <h3 style="text-align: center;"><strong>Online Mağazada Fiziki Deneyim: Görüntülü Görüşme</strong></h3>
+            <p>Jebinde’de alışverişi bir adım öteye taşıyoruz!...</p>
+          </div>
+        </div>
+      </section>
+
+      <div style="text-align: center;">
+        <h3><strong>Jebinde Güvenilir mi?</strong></h3>
+        <p>Jebinde olarak, müşterilerimize sunduğumuz güvenilirlik...</p>
+      </div>
+
+      <div class="social-buttons">
+        <a class="social-btn instagram" href="https://www.instagram.com/jebinde/" rel="nofollow" target="_blank">
+          <img alt="Instagram'da Jebinde" src="8d1e77d9-ig2.png">
+        </a>
+        <a class="social-btn youtube" href="https://www.youtube.com/channel/UCS9TrKepaY1f3dxmLonQ63A" rel="nofollow" target="_blank">
+          <img alt="YouTube" src="f76b1696-yt2.png">
+        </a>
+        <a class="social-btn linkedin" href="https://www.linkedin.com/company/jebinde" rel="nofollow" target="_blank">
+          <img alt="LinkedIn" src="3f2adfd4-lk2.png">
+        </a>
+        <a class="social-btn x" href="https://www.x.com/jebinde/" rel="nofollow" target="_blank">
+          <img alt="X" src="f05e8a81-xt2.png">
+        </a>
+      </div>
+
+      <div class="video-container">
+        <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen=""
+                frameborder="0"
+                src="https://www.youtube.com/embed/XmP9ZRipptU">
+        </iframe>
+      </div>
+
+      <section class="pd-info-template-1">
+        <div class="item">
+          <div class="j-left">
+            <img alt="" src="00976ec2-yesil-enerji.png">
+          </div>
+          <div class="j-right">
+            <h4><strong>Sürdürülebilir Bir Gelecek İçin</strong></h4>
+            <p>5500 m²’lik lojistik merkezimizde yeşil enerji kullanarak...</p>
+            <h4><strong>Jebinde Ailesine Katılın!</strong></h4>
+            <p>Küçük ev aletlerinden beyaz eşyalara kadar ihtiyacınız olan her şey Jebinde’de!</p>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <div class="staticpage-right">
+      <h4>Kurumsal</h4>
+      <ul>
+        <li><a class="active" href="https://www.jebinde.com/icerik/hakkimizda">Hakkımızda</a></li>
+        <li><a href="https://www.jebinde.com/icerik/sik-sorulan-sorular">Sık Sorulan Sorular</a></li>
+      </ul>
+    </div>
+  </div>
+</section>

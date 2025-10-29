@@ -1,0 +1,179 @@
+<style type="text/css">body {
+  margin: 0;
+  background-color: #fff;
+  color: #222;
+}
+
+.product-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  padding: 40px 60px;
+  align-items: center;
+}
+
+.product-info {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.product-info h2 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.product-info h3 {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #444;
+  margin-top: -5px;
+}
+
+.product-info ul {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+}
+
+.product-info ul li {
+  margin-bottom: 8px;
+  font-size: 0.95rem;
+  position: relative;
+  padding-left: 20px;
+}
+
+.product-info ul li::before {
+  content: "✔";
+  color: #8ABF7B;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.product-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.product-image img {
+  width: 100%;
+  max-width: 450px;
+  border-radius: 10px;
+}
+
+.product-gallery {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+  text-align: center;
+  padding: 30px 60px;
+}
+
+.product-gallery div{
+    flex:1;
+}
+
+.product-gallery img {
+  width: 120px;
+  height: auto;
+}
+
+.product-gallery p {
+  text-align: center;
+  font-size: 0.8rem;
+  margin-top: 6px;
+}
+
+.footer-bar {
+  background-color: #a9c5a4;
+  padding: 10px 60px;
+  color: #fff;
+  font-weight: 600;
+  letter-spacing: 1px;
+  font-size: 1rem;
+}
+
+.product-wrapper {
+  background-color: #fff;
+  border: 2px solid #e0e0e0; 
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08); 
+  max-width: 1100px;         
+  margin: 40px auto;         
+  overflow: hidden;          
+}
+
+@media (max-width: 800px) {
+  .product-section {
+    grid-template-columns: 1fr;
+    padding: 20px;
+  }
+
+  .product-gallery {
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .product-gallery img {
+    width: 60%;
+  }
+
+  .footer-bar {
+    text-align: center;
+    padding: 15px;
+  }
+}
+</style>
+<div class="product-wrapper">
+<section class="product-section">
+<div class="product-info">
+<h2>Ariete Vintage Yeşil Kettle</h2>
+
+<h3>2877/04</h3>
+
+<ul>
+	<li>2000 Watt</li>
+	<li>1.7 L Kapasite</li>
+	<li>Paslanmaz &Ccedil;elik G&ouml;vde</li>
+	<li>360&deg; Kablosuz Taban</li>
+	<li>&Ccedil;ıkarılabilir ve Yıkanabilir Filtre</li>
+	<li>Ergonomik Tasarım ve Tutma Sapı</li>
+	<li>Su Seviyesi G&ouml;stergesi</li>
+	<li>Otomatik Kapanma</li>
+</ul>
+</div>
+
+<div class="product-image"><img alt="" src="6.jpg" /></div>
+</section>
+
+<section class="product-gallery">
+<div><img alt="" src="1.jpg" />
+<p>360&deg; kablosuz taban</p>
+</div>
+
+<div><img alt="" src="2.jpg" />
+<p>&Ccedil;ıkarılabilir ve yıkanabilir<br />
+filtre</p>
+</div>
+
+<div><img alt="" src="4.jpg" />
+<p>1.7 L kapasite<br />
+ve su seviyesi g&ouml;stergesi</p>
+</div>
+
+<div><img alt="" src="7.jpg" />
+<p>Ergonomik tasarım<br />
+ve tutma sapı</p>
+</div>
+
+<div><img alt="" src="5.jpg" />
+<p>&Ccedil;ay, kahve veya bitki &ccedil;ayları<br />
+i&ccedil;in ideal sıcaklık</p>
+</div>
+</section>
+
+<div class="footer-bar">&nbsp;</div>
+</div>

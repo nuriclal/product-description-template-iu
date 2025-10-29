@@ -1,0 +1,353 @@
+<style type="text/css">.product-container-iu {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: 10px;
+	max-width: 800px;
+	width: 100%;
+	margin: 0 auto;
+    margin-top: 100px;
+}
+
+.product-carousel-iu {
+	position: relative;
+	width: 100%;
+	max-width: 800px;
+	height: auto;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	perspective: 1000px;
+}
+
+.product-track-iu {
+	position: relative;
+	width: 100%;
+	height: 520px;
+	transform-style: preserve-3d;
+	transition: transform 0.8s ease;
+}
+
+.product-card-iu {
+	position: absolute;
+	width: 100%;
+	max-width: 800px;
+	height: auto;
+	min-height: 350px;
+	background: white;
+	border-radius: 20px;
+	overflow: hidden;
+	box-shadow: 0 10px 30px rgba(240, 123, 16, 0.3);
+	display: flex;
+	flex-direction: row;
+	cursor: pointer;
+	transition: all 0.8s ease;
+}
+
+.product-card-iu img {
+	width: 350px;
+	aspect-ratio: 1 / 1;
+	object-fit: cover;
+}
+
+.product-info-iu {
+	flex: 1;
+	padding: 25px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.product-title-iu {
+	color: #1e2a44;
+	font-size: 1.6rem;
+	font-weight: 700;
+	margin-bottom: 12px;
+}
+
+.product-description-iu {
+	color: #0c111b;
+	font-size: 1rem;
+	line-height: 1.4;
+}
+
+.product-card-iu.center-iu {
+	z-index: 10;
+	transform: scale(1.05);
+}
+.product-card-iu.up-1-iu {
+	transform: translateY(-150px) scale(0.9);
+	opacity: 0.8;
+}
+.product-card-iu.down-1-iu {
+	transform: translateY(150px) scale(0.9);
+	opacity: 0.8;
+}
+.product-card-iu.hidden-iu {
+	opacity: 0;
+	pointer-events: none;
+}
+
+.nav-arrows-iu {
+	display: flex;
+	justify-content: center;
+	gap: 16px;
+	width: 100%;
+}
+
+.nav-btn-iu {
+	background: #fff;
+	border: 2px solid #1e2a44;
+	color: #1e2a44;
+	border-radius: 50%;
+	width: 40px;
+	height: 40px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+	box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+	transition: all 0.3s ease;
+	font-size: 20px;
+	line-height: 1;
+	padding: 0;
+}
+.nav-btn-iu:hover {
+	background-color: #ff9a44;
+	color: #1e2a44;
+	border-color: #ff9a44;
+	transform: scale(1.1);
+}
+
+.dots-iu {
+	display: flex;
+	justify-content: center;
+	gap: 8px;
+	width: 100%;
+}
+.dot-iu {
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+	background: rgba(240, 123, 16, 0.3);
+	cursor: pointer;
+	transition: all 0.3s ease;
+}
+.dot-iu.active-iu {
+	background: #f07b10;
+	transform: scale(1.2);
+}
+
+@media (max-width: 600px) {
+
+	.product-container-iu {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: flex-start;
+		padding-top: 0;
+		margin-top: 0;
+		gap: 20px;
+	}
+
+	.product-carousel-iu {
+		width: 100%;
+		max-width: 480px;
+		margin: 0 auto;
+		height: 460px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: flex-start;
+		position: relative;
+		overflow: visible;
+		perspective: 900px;
+		padding-top: 150px;
+	}
+
+	.product-track-iu {
+		width: 100%;
+		height: 100%;
+		position: relative;
+		transform-style: preserve-3d;
+		transition: transform 0.8s ease;
+	}
+
+	.product-card-iu {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		width: 90%;
+		max-width: 420px;
+		background: #fff;
+		border-radius: 16px;
+		box-shadow: 0 6px 20px rgba(240, 123, 16, 0.15);
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		text-align: center;
+		transition: all 0.6s ease;
+	}
+
+	.product-card-iu img {
+		width: 100%;
+		height: auto;
+		object-fit: cover;
+		border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+	}
+
+	.product-info-iu {
+		padding: 18px 14px 25px;
+	}
+
+	.product-title-iu {
+		font-size: 1.3rem;
+		margin-bottom: 8px;
+	}
+
+	.product-description-iu {
+		font-size: 0.95rem;
+		line-height: 1.5;
+	}
+
+	.product-card-iu.center-iu {
+		transform: translate(-50%, -50%) scale(1.05);
+		z-index: 3;
+		opacity: 1;
+	}
+
+	.product-card-iu.up-1-iu {
+		transform: translate(-50%, calc(-50% - 80px)) scale(0.9);
+		z-index: 2;
+		opacity: 0.8;
+	}
+
+	.product-card-iu.down-1-iu {
+		transform: translate(-50%, calc(-50% + 80px)) scale(0.9);
+		z-index: 2;
+		opacity: 0.8;
+	}
+
+	.product-card-iu.hidden-iu {
+		transform: translate(-50%, -50%) scale(0.8);
+		opacity: 0;
+		pointer-events: none;
+	}
+
+	.product-controls-iu {
+		position: relative;
+		margin-top: 25px;
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		gap: 14px;
+		padding-bottom: 10px;
+	}
+
+	.nav-arrows-iu {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		gap: 16px;
+		padding-top: 180px;
+	}
+
+	.dots-iu {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		gap: 10px;
+		margin-top: 8px;
+	}
+
+	.dot-iu {
+		width: 12px;
+		height: 12px;
+		border-radius: 50%;
+		background: rgba(240, 123, 16, 0.3);
+		cursor: pointer;
+		transition: all 0.3s ease;
+	}
+	.dot-iu.active-iu {
+		background: #f07b10;
+		transform: scale(1.2);
+	}
+}
+</style>
+<div style="display: flex; justify-content: center; align-items: center;">
+<div class="product-container-iu">
+<div class="product-carousel-iu">
+<div class="product-track-iu">
+<div class="product-card-iu" data-index="0"><img alt="Product 1" src="/Content/UploadFiles/1e775ca7-1.jpg" />
+<div class="product-info-iu">
+<h4 class="product-title-iu">Pişirme G&ouml;stergesi</h4>
+
+<p class="product-description-iu">Pişirme g&ouml;stergesi, s&uuml;reci kolayca takip etmenizi sağlar. İki pişirme seviyesi bulunur; biri sebze, balık ve k&uuml;mes hayvanları i&ccedil;in, diğeri et, patates ve g&uuml;ve&ccedil; gibi daha dayanıklı yiyecekler i&ccedil;in kullanılır.</p>
+</div>
+</div>
+
+<div class="product-card-iu" data-index="1"><img alt="Product 2" src="/Content/UploadFiles/df6ce8de-2.jpg" />
+<div class="product-info-iu">
+<h4 class="product-title-iu">Kolay Temizlik</h4>
+
+<p class="product-description-iu">Hijyenik boşluksuz bağlantı ve tek tıkla &ccedil;ıkarılabilir sap sayesinde d&uuml;d&uuml;kl&uuml; tencerenin t&uuml;m avantajlarından zahmetsiz temizlikle yararlanın.</p>
+</div>
+</div>
+
+<div class="product-card-iu" data-index="2"><img alt="Product 3" src="/Content/UploadFiles/15ac4a86-3.jpg" />
+<div class="product-info-iu">
+<h4 class="product-title-iu">Pratik &Ouml;l&ccedil;&uuml;m</h4>
+
+<p class="product-description-iu">Tencerenin i&ccedil; kısmındaki entegre &ouml;l&ccedil;&uuml;m işaretleri sayesinde doğru &ouml;l&ccedil;&uuml;mler yapmayı &ccedil;ok kolaylaştırır.&nbsp;</p>
+</div>
+</div>
+</div>
+</div>
+
+<div class="nav-arrows-iu"><button class="nav-btn-iu up-iu">▲</button><button class="nav-btn-iu down-iu">▼</button></div>
+
+<div class="dots-iu">
+<div class="dot-iu active-iu" data-index="0">&nbsp;</div>
+
+<div class="dot-iu" data-index="1">&nbsp;</div>
+
+<div class="dot-iu" data-index="2">&nbsp;</div>
+</div>
+</div>
+</div>
+<script>
+const cards = document.querySelectorAll(".product-card-iu");
+const dots = document.querySelectorAll(".dot-iu");
+let currentIndex = 0;
+let animating = false;
+
+function updateProductCarousel(index) {
+	if (animating) return;
+	animating = true;
+	currentIndex = (index + cards.length) % cards.length;
+
+	cards.forEach((card, i) => {
+		const offset = (i - currentIndex + cards.length) % cards.length;
+		card.classList.remove("center-iu", "up-1-iu", "down-1-iu", "hidden-iu");
+		if (offset === 0) card.classList.add("center-iu");
+		else if (offset === 1) card.classList.add("down-1-iu");
+		else if (offset === cards.length - 1) card.classList.add("up-1-iu");
+		else card.classList.add("hidden-iu");
+	});
+
+	dots.forEach((dot, i) => {
+		dot.classList.toggle("active-iu", i === currentIndex);
+	});
+
+	setTimeout(() => animating = false, 600);
+}
+
+document.querySelector(".up-iu").addEventListener("click", () => updateProductCarousel(currentIndex - 1));
+document.querySelector(".down-iu").addEventListener("click", () => updateProductCarousel(currentIndex + 1));
+dots.forEach((dot, i) => dot.addEventListener("click", () => updateProductCarousel(i)));
+window.addEventListener("load", () => updateProductCarousel(currentIndex));
+</script>

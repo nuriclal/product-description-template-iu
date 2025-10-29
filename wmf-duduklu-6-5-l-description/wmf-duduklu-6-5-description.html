@@ -1,0 +1,308 @@
+<style>
+.carousel-wrap-iu {
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  isolation: isolate !important;
+}
+
+.carousel-iu {
+  position: relative;
+  overflow: hidden;
+  padding: 20px 10px;
+  background: transparent;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.track-iu {
+  display: flex;
+  gap: 28px;
+  align-items: stretch;
+  flex-wrap: nowrap;
+  transition: transform 600ms cubic-bezier(.22, .9, .28, 1);
+}
+
+.slide-iu {
+  min-height: 400px;
+  background: #fff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.05);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  flex-shrink: 0;
+  width: 320px;
+  max-width: 400px;
+}
+
+.slide-iu img {
+  width: 100%;
+  aspect-ratio: 1/1;
+  border-radius: 12px;
+  object-fit: cover;
+  margin-bottom: 16px;
+}
+
+.slide-iu h4 {
+  margin-bottom: 8px;
+  text-align: center;
+}
+
+.slide-iu p {
+  text-align: center;
+  font-size: 0.95rem;
+  color: #334155;
+}
+
+.nav-iu {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.35);
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  z-index: 10;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 75%;
+  transition: background 0.3s ease;
+}
+
+.nav-iu:hover {
+  background: rgba(0,0,0,0.55);
+}
+
+.nav-iu.prev-iu { left: 5px; }
+.nav-iu.next-iu { right: 5px; }
+
+.dots-iu {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  margin-top: 14px;
+}
+
+.dot-iu {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #e2e8f0; 
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.dot-iu.active-iu { 
+  background: #f07b10; 
+  transform: scale(1.2); 
+}
+</style>
+
+<div class="carousel-wrap-iu">
+  <div class="carousel-iu">
+    <button aria-label="Önceki" class="nav-iu prev-iu">
+  <svg width="24" height="24" viewBox="0 0 24 24">
+    <path d="M15 18l-6-6 6-6" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  </svg>
+    </button>
+    <div class="track-iu" id="track">
+      <div class="slide-iu">
+        <img alt="" src="/Content/UploadFiles/03a2a3fb-1.jpg" />
+        <h4>Yüksek kaliteli Cromargan® 18/10</h4>
+        <p>Cromargan® 18/10 paslanmaz çelik; bulaşık makinesinde yıkanabilir, kolay temizlenebilir, fırında kullanıma uygundur, tadı yoktur ve aside dayanıklıdır.</p>
+      </div>
+      <div class="slide-iu">
+        <img alt="" src="/Content/UploadFiles/10bba067-2.jpg" />
+        <h4>Kontrol mekanizması</h4>
+        <p>Kontrol mekanizması saptadır. Pişirme göstergesindeki renkli halkalar farklı ayarları ve kademeli basınç güvenliğini gösterir. 2 farklı basınçta pişirme ayarı bulunur. (107°C/115°C)</p>
+      </div>
+      <div class="slide-iu">
+        <img alt="" src="/Content/UploadFiles/a7537948-3.jpg" />
+        <h4>All-in-one düğmesi ve TÜV testi onaylı güvenlik</h4>
+        <p>2 farklı basınç değeri için ayarlanabilir all-in-one düğmesi ile pratik kullanım sağlar. Kapak açılışı için aynı düğmeden otomatik buhar çıkışı sağlanır, basınç güvenliği güvenli bir kapak açılışı sağlar.</p>
+      </div>
+    </div> 
+      <button aria-label="Sonraki" class="nav-iu next-iu">
+  <svg width="24" height="24" viewBox="0 0 24 24">
+    <path d="M9 6l6 6-6 6" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  </svg>
+      </button>
+    <div class="dots-iu" id="dots">
+      <div class="dot-iu active-iu" data-i="0"></div>
+      <div class="dot-iu" data-i="1"></div>
+      <div class="dot-iu" data-i="2"></div>
+    </div>
+  </div>
+</div>
+
+<script>
+(function () {
+  let slidesToShow, slideWidth, index, track, dotsWrap, carousel;
+  let originalSlides = [], realCount = 0;
+  let isDragging = false, startX = 0, startY = 0, currentTranslate = 0, prevTranslate = 0;
+
+  function initCarousel() {
+    track = document.getElementById("track");
+    dotsWrap = document.getElementById("dots");
+    carousel = document.querySelector(".carousel-iu");
+    if (!track || !dotsWrap || !carousel) return;
+
+    originalSlides = Array.from(track.children);
+    realCount = originalSlides.length;
+    slidesToShow = getSlidesToShow();
+
+    buildClones();
+    setSizes();
+    attachEvents();
+
+    index = slidesToShow;
+    setTranslate(-index * slideWidth, false);
+    updateDots();
+  }
+
+  function getSlidesToShow() {
+    const w = window.innerWidth;
+    if (w <= 540) return 1;
+    if (w <= 1000) return 2;
+    return 3;
+  }
+
+  function buildClones() {
+    track.querySelectorAll(".clone-iu").forEach(n => n.remove());
+    for (let i = 0; i < slidesToShow; i++) {
+      const firstClone = originalSlides[i % realCount].cloneNode(true);
+      firstClone.classList.add("clone-iu");
+      track.appendChild(firstClone);
+
+      const lastClone = originalSlides[realCount - 1 - (i % realCount)].cloneNode(true);
+      lastClone.classList.add("clone-iu");
+      track.insertBefore(lastClone, track.firstChild);
+    }
+  }
+
+  function setSizes() {
+    const gap = 28;
+    const containerWidth = carousel.offsetWidth - 20;
+    let perSlideWidth = (containerWidth - gap * (slidesToShow - 1)) / slidesToShow;
+    perSlideWidth = Math.max(220, Math.min(perSlideWidth, 400));
+
+    track.querySelectorAll(".slide-iu, .clone-iu").forEach(s => {
+      s.style.width = `${perSlideWidth}px`;
+      s.style.flex = `0 0 ${perSlideWidth}px`;
+    });
+
+    slideWidth = perSlideWidth + gap;
+    currentTranslate = -index * slideWidth;
+    track.style.transition = "none";
+    track.style.transform = `translate3d(${currentTranslate}px,0,0)`;
+  }
+
+  function attachEvents() {
+    const prevBtn = carousel.querySelector(".prev-iu");
+    const nextBtn = carousel.querySelector(".next-iu");
+    prevBtn.onclick = movePrev;
+    nextBtn.onclick = moveNext;
+
+    track.onmousedown = pointerDown;
+    track.ontouchstart = pointerDown;
+    window.onmouseup = pointerUp;
+    window.ontouchend = pointerUp;
+    window.onmousemove = pointerMove;
+    window.ontouchmove = pointerMove;
+
+    window.onkeydown = e => {
+      if (e.key === "ArrowLeft") movePrev();
+      if (e.key === "ArrowRight") moveNext();
+    };
+
+    window.addEventListener("resize", debounce(() => {
+      slidesToShow = getSlidesToShow();
+      buildClones();
+      setSizes();
+      setTranslate(-index * slideWidth, false);
+    }));
+  }
+
+  function updateDots() {
+    const dots = Array.from(dotsWrap.children);
+    let realIndex = (index - slidesToShow) % realCount;
+    if (realIndex < 0) realIndex += realCount;
+    dots.forEach(d => d.classList.remove("active-iu"));
+    if (dots[realIndex]) dots[realIndex].classList.add("active-iu");
+  }
+
+  function setTranslate(x, animate = true) {
+    track.style.transition = animate ? "transform 600ms cubic-bezier(.22,.9,.28,1)" : "none";
+    track.style.transform = `translate3d(${x}px,0,0)`;
+    currentTranslate = x;
+  }
+
+  function moveNext() {
+    index++;
+    slideMove();
+  }
+
+  function movePrev() {
+    index--;
+    slideMove();
+  }
+
+  function slideMove() {
+    setTranslate(-index * slideWidth, true);
+    track.addEventListener("transitionend", () => {
+      if (index >= realCount + slidesToShow) index = slidesToShow;
+      if (index < slidesToShow) index = realCount + slidesToShow - 1;
+      setTranslate(-index * slideWidth, false);
+      updateDots();
+    }, { once: true });
+    updateDots();
+  }
+
+  function pointerDown(e) {
+    isDragging = true;
+    startX = e.type.includes("mouse") ? e.pageX : e.touches[0].clientX;
+    startY = e.type.includes("mouse") ? e.pageY : e.touches[0].clientY;
+    prevTranslate = currentTranslate;
+    track.style.transition = "none";
+  }
+
+  function pointerMove(e) {
+    if (!isDragging) return;
+    const currentX = e.type.includes("mouse") ? e.pageX : e.touches[0].clientX;
+    const dx = currentX - startX;
+    if (Math.abs(dx) > Math.abs(e.type.includes("mouse") ? e.pageY - startY : e.touches[0].clientY - startY)) {
+      setTranslate(prevTranslate + dx, false);
+      e.preventDefault();
+    }
+  }
+
+  function pointerUp() {
+    if (!isDragging) return;
+    isDragging = false;
+    const moved = currentTranslate - prevTranslate;
+    if (Math.abs(moved) > slideWidth / 3) {
+      if (moved < 0) moveNext();
+      else movePrev();
+    } else {
+      setTranslate(-index * slideWidth, true);
+    }
+  }
+
+  function debounce(fn, d = 150) {
+    let t;
+    return (...a) => {
+      clearTimeout(t);
+      t = setTimeout(() => fn.apply(null, a), d);
+    };
+  }
+
+  window.addEventListener("load", initCarousel);
+})();
+</script>

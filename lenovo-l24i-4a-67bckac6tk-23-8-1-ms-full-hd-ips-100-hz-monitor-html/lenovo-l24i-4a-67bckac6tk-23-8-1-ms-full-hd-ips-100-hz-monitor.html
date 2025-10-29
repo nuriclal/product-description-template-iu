@@ -1,0 +1,598 @@
+<style type="text/css">.section-iu {
+  max-width: 1200px;
+  margin: 60px auto;
+  padding: 40px 20px;
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+}
+
+.section-1-iu {
+  text-align: center;
+  position: relative;
+}
+.section-1-iu img {
+  width: 100%;
+  max-width: 700px;
+  border-radius: 15px;
+  object-fit: cover;
+}
+.section-1-iu .text-overlay-iu {
+  margin-bottom: 15px;
+  color: #333;
+  text-shadow: none;
+}
+.section-1-iu h3 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+.section-1-iu p {
+  font-size: 1rem;
+}
+
+.section-2-iu {
+  text-align: center;
+}
+.section-2-iu h3 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+}
+.section-2-iu h4 {
+  font-size: 1.4rem;
+  margin-bottom: 30px;
+  color: #555;
+}
+.section-2-iu .three-grid-iu {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+}
+.section-2-iu .item-iu img {
+  width: 100%;
+  border-radius: 10px;
+  object-fit: cover;
+  height: 250px;
+}
+.section-2-iu .item-iu p {
+  margin-top: 10px;
+  font-size: 1rem;
+}
+
+.section-3-iu {
+  text-align: center;
+  position: relative;
+}
+.section-3-iu img {
+  width: 100%;
+  max-width: 700px;
+  border-radius: 15px;
+}
+.section-3-iu .text-overlay-iu {
+  margin-bottom: 15px;
+  color: #333;
+  text-shadow: none;
+}
+.section-3-iu h3 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+.section-3-iu p {
+  font-size: 1rem;
+}
+
+.section-4-iu .row-iu {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  margin-bottom: 40px;
+}
+.section-4-iu img {
+  width: 50%;
+  border-radius: 15px;
+  object-fit: cover;
+}
+.section-4-iu .text-iu {
+  width: 50%;
+}
+.section-4-iu h3 {
+  margin-bottom: 10px;
+}
+.section-4-iu p {
+  font-size: 1rem;
+}
+.section-4-iu .row-iu:nth-child(even) {
+  flex-direction: row-reverse;
+}
+
+.section-5-iu {
+  text-align: center;
+}
+.section-5-iu h3 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+}
+.section-5-iu h4 {
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+  color: #555;
+}
+.section-5-iu p {
+  font-size: 1rem;
+  margin-bottom: 30px;
+}
+.section-5-iu .three-grid-iu {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+}
+.section-5-iu .item-iu img {
+  width: 100%;
+  border-radius: 10px;
+  height: 250px;
+  object-fit: cover;
+}
+.section-5-iu .item-iu p {
+  margin-top: 10px;
+  font-size: 1rem;
+}
+
+@media (max-width: 768px) {
+  .section-iu {
+    padding: 30px 15px;
+  }
+  
+  .section-4-iu .row-iu {
+    flex-direction: column !important;
+    gap: 20px;
+  }
+  .section-4-iu img, .section-4-iu .text-iu {
+    width: 100%;
+  }
+  
+  .section-1-iu h3, .section-3-iu h3 {
+    font-size: 1.6rem;
+  }
+  
+  .section-1-iu p, .section-3-iu p {
+    font-size: 0.95rem;
+  }
+}
+
+.carousel-wrapper-iu {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  background: #ffffff;
+  border-radius: 10px;
+  margin-top: 20px;
+}
+
+.carousel-header-iu {
+  text-align: center;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.carousel-header-iu h3 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.carousel-header-iu h4 {
+  font-size: 1.4rem;
+  color: #555;
+  margin-bottom: 0;
+}
+
+.carousel-container-iu {
+  position: relative;
+  width: 100%;
+  max-width: 700px;
+  height: 400px;
+  perspective: 1200px;
+  overflow: hidden;
+  box-sizing: border-box; 
+}
+
+.carousel-iu {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+}
+
+.carousel-item-iu {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 60%;
+  height: 80%;
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+  text-align: center;
+  padding: 15px;
+  transition: all 0.6s ease;
+  opacity: 0.6;
+  z-index: 1;
+  transform-style: preserve-3d;
+  user-select: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; 
+  align-items: center;
+  box-sizing: border-box; 
+  max-width: 100%; 
+}
+
+.carousel-item-iu img {
+  width: 100%;
+  height: auto;
+  max-height: 60%;
+  border-radius: 10px;
+  object-fit: contain;
+  margin-bottom: 10px;
+}
+
+.carousel-item-iu h5 {
+  font-size: 1.2rem;
+  color: #333;
+  margin: 0 0 8px 0;
+  font-weight: bold;
+  word-wrap: break-word; 
+  hyphens: auto; 
+  width: 100%;
+}
+
+.carousel-item-iu p {
+  font-size: 0.9rem;
+  color: #333;
+  margin: 0;
+  line-height: 1.4;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  hyphens: auto;
+  width: 100%;
+  padding: 0 5px; 
+}
+
+.carousel-prev-iu, .carousel-next-iu {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.5);
+  color: white;
+  border: none;
+  font-size: 24px;
+  padding: 10px 18px;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 5;
+  transition: background 0.3s ease;
+}
+
+.carousel-prev-iu:hover, .carousel-next-iu:hover {
+  background: rgba(0,0,0,0.7);
+}
+
+.carousel-prev-iu { left: 10px; }
+.carousel-next-iu { right: 10px; }
+
+@media (max-width: 768px) {
+  .carousel-wrapper-iu {
+    padding: 15px; 
+    margin: 0 10px; 
+  }
+  
+  .carousel-header-iu {
+    margin-bottom: 15px;
+  }
+  
+  .carousel-header-iu h3 {
+    font-size: 1.5rem; 
+  }
+  
+  .carousel-header-iu h4 {
+    font-size: 1.2rem;
+  }
+  
+  .carousel-container-iu {
+    width: 100%;
+    height: 350px; 
+    perspective: 800px; 
+  }
+  
+  .carousel-item-iu {
+    width: 90%; 
+    height: 85%; 
+    padding: 10px; 
+    min-height: 0; 
+  }
+  
+  .carousel-item-iu img {
+    max-height: 50%; 
+    width: 100%;
+    height: auto;
+  }
+  
+  .carousel-item-iu h5 {
+    font-size: 1.0rem; 
+    margin-bottom: 5px;
+  }
+  
+  .carousel-item-iu p {
+    font-size: 0.8rem; 
+    line-height: 1.3;
+    padding: 0 5px;
+  }
+  
+  .carousel-prev-iu, .carousel-next-iu {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: transparent; 
+  color: #333; 
+  border: none;
+  font-size: 20px;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.carousel-prev-iu { left: 10px; }
+.carousel-next-iu { right: 10px; }
+  
+  .carousel-iu {
+    transform-style: preserve-3d; 
+  }
+}
+
+@media (max-width: 480px) {
+  .carousel-wrapper-iu {
+    padding: 10px;
+    margin: 0 5px;
+  }
+  
+  .carousel-header-iu h3 {
+    font-size: 1.3rem;
+  }
+  
+  .carousel-header-iu h4 {
+    font-size: 1.1rem;
+  }
+  
+  .carousel-container-iu {
+    height: 300px; 
+    perspective: 400px; 
+  }
+  
+  .carousel-item-iu {
+    width: 95%;
+    height: 90%;
+    padding: 8px;
+  }
+  
+  .carousel-item-iu img {
+    max-height: 45%;
+  }
+  
+  .carousel-item-iu h5 {
+    font-size: 0.95rem;
+  }
+  
+  .carousel-item-iu p {
+    font-size: 0.75rem;
+  }
+  
+  .carousel-prev-iu, .carousel-next-iu {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: transparent; 
+  color: #333; 
+  border: none;
+  font-size: 20px;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.carousel-prev-iu { left: 10px; }
+.carousel-next-iu { right: 10px; }
+  
+  .carousel-iu {
+    transform-style: flat;
+  }
+  
+  .carousel-item-iu {
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1); 
+  }
+}
+</style>
+<section class="section-iu section-1-iu">
+<div class="text-overlay-iu">
+<h3>Modern Fikirlerle Tasarlandı</h3>
+
+<p>4 tarafta ultra ince &ccedil;er&ccedil;eve ve 6,9 mm ince baş kısım tasarımıyla, t&uuml;m &ccedil;alışma alanlarına m&uuml;kemmel şekilde uyum sağlayan modern bir g&ouml;r&uuml;n&uuml;me sahiptir.</p>
+</div>
+<img alt="" src="1.jpg" /></section>
+
+<section class="section-iu section-2-iu">
+<div class="carousel-wrapper-iu">
+<div class="carousel-header-iu">
+<h3>Tasarım amacı</h3>
+
+<h4>Işık hızında ve kristal berraklığında g&ouml;rsel deneyim</h4>
+</div>
+
+<div class="carousel-container-iu"><button class="carousel-prev-iu">❮</button>
+
+<div class="carousel-iu">
+<div class="carousel-item-iu"><img alt="" src="2.jpg" />
+<h5>&Uuml;st&uuml;n Renk Kalitesi</h5>
+
+<p>IPS ekranda kendini g&ouml;steren %99 sRGB renk gamı ve 1500:1 kontrast oranı ile &uuml;st&uuml;n kaliteli renklerin ve netliğin keyfini &ccedil;ıkarın.</p>
+</div>
+
+<div class="carousel-item-iu"><img alt="" src="3.jpg" />
+<h5>Y&uuml;ksek Yenileme Hızı</h5>
+
+<p>1100 Hz y&uuml;ksek yenileme hızı ve 1 ms MPRT tepki s&uuml;resi ile monit&ouml;rde hızlı ve sorunsuz bir şekilde &ccedil;alıştığınızı hissedeceksiniz.</p>
+</div>
+
+<div class="carousel-item-iu"><img alt="" src="4.jpg" />
+<h5>Kolay Bağlantı</h5>
+
+<p>VGA ve HDMI bağlantı noktalarını kullanarak t&uuml;m cihazlarınıza kolayca bağlayın.</p>
+</div>
+</div>
+<button class="carousel-next-iu">❯</button></div>
+</div>
+</section>
+
+<section class="section-iu section-3-iu">
+<div class="text-overlay-iu">
+<h3>Geliştirilmiş G&ouml;z Koruması</h3>
+
+<p>Doğal D&uuml;ş&uuml;k Mavi Işık teknolojisi, &ccedil;alışırken g&ouml;zlerinizi yorgunluktan ve zararlı mavi ışıktan korumak i&ccedil;in perde arkasında &ccedil;alışır.</p>
+
+<p>Doğal D&uuml;ş&uuml;k Mavi Işık Modu ile Geleneksel Mavi Filtre Modunun Karşılaştırması</p>
+</div>
+<img alt="" src="5.jpg" /></section>
+
+<section class="section-iu section-4-iu">
+<div class="row-iu"><img alt="" src="6.jpg" />
+<div class="text-iu">
+<h3>Tasarım amacı</h3>
+
+<h4>Net Ses</h4>
+
+<p>Monit&ouml;r&uuml;n &ccedil;ift 3 W hoparl&ouml;r&uuml; sayesinde kristal berraklığında bir ses deneyimiyle toplantılarınızı yapın ve filmlerinizi izleyin.</p>
+</div>
+</div>
+
+<div class="row-iu"><img alt="" src="7.jpg" />
+<div class="text-iu">
+<h3>S&uuml;rd&uuml;r&uuml;lebilir Geliştirme</h3>
+
+<h4>&Ccedil;evre Dostu</h4>
+
+<p>%100 yeşil ambalaj ve %95 PCC (T&uuml;ketici sonrası geri d&ouml;n&uuml;şt&uuml;r&uuml;lm&uuml;ş i&ccedil;erik).</p>
+</div>
+</div>
+</section>
+
+<section class="section-iu section-5-iu">
+<div class="carousel-wrapper-iu">
+<div class="carousel-header-iu">
+<h3>Kullanıcı Dostu Tasarım</h3>
+
+<h4>Net ve Minimalist G&ouml;r&uuml;n&uuml;m</h4>
+
+<p>&Ccedil;alışma alanınızı d&uuml;zenli tutun ve kablo karmaşasını &ouml;nleyin.</p>
+</div>
+
+<div class="carousel-container-iu"><button class="carousel-prev-iu">❮</button>
+
+<div class="carousel-iu">
+<div class="carousel-item-iu"><img alt="" src="8.jpg" />
+<h5>Eğme A&ccedil;ısı</h5>
+
+<p>-5&deg;-22&deg; ayarlanabilir eğme ile konforlu kullanım.</p>
+</div>
+
+<div class="carousel-item-iu"><img alt="" src="9.jpg" />
+<h5>Kablo Y&ouml;netimi Yuvası</h5>
+
+<p>Masa&uuml;st&uuml;n&uuml;z&uuml; d&uuml;zenli tutmak i&ccedil;in entegre kablo y&ouml;netimi.</p>
+</div>
+
+<div class="carousel-item-iu"><img alt="" src="10.jpg" />
+<h5>Telefon Tutucu</h5>
+
+<p>Telefonunuzu kolayca yerleştirebileceğiniz pratik tutucu.</p>
+</div>
+</div>
+<button class="carousel-next-iu">❯</button></div>
+</div>
+</section>
+<script>
+(function() {
+  document.querySelectorAll('.carousel-container-iu').forEach(container => {
+    const items = container.querySelectorAll('.carousel-item-iu');
+    const prev = container.querySelector('.carousel-prev-iu');
+    const next = container.querySelector('.carousel-next-iu');
+    if (!items.length) return;
+    let current = 0;
+    let autoInterval = null; 
+
+    function update() {
+      items.forEach((item, i) => {
+        const offset = i - current;
+        const scale = offset === 0 ? 1 : 0.7;
+        const opacity = offset === 0 ? 1 : 0.6;
+        const translateX = offset * 80 - 50;
+        const rotateY = offset * 20;
+        const z = offset === 0 ? 0 : offset * -50;
+        item.style.transform = `translateX(${translateX}%) translateY(-50%) translateZ(${z}px) scale(${scale}) rotateY(${rotateY}deg)`;
+        item.style.opacity = opacity;
+        item.style.zIndex = offset === 0 ? 3 : 1;
+      });
+    }
+
+    function nextSlide() {
+      current = (current + 1) % items.length;
+      update();
+    }
+
+    function prevSlide() {
+      current = (current - 1 + items.length) % items.length;
+      update();
+    }
+
+    prev.addEventListener('click', e => { 
+      e.preventDefault(); 
+      prevSlide();
+      resetAuto(); 
+    });
+    next.addEventListener('click', e => { 
+      e.preventDefault(); 
+      nextSlide();
+      resetAuto(); 
+    });
+
+    function startAuto() {
+      if (autoInterval) clearInterval(autoInterval);
+      autoInterval = setInterval(nextSlide, 6000); 
+    }
+
+    function resetAuto() {
+      clearInterval(autoInterval);
+      startAuto(); 
+    }
+
+    container.addEventListener('mouseenter', () => {
+      if (autoInterval) clearInterval(autoInterval);
+    });
+    container.addEventListener('mouseleave', () => {
+      startAuto();
+    });
+
+    update();
+    startAuto();
+  });
+})();
+</script>

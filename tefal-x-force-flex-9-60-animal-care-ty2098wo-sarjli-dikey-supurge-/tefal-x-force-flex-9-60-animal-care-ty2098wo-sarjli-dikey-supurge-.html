@@ -1,0 +1,247 @@
+<style>
+.product-section-iu {
+  background: linear-gradient(135deg, #1e3644, #000000, #2e5b74);
+  background-attachment: fixed;
+  color: #e0e0e0;
+  overflow: hidden;
+}
+
+.product-section-iu .hero-iu {
+  text-align: center;
+  padding: 80px 20px;
+}
+.product-section-iu .hero-iu h2 {
+  font-size: clamp(32px, 3vw, 52px);
+  margin: 0;
+  font-weight: 600;
+  position: relative;
+}
+
+.product-section-iu .product-description-iu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  padding: 80px 5%;
+  opacity: 0;
+  transform: translateY(60px);
+  transition: all 0.8s ease-out;
+}
+
+.product-section-iu .product-description-iu.revealed {
+  opacity: 1;
+  transform: translateY(0);
+  transition: all 1s ease-out; 
+}
+
+.product-section-iu .image-iu {
+  width: 100%;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform 1s ease, box-shadow 1s ease; 
+}
+
+.product-section-iu .image-iu img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transform: scale(1);  
+  transition: transform 1s ease, opacity 1s ease; 
+}
+
+.product-section-iu .image-iu.zoomed img {
+  transform: scale(1.1); 
+  opacity: 1;
+}
+
+.product-section-iu .text-iu,
+.product-section-iu .text-left-iu,
+.product-section-iu .text-right-iu,
+.product-section-iu .text-center-iu {
+  color: #f2f2f2;
+  transition: transform 0.3s ease;
+}
+
+.product-section-iu h3 {
+  font-size: 30px;
+  margin-bottom: 16px;
+  position: relative;
+}
+
+.product-section-iu p {
+  font-size: 24px;
+  line-height: 1.6;
+}
+
+.product-section-iu .layout-1-iu,
+.product-section-iu .layout-3-iu,
+.product-section-iu .layout-6-iu,
+.product-section-iu .layout-7-iu {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 40px;
+}
+.product-section-iu .layout-2-iu,
+.product-section-iu .layout-4-iu,
+.product-section-iu .layout-5-iu {
+  display: grid;
+  grid-template-columns: 30% 40% 30%;
+  align-items: center;
+  gap: 40px;
+}
+
+.product-section-iu .layout-2-iu .text-left-iu,
+.product-section-iu .layout-2-iu .text-right-iu,
+.product-section-iu .layout-4-iu .text-left-iu,
+.product-section-iu .layout-4-iu .text-right-iu,
+.product-section-iu .layout-5-iu .text-center-iu {
+  text-align: center;
+}
+
+.product-section-iu .text-left-iu img[src="/Content/UploadFiles/0ff96934-wing.png"] {
+  width: 160px; 
+  position: relative;
+  animation: featherFloat 10s ease-in-out infinite;
+  filter: drop-shadow(0 0 25px rgba(255,255,255,0.3));
+  opacity: 0.95;
+  transform-origin: center;
+  will-change: transform;
+}
+
+@keyframes featherFloat {
+  0% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  10% {
+    transform: translate(80px, -40px) rotate(10deg);
+  }
+  25% {
+    transform: translate(160px, 60px) rotate(20deg);
+  }
+  40% {
+    transform: translate(100px, 160px) rotate(10deg);
+  }
+  50% {
+    transform: translate(0, 200px) rotate(0deg);
+  }
+  60% {
+    transform: translate(-100px, 160px) rotate(-10deg);
+  }
+  75% {
+    transform: translate(-160px, 60px) rotate(-20deg);
+  }
+  90% {
+    transform: translate(-80px, -40px) rotate(-10deg);
+  }
+  100% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+}
+
+
+@media (max-width: 900px) {
+  .product-section-iu .layout-1-iu,
+  .product-section-iu .layout-2-iu,
+  .product-section-iu .layout-3-iu,
+  .product-section-iu .layout-4-iu,
+  .product-section-iu .layout-5-iu,
+  .product-section-iu .layout-6-iu,
+  .product-section-iu .layout-7-iu {
+    grid-template-columns: 1fr;
+  }
+  .product-section-iu .product-description-iu {
+    padding: 40px 5%;
+  }
+}
+</style>
+
+<section class="product-section-iu">
+  <div class="hero-iu">
+    <h2>TY2098WO X-Force Flex 9.60 Animal Care Kablosuz Şarjlı Dikey Süpürge 100 Air Watt</h2>
+  </div>
+
+  <div class="product-description-iu layout-1-iu reveal-iu">
+    <div class="image-iu"><img src="/Content/UploadFiles/40cba31a-1.png" alt=""></div>
+    <div class="text-iu">
+      <h3>Yüksek Performans</h3>
+      <p>Zamanla maksimum verimlilik için 100 Air Watt’a* kadar güçlü ve sabit emiş gücü sunan kablosuz stick süpürge ve çıkarılabilir pil ile 45 dakikaya kadar çalışma süresi** * Boost modunda kullanımda ** Güçlü Eco modunda, elde kullanımda</p>
+    </div>
+  </div>
+
+  <div class="product-description-iu layout-2-iu reveal-iu">
+    <div class="text-left-iu"><img src="/Content/UploadFiles/0ff96934-wing.png" alt=""></div>
+    <div class="image-iu"><img src="/Content/UploadFiles/ebb843df-2.png" alt=""></div>
+    <div class="text-right-iu"><h3>Ultra-Hafif Dizayn</h3><p>İnce ve kompakt kablosuz süpürge—elde kullanımda sadece 1,1 kg ağırlığında—ultra hafif temizlik ve gün boyu tam konfor için.</p></div>
+  </div>
+
+  <div class="product-description-iu layout-3-iu reveal-iu">
+    <div class="text-iu"><h3>Akıllı ve Optimize Temizlik</h3>
+        <p>Her seferinde optimize edilmiş temizlik sonuçları için zemin türüne göre otomatik emiş gücü ayarı sağlayan son teknoloji ile geliştirilmiş olağanüstü performans.</p></div>
+    <div class="image-iu"><img src="/Content/UploadFiles/dcdee927-3.png" alt=""></div>
+  </div>
+
+  <div class="product-description-iu layout-4-iu reveal-iu">
+    <div class="text-left-iu"><p style="color: #01bf5d; font-size: 38px;"><strong>ECO</strong></p><p style="color: #319fd0; font-size: 38px; background: rgba(30, 30, 30, 0.6); padding: 10px 30px; border-radius: 50px; display: inline-block; box-shadow: 0 4px 20px rgba(0,0,0,0.5); font-weight: 700;"><strong>AUTO</strong></p><p style="color: #df5a64; font-size: 38px;"><strong>BOOST</strong></p></div>
+    <div class="image-iu"><img src="/Content/UploadFiles/e7761809-5.png" alt=""></div>
+    <div class="text-right-iu"><h3>Parmaklarınızın Ucunda Verimlilik</h3><p>Akıllı Kontrol Ekranı, kalan pil süresini ve filtre temizleme uyarılarını gösterir—aynı zamanda gücü ihtiyacınıza göre 3 farklı seviyede ve “boost” modu ile ayarlamanıza olanak tanır.</p></div>
+  </div>
+
+  <div class="product-description-iu layout-5-iu reveal-iu">
+    <div class="image-left-iu image-iu"><img src="/Content/UploadFiles/d1949f55-4.png" alt=""></div>
+    <div class="text-center-iu"><h3>Her Yere Ulaşan Temizlik</h3><p>Eğilmeden her yere ulaşmayı sağlayan esnek boruya ve düşük ışıklı alanlarda tozu takip etmeye yardımcı olan Power LED ışıklarına sahip akıllı tasarımı sayesinde inanılmaz kolaylıkla yeni bir süpürme deneyimi keşfedin.<br>Toz haznesi büyük kapasiteye sahiptir, böylece daha az boşaltma ve kolay bakım sağlar.</p></div>
+    <div class="image-right-iu image-iu"><img src="/Content/UploadFiles/1454f839-8.png" alt=""></div>
+  </div>
+
+  <div class="product-description-iu layout-6-iu reveal-iu">
+    <div class="image-iu"><img src="/Content/UploadFiles/67b214cf-6.png" alt=""></div>
+    <div class="text-iu"><h3>Evcil Hayvan Bakım Aksesuarları</h3><p>Yalnızca zeminlerde değil, evin her köşesinde temizlik için kapsamlı erişim sağlar—ve evcil hayvan sahiplerinin ihtiyaçlarını karşılayan özel hayvan turbo fırçası ile birlikte gelir.</p></div>
+  </div>
+
+  <div class="product-description-iu layout-7-iu reveal-iu">
+    <div class="text-iu"><h3>Üst Düzey Hijyen ve Filtreleme</h3><p>Uzun ömürlü hava/toz ayrımı ve ince tozlar, alerjenler ve akarların %99,9’unu filtreleme özelliğiyle sağlıklı ve kapsamlı bir temizlik deneyimi yaşayın.</p></div>
+    <div class="image-iu"><img src="/Content/UploadFiles/6a06e74f-7.png" alt=""></div>
+  </div>
+</section>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const reveals = document.querySelectorAll(".product-section-iu .reveal-iu");
+  const images = document.querySelectorAll(".product-section-iu .image-iu"); 
+
+  const options = {
+    threshold: 0.4 
+  };
+
+  const handleIntersection = (entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("revealed");
+        
+        if (entry.target.classList.contains("image-iu")) {
+          entry.target.classList.add("zoomed");
+        }
+      } else {
+
+        if (entry.target.classList.contains("image-iu")) {
+          entry.target.classList.remove("zoomed");
+        }
+      }
+    });
+  };
+
+  const observer = new IntersectionObserver(handleIntersection, options);
+
+  reveals.forEach(el => observer.observe(el));
+  images.forEach(el => observer.observe(el));
+
+    const wing = document.querySelector('.text-left-iu img[src="/Content/UploadFiles/0ff96934-wing.png"]');
+    if (wing) {
+    const randomDelay = Math.random() * 3; 
+    const randomDuration = 9 + Math.random() * 4; 
+    wing.style.animationDuration = `${randomDuration}s`;
+    wing.style.animationDelay = `${randomDelay}s`;
+    }
+
+});
+</script>
