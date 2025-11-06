@@ -1,0 +1,347 @@
+<style type="text/css">.category-section {
+    padding: 40px 20px !important;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+.category-block {
+    max-width: 1200px;
+    margin: 0 auto 70px;
+    padding: 40px;
+    border-radius: 25px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+    transition: all 0.3s ease;
+    background-color: white;
+}
+
+.category-block:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 18px 60px rgba(0, 0, 0, 0.1);
+}
+
+.block-left {
+    direction: rtl;
+}
+.block-left > * {
+    direction: ltr;
+}
+
+.category-text h2,
+.category-text h3 {
+    font-weight: 800;
+    color: #2c2f3a;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.category-text h2::after,
+.category-text h3::after {
+    content: '';
+    display: block;
+    width: 120px;
+    height: 4px;
+    background: linear-gradient(90deg, #ec6907, #f6b142);
+    border-radius: 2px;
+    margin-top: 10px;
+}
+
+.category-text h2 {
+    font-size: 34px;
+    text-transform: uppercase;
+}
+.category-text h3 {
+    font-size: 28px;
+}
+
+.category-text p {
+    font-size: 17px;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.category-text ul {
+    list-style: none;
+    padding-left: 0;
+    margin: 30px 0;
+}
+.category-text ul li {
+    padding-left: 32px;
+    position: relative;
+    margin-bottom: 12px;
+    font-size: 17px;
+    font-weight: 500;
+    color: #444;
+}
+.category-text ul li::before {
+    content: '✓';
+    color: #ec6907;
+    font-size: 1.3em;
+    font-weight: 700;
+    position: absolute;
+    left: 0;
+    top: -2px;
+}
+
+.highlight {
+    font-size: 19px;
+    font-weight: 600;
+    color: #212121;
+    margin-top: 35px;
+    border-left: 6px solid #ef8434;
+    background: linear-gradient(90deg, #fff9f3 0%, #e3f6ff 100%);
+    padding: 15px 20px 15px 25px;
+    border-radius: 10px;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.05);
+}
+
+.category-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.image-placeholder {
+    width: 80%;
+    aspect-ratio: 1 / 1;
+    max-width: 550px;
+    background: linear-gradient(145deg, #3a3e54 0%, #ec6907 100%);
+    border-radius: 30px;
+    box-shadow: 0 15px 45px rgba(0, 0, 0, 0.15);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    transition: all 0.4s ease;
+}
+.image-placeholder:hover {
+    transform: scale(1.05);
+    box-shadow: 0 20px 55px #ec6a07af;
+}
+.image-placeholder img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.block-center {
+    grid-template-columns: 1fr;
+    text-align: center;
+    background: linear-gradient(to top, #e3f6ff, #ffffff);
+    padding: 70px;
+    border: 2px solid #f3f3f3;
+}
+.block-center .image-placeholder {
+    max-width: 420px;
+    margin: 40px auto;
+    background: linear-gradient(45deg, #3a3e54, #ec6907);
+}
+
+.block-center .category-text h2 {
+    position: relative;
+    display: inline-block; 
+}
+
+.block-center .category-text h2::after {
+    content: "";
+    width: 120px; 
+    height: 4px; 
+    background: linear-gradient(90deg, #ec6907, #f6b142);; 
+    position: absolute;
+    bottom: -12px; 
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 2px;
+}
+
+@media (max-width: 992px) {
+    .category-block {
+        grid-template-columns: 1fr;
+        padding: 40px 25px;
+        gap: 40px;
+        margin-bottom: 50px;
+    }
+}
+
+@media (max-width: 768px) {
+    .category-block {
+        padding: 30px 15px;
+        gap: 25px;
+        margin-bottom: 40px;
+    }
+}
+
+@media (max-width: 480px) {
+    .category-block {
+        padding: 25px 10px;
+        border-radius: 15px;
+    }
+    .category-image {
+        order: -1;
+    }
+    .category-text,
+    .category-text h2,
+    .category-text p,
+    .highlight {
+        text-align: left !important;
+    }
+    .block-left {
+        direction: ltr;
+    }
+}
+</style>
+<section class="category-section">
+<div class="category-block block-left">
+<div class="category-text">
+<p>
+Güçlü emiş gücü ve kullanışlı yapısıyla öne çıkan Fakir dikey süpürge modelleri, ev temizliğini çok daha pratik hale getirir. Hafif, konforlu ve çok yönlü özellikleri ile bilinen dikey süpürge çeşitleri, ergonomik tasarımı ile dar alanlarda bile kolaylıkla kullanılabilir.
+</p>
+
+<p>
+Profesyonel temizlik için tasarlanan Fakir dikey elektrikli süpürgeler farklı zemin tiplerine rahatlıkla adapte olur. Halı, ahşap, parke veya fayans yüzeyler için emiş gücünü optimize edebilen dikey süpürge çeşitleri, minimum eforla maksimum temizlik sunar. Dikey süpürgenin kompakt formu sayesinde süpürge başlığını zahmetsizce hareket ettirmek ve kolayca temizlik yapmak da mümkün olur.
+</p>
+
+<p class="highlight"> Fakir'in yenilikçi özellikleri sayesinde hem enerji verimliliği hem de etkili temizlik elde edilir.</p>
+</div>
+
+<div class="category-image">
+<div class="image-placeholder"><img alt="" src="/Content/UploadFiles/d6e21104-1.jpg" /></div>
+</div>
+</div>
+
+<div class="category-block block-right">
+<div class="category-text">
+<h3>Fakir Dikey Süpürge Modelleri ile Hafiflik ve Performansı Keşfedin</h3>
+
+<p>
+Dikey formda geliştirilen Fakir süpürge modellerinin ergonomik gövde yapısı, günlük kullanımda önemli avantajları da beraberinde getirir. Süpürgenin hafifliği ise kullanım kolaylığını bir üst noktaya taşır. Günlük temizlikte ya da yere herhangi bir şey döküldüğünde süpürgeyi rahatlıkla kurabilmek ve kirli yüzeylere hızlı bir şekilde müdahale etmek sıradan bir iş haline gelir.
+</p>
+
+<p>
+Fakir dikey elektrikli süpürge çeşitlerinin kullanım kolaylığı kompakt tasarımla sınırlı kalmaz. Süpürgenin ergonomik sap kısmı kullanıcının boyuna uygun olarak tek hareketle ayarlanabilir. Dikey süpürge modellerinde geleneksel süpürgelerde bulunan esnek hortum parçasının yer almaması da kullanım esnasında karşılaşılan takılmaları ve hareket kısıtlamalarını ortadan kaldırır.
+</p>
+
+<p class="highlight">
+En güvenilir elektrikli ev aleti markaları arasında yer alan Fakir, kullanıcı deneyimini geliştirmeye öncelik verir. Kaliteli ve uzun ömürlü bileşenleri ile öne çıkan Fakir ürünleri, kullanıcı odaklı tasarımı ile göz doldurur. Fakir marka dikey süpürgeler zemine göre emiş gücünü ayarlar. Halıda ve paspas gibi yüzeylerde emiş gücü artarken parke ve fayans benzeri düz yüzeylerde de emiş gücü ideal seviyede tutulur.
+</p>
+</div>
+
+<div class="category-image">
+<div class="image-placeholder"><img alt="" src="/Content/UploadFiles/2e6320f7-2.jpg" /></div>
+</div>
+</div>
+
+<div class="category-block block-left">
+<div class="category-text">
+<h3>Fakir Dikey Süpürge Hangi Özellikleriyle Öne Çıkar?</h3>
+
+<p>
+Fakir dikey süpürge modelleri yapısı gereği geleneksel süpürge modellerinden oldukça farklıdır. Temizlik borusu, dikey formda tasarlanan süpürgelerin ana iskeletini oluşturur. Motor, tahliye kanalı, başlıklar ve tutma kolu, boru üzerine konumlandırılır. Bu sayede hem oldukça hafif hem de son derece kompakt bir tasarım elde edilir.
+</p>
+
+<p>
+Kaliteli rulmanlarla donatılan temizlik başlığı, vakum gücünün de etkisiyle kendiliğinden ilerler. Bu sayede minimum eforla pratik ve sorunsuz süpürme yapılabilir. Otomatik güç algılama sistemi, zemin durumuna ve kirlilik seviyesine uygun olarak motor gücünün ayarlanmasına olanak tanır. Temiz alanlarda daha az güç, kirli bölgelerde ise daha etkin vakumlama ile optimum verimliliğe ulaşılır.
+</p>
+
+<p class="highlight">
+    Alman mühendisliğini pratik tasarım ile buluşturan Fakir, en çok tercih edilen dikey süpürge markaları arasında yer alır. Kendi segmentinde yenilikçi özelliklere imza atan marka, sıradışı tasarım detaylarına sahiptir. Ev tipi süpürge modelleri içinde bulunan Fakir dikey süpürgeler otomatik sürüş, akıllı kir algılama ve kendi kendini temizleme gibi özellikler ile gelir.
+</p>
+</div>
+
+<div class="category-image">
+<div class="image-placeholder"><img alt="" src="/Content/UploadFiles/0352f526-3.jpg" /></div>
+</div>
+</div>
+
+<div class="category-block block-center">
+<div class="category-text">
+<h2>Fakir Islak Kuru Dikey Süpürge Modelleri ile Çift Fonksiyonlu Temizlik</h2>
+
+<p>
+Leke temizliği özelliği halı, kilim, parke, cam veya mermer gibi yüzeylere tutunan inatçı lekeleri başarıyla ortadan kaldırır. Fakir ıslak-kuru dikey süpürgelerde toz hazneli süpürge çeşitlerinden farklı olarak temiz ve kirli su tankları da bulunur. Çift hazneli tank aparatı sayesinde temiz ve kirli suyun birbirine karışması önlenir.
+</p>
+
+<p>
+Pratik temizlik aleti olan ıslak kuru elektrikli süpürge çeşitleri, çok amaçlı aksesuar seçenekleri ile dikkat çeker. Fakir ıslak kuru dikey süpürge üzerine eklenebilen akıllı başlıklar sayesinde cam, duvar köşeleri, koltuk kenarları ve petek araları gibi ulaşılması zor alanlara kolaylıkla müdahale edilebilir.
+</p>
+
+<p>
+Fakir ıslak kuru dikey süpürge modelleri en güncel teknolojilerle sunulur. Süpürge gövdesi veya başlığı üzerine konumlandırılan LCD gösterge panelinden batarya doluluk oranı, çalışma modu ve kullanım bildirimleri anlık olarak takip edilebilir. Ayrıca LED ışıklı gösterge başlığı sayesinde karanlık alanlarda da kolaylıkla temizlik yapılabilir.
+</p>
+
+<p class="highlight">HEPA filtreli süpürge modelleri zemine tutunan ince partikülleri ve alerjenleri temizleme konusunda da oldukça iyidir.</p>
+</div>
+
+<div class="category-image">
+<div class="image-placeholder"><img alt="" src="/Content/UploadFiles/d2c2694f-4.jpg" /></div>
+</div>
+</div>
+
+<div class="category-block block-left">
+<div class="category-text">
+<h3>Fakir Kablolu Dikey Süpürgeler: Kesintisiz Güç, Yüksek Emiş</h3>
+
+<p>
+Fakir dikey süpürge modelleri kablolu ve kablosuz olmak üzere iki farklı temel model seçeneğine sahiptir. Giriş seviyesi için ideal olan kablolu süpürge modelleri fazla eşyanın olmadığı geniş odalar için büyük kolaylık sağlar. Şarj ihtiyacı duymadan tüm odalar pratik bir şekilde süpürülebilir. Fakir kablolu dikey süpürge üzerinde batarya olmadığı için hem gövde ağırlığı azalır hem de kesintisiz güç sağlanır.
+</p>
+
+<p>
+Popüler bir kablolu model olan Fakir Darky's 2in1 Rouge dikey elektrikli süpürge, 1000 Watt motor gücü sayesinde kesintisiz ve stabil kullanım sunar. Sadece 2,8 kg ağırlığında olan Fakir süpürge, bir yerden başka bir yere rahatlıkla taşınabilir. Pratik şekilde 6 metreye kadar uzayabilen kablo desteği mobiliteyi artırır. Üçgen formda tasarlanan tekerlekli uç aparatı ise köşe alanlara erişimi kolaylaştırır.
+</p>
+
+<p class="highlight">Çok fazla eşyanın olduğu ve dar aralıkların bulunduğu odalar için ise Fakir kablolu dikey süpürge yerine kablosuz modeller tercih edilebilir. Yeni nesil kablosuz Fakir dik süpürge modelleri hem fazla yer kaplamaz hem de kablosuz yapısı ile kargaşayı önler. Süpürge başlığını kablonun ulaşamadığı noktalara veya kapı pervazları gibi yüksek alanlara rahatlıkla taşıyabilmek de mümkün olur.</p>
+</div>
+
+<div class="category-image">
+<div class="image-placeholder"><img alt="" src="/Content/UploadFiles/391ff56c-5.jpg" /></div>
+</div>
+</div>
+
+<div class="category-block block-right">
+<div class="category-text">
+<h3>Fakir Dikey Süpürge Fiyatları: Her Bütçeye Uygun Seçenekler</h3>
+
+<p>
+Bütçe dostu ve az yer kaplayan süpürge arayışında olanlar Fakir dikey süpürge alternatifleri içinden seçim yapabilir. Pure Clean, Shadow ve Invator serisi Fakir dikey süpürge modelleri, dikey süpürge önerisi için en iyi örnekler arasında sıralanabilir. Örneğin; Fakir Invator serisi modeller, üçlü filtreleme özelliği ile kıl, tüy ve partikül gibi zorlu kirleri kolayca hapseder.
+</p>
+
+<p>
+Fakir dikey süpürge yorumları da kararsızlık yaşayan kullanıcılara yol gösterebilir. Süpürge yorumlarında yer alan gerçek kullanıcı deneyimleri sayesinde hangi ürünün kullanım tarzınıza ve ihtiyacınıza yanıt verebileceğini öngörmek kolaylaşır. Fakir dik süpürge görselleri ve teknik detayları da süpürgeyi yakından incelemenize yardımcı olur.
+</p>
+
+<p>
+Fakir dikey süpürge fiyatları ise ürünün modeline, tasarımına, motor gücüne ve özelliklerine bağlı olarak değişkenlik gösterebilir. Yeni nesil kablosuz Fakir dik süpürge fiyatları, geleneksel kablolu modellerden genellikle daha yüksektir. 
+</p>
+
+<p class="highlight">Fakir dikey süpürge fiyatları üzerinde etkili olan bir diğer husus da aksesuar seçenekleridir. Ekstra donanımlara ve duvar standı gibi aksesuarlara bağlı olarak fiyat seviyesi artabilir.</p>
+</div>
+
+<div class="category-image">
+<div class="image-placeholder"><img alt="" src="/Content/UploadFiles/9aeba883-6.jpg" /></div>
+</div>
+</div>
+
+<div class="category-block block-center">
+<div class="category-text">
+<h2>Jebinde ile Fakir Dikey Süpürge Alışverişi: Güvenli Satın Alma</h2>
+
+<p>
+Güvenli alışverişin adresi Jebinde, yetkili satıcı garantisi altında sunulan ürünlere ev sahipliği yapar. Orijinal ürün güvencesi ile sunulan elektrikli ev aletleri kullanıcıların gönül rahatlığıyla alışveriş yapabilmesine olanak tanır.
+</p>
+
+<p>
+Jebinde üzerinden satılan her Fakir elektrikli süpürge modeli orijinal ambalajı ve kullanım kılavuzu ile gelir. Kullanım için gerekli olan tüm parçalar da kutu içeriğinde belirtildiği şekilde sunulur. Online alışverişte oldukça önemli olan müşteri desteği ise satın alma sürecinin ilk aşamasından son aşamasına kadar devam eder.
+</p>
+
+<p class="highlight">Siz de yeni nesil <a href="https://www.jebinde.com/kucuk-ev-aletleri/supurge"><strong>elektrikli süpürge</strong></a> modelleri için detaylı arama yapabilir, bütçenize en uygun elektrikli süpürgeye Jebinde güvencesi ve ayrıcalıkları ile sahip olabilirsiniz.</p>
+</div>
+
+<div class="category-image">
+<div class="image-placeholder"><img alt="" src="/Content/UploadFiles/e59a0982-7.jpg" /></div>
+</div>
+</div>
+</section>

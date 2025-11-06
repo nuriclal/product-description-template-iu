@@ -1,0 +1,317 @@
+<style>
+.product-section-iu {
+  background: linear-gradient(135deg, #1e3644, #000000, #2e5b74);
+  color: #e0e0e0;
+  overflow: hidden;
+}
+
+.product-section-iu .hero-iu {
+  text-align: center;
+  padding: 20px;
+  position: relative;
+}
+
+.product-section-iu .hero-iu h2 {
+  font-size: clamp(34px, 2vw, 52px);
+  line-height: 1;
+  margin: 0;
+  margin-top: 20px;
+  font-weight: 600;
+}
+
+.product-section-iu .hero-iu img {
+  width: 80%;
+  height: auto;
+  padding: 10px;
+  object-fit: cover; 
+}
+
+.product-section-iu .product-description-iu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  padding: 40px 5%;
+  opacity: 0;
+  transform: translateY(60px);
+  transition: all 0.8s ease-out;
+}
+
+.product-section-iu .product-description-iu.revealed {
+  opacity: 1;
+  transform: translateY(0);
+  transition: all 1s ease-out;
+}
+
+.product-section-iu .image-iu {
+  width: 100%;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform 1s ease, box-shadow 1s ease;
+}
+
+.product-section-iu .image-iu img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transform: scale(1);
+  transition: transform 1s ease, opacity 1s ease;
+}
+
+.product-section-iu .image-iu.zoomed img {
+  transform: scale(1.05); 
+  opacity: 1;
+}
+
+.mode-container-iu {
+  text-align: center;
+}
+
+.mode-top-iu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+  margin-bottom: 10px;
+}
+
+.mode-top-iu p {
+  font-size: 28px !important;
+  font-weight: 700;
+  margin: 0;
+}
+
+.mode-top-iu .eco { color: #01bf5d; }
+.mode-top-iu .max { color: #ff7b00; }
+.mode-top-iu .boost { color: #df5a64; }
+
+.mode-bottom-iu .auto {
+  color: #319fd0;
+  font-size: 28px !important;
+  background: rgba(30, 30, 30, 0.6);
+  padding: 8px 28px;
+  border-radius: 50px;
+  display: inline-block;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+  font-weight: 700;
+}
+
+.product-section-iu .text-iu,
+.product-section-iu .text-left-iu,
+.product-section-iu .text-right-iu,
+.product-section-iu .text-center-iu {
+  color: #f2f2f2;
+  transition: transform 0.3s ease;
+}
+
+.product-section-iu h3 {
+  font-size: 24px !important;
+  margin-bottom: 16px !important;
+  position: relative;
+}
+
+.product-section-iu p {
+  font-size: 20px !important;
+  line-height: 1.6 !important;
+}
+
+.product-section-iu .layout-1-iu,
+.product-section-iu .layout-3-iu,
+.product-section-iu .layout-6-iu,
+.product-section-iu .layout-7-iu {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 40px;
+}
+
+.product-section-iu .layout-2-iu,
+.product-section-iu .layout-4-iu,
+.product-section-iu .layout-5-iu {
+  display: grid;
+  grid-template-columns: 30% 40% 30%;
+  align-items: center;
+  gap: 40px;
+}
+
+.product-section-iu .layout-2-iu .text-left-iu,
+.product-section-iu .layout-2-iu .text-right-iu,
+.product-section-iu .layout-4-iu .text-left-iu,
+.product-section-iu .layout-4-iu .text-right-iu,
+.product-section-iu .layout-5-iu .text-center-iu {
+  text-align: center;
+}
+
+.product-section-iu .text-left-iu img[src="/Content/UploadFiles/b26f7c76-wing.png"] {
+  width: 160px;
+  position: relative;
+  animation: featherFloat 10s ease-in-out infinite;
+  filter: drop-shadow(0 0 25px rgba(255,255,255,0.3));
+  opacity: 0.95;
+  transform-origin: center;
+  will-change: transform;
+}
+
+@keyframes featherFloat {
+  0% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  10% {
+    transform: translate(80px, -40px) rotate(10deg);
+  }
+  25% {
+    transform: translate(160px, 60px) rotate(20deg);
+  }
+  40% {
+    transform: translate(100px, 160px) rotate(10deg);
+  }
+  50% {
+    transform: translate(0, 200px) rotate(0deg);
+  }
+  60% {
+    transform: translate(-100px, 160px) rotate(-10deg);
+  }
+  75% {
+    transform: translate(-160px, 60px) rotate(-20deg);
+  }
+  90% {
+    transform: translate(-80px, -40px) rotate(-10deg);
+  }
+  100% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+}
+
+@media (max-width: 900px) {
+  .product-section-iu .layout-1-iu,
+  .product-section-iu .layout-2-iu,
+  .product-section-iu .layout-3-iu,
+  .product-section-iu .layout-4-iu,
+  .product-section-iu .layout-5-iu,
+  .product-section-iu .layout-6-iu,
+  .product-section-iu .layout-7-iu {
+    grid-template-columns: 1fr;
+  }
+  .product-section-iu .product-description-iu {
+    padding: 40px 5%;
+  }
+  .product-section-iu .hero-iu img {
+  width: 100%;
+  height: auto;
+  padding: 10px;
+  object-fit: cover; 
+}
+}
+
+</style>
+
+<section class="product-section-iu">
+  <div class="hero-iu">
+    <h2>Tefal X-Force Flex 13.60 Allergy Aqua TY9AC Aerospin Şarjlı Dikey Süpürge</h2>
+    <img src="/Content/UploadFiles/e19f4d70-x-force-13-60.png">
+  </div>
+
+  <div class="product-description-iu layout-1-iu reveal-iu">
+    <div class="image-iu"><img src="/Content/UploadFiles/4cc573b0-1.jpg" alt=""></div>
+    <div class="text-iu">
+      <h3>Yüksek verimli temizlik</h3>
+      <p>Zemindeki kirler için yeni nesil fırça ve 150 Air Watt'a kadar emiş gücü ile halılar da dahil olmak üzere her türlü zeminde tam derinlemesine temizlik.<br>En küçüğüne kadar neredeyse tüm ince tozları, alerjenleri ve ev tozu akarlarını yakalayan %99 filtreleme teknolojisi ile üstün filtreleme.</p>
+    </div>
+  </div>
+
+  <div class="product-description-iu layout-2-iu reveal-iu">
+    <div class="text-left-iu"><img src="/Content/UploadFiles/b26f7c76-wing.png" alt=""></div>
+    <div class="image-iu"><img src="/Content/UploadFiles/46eb123f-2.jpg" alt=""></div>
+    <div class="text-right-iu"><h3>Hafif temizlik</h3>
+    <p>İnce ve hafif tasarım (elde kullanım modunda 1,6 kg) tam konfor ve rahatlık ile kablosuz temizlik deneyimi sunar</p></div>
+  </div>
+
+  <div class="product-description-iu layout-3-iu reveal-iu">
+    <div class="text-iu"><h3>Aerospin Aqua Başlık Sistemi</h3>
+        <p>Aqua aksesuarınızla geliştirilmiş yüksek performanslı paspas aparatı sayesinde aynı anda süpürme ve paspaslama işlemi ile temizlik sürenizi yarı yarıya azaltın.</p></div>
+    <div class="image-iu"><img src="/Content/UploadFiles/c627129b-3.jpg" alt=""></div>
+  </div>
+
+<div class="product-description-iu layout-4-iu reveal-iu">
+  <div class="text-left-iu">
+    <div class="mode-container-iu">
+      <div class="mode-top-iu">
+        <p class="eco">ECO</p>
+        <p class="max">MAX</p>
+        <p class="boost">BOOST</p>
+      </div>
+      <div class="mode-bottom-iu">
+        <p class="auto">AUTO</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="image-iu">
+    <img src="/Content/UploadFiles/0ce264ad-4.jpg" alt="">
+  </div>
+
+  <div class="text-right-iu">
+    <h3>Akıllı izleme</h3>
+    <p>En sevdiğiniz elektrikli süpürge şimdi hızı, batarya seviyesini ve zahmetsiz bakım için akıllı filtre temizleme uyarılarını gösteren akıllı bir LED ekrana sahip.</p>
+  </div>
+</div>
+
+
+  <div class="product-description-iu layout-5-iu reveal-iu">
+    <div class="image-left-iu image-iu"><img src="/Content/UploadFiles/9a92a01b-8.jpg" alt=""></div>
+    <div class="text-center-iu"><h3>Akıllı ve Uzun Ömürlü Temizlik</h3><p>Gelişmiş teknoloji, işi sizin yerinize yapan bir elektrikli süpürge için zeminin tipine göre otomatik emiş gücü ayarı sunar.<br>Tek bir şarjla her yeri temizlemek için 60 dakikaya* kadar azalmayan emiş performansı sağlayan yüksek kaliteli bir batarya. *portatif cihazı Eco konumunda kullanırken</p></div>
+    <div class="image-right-iu image-iu"><img src="/Content/UploadFiles/6b2a8884-6.jpg" alt=""></div>
+  </div>
+
+  <div class="product-description-iu layout-6-iu reveal-iu">
+    <div class="image-iu"><img src="/Content/UploadFiles/5a0155e8-5.jpg" alt=""></div>
+    <div class="text-iu"><h3>Esnek boru</h3><p>Esnek boru tasarımı, düşük aydınlatmalı alanlarda tozu takip etmek adına LED barlar sayesinde eğilmeden her yerde tam temizlik için mobilyaların derinliklerine ulaşır.</p></div>
+  </div>
+
+  <div class="product-description-iu layout-7-iu reveal-iu">
+    <div class="text-iu"><p> Kutu İçeriği: Dikey elektrikli süpürge, şarj istasyonu, şarj cihazı, dar uçlu başlık, kanepe fırçası, 4 paspaslı Aerospin aktif Aqua Başlık</p></div>
+    <div class="image-iu"><img src="/Content/UploadFiles/19a35419-7.jpg" alt=""></div>
+  </div>
+</section>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const reveals = document.querySelectorAll(".product-section-iu .reveal-iu");
+  const images = document.querySelectorAll(".product-section-iu .image-iu"); 
+
+  const options = {
+    threshold: 0.4 
+  };
+
+  const handleIntersection = (entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("revealed");
+        
+        if (entry.target.classList.contains("image-iu")) {
+          entry.target.classList.add("zoomed");
+        }
+      } else {
+
+        if (entry.target.classList.contains("image-iu")) {
+          entry.target.classList.remove("zoomed");
+        }
+      }
+    });
+  };
+
+  const observer = new IntersectionObserver(handleIntersection, options);
+
+  reveals.forEach(el => observer.observe(el));
+  images.forEach(el => observer.observe(el));
+
+    const wing = document.querySelector('.text-left-iu img[src="/Content/UploadFiles/b26f7c76-wing.png"]');
+    if (wing) {
+    const randomDelay = Math.random() * 3; 
+    const randomDuration = 9 + Math.random() * 4; 
+    wing.style.animationDuration = `${randomDuration}s`;
+    wing.style.animationDelay = `${randomDelay}s`;
+    }
+
+});
+</script>

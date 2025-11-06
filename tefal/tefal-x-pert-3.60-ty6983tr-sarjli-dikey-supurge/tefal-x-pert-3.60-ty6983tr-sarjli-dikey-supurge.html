@@ -1,0 +1,292 @@
+<style type="text/css">.product-section {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 35px;
+}
+
+.product {
+  background-color: #fff;
+  border-radius: 16px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+  transition: all 0.35s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+}
+
+.product:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+}
+
+.product-img {
+  width: 100%;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 25px;
+  transition: all 0.3s ease;
+}
+
+.product:hover .product-img img {
+  transform: scale(1.05);
+  transition: transform 0.4s ease;
+}
+
+.product-img img {
+  width: 50%;
+  height: auto;
+  object-fit: contain;
+  border-radius: 10px;
+}
+
+.product-description {
+  width: 100%;
+  text-align: center;
+  padding: 20px 15px 30px;
+}
+
+.product-description h4 {
+  color: #111;
+  font-size: 1.15rem;
+  margin: 0 0 10px;
+  font-weight: 600;
+}
+
+.product-description p {
+  font-size: 0.95rem;
+  color: #555;
+  line-height: 1.5;
+  opacity: 0;
+  max-height: 0;
+  transition: all 0.4s ease;
+  overflow: hidden;
+}
+
+.product:hover .product-description p {
+  opacity: 1;
+  max-height: 200px;
+  margin-top: 10px;
+}
+
+@media (max-width: 1200px) {
+  .product-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .product-description p {
+    opacity: 0;
+    max-height: 0;
+    margin-top: 0;
+    transform: translateY(10px);
+    transition: opacity 0.35s ease, max-height 0.35s ease, margin-top 0.35s ease, transform 0.35s ease;
+    overflow: hidden;
+  }
+  .product-description p.visible {
+    opacity: 1;
+    max-height: 200px;
+    margin-top: 10px;
+    transform: translateY(0);
+  }
+
+  .product-img img {
+    transform: scale(1);
+    transition: transform 0.4s ease;
+    will-change: transform;
+  }
+  .product-img img.zoomed {
+    transform: scale(1.05);
+  }
+}
+
+@media (max-width: 800px) {
+
+  .product-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .product-description p {
+    opacity: 0;
+    max-height: 0;
+    margin-top: 0;
+    transform: translateY(10px);
+    transition: opacity 0.35s ease, max-height 0.35s ease, margin-top 0.35s ease, transform 0.35s ease;
+    overflow: hidden;
+  }
+  .product-description p.visible {
+    opacity: 1;
+    max-height: 200px;
+    margin-top: 10px;
+    transform: translateY(0);
+  }
+
+  .product-img img {
+    transform: scale(1);
+    transition: transform 0.4s ease;
+    will-change: transform;
+  }
+  .product-img img.zoomed {
+    transform: scale(1.05);
+  }
+}
+
+@media (max-width: 500px) {
+  .product-grid {
+    grid-template-columns: 1fr;
+  }
+  .product-description p {
+    opacity: 0;
+    max-height: 0;
+    margin-top: 0;
+    transform: translateY(10px);
+    transition: opacity 0.35s ease, max-height 0.35s ease, margin-top 0.35s ease, transform 0.35s ease;
+    overflow: hidden;
+  }
+  .product-description p.visible {
+    opacity: 1;
+    max-height: 200px;
+    margin-top: 10px;
+    transform: translateY(0);
+  }
+
+  .product-img img {
+    transform: scale(1);
+    transition: transform 0.4s ease;
+    will-change: transform;
+  }
+  .product-img img.zoomed {
+    transform: scale(1.05);
+  }
+}
+</style>
+<section class="product-section">
+<div class="product-grid">
+<div class="product">
+<div class="product-img"><img alt="" src="/Content/UploadFiles/69bdebd5-1.jpg" /></div>
+
+<div class="product-description">
+<h4>45 Dakika*&#39;ya Kadar Kablosuz Kullanım</h4>
+
+<p>&Uuml;st&uuml;n performans ile istediğiniz zaman ve yerde temizlik yapmanızı sağlayan 45 dakikaya kadar &ccedil;alışma s&uuml;resi *.</p>
+</div>
+</div>
+
+<div class="product">
+<div class="product-img"><img alt="" src="/Content/UploadFiles/6c72cb20-2.jpg" /></div>
+
+<div class="product-description">
+<h4>Hızlı Temizlik i&ccedil;in Motorlu Fır&ccedil;a</h4>
+
+<p>Tek bir seferde t&uuml;m tozları toplayan, temiz ve daha keyifli bir ev i&ccedil;in tozları yok eden motorlu bir fır&ccedil;a ile hızlı temizlemeye sahip olun.</p>
+</div>
+</div>
+
+<div class="product">
+<div class="product-img"><img alt="" src="/Content/UploadFiles/1a9d2057-3.jpg" /></div>
+
+<div class="product-description">
+<h4>22V Lityum Pil</h4>
+
+<p>NiMH pilden iki kata kadar daha uzun s&uuml;re ev temizliği i&ccedil;in 22V&#39;lık y&uuml;ksek kaliteli lityum pil kullanılmıştır.</p>
+</div>
+</div>
+
+<div class="product">
+<div class="product-img"><img alt="" src="/Content/UploadFiles/f1778227-4.jpg" /></div>
+
+<div class="product-description">
+<h4>Zeminden Tavana 3&#39;&uuml; 1 Arada Temizlik</h4>
+
+<p>Zeminden tavana kadar evinizin her yerine ulaşmak i&ccedil;in tasarlanmış bu &uuml;r&uuml;nle hareket verimliliğini keşfedin.</p>
+</div>
+</div>
+
+<div class="product">
+<div class="product-img"><img alt="" src="/Content/UploadFiles/9034b7c5-5.jpg" /></div>
+
+<div class="product-description">
+<h4>Ekstra Hafif</h4>
+
+<p>Zahmetsiz ve hızlı temizlik i&ccedil;in sadece 2,2 kg.</p>
+</div>
+</div>
+
+<div class="product">
+<div class="product-img"><img alt="" src="/Content/UploadFiles/59e1e712-6.jpg" /></div>
+
+<div class="product-description">
+<h4>Tozları Daha İyi G&ouml;rebilmeniz İ&ccedil;in LED Işıklar</h4>
+
+<p>Gelişmiş hareket kapasitesi, al&ccedil;ak mobilyaların altındaki tozları kolay bir şekilde s&uuml;p&uuml;rmenize yardımcı olurken, y&uuml;ksek kaliteli LED ışıklara sahip motorlu bir başlık ile ulaşılması zor alanlardaki tozu kolayca s&uuml;p&uuml;r&uuml;n.</p>
+</div>
+</div>
+
+<div class="product">
+<div class="product-img"><img alt="" src="/Content/UploadFiles/7d1840bd-7.jpg" /></div>
+
+<div class="product-description">
+<h4>Kullanım Sırasında Muhteşem Konforun Keyfine Varın</h4>
+
+<p>&Uuml;r&uuml;n&uuml; kolayca saklamak i&ccedil;in duvara montaj tabanı</p>
+</div>
+</div>
+
+<div class="product">
+<div class="product-img"><img alt="" src="/Content/UploadFiles/71dea060-8.jpg" /></div>
+
+<div class="product-description">
+<h4>T&uuml;m Zeminler İ&ccedil;in Tek Başlık!</h4>
+
+<p>Her t&uuml;rl&uuml; zeminde etkin kullanım sağlayan motorlu fır&ccedil;a</p>
+</div>
+</div>
+</div>
+</section>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  if (window.innerWidth <= 800) {
+    const products = document.querySelectorAll(".product");
+    let activeCard = null;
+    let timeout = null;
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        const el = entry.target;
+        const p = el.querySelector(".product-description p");
+        const img = el.querySelector(".product-img img");
+
+        if (entry.intersectionRatio === 1) {
+          if (activeCard && activeCard !== el) {
+            const oldP = activeCard.querySelector(".product-description p");
+            const oldImg = activeCard.querySelector(".product-img img");
+            oldP.classList.remove("visible");
+            oldImg.classList.remove("zoomed");
+          }
+          clearTimeout(timeout);
+          timeout = setTimeout(() => {
+            activeCard = el;
+            p.classList.add("visible");
+            img.classList.add("zoomed");
+          }, 100);
+        } 
+        else if (activeCard === el && entry.intersectionRatio < 0.8) {
+          clearTimeout(timeout);
+          timeout = setTimeout(() => {
+            p.classList.remove("visible");
+            img.classList.remove("zoomed");
+            activeCard = null;
+          }, 100);
+        }
+      });
+    }, { threshold: [0, 0.8, 1] });
+
+    products.forEach(p => observer.observe(p));
+  }
+});
+</script>

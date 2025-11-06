@@ -1,0 +1,292 @@
+<style> 
+@property --card-rotation-progress { 
+  syntax: "<number>";
+  inherits: true;
+  initial-value: 0;
+}
+
+@property --radial-progress {
+  syntax: "<number>";
+  inherits: true;
+  initial-value: 0;
+}
+
+:where(h3) {
+}
+
+.container-iu {
+  max-width: 80rem;
+  margin-block: 2rem;
+  margin-inline: auto;
+}
+
+.hero-iu {
+  container-type: inline-size;
+  min-height: 20vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-iu .hero__title-iu {
+  font-size: 40px;
+  text-align: center;
+  background-image: linear-gradient(to right, #001f5b, #FFA500);
+  background-clip: text;
+  color: transparent;
+
+}
+
+.hero-iu .hero__payoff-iu {
+  font-size: 20px;
+  text-align: center;
+  font-weight: var(--font-weight-9);
+}
+
+.divider-v-iu {
+  display: grid;
+  gap: var(--size-fluid-6);
+}
+
+.section-iu {
+  container-type: inline-size;
+  position: relative;
+  background: #fff !important;
+  border-radius: var(--radius-3);
+}
+
+.section-iu .section__title-iu {
+  margin-block: 0 var(--size-fluid-2);
+}
+
+.calendar-container-iu {
+  overflow: hidden;
+  position: relative;
+  perspective: 1000px;
+}
+
+.calendar-wide-iu {
+  transform-style: preserve-3d;
+  width: 100%;
+  aspect-ratio: 2/1;
+  animation: calendarLargeAppear 1ms linear, calendarLargeFadeIn 1s ease-out;
+  animation-timeline: scroll(root), auto;
+  animation-range: -10% 20%;
+}
+
+.calendar-mobile-iu {
+  width: 22rem;
+  aspect-ratio: 1/1;
+  position: absolute;
+  inset: auto 5% 3% auto;
+  z-index: 1;
+  opacity: 0;
+  animation: calendarSmallAppear 1ms cubic-bezier(0.17, 0.67, 0.34, 1.36) forwards;
+  animation-timeline: scroll(root);
+  animation-range: 5% 25%;
+}
+
+.calendar-iu {
+  width: 100%;
+  aspect-ratio: 1/1.5;
+  border-radius: var(--radius-3);
+  border: 4px solid var(--gray-0);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column; 
+  align-items: flex-start; 
+  justify-content: center;
+
+  @container (width > 40rem) {
+    width: 100%;
+    height: 100%;
+    aspect-ratio: initial;
+  }
+}
+
+.calendar-iu h3 {
+  text-align: left;
+  color: #001f5b;
+  padding: 20px;
+}
+
+.calendar-iu ul {
+  list-style: disc inside; 
+  margin: 0;
+}
+
+.calendar-iu li {
+  color: #000;
+  margin-bottom: var(--size-fluid-1);
+}
+
+.calendar-iu li p {
+  color: #000;
+  margin: 0 0 var(--size-fluid-2) 0;
+  padding-left: 1rem; 
+}
+
+.calendar-iu img {
+  max-width: 100%;
+  height: auto;
+  aspect-ratio: 1/1;
+  display: block;
+  margin: var(--size-3) auto 0 auto; 
+}
+
+.popup-container-iu {
+  display: grid;
+  gap: 1rem;
+  height: 500px;
+
+  @container (width > 40rem) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.review-iu {
+  --index: sibling-index();
+  --count: sibling-count();
+
+  --entry-start: 20%;
+  --entry-step: calc((100% - var(--entry-start)) / (var(--count) + 1));
+  --entry: calc(var(--entry-start) + var(--index) * var(--entry-step));
+
+  background: var(--gray-1);
+  width: calc(100% - var(--index) * 5%);
+  height: 440px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  border-radius: var(--radius-3);
+  color: var(--gray-8);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+
+  animation: reviewUp 1ms ease-out both;
+  animation-timeline: view(block);
+  animation-range: entry var(--entry) contain 50%;
+}
+
+.review-iu h3 {
+  font-size: var(--font-size-fluid-1);
+  margin-block-end: var(--size-fluid-3);
+}
+
+.review-iu p {
+  padding: 10px;
+}
+
+.review-iu img {
+  max-width: 180px;
+  width: 100%;
+  height: auto;
+  border-radius: var(--radius-2);
+  margin-bottom: 1rem;
+}
+
+@keyframes calendarLargeAppear {
+  from {
+    transform: translateZ(-40rem) rotateX(45deg);
+  }
+  to {
+    transform: translateZ(0rem) rotateX(0deg);
+  }
+}
+
+@keyframes calendarLargeFadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes calendarSmallAppear {
+  from {
+    opacity: 0;
+    transform: translateX(50%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0%);
+  }
+}
+
+@keyframes reviewUp {
+  from {
+    translate: 0 40%;
+  }
+  to {
+    translate: 0 0%;
+  }
+}
+</style>
+<div class="container-iu">
+  <div class="hero-iu">
+    <h1 class="hero__title-iu">Karcher SC 3 EasyFix</h1>
+    <div class="hero__payoff-iu">Buharlı Temizleyici</div>
+  </div>
+
+  <div class="divider-v-iu">
+    <section class="section-iu">
+      <div class="calendar-container-iu">
+        <div class="calendar-wide-iu">
+          <div class="calendar-iu">
+            <h3>SC 3 EasyFix</h3>
+            <ul>
+              <li>Çok işlevli aksesuarlar</li>
+              <p>Zemin nozulu, el nozulu, yuvarlak fırça ve çok daha fazlasıyla farklı yüzeylerin etkili şekilde temizlenmesi.</p>
+
+              <li>Zemin temizleme bezi ve el başlığı için kapak</li>
+              <p>Mükemmel temiz sonuçlar ve gelişmiş kir çıkarma için.</p>
+
+              <li>Buhar tabancasında çocuk emniyet kilidi</li>
+              <p>Kilit sistemi çocukların yanlış şekilde kullanımını önlemek için güvenilir koruma sağlar.</p>
+
+              <li>Tutamağın üstünde iki kademeli buhar akış kontrolü</li>
+              <p>Buhar hacmi, yüzeye ve kire göre bireysel olarak ayarlanabilir.</p>
+
+              <li>Aksesuar saklama ve park pozisyonu</li>
+              <p>Pratik aksesuar saklama. Aralar sırasında zemin nozulu için park pozisyonu.</p>
+
+              <li>Makinenin üstünde Aç/Kapa düğmesi</li>
+              <p>Kolaylıkla açılıp kapanabilir</p>
+            </ul>
+          </div>
+        </div>
+
+        <div class="calendar-mobile-iu">
+          <div class="calendar-iu">
+            <img src="https://s1.kaercher-media.com/mam/15136500/mainproduct/220251/d0.jpg" alt="Karcher SC 3 Easyfix">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-iu">
+      <div class="popup-container-iu">
+
+        <div class="review-iu">
+          <img src="https://s1.kaercher-media.com/images/pim/870ee6f5-7674-4b25-9865-31cd8e4d4b41.jpg" alt="EasyFix zemin aparatı">
+          <h3>Esnek zemin aparatlı ve temizleme bezi için uygun hızlı sabitleme özellikli zemin temizleme seti EasyFix</h3>
+          <p>Etkin aksesuar sabitleme teknolojisi sayesinde evdeki her tür sert zeminde en uygun temizleme sonuçları. Kire hiç değmeden temassız bez değiştirme ve hızlı bez değiştirme sistemi sayesinde yer temizleme bezinin kolaylıkla tutturulması. Esnek nozul birleşme yeri sayesinde kullanıcının boyuna bakılmaksızın zemine tam temas eden ergonomik ve verimli temizlik.</p>
+        </div>
+
+        <div class="review-iu">
+          <img src="https://s1.kaercher-media.com/images/pim/a1f34219-3396-44d3-85cd-064a7f6cabbf.jpg" alt="Kısa kaynatma süresi">
+          <h3>Kısa kaynatma süresi</h3>
+          <p>Sadece 30 saniyelik bir ısıtma süresi ile makine kullanıma hazırdır</p>
+        </div>
+
+        <div class="review-iu">
+          <img src="https://s1.kaercher-media.com/images/pim/1513160_det_03_502x502.jpg" alt="Entegre kartuş filtre">
+          <h3>Entegre kartuş filtre sayesinde aralıksız buhar</h3>
+          <p>Kolay doldurulabilir tank sayesinde aralıksız buhar. Kartuş filtre sayesinde kireç sudan otomatik olarak arındırılır.</p>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>

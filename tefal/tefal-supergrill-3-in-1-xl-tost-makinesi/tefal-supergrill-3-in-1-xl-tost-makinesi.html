@@ -1,0 +1,292 @@
+<style type="text/css">.product-section {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 35px;
+}
+
+.product {
+  background-color: #fff;
+  border-radius: 16px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+  transition: all 0.35s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+}
+
+.product:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+}
+
+.product-img {
+  width: 100%;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 25px;
+  transition: all 0.3s ease;
+}
+
+.product:hover .product-img img {
+  transform: scale(1.05);
+  transition: transform 0.4s ease;
+}
+
+.product-img img {
+  width: 85%;
+  height: auto;
+  object-fit: contain;
+  border-radius: 10px;
+}
+
+.product-description {
+  width: 100%;
+  text-align: center;
+  padding: 20px 15px 30px;
+}
+
+.product-description h4 {
+  color: #111;
+  font-size: 1.15rem;
+  margin: 0 0 10px;
+  font-weight: 600;
+}
+
+.product-description p {
+  font-size: 0.95rem;
+  color: #555;
+  line-height: 1.5;
+  opacity: 0;
+  max-height: 0;
+  transition: all 0.4s ease;
+  overflow: hidden;
+}
+
+.product:hover .product-description p {
+  opacity: 1;
+  max-height: 200px;
+  margin-top: 10px;
+}
+
+@media (max-width: 1200px) {
+  .product-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .product-description p {
+    opacity: 0;
+    max-height: 0;
+    margin-top: 0;
+    transform: translateY(10px);
+    transition: opacity 0.35s ease, max-height 0.35s ease, margin-top 0.35s ease, transform 0.35s ease;
+    overflow: hidden;
+  }
+  .product-description p.visible {
+    opacity: 1;
+    max-height: 200px;
+    margin-top: 10px;
+    transform: translateY(0);
+  }
+
+  .product-img img {
+    transform: scale(1);
+    transition: transform 0.4s ease;
+    will-change: transform;
+  }
+  .product-img img.zoomed {
+    transform: scale(1.05);
+  }
+}
+
+@media (max-width: 800px) {
+
+  .product-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .product-description p {
+    opacity: 0;
+    max-height: 0;
+    margin-top: 0;
+    transform: translateY(10px);
+    transition: opacity 0.35s ease, max-height 0.35s ease, margin-top 0.35s ease, transform 0.35s ease;
+    overflow: hidden;
+  }
+  .product-description p.visible {
+    opacity: 1;
+    max-height: 200px;
+    margin-top: 10px;
+    transform: translateY(0);
+  }
+
+  .product-img img {
+    transform: scale(1);
+    transition: transform 0.4s ease;
+    will-change: transform;
+  }
+  .product-img img.zoomed {
+    transform: scale(1.05);
+  }
+}
+
+@media (max-width: 500px) {
+  .product-grid {
+    grid-template-columns: 1fr;
+  }
+  .product-description p {
+    opacity: 0;
+    max-height: 0;
+    margin-top: 0;
+    transform: translateY(10px);
+    transition: opacity 0.35s ease, max-height 0.35s ease, margin-top 0.35s ease, transform 0.35s ease;
+    overflow: hidden;
+  }
+  .product-description p.visible {
+    opacity: 1;
+    max-height: 200px;
+    margin-top: 10px;
+    transform: translateY(0);
+  }
+
+  .product-img img {
+    transform: scale(1);
+    transition: transform 0.4s ease;
+    will-change: transform;
+  }
+  .product-img img.zoomed {
+    transform: scale(1.05);
+  }
+}
+</style>
+<section class="product-section">
+<div class="product-grid">
+<div class="product">
+<div class="product-img"><img alt="" src="/Content/UploadFiles/bf80f6e2-1.jpg" /></div>
+
+<div class="product-description">
+<h4>3&#39;&uuml; 1 Arada &Ccedil;ok Y&ouml;nl&uuml; Izgara</h4>
+
+<p>Barbek&uuml; ve fırın &ouml;zelliğine sahip 3&#39;&uuml; 1 arada tost makinesi ile &ccedil;ok y&ouml;nl&uuml; ızgara, kusursuz sonu&ccedil;lar ve kalabalığı memnun eden sonsuz yemekler.</p>
+</div>
+</div>
+
+<div class="product">
+<div class="product-img"><img alt="" src="/Content/UploadFiles/c7e29f9f-2.jpg" /></div>
+
+<div class="product-description">
+<h4>XL Aile Boyu Yemekler i&ccedil;in Geniş Izgara Alanı</h4>
+
+<p>C&ouml;mert ızgara alanı, 8 porsiyona kadar ekstra geniş bir pişirme y&uuml;zeyi (800 cm2) sunar ve barbek&uuml; modunda yemek pişirmek i&ccedil;in iki kat daha fazla alan sunar.</p>
+</div>
+</div>
+
+<div class="product">
+<div class="product-img"><img alt="" src="/Content/UploadFiles/33de8494-3.jpg" /></div>
+
+<div class="product-description">
+<h4>Hassas Pişirme</h4>
+
+<p>3 sıcaklık ayarına sahip ayarlanabilir termostat; et, sebze ve sandvi&ccedil;in kusursuz bir şekilde pişirilmesini sağlar.</p>
+</div>
+</div>
+
+<div class="product">
+<div class="product-img"><img alt="" src="/Content/UploadFiles/a614065c-4.jpg" /></div>
+
+<div class="product-description">
+<h4>Ayarlanabilir Fırın &Ouml;zelliği</h4>
+
+<p>SuperGrill 3&#39;&uuml; 1 arada cihazınızı 3 ayarlanabilir y&uuml;kseklikte fırın &ouml;zelliğinde kullanın, kalanları bastırmadan ızgarada kızartmak ve yeniden ısıtmak i&ccedil;in m&uuml;kemmeldir.</p>
+</div>
+</div>
+
+<div class="product">
+<div class="product-img"><img alt="" src="/Content/UploadFiles/e306ee5b-5.jpg" /></div>
+
+<div class="product-description">
+<h4>İ&ccedil; Mek&acirc;n Barbek&uuml;s&uuml;</h4>
+
+<p>180&deg; a&ccedil;ılarak SuperGrill&#39;inizi iki katına &ccedil;ıkarılmış pişirme y&uuml;zeyi ile keyifli bir kullanım i&ccedil;in i&ccedil; mek&acirc;n barbek&uuml;s&uuml;ne d&ouml;n&uuml;şt&uuml;r&uuml;n.</p>
+</div>
+</div>
+
+<div class="product">
+<div class="product-img"><img alt="" src="/Content/UploadFiles/7577677d-6.jpg" /></div>
+
+<div class="product-description">
+<h4>Temizlemesi Kolay</h4>
+
+<p>Ekstra rahatlık i&ccedil;in bulaşık makinesinde yıkanabilir &ccedil;ıkarılabilir tabaklar ve damlatma tepsisi</p>
+</div>
+</div>
+
+<div class="product">
+<div class="product-img"><img alt="" src="/Content/UploadFiles/f6c1bf62-7.jpg" /></div>
+
+<div class="product-description">
+<h4>Saklaması Kolay</h4>
+
+<p>Dikey saklama alanı, kablo saklama yeri ve plaka kilidi sayesinde yerden tasarruf sağlayan tasarım. SuperGrill mutfağınızın her yerine sığacak!</p>
+</div>
+</div>
+
+<div class="product">
+<div class="product-img"><img alt="" src="/Content/UploadFiles/a15fdef8-8.jpg" /></div>
+
+<div class="product-description">
+<h4>15 Yıl Onarılabilme</h4>
+
+<p>D&uuml;nya genelinde 6.200 tamir noktamız sayesinde uygun bir fiyata &uuml;r&uuml;n&uuml;n&uuml;z&uuml; onartmanızı &ouml;neririz: daha uzun s&uuml;re dayanacaktır.</p>
+</div>
+</div>
+</div>
+</section>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  if (window.innerWidth <= 800) {
+    const products = document.querySelectorAll(".product");
+    let activeCard = null;
+    let timeout = null;
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        const el = entry.target;
+        const p = el.querySelector(".product-description p");
+        const img = el.querySelector(".product-img img");
+
+        if (entry.intersectionRatio === 1) {
+          if (activeCard && activeCard !== el) {
+            const oldP = activeCard.querySelector(".product-description p");
+            const oldImg = activeCard.querySelector(".product-img img");
+            oldP.classList.remove("visible");
+            oldImg.classList.remove("zoomed");
+          }
+          clearTimeout(timeout);
+          timeout = setTimeout(() => {
+            activeCard = el;
+            p.classList.add("visible");
+            img.classList.add("zoomed");
+          }, 100);
+        } 
+        else if (activeCard === el && entry.intersectionRatio < 0.8) {
+          clearTimeout(timeout);
+          timeout = setTimeout(() => {
+            p.classList.remove("visible");
+            img.classList.remove("zoomed");
+            activeCard = null;
+          }, 100);
+        }
+      });
+    }, { threshold: [0, 0.8, 1] });
+
+    products.forEach(p => observer.observe(p));
+  }
+});
+</script>

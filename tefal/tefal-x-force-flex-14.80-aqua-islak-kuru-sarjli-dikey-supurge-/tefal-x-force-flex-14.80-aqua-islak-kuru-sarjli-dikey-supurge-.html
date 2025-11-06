@@ -1,0 +1,263 @@
+<style>
+.product-section-iu {
+  background: linear-gradient(135deg, #1e3644, #000000, #2e5b74);
+  color: #e0e0e0;
+  overflow: hidden;
+}
+
+.product-section-iu .hero-iu {
+  text-align: center;
+  padding: 20px;
+  position: relative;
+}
+
+.product-section-iu .hero-iu h2 {
+  font-size: clamp(34px, 2vw, 52px);
+  line-height: 1;
+  margin: 0;
+  margin-top: 20px;
+  font-weight: 600;
+}
+
+.product-section-iu .product-description-iu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  padding: 40px 5%;
+  opacity: 0;
+  transform: translateY(60px);
+  transition: all 0.8s ease-out;
+}
+
+.product-section-iu .product-description-iu.revealed {
+  opacity: 1;
+  transform: translateY(0);
+  transition: all 1s ease-out;
+}
+
+.product-section-iu .image-iu {
+  width: 100%;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform 1s ease, box-shadow 1s ease;
+}
+
+.product-section-iu .image-iu img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transform: scale(1);
+  transition: transform 1s ease, opacity 1s ease;
+}
+
+.product-section-iu .image-iu.zoomed img {
+  transform: scale(1.05); 
+  opacity: 1;
+}
+
+.product-section-iu .text-iu,
+.product-section-iu .text-left-iu,
+.product-section-iu .text-right-iu,
+.product-section-iu .text-center-iu {
+  color: #f2f2f2;
+  transition: transform 0.3s ease;
+}
+
+.product-section-iu h3 {
+  font-size: 24px !important;
+  margin-bottom: 16px !important;
+  position: relative;
+}
+
+.product-section-iu p {
+  font-size: 20px !important;
+  line-height: 1.6 !important;
+}
+
+.product-section-iu .layout-1-iu,
+.product-section-iu .layout-3-iu,
+.product-section-iu .layout-6-iu,
+.product-section-iu .layout-7-iu {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 40px;
+}
+
+.product-section-iu .layout-2-iu,
+.product-section-iu .layout-4-iu,
+.product-section-iu .layout-5-iu {
+  display: grid;
+  grid-template-columns: 30% 40% 30%;
+  align-items: center;
+  gap: 40px;
+}
+
+.product-section-iu .layout-2-iu .text-left-iu,
+.product-section-iu .layout-2-iu .text-right-iu,
+.product-section-iu .layout-4-iu .text-left-iu,
+.product-section-iu .layout-4-iu .text-right-iu,
+.product-section-iu .layout-5-iu .text-center-iu {
+  text-align: center;
+}
+
+.product-section-iu .text-left-iu img[src="/Content/UploadFiles/b26f7c76-wing.png"] {
+  width: 160px;
+  position: relative;
+  animation: featherFloat 10s ease-in-out infinite;
+  filter: drop-shadow(0 0 25px rgba(255,255,255,0.3));
+  opacity: 0.95;
+  transform-origin: center;
+  will-change: transform;
+}
+
+@keyframes featherFloat {
+  0% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  10% {
+    transform: translate(80px, -40px) rotate(10deg);
+  }
+  25% {
+    transform: translate(160px, 60px) rotate(20deg);
+  }
+  40% {
+    transform: translate(100px, 160px) rotate(10deg);
+  }
+  50% {
+    transform: translate(0, 200px) rotate(0deg);
+  }
+  60% {
+    transform: translate(-100px, 160px) rotate(-10deg);
+  }
+  75% {
+    transform: translate(-160px, 60px) rotate(-20deg);
+  }
+  90% {
+    transform: translate(-80px, -40px) rotate(-10deg);
+  }
+  100% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+}
+
+@media (max-width: 900px) {
+  .product-section-iu .layout-1-iu,
+  .product-section-iu .layout-2-iu,
+  .product-section-iu .layout-3-iu,
+  .product-section-iu .layout-4-iu,
+  .product-section-iu .layout-5-iu,
+  .product-section-iu .layout-6-iu,
+  .product-section-iu .layout-7-iu {
+    grid-template-columns: 1fr;
+  }
+  .product-section-iu .product-description-iu {
+    padding: 40px 5%;
+  }
+}
+
+</style>
+
+<section class="product-section-iu">
+  <div class="hero-iu">
+    <h2>Tefal X-Force Flex 14.80 Animal Care TY9B74WO Şarjlı Dikey Süpürge</h2>
+  </div>
+
+  <div class="product-description-iu layout-1-iu reveal-iu">
+    <div class="image-iu"><img src="/Content/UploadFiles/0b773f60-1.jpg" alt=""></div>
+    <div class="text-iu">
+      <h3>Ekstra Emiş Gücü</h3>
+      <p>Tüm zemin türlerinde—halılarda bile—yeni nesil fırça ve 240 Air Watt*’a kadar emiş gücüyle, inatçı, yerleşmiş kirler için tam derin temizlik.</p>
+    </div>
+  </div>
+
+  <div class="product-description-iu layout-2-iu reveal-iu">
+    <div class="text-left-iu"><img src="/Content/UploadFiles/b26f7c76-wing.png" alt=""></div>
+    <div class="image-iu"><img src="/Content/UploadFiles/a83beeba-2.jpg" alt=""></div>
+    <div class="text-right-iu"><h3>Zahmetsiz Derin Temizlik</h3>
+    <p>Zahmetsiz temizlik deneyimi, etkileyici gücüyle rahat temizlik sunan ince ve kompakt tasarımı (elde kullanım ağırlığı: 1.8 kg) sayesinde mümkündür.</p></div>
+  </div>
+
+  <div class="product-description-iu layout-3-iu reveal-iu">
+    <div class="text-iu"><h3>Ekstra Uzun Çalışma Süresi</h3>
+        <p>Tek bir şarjla tüm alanınızı kesintisiz bir şekilde temizlemek için 2 saate kadar* güçlü emiş gücü. *Elde kullanımda eco modda kullanıldığında</p></div>
+    <div class="image-iu"><img src="/Content/UploadFiles/ff414163-3.jpg" alt=""></div>
+  </div>
+
+<div class="product-description-iu layout-4-iu reveal-iu">
+  <div class="text-left-iu">
+    <h3>4'ü 1 Arada Temizlik Çözümü</h3>
+    <p>Güçlü derin 4'ü 1 arada temizlik, çok yönlü kapsama ve her köşeye erişim sayesinde sadece zeminlerde değil, evin her yerinde kolayca temizlik yapın.</p>
+  </div>
+
+  <div class="image-iu">
+    <img src="/Content/UploadFiles/55b7cd44-4.jpg" alt="">
+  </div>
+
+  <div class="text-right-iu">
+    <h3>Aerospin Aqua Başlık</h3>
+    <p>Yüksek performanslı bir mop aparatı ve Aqua aksesuarınız sayesinde süpürme ve silmeyi aynı anda yaparak temizlik sürenizi yarıya indirin.</p>
+  </div>
+</div>
+  
+  <div class="product-description-iu layout-5-iu reveal-iu">
+    <div class="image-left-iu image-iu"><img src="/Content/UploadFiles/e0011452-5.jpg" alt=""></div>
+    <div class="text-center-iu"><h3>%99.9 Yüksek Filtrasyon</h3><p>%99.9 filtrasyon teknolojisiyle yüksek filtrasyon, neredeyse tüm ince tozları, alerjenleri ve toz akarlarını—en küçük olanlara kadar—yakalar.</p></div>
+    <div class="image-right-iu image-iu"><img src="/Content/UploadFiles/052d16fb-6.jpg" alt=""></div>
+  </div>
+
+  <div class="product-description-iu layout-6-iu reveal-iu">
+    <div class="image-iu"><img src="/Content/UploadFiles/dcecb0e0-7.jpg" alt=""></div>
+    <div class="text-iu"><h3>Flex Teknolojisi</h3>
+        <p>Flex teknolojisi, mobilyaların altına derinlemesine ulaşarak eğilmeden her yeri temizler ve zor ulaşılabilen alanlarda bile tozu takip etmek için LED barlar kullanır.</p></div>
+  </div>
+
+  <div class="product-description-iu layout-7-iu reveal-iu">
+    <div class="text-iu"><h3>Akıllı Temizlik</h3><p>Son teknoloji, zemin türüne göre otomatik emiş gücü ayarı sunarak sizin yerinize temizlik yapan bir süpürge sağlar.</p></div>
+    <div class="image-iu"><img src="/Content/UploadFiles/59d5cc48-8.jpg" alt=""></div>
+  </div>
+
+</section>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const reveals = document.querySelectorAll(".product-section-iu .reveal-iu");
+  const images = document.querySelectorAll(".product-section-iu .image-iu"); 
+
+  const options = {
+    threshold: 0.4 
+  };
+
+  const handleIntersection = (entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("revealed");
+        
+        if (entry.target.classList.contains("image-iu")) {
+          entry.target.classList.add("zoomed");
+        }
+      } else {
+
+        if (entry.target.classList.contains("image-iu")) {
+          entry.target.classList.remove("zoomed");
+        }
+      }
+    });
+  };
+
+  const observer = new IntersectionObserver(handleIntersection, options);
+
+  reveals.forEach(el => observer.observe(el));
+  images.forEach(el => observer.observe(el));
+
+    const wing = document.querySelector('.text-left-iu img[src="/Content/UploadFiles/b26f7c76-wing.png"]');
+    if (wing) {
+    const randomDelay = Math.random() * 3; 
+    const randomDuration = 9 + Math.random() * 4; 
+    wing.style.animationDuration = `${randomDuration}s`;
+    wing.style.animationDelay = `${randomDelay}s`;
+    }
+
+});
+</script>

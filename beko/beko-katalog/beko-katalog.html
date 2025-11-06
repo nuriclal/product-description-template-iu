@@ -1,0 +1,442 @@
+<style type="text/css">
+.category-section {
+    padding: 40px 20px !important;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+.category-block {
+    max-width: 1200px;
+    margin: 0 auto 70px;
+    padding: 40px;
+    border-radius: 25px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+    transition: all 0.3s ease;
+    background-color: white;
+}
+
+.category-block:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 18px 60px rgba(0, 0, 0, 0.1);
+}
+
+.block-left {
+    direction: rtl;
+}
+.block-left > * {
+    direction: ltr;
+}
+
+.category-text h2,
+.category-text h3 {
+    font-weight: 800;
+    color: #2c2f3a;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.category-text h2::after,
+.category-text h3::after {
+    content: '';
+    display: block;
+    width: 120px;
+    height: 4px;
+    background: linear-gradient(90deg, #ec6907, #f6b142);
+    border-radius: 2px;
+    margin-top: 10px;
+}
+
+.category-text h2 {
+    font-size: 34px;
+    text-transform: uppercase;
+}
+.category-text h3 {
+    font-size: 28px;
+}
+
+.category-text p {
+    font-size: 17px;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.category-text ul {
+    list-style: none;
+    padding-left: 0;
+    margin: 30px 0;
+}
+.category-text ul li {
+    padding-left: 32px;
+    position: relative;
+    margin-bottom: 12px;
+    font-size: 17px;
+    font-weight: 500;
+    color: #444;
+}
+.category-text ul li::before {
+    content: '✓';
+    color: #ec6907;
+    font-size: 1.3em;
+    font-weight: 700;
+    position: absolute;
+    left: 0;
+    top: -2px;
+}
+
+.highlight {
+    font-size: 19px;
+    font-weight: 600;
+    color: #212121;
+    margin-top: 35px;
+    border-left: 6px solid #ef8434;
+    background: linear-gradient(90deg, #fff9f3 0%, #e3f6ff 100%);
+    padding: 15px 20px 15px 25px;
+    border-radius: 10px;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.05);
+}
+
+.category-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.image-placeholder {
+    width: 80%;
+    aspect-ratio: 1 / 1;
+    max-width: 550px;
+    background: linear-gradient(145deg, #3a3e54 0%, #ec6907 100%);
+    border-radius: 30px;
+    box-shadow: 0 15px 45px rgba(0, 0, 0, 0.15);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    transition: all 0.4s ease;
+}
+.image-placeholder:hover {
+    transform: scale(1.05);
+    box-shadow: 0 20px 55px #ec6a07af;
+}
+.image-placeholder img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.block-center {
+    grid-template-columns: 1fr;
+    text-align: center;
+    background: linear-gradient(to top, #e3f6ff, #ffffff);
+    padding: 70px;
+    border: 2px solid #f3f3f3;
+}
+.block-center .image-placeholder {
+    max-width: 420px;
+    margin: 40px auto;
+    background: linear-gradient(45deg, #3a3e54, #ec6907);
+}
+
+.block-center .category-text h2 {
+    position: relative;
+    display: inline-block; 
+}
+
+.block-center .category-text h2::after {
+    content: "";
+    width: 120px; 
+    height: 4px; 
+    background: linear-gradient(90deg, #ec6907, #f6b142);; 
+    position: absolute;
+    bottom: -12px; 
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 2px;
+}
+
+#text-section {
+    text-align: center;
+    padding: 40px 0;
+}
+.text-heading span {
+    font-size: 1.5rem;
+    color: #2c2f3a;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-bottom: 25px;
+    display: inline-block;
+    position: relative;
+}
+.text-heading span::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: -10px;
+    transform: translateX(-50%);
+    width: 120px;
+    height: 4px;
+    background: linear-gradient(90deg, #ec6907, #f6b142);
+    border-radius: 2px;
+}
+
+.text-box-container {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    align-items: center;
+}
+
+.text-row {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.text-box {
+    width: 500px;
+    min-height: auto;
+    background: #ffffff;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+    border-radius: 20px;
+    padding: 25px;
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+}
+.text-box p {
+    font-size: 16px;
+    color: #444;
+    margin: 0;
+    line-height: 1.6;
+}
+.text-box:hover {
+    transform: translateY(-8px);
+    border-color: #ec6907;
+    box-shadow: 0 12px 35px rgba(236, 105, 7, 0.15);
+}
+
+@media (max-width: 992px) {
+    .category-block {
+        grid-template-columns: 1fr;
+        padding: 40px 25px;
+        gap: 40px;
+        margin-bottom: 50px;
+    }
+}
+
+@media (max-width: 768px) {
+    .category-block {
+        padding: 30px 15px;
+        gap: 25px;
+        margin-bottom: 40px;
+    }
+    .text-box {
+        width: 90%;
+    }
+}
+
+@media (max-width: 480px) {
+    .category-block {
+        padding: 25px 10px;
+        border-radius: 15px;
+    }
+    .category-image {
+        order: -1;
+    }
+    .category-text,
+    .category-text h2,
+    .category-text p,
+    .highlight {
+        text-align: left !important;
+    }
+    .block-left {
+        direction: ltr;
+    }
+}
+</style>
+
+
+<section class="category-section">
+
+<div class="category-block block-left">
+<div class="category-text">
+<p>
+Beko dikey süpürge modelleri, modern ev temizliğinin hızla değişen ihtiyaçlarına cevap verir. Kablo karmaşası ve ağırlık sorununu ortadan kaldıran Beko şarjlı dikey süpürge seçenekleri, kullanıcılara fazlasıyla hareket özgürlüğü tanır. Dikey ürünlerdeki Li-Ion batarya teknolojisi, uzun süreli kesintisiz çalışma imkanı sunar. Bazı modellerde kablosuz çalışma süresi tek şarjla 50 dakikaya kadar ulaşır. 
+</p>
+<p>
+Marka, motor gücü yüksek süpürge modelleri ile öne çıkar. Yüksek watt gücüne sahip dijital motorlar, zeminlerin yanı sıra halıların derinliklerine işlemiş tozları, kirleri de etkili şekilde vakumlar. Kısa süre içinde bir evin detaylı temizliği için yeterli performansı sağlar. Cihazlar hem dik süpürge hem de el süpürgesi olarak çift fonksiyonlu kullanılabilme özelliğiyle pratik çözümler sunar. 
+</p>
+
+<p class="highlight">Tavan veya köşeler gibi zor ulaşılan alanlar, farklı aksesuar başlıkları sayesinde kolayca temizlenir. Toz haznesi kapasiteleri genellikle 0.7 litre civarında olup tek tuşla kolayca boşaltılır. Beko cihazları, temizlik yapmayı zahmetli olmaktan çıkarır, hızlı etkili bir rutin haline getirir.</p>
+</div>
+
+<div class="category-image">
+<div class="image-placeholder"><img alt="" src="/Content/UploadFiles/1ae2386b-1.jpg" /></div>
+</div>
+</div>
+
+<div class="category-block block-right">
+<div class="category-text">
+<h3>Beko Dikey Süpürge Modelleri ile Hafif, Şarjlı ve Etkili Temizlik</h3>
+
+<p>
+Beko dikey süpürge serisi, hafif yapılarıyla kullanım kolaylığı sunar, temizliği yorucu olmaktan çıkarır. Kablosuz yapısıyla dikkat çeken modeller, prize bağımlılığı sonlandırır ve evin her köşesine kolayca ulaşım sağlar. Kablosuz dikey süpürge alternatifleri, ergonomik tasarımını yüksek teknolojiyle birleştirir. Markanın bazı modellerinde bulunan ActiFlex kolay katlanabilir boru teknolojisi, eğilme derdine son vererek mobilyaların altını zorlanmadan temizleme imkanı sunar. Beko dik süpürge tasarımları, cihazın saklanmasını da kolaylaştıracak kadar az yer kaplar. 
+</p>
+
+<p>
+Ürünler, yüksek emiş gücünün yanında gelişmiş filtreleme sistemlerine sahiptir. HEPA filtreli elektrikli süpürge özelliği, havanın en küçük toz partiküllerden, polen alerjenlerden arındırılmasını sağlar. Alerjisi, astımı olan kullanıcılar için daha sağlıklı bir yaşam alanı yaratır. Beko'nun yenilikçi ActiFlex teknolojisi, temizliği daha konforlu pratik hale getirir.
+</p>
+
+<p class="highlight">Tüm nitelikli özellikler, Beko dikey süpürgeleri günlük hızlı temizlikten detaylı genel temizliğe kadar her ihtiyaca uygun, güçlü bir temizlik yardımcısına dönüştürür.</p>
+</div>
+
+<div class="category-image">
+<div class="image-placeholder"><img alt="" src="/Content/UploadFiles/05e6c533-2.jpg" /></div>
+</div>
+</div>
+
+<div class="category-block block-left">
+<div class="category-text">
+<h3>Beko Dikey Süpürgelerde Hangi Özellikler Öne Çıkıyor?</h3>
+
+<p>
+Beko dikey süpürge modelleri, gelişmiş özellikleriyle temizlik deneyimini üst seviyeye taşır. Cihazların genelinde dijital motor teknolojisi kullanılır. Güçlü motorlar, yüksek emiş gücü sunarken enerji verimliliğini korur. Beko şarjlı dikey süpürge serilerinde, motor gücü 150W-210W gibi yüksek emiş değerlerine ulaşır. 
+</p>
+
+<p>
+Bazı üst segment modellerde bulunan akıllı LED ekranlar, kullanıcıya gerçek zamanlı olarak batarya durumunu, temizleme modunu olası arızaları gösterir. Filtreleme sistemi, markanın önem verdiği en özel alandır. Yıkanabilir HEPA filtreler, tozun havaya karışmasını önler ve hijyeni artırır. Fırça teknolojilerinde de yenilikler öne çıkar. LED ışıklı turbo fırça, karanlık alanlardaki tozları görünür kılar. AdaptEdge fırça teknolojisi ise kenar-köşe temizliğini iyileştirir. 
+</p>
+
+<p>
+Beko ıslak kuru dikey süpürge gibi özel modellerde aynı anda süpürme silme imkanı, çift su hazne sistemi kendi kendini temizleme özellikleri gibi benzersiz fonksiyonlar yer alır. Sert zeminlerde tek adımda kapsamlı bir temizlik sunarak zaman tasarrufu sağlar.  
+&nbsp;
+</p>
+
+<p class="highlight">Beko, dikey süpürge tasarımlarında performansı, ergonomiyi akıllı teknolojilerle birleştirerek kullanıcı ihtiyaçlarına uygun çözümler yaratır.</p>
+</div>
+
+<div class="category-image">
+<div class="image-placeholder"><img alt="" src="/Content/UploadFiles/3be57db9-3.jpg" /></div>
+</div>
+</div>
+
+<div class="category-block block-center">
+<div class="category-text">
+<h2>Beko Şarjlı Dikey Süpürge Modelleri ile Kablo Derdi Olmadan Temizlik</h2>
+
+<p>
+Beko dikey süpürge serisi, kablo bağımlılığını tamamen ortadan kaldırarak ev temizliğine büyük konfor katar. Beko dikey süpürge modelleri, güçlü Li-Ion batarya teknolojisi sayesinde kullanıcıya kesintisiz kablosuz hareket özgürlüğü sunar. Markanın <a href="https://www.jebinde.com/kucuk-ev-aletleri/supurge"><strong>süpürge modelleri</strong></a> arasındaki farklılıklar, bilhassa pil süresi gücü noktasında belirginleşir. Bazı modellerde düşük güç ayarında 50 dakikaya kadar çıkan uzun bir çalışma süresi elde edilir. Geniş alanların tek seferde temizlenmesi için yeterlidir. 
+</p>
+
+<p>
+Yüksek performans gerektiren zorlu temizliklerde bile tatmin edici sürelerde çalışma imkanı bulunur. Batarya tipi olarak kullanılan Li-Ion teknolojisi, hızlı şarj döngüsü uzun ömür vadeder. Beko dikey süpürgeler yaklaşık 4-6 saatlik şarj süresi sonunda tekrar tam kapasiteyle kullanıma hazır hale gelir. 
+</p>
+
+<p>
+Şarj kontrol ışığı ekranlar sayesinde pil durumunu anlık olarak takip etmek mümkündür. Kablosuz kullanım, hareket özgürlüğü sağlamanın yanı sıra cihazın pratik bir şekilde el süpürgesine dönüştürülmesine, tavan koltuk arası gibi zor yerlerin temizlenmesine olanak tanır. 
+</p>
+
+<p class="highlight">Cihazlar, modern yaşamın hızlı pratik temizlik beklentilerini tam olarak karşılar.</p>
+</div>
+
+<div class="category-image">
+<div class="image-placeholder"><img alt="" src="/Content/UploadFiles/d2c2694f-4.jpg" /></div>
+</div>
+</div>
+
+<div class="category-block block-left">
+<div class="category-text">
+<h3>Islak Kuru Özellikli Beko Süpürgelerle Çift Fonksiyon Bir Arada</h3>
+
+<p>
+Beko, temizlik sürecini basitleştiren ıslak kuru özellikli dikey süpürge modelleriyle öne çıkar. Bu yenilikçi cihazlar, süpürme silme işlemini tek adımda birleştirir. Sert zeminlerdeki tozları kuru kirleri vakumlar ve aynı anda zemini paspaslayarak siler. 
+</p>
+
+<p>
+Islak zemin süpürge teknolojisi ile donatılan modeller, mutfak veya banyo gibi sık kirlenen alanlarda büyük oranda kolaylık sağlar. Markanın HydroTrio serisindeki modeller, çift su hazne sistemi kullanır. Temiz ve kirli su ayrı tanklarda tutulduğundan zemin sürekli hijyenik kalır. Haznesi çıkarılabilir dikey süpürge yapısı sayesinde kirli su ve temiz su haznelerinin doldurulup boşaltılması son derece pratiktir. 
+</p>
+
+<p class="highlight">Bazı ıslak kuru modellerde bulunan kendi kendini temizleme fonksiyonu, fırçanın bile el değmeden hijyenik bir şekilde temizlenmesini sağlar. Ev tipi hafif süpürge tasarımına sahip çift fonksiyonlu modeller, iki ayrı cihazın işini tek bir hafif pratik gövdede toplayarak ev temizliğini hem zamandan hem de emekten tasarruf ettirir.</p>
+</div>
+
+<div class="category-image">
+<div class="image-placeholder"><img alt="" src="/Content/UploadFiles/d08e1e26-5.jpg" /></div>
+</div>
+</div>
+
+<div class="category-block block-right">
+<div class="category-text">
+<h3>Beko Dikey Süpürge Fiyatları Neye Göre Değişiyor?</h3>
+
+<p>
+Beko dikey süpürge fiyatları, birçok teknik ve fonksiyonel özelliğe bağlı olarak farklılık gösterir. Fiyat skalasını belirleyen en temel faktör, motor gücü ile batarya performansıdır. Daha yüksek emiş gücü sunan uzun ömürlü güçlü Li-Ion bataryalara sahip modeller doğal olarak daha yüksek fiyatlandırılır. 
+</p>
+
+<p>
+Yüksek watt emiş gücüne sahip dijital motorlu modeller, standart motorlulara göre daha üst segmentte yer alır. Cihazın hazne kapasitesi şarj süresi de önemlidir. Daha geniş toz haznesi sık boşaltma gereksinimini ortadan kaldırır ve kısa şarj süresi ise kesintisiz kullanım imkanı sağlar. Islak kuru temizlik sunan Beko modelleri, ek fonksiyonellikleri ve çift su hazne sistemleri nedeniyle farklı fiyatlandırılır. 
+</p>
+
+<p>
+    Modelin sunduğu program sayısı, farklı zemin türlerine göre ayarlanabilir güç modları gibi özellikler de fiyatı etkiler. Kutu içeriğinde bulunan ek başlıklar, temizlik çeşitliliğini artırdığı için maliyeti yükseltir. Sessiz çalışan elektrikli süpürge teknolojisine sahip tasarımlar da konfor farkı yarattığı için daha farklı fiyat bandında yer alır. 
+</p>
+
+<p class="highlight">Dik süpürge tavsiyesi arayan kullanıcılar, bütçe belirlerlerken tüm teknolojik detayları göz önünde bulundurmalıdır.</p>
+</div>
+
+<div class="category-image">
+<div class="image-placeholder"><img alt="" src="/Content/UploadFiles/ff496493-6.jpg" /></div>
+</div>
+</div>
+
+<div class="category-block block-center">
+  <section id="text-section">
+    <div class="text-heading">
+      <span>Kullanıcı Deneyimiyle Şekillenmiş Beko Dikey Süpürge Yorumları</span>
+    </div>
+
+    <div class="text-box-container">
+      <div class="text-row">
+        <div class="text-box">
+          <p>Beko dikey süpürge yorumları, cihazların pratikliği ve yüksek emiş gücü konusunda genellikle olumlu geri bildirimler sunar. </p>
+        </div>
+        <div class="text-box">
+          <p>Kullanıcılar, Beko şarjlı süpürge önerisi arayanlara özellikle hafif kablosuz kullanım kolaylığını vurgular. </p>
+        </div>
+      </div>
+      <div class="text-row">
+        <div class="text-box">
+          <p>Hızlı temizliklerde cihazın anında kullanıma hazır olması büyük bir avantaj sağlar. Beko ıslak kuru dikey süpürge gibi çift fonksiyonlu modeller ise tek seferde süpürme silme yeteneği sayesinde zamandan büyük bir tasarruf ettirdiği için övgü toplar. Kendi kendini temizleme özelliği bulunan ıslak kuru modeller, hijyen konusunda kullanıcı memnuniyetini artırır. </p>
+        </div>
+        <div class="text-box">
+          <p>Bazı kullanıcıların yorumlarında pil performansına dair olumsuz eleştiriler de yer alır. Bazı cihazların bir süre kullanımından sonra batarya ömrünün hızla azalması, yüksek güç modunda kullanım süresinin kısa olması gibi sorunlar dile getirilir. Bu gibi durumlarda, servis desteği garanti süreci kullanıcı deneyiminin şekillenmesinde önemli bir rol oynar.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<div class="category-block block-center">
+<div class="category-text">
+<h2>Jebinde’den Beko Dikey Süpürge Alırken Kazanacağınız Avantajlar</h2>
+
+<p>
+Jebinde, Beko dikey süpürge sahibi olmak isteyenler için güvenilirlik ve ek avantajlar sunar. Jebinde, Beko markasının yetkili satıcısı olduğundan satın aldığınız tüm ürünlerin orijinal olduğunu garanti eder. Bu güvence, olası teknik sorunlarda yetkili servis hizmetlerinden kolayca faydalanmanızı sağlar. Beko süpürge karşılaştırması yaparak doğru modeli seçen müşteriler, Jebinde’nin çeşitli ödeme kolaylıklarından yararlanır. 
+</p>
+
+<p>
+Peşin fiyatına taksit seçenekleri, yüksek segmentli dikey süpürge modellerine daha erişilebilir şekilde ulaşmanıza imkan verir. Beko dikey süpürge fiyatları üzerinde yapılan kampanyalar, ek indirimler ile en iyi fiyat performans dengesini yakalama fırsatı bulunur. Markanın sunduğu standart garantiye ek olarak uzatılmış garanti seçenekleri hakkında bilgi almak da mümkündür. Jebinde’den yapılan alışveriş, ürün kalitesini satış sonrası tam güvenceyle birleştirir.
+</p>
+
+<p class="highlight">Beko Dikey Süpürge kalitesini Jebinde g&uuml;vencesiyle elde etmek i&ccedil;in alışverişe başlayabilirsiniz.</p>
+</div>
+
+<div class="category-image">
+<div class="image-placeholder"><img alt="" src="/Content/UploadFiles/94332964-7.jpg" /></div>
+</div>
+</div>
+</section>
