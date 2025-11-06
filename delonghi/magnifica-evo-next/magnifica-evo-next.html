@@ -1,0 +1,103 @@
+<style>
+.container-iu {
+  position: relative;
+  width: 100%;
+  max-width: 1200px; /* isteğe göre */
+  margin: 0 auto;
+  background-color: #132440;
+  padding: 60px 0;
+  overflow: hidden;
+}
+
+/* Arka plan ızgarası container içine göre */
+.pattern-iu {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 80px);
+  grid-auto-rows: 80px;
+  gap: 85px;
+  z-index: 0;
+  opacity: 0.1;
+  pointer-events: none;
+  user-select: none;
+}
+
+/* Küçük ikonlar */
+.p-iu {
+  width: 64px;
+  height: 64px;
+  object-fit: contain;
+  -webkit-user-drag: none;
+}
+
+/* Galeri (ön katman) */
+.galeri-iu {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.foto-iu {
+  width: 50%;
+  height: auto;
+  margin: 30px 0;
+  pointer-events: none;
+  -webkit-user-drag: none;
+  user-select: none;
+}
+</style>
+
+<div class="container-iu">
+  <!-- 🔹 Arka plan -->
+  <div class="pattern-iu" id="pattern"></div>
+
+  <!-- 🔹 Galeri -->
+  <div class="galeri-iu" oncontextmenu="return false;">
+    <img src="/Content/UploadFiles/88f2e91b-1.jpg" class="foto-iu">
+    <img src="/Content/UploadFiles/5002bb51-2.jpg" class="foto-iu">
+    <img src="/Content/UploadFiles/0997a5b3-3.jpg" class="foto-iu">
+    <img src="/Content/UploadFiles/2ee3f9d7-4.jpg" class="foto-iu">
+    <img src="/Content/UploadFiles/4e574ee1-5.jpg" class="foto-iu">
+    <img src="/Content/UploadFiles/6e06329a-6.jpg" class="foto-iu">
+    <img src="/Content/UploadFiles/d0429b25-7.jpg" class="foto-iu">
+    <img src="/Content/UploadFiles/b3638a88-8.jpg" class="foto-iu">
+    <img src="/Content/UploadFiles/437ec77c-9.jpg" class="foto-iu">
+  </div>
+</div>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const pattern = document.getElementById("pattern");
+  const container = document.querySelector(".container-iu");
+
+  const iconPaths = [
+    "/Content/UploadFiles/f0e43b9e-1.png","/Content/UploadFiles/ce8fe5be-2.png",
+    "/Content/UploadFiles/885e7b6e-3.png","/Content/UploadFiles/23cda84b-4.png",
+    "/Content/UploadFiles/5005a3d2-5.png","/Content/UploadFiles/25e35e99-6.png",
+    "/Content/UploadFiles/2d43dd0c-7.png","/Content/UploadFiles/c15f068e-8.png",
+    "/Content/UploadFiles/f78dcd57-9.png","/Content/UploadFiles/2f1c2e53-10.png",
+    "/Content/UploadFiles/642e6cd5-11.png","/Content/UploadFiles/1d5b0131-12.png"
+  ];
+
+  const containerHeight = container.offsetHeight;
+  const rowHeight = 160; // 80px + 80px boşluk
+  const rowsNeeded = Math.ceil(containerHeight / rowHeight);
+
+  for (let row = 0; row < rowsNeeded; row++) {
+    const shuffled = [...iconPaths].sort(() => Math.random() - 0.5);
+    shuffled.forEach(src => {
+      const img = document.createElement("img");
+      img.src = src;
+      img.className = "p-iu";
+      pattern.appendChild(img);
+    });
+  }
+});
+</script>

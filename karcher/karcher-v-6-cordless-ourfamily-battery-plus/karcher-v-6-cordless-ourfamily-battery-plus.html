@@ -1,0 +1,227 @@
+<style type="text/css">.container-iu {
+  max-width: 80rem;
+  padding: 0;
+}
+
+.hero-iu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 18vh;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+
+.hero__title-iu {
+  font-size: 40px !important;
+  display: flex;
+  justify-content: center; 
+  align-items: center;    
+  height: 100%;            
+  color: black;
+}
+
+.hero__payoff-iu {
+  font-size: 20px;
+  text-align: center;
+  font-weight: 600;
+  margin-top: 0.75rem; 
+}
+
+.calendar-container-iu {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.calendar-wide-iu,
+.calendar-mobile-iu {
+  flex: 1 1 45%;
+  opacity: 0;
+  transform: translateY(-50px);  
+  animation: slideFromTop 1s ease-out forwards; 
+  animation-timeline: view(block);
+  animation-range: entry 0% cover 40%;
+  animation-delay: 1s; 
+}
+
+.calendar-iu {
+  width: 100%;
+  border-radius: 8px;
+  border: 2px solid #eee;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+  background: #fff;
+  padding: 2rem;
+}
+
+.calendar-iu h3 {
+  margin-bottom: 1rem;
+}
+
+.feature {
+  margin-bottom: 1rem;
+}
+
+.feature li {
+  list-style: disc;
+  margin-left: 1.5rem;
+
+}
+
+.feature p {
+  margin: 0.25rem 0 0.75rem 2rem;
+  color: #333;
+  font-weight: bold;
+}
+
+.calendar-iu img {
+  max-width: 80%;
+  height: auto;
+  display: block;
+  margin: auto;
+}
+
+.popup-container-iu {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  align-items: start;
+  margin-top: 2rem;
+}
+
+.review-iu {
+  background: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.08);
+  padding: 1rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  animation: reviewUp 1s ease-out both;
+  animation-timeline: view(block);
+  animation-range: entry 0% contain 40%;
+  animation-delay: 0.5s;
+}
+
+.review-iu img {
+  max-width: 180px;
+  height: auto;
+  border-radius: 6px;
+  margin-bottom: 1rem;
+}
+
+.review-iu h3 {
+  margin-bottom: 0.5rem;
+}
+
+@keyframes reviewUp {
+  from { transform: translateY(40%); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes slideFromTop {
+  from { transform: translateY(-50px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+@media (max-width: 768px) {
+  .calendar-container-iu {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .calendar-mobile-iu {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    will-change: transform, opacity;
+  }
+
+  .calendar-mobile-iu.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+</style>
+<div class="container-iu">
+<div class="hero-iu">
+<h2 class="hero__title-iu"><img alt="KÄRCHER Logo" src="/Content/UploadFiles/fbcea62c-kaercher_jebinde-logo.svg" /></h2>
+
+<h2 class="hero__title-iu">VC 6 Cordless ourFamily Battery Plus</h2>
+
+<div class="hero__payoff-iu">Dikey Süpürge</div>
+</div>
+
+<div class="divider-v-iu">
+<section class="section-iu">
+<div class="calendar-container-iu">
+<div class="calendar-wide-iu">
+<div class="calendar-iu">
+<h3>VC 6 Cordless ourFamily Battery Plus</h3>
+
+<ul>
+	<li><strong>İki aşamalı güç kontrolü</strong>
+	<p>Daha büyük evleri temizlemek için yeterli çalışma süresi</p>
+    <p>İsteğe bağlı yükseltme modu</p>
+	</li>
+	<li><strong>Şarj seçeneği dahil duvar braketi</strong>
+	<p>Elektrikli süpürgeyi asarak kolayca şarj edebilirsiniz</p>
+    <p>Hızlı takılan aksesuarlar için saklama seçeneği</p>
+    <p>Yerden tasarruf sağlayan tasarımı ile her zaman kullanıma hazır</p>
+    <p>Duvar braketi kullanılarak cihaz hızlı ve kolay bir şekilde saklanabilir</p>
+    <p>Elektrikli süpürgeyi asarak kolayca şarj edebilirsiniz</p>
+	</li>
+    <li><strong>Kullanımı kolay</strong>
+	<p>Güç, uygulamanın gerekliliklerine göre kolaylıkla ve hızlıca ayarlanabilir</p>
+    <p>İsteğe bağlı yükseltme modu</p>
+    <p>Kullanım kolaylığı için Güç Kilidi içerir</p>
+	</li>
+    <li><strong>Sezgisel geri bildirim ve şarj göstergesi</strong>
+	<p>Okunması kolay LED ekran aracılığıyla geri bildirim ve hata mesajları</p>
+    <p>Pil durumu ekranını temizleyin</p>
+	</li>
+</ul>
+</div>
+</div>
+
+<div class="calendar-mobile-iu">
+<div class="calendar-iu"><img alt="" src="/Content/UploadFiles/c3f1b71a-1.jpg" /></div>
+</div>
+</div>
+</section>
+
+<section class="section-iu">
+<div class="popup-container-iu">
+<div class="review-iu"><img alt="" src="/Content/UploadFiles/05d89281-2.jpg" />
+<h3>İnce ayarlı teknoloji</h3>
+
+<p>
+Aktif zemin başlığıyla mükemmel uyum sağlayan güçlü 25,2 V pil Normal modda optimize edilmiş 50 dakikalık çalışma süresi 250 W motor, aktif zemin başlığı, Power Lock & 3 kademeli torbasız filtre sistemi
+</p>
+</div>
+
+<div class="review-iu"><img alt="" src="/Content/UploadFiles/3052d33a-4.jpg" />
+<h3>Aktif zemin başlığı</h3>
+
+<p>
+Motorlu silindir ile optimum kir toplama Aşırı manevra kabiliyeti, mobilyaların altında hareket etmeyi çok kolaylaştırır Yüzeylerin güvenilir şekilde temizlenmesini sağlar
+</p>
+</div>
+
+<div class="review-iu"><img alt="" src="/Content/UploadFiles/c5c910dc-3.jpg" />
+<h3>Pratik olarak tasarlanmış filtre sistemi</h3>
+
+<p>
+    Siklon, hava girişi ve HEPA hijyen filtrelerine sahip 3 aşamalı filtre sistemi Özellikle temiz hava atılımı için HEPA hijyen filtresi (EN 1822: 1998) Basit tek tıkla filtre boşaltma
+
+</p>
+</div>
+
+</div>
+</section>
+</div>
+</div>

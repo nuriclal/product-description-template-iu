@@ -1,0 +1,180 @@
+<style type="text/css">
+.product-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  padding: 40px 60px;
+  align-items: center;
+  margin: 0;
+  background-color: #fff;
+  color: #222;  
+}
+
+.product-info {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.product-info h2 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.product-info h3 {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #444;
+  margin-top: -5px;
+}
+
+.product-info ul {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+}
+
+.product-info ul li {
+  margin-bottom: 8px;
+  font-size: 0.95rem;
+  position: relative;
+  padding-left: 20px;
+}
+
+.product-info ul li::before {
+  content: "✔";
+  color: #030507;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.product-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.product-image img {
+  width: 100%;
+  max-width: 450px;
+  border-radius: 10px;
+}
+
+.product-gallery {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+  text-align: center;
+  padding: 30px 60px;
+}
+
+.product-gallery div{
+    flex:1;
+}
+
+.product-gallery img {
+  width: 120px;
+  height: auto;
+}
+
+.product-gallery p {
+  text-align: center;
+  font-size: 0.8rem;
+  margin-top: 6px;
+}
+
+.footer-bar {
+  background-color: #030507;
+  padding: 10px 60px;
+  letter-spacing: 1px;
+
+}
+
+.product-wrapper {
+  background-color: #fff;
+  border: 2px solid #e0e0e0; 
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08); 
+  max-width: 1100px;         
+  margin: 40px auto;         
+  overflow: hidden;          
+}
+
+@media (max-width: 800px) {
+  .product-section {
+    grid-template-columns: 1fr;
+    padding: 20px;
+  }
+
+  .product-gallery {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    justify-items: center;
+  }
+
+  .product-gallery img {
+    width: 100%;
+    max-width: 150px;
+  }
+
+  .footer-bar {
+    text-align: center;
+    padding: 15px;
+  }
+}
+</style>
+<div class="product-wrapper">
+<section class="product-section">
+<div class="product-info">
+<h2>Ariete Moderna Siyah Ekmek Kızartma Makinesi</h2>
+
+<h3>0149/12</h3>
+
+<ul>
+	<li>815 Watt</li>
+	<li>2 Dilim Ekmek Kızartma</li>
+	<li>6 Kızartma Ayarı</li>
+	<li>Buz çözme, Isıtma ve Kızartma Fonksiyonu</li>
+	<li>Isıya Dayanıklı Metal Gövde</li>
+	<li>Otomatik Dilim Çıkarma</li>
+	<li>Sıcaklık Hazır Işığı</li>
+	<li>Kırıntı Tepsisi</li>
+	<li>Kaydırmaz Ayarlar</li>
+	<li>Kablo Sarma</li>
+</ul>
+</div>
+
+<div class="product-image"><img alt="" src="/Content/UploadFiles/2207db94-1.jpg" /></div>
+</section>
+
+<section class="product-gallery">
+<div><img alt="" src="/Content/UploadFiles/ab36b29d-2.jpg" />
+<p>Isıya Dayanıklı Metal Gövde</p>
+</div>
+
+<div><img alt="" src="/Content/UploadFiles/83b1f5ce-3.jpg" />
+<p>Buz Çözme Fonksiyonu</p>
+</div>
+
+<div><img alt="" src="/Content/UploadFiles/7dc8f661-4.jpg" />
+<p>Çıkarılabilir Kırıntı Tepsisi</p>
+</div>
+
+<div><img alt="" src="/Content/UploadFiles/09c4f991-5.jpg" />
+<p>Isıtma Fonksiyonu</p>
+</div>
+
+<div><img alt="" src="/Content/UploadFiles/8f9a92fb-6.jpg" />
+<p>6 Kızartma Ayarı</p>
+</div>
+
+<div><img alt="" src="/Content/UploadFiles/bcc5f226-7.jpg" />
+<p>Kızartma Fonksiyonu</p>
+</div>
+</section>
+
+<div class="footer-bar">&nbsp;</div>
+</div>
