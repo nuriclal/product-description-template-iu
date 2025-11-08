@@ -1,0 +1,181 @@
+<style>
+.hair-section-iu {
+  padding: 60px 40px;
+  background: linear-gradient(135deg, #634f57, #4b3f44);
+  overflow: hidden;
+  color: #e5e5e5;
+}
+
+.hair-section-iu .big-item-iu {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 80px;
+  gap: 60px;
+}
+
+.hair-section-iu .big-item-iu img {
+  width: 45%;
+  border-radius: 12px;
+  object-fit: cover;
+  box-shadow: 0 10px 25px #d18a7a;
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+.hair-section-iu .big-item-iu img:hover {
+  transform: scale(1.03);
+  box-shadow: 0 15px 35px #d18a7a;
+}
+
+.hair-section-iu .text-iu {
+  width: 50%;
+  animation: fadeIn-iu 1s ease forwards;
+  opacity: 0;
+}
+
+.hair-section-iu .text-iu h2 {
+  font-size: 1.5rem !important;
+  margin-bottom: 15px;
+  position: relative;
+  color: #ffffff;
+}
+
+.hair-section-iu .text-iu h2::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(90deg, #d18a7a, #e6b6aa);
+  margin-top: 8px;
+  border-radius: 2px;
+}
+
+.hair-section-iu .text-iu p {
+  font-size: 16px !important;
+  line-height: 1.6em !important;
+  color: #cfcfcf;
+}
+
+.hair-section-iu .small-gallery-iu {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 25px;
+  margin-top: 60px;
+}
+
+.hair-section-iu .small-item-iu {
+  text-align: center;
+  background: #3b3438;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+}
+
+.hair-section-iu .small-item-iu:hover {
+  transform: translateY(-8px);
+  background: #4b3f44;
+  box-shadow: 0 12px 25px #d18a7a;
+}
+
+.hair-section-iu .small-item-iu img {
+  width: 80%;
+  border-radius: 8px;
+  object-fit: cover;
+  transition: all 0.4s ease;
+}
+
+.hair-section-iu .small-item-iu img:hover {
+  transform: scale(1.05);
+  filter: brightness(1.1);
+}
+
+.hair-section-iu .small-item-iu h4 {
+  margin-top: 10px;
+  font-weight: 500;
+  color: #ffffff;
+}
+
+.hair-section-iu .small-item-iu p {
+  margin-top: 10px;
+  font-weight: 400;
+  color: #cfcfcf;
+}
+
+@keyframes fadeIn-iu {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 992px) {
+  .hair-section-iu .big-item-iu {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hair-section-iu .big-item-iu img {
+    width: 100%;
+  }
+
+  .hair-section-iu .text-iu {
+    width: 100%;
+    opacity: 1;
+  }
+
+  .hair-section-iu .small-gallery-iu {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 500px) {
+  .hair-section-iu .small-gallery-iu {
+    grid-template-columns: 1fr;
+  }
+}
+
+</style>
+
+<section class="hair-section-iu">
+  <div class="big-item-iu left-image-iu">
+    <img src="/Content/UploadFiles/58a8945a-1.jpg" alt="Saç Şekillendirici 1">
+    <div class="text-iu">
+      <h2>Pürüzsüz Düzleştirme</h2>
+      <p>
+        Profesyonel 28 x 110mm elmas seramik plakalar ile orta ve uzun saç boyları için pürüzsüz düzleştirme sağlayan BaByliss ST330E Düzleştirici farklı saç tipine göre 235°C’ye kadar 6 ısı ayarında, saçı koruma amaçlı(koruma (140°C, 160°C, 180°C, 200°C veya kalın telli saçlar için yüksek sıcaklık ayar seçenekleri (220°C, 235°C) ile çalışmaktadır.
+      </p>
+    </div>
+  </div>
+
+  <div class="big-item-iu right-image-iu">
+    <div class="text-iu">
+      <h2>Yüzen plakalar ile daha kolay kayma ve kullanım sağlar, saça sabit basınç uygular ve korur.</h2>
+      <p>I-Curl Fonksiyonu</p>
+      <p>Düz plakalar : düzleştirme</p>
+      <p>Kıvrımlı plakalar : bukle</p>
+    </div>
+    <img src="/Content/UploadFiles/fba2df75-2.jpg" alt="Saç Şekillendirici 2">
+  </div>
+
+  <div class="small-gallery-iu">
+    <div class="small-item-iu">
+      <img src="/Content/UploadFiles/d3c73ec1-4.jpg" alt="Model 2">
+      <h4><strong>6 Isı Ayarı</strong></h4>
+      <p>160°C - 210°C arası 6 ısı ayarı</p>
+    </div>
+    <div class="small-item-iu">
+      <img src="/Content/UploadFiles/f9a3108e-5.jpg" alt="Model 3">
+      <h4><strong>Hızlı Isınma</strong></h4>
+      <p>40 saniye içerisinde kullanıma hazır hale gelir.</p>
+    </div>
+    <div class="small-item-iu">
+      <img src="/Content/UploadFiles/da031063-6.jpg" alt="Model 4">
+      <h4><strong>Otomatik Kapanma</strong></h4>
+      <p>60 dakika sonunda otomatik kapanır ve güvenli kullanım sağlar.</p>
+    </div>
+        <div class="small-item-iu">
+      <img src="/Content/UploadFiles/00e499f3-6.jpg" alt="Model 1">
+      <h4><strong>1.8 Metre Kablo</strong></h4>
+      <p>1.8 metre uzunluğunda döner kablo rahat kullanım sunarken, 360° dönebilme özelliği sayesinde takılma sorunlarını önler. Bu sayede kablo içindeki bakır teller kopmaz, kırılmaz.</p>
+    </div>
+  </div>
+</section>
