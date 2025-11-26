@@ -1,0 +1,179 @@
+<style>
+.product-wrapper-iu {
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+
+  border: 6px solid #d60000;
+  border-radius: 14px;
+  padding: 18px;
+
+  box-shadow: 0 0 18px rgba(255,0,0,0.25);
+  box-sizing: border-box;   
+}
+
+.product-wrapper-iu::before {
+  content: "🎁 Hediye Ürün";
+  position: absolute;
+  top: -30px;
+  left: -10px;
+  background: #d60000;
+  color: white;
+  padding: 10px 45px;
+  font-size: 24px;
+  font-weight: bold;
+  transform: rotate(-10deg);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+  letter-spacing: 1px;
+  z-index: 2;
+}
+
+.product-gallery-iu {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  justify-items: center;
+  position: relative;
+  z-index: 1;
+  padding: 50px 40px;
+  background: linear-gradient(90deg, #1c673c,#398636, #7ea02f);
+}
+
+.product-gallery-iu-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  background: white;
+  padding: 20px 0px;
+  border-radius: 24px;
+}
+
+.img-box-iu {
+  width: 100%;
+  max-width: 200px;
+  border-radius: 14px;
+  margin-bottom: 20px;
+  transition: transform 0.3s ease;
+}
+
+.text-box-iu {
+  width: 200px;
+  padding: 22px;
+  border-radius: 18px;
+  transition: all 0.3s ease;
+}
+
+.product-gallery-iu-box h3 {
+  font-size: 1.15rem;
+  margin-bottom: 10px;
+  font-weight: 600;
+  line-height: 1.35;
+  text-align: center;
+}
+
+.product-gallery-iu-box p {
+  font-size: 0.92rem;
+  line-height: 1.5;
+  text-align: center;
+  margin: 0;
+}
+
+@media (max-width: 600px) {
+
+  .product-gallery-iu {
+    grid-template-columns: 1fr;
+    padding: 30px 20px;
+  }
+
+  .img-box-iu {
+    max-width: 100%;
+  }
+
+  .text-box-iu {
+    width: 100%;        
+    padding: 18px;
+  }
+
+  .product-gallery-iu-box h3 {
+    font-size: 1.05rem;
+  }
+
+  .product-gallery-iu-box p {
+    font-size: 0.85rem;
+  }
+}
+
+</style>
+
+<div class="product-wrapper-iu">
+<div class="product-banner-iu">
+<img src="h1.jpg" alt="" style="max-width: 1152px;">
+</div>
+  <section class="product-gallery-iu">
+    <div class="product-gallery-iu-box">
+      <img src="1.png" alt="" class="img-box-iu">
+      <div class="text-box-iu">
+      <h3>Otomatik Sıcak Tutma İşlevi</h3>
+      <p>Otomatik sıcak tutma işlevi sayesinde çayınız demlendikten sonra sıcak kalır. Bu işlev su kaynadığında otomatik olarak devreye girer ve siz çayınızı içene kadar ideal sıcaklığı korur. Ailece yapacağınız uzun çay sohbetleri için mükemmel bir yardımcıdır. ​</p>
+    </div>
+    </div>
+
+    <div class="product-gallery-iu-box">
+      <img src="2.png" alt="" class="img-box-iu">
+      <div class="text-box-iu">
+      <h3>1,9 L Su Isıtıcı Kapasitesi​</h3>
+      <p>1,9 litrelik geniş su ısıtıcı haznesi ile kalabalık aileler veya misafir ağırlama için idealdir. Tek seferde tüm ailenize yetecek kadar çay hazırlayabilir, tekrar tekrar su kaynatma derdinden kurtulabilirsiniz.</p>
+    </div>
+    </div>
+
+    <div class="product-gallery-iu-box">
+      <img src="4.png" alt="" class="img-box-iu">
+      <div class="text-box-iu">
+      <h3>Şeffaf Cam Demlik ile Çay Keyfi</h3>
+      <p>Cam demlik, şeffaf yapısıyla çayın rengini görmenizi sağlar. Zarif tasarımı mutfağınıza şıklık katarken, kolay temizlenebilir yapısı ise kullanıcı dostudur. Üstelik sağlam ve dayanıklıdır.</p>
+    </div>
+    </div>  
+
+    <div class="product-gallery-iu-box">
+      <img src="6.png" alt="" class="img-box-iu">
+      <div class="text-box-iu">
+      <h3>Hızlı Kaynatma ve Kolay Temizlik İçin Yassı Isıtma Yüzeyleri</h3>
+      <p>Paslanmaz çelikten gizli ısıtma yüzeyi, hızlı kaynatma ve kolay temizlik sağlar.
+      </p>
+    </div>    
+    </div>    
+
+    <div class="product-gallery-iu-box">
+      <img src="3.png" alt="" class="img-box-iu">
+      <div class="text-box-iu">
+      <h3>0,9 L Cam Çaydanlık</h3>
+      <p>0,9 L cam çaydanlık, tüm aileye yetecek kadar çay yapmanıza olanak tanır.</p>
+    </div>
+    </div>
+
+    <div class="product-gallery-iu-box">
+      <img src="5.png" alt="" class="img-box-iu">
+      <div class="text-box-iu">
+      <h3>360° Döner Taban</h3>
+      <p>Kolay kaldırma ve yerleştirme için kablosuz, 360° döner taban.</p>
+    </div>
+    </div>
+
+    <div class="product-gallery-iu-box">
+      <img src="7.png" alt="" class="img-box-iu">
+      <div class="text-box-iu">
+      <h3>Kireç Önleyici Filtre</h3>
+      <p>Temiz bir bardak su ve daha temiz bir su ısıtıcı için çıkarılabilir kireç önleyici filtre.</p>
+    </div>
+    </div>
+
+    <div class="product-gallery-iu-box">
+      <img src="8.png" alt="" class="img-box-iu">
+      <div class="text-box-iu">
+      <h3>Kolay Saklama İçin Güç Kablosu Sarıcı​</h3>
+      <p>Kabloyu tabana sararak su ısıtıcıyı mutfağınıza kolayca yerleştirebilirsiniz.​</p>
+    </div>
+    </div>     
+  </section>
+</div>

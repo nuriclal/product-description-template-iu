@@ -1,0 +1,702 @@
+<style type="text/css">.product-wrapper-iu-v2 {
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.section-iu {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.section-iu img,
+.carousel-track-iu img {
+  object-fit: cover;
+  display: block;
+  width: 100%;
+}
+
+.overlay-text-iu {
+  position: absolute;
+  top: 50%;
+  left: 40px;
+  transform: translateY(-50%);
+  color: white;
+  z-index: 5;
+  max-width: 420px;
+}
+
+.overlay-text-iu h2 {
+  font-size: 36px;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.overlay-text-iu p {
+  font-size: 18px;
+  line-height: 1.4;
+}
+
+.carousel-iu {
+  position: relative;
+  overflow: hidden;
+}
+
+.carousel-track-iu {
+  display: flex;
+  transition: transform 0.7s ease;
+}
+
+.carousel-slide-iu {
+  position: relative;
+  flex-shrink: 0;
+  width: 100%;
+}
+
+.carousel-text-iu {
+  position: absolute;
+  top: 70%;
+  left: 20px;
+  transform: translateY(-50%);
+  color: rgb(0, 0, 0);
+  z-index: 2;
+  max-width: 250px;
+}
+
+.carousel-text-iu h3 {
+  font-size: 24px !important;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.carousel-text-iu p {
+  font-size: 16px !important;
+  line-height: 1.4 !important;
+}
+
+.carousel-track-iu img {
+  flex-shrink: 0;
+  width: 100%;
+  object-fit: cover;
+}
+
+.carousel-nav-iu {
+  position: absolute;
+  bottom: 25px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+  z-index: 2;
+}
+
+.carousel-nav-iu span {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #337399;
+  cursor: pointer;
+}
+
+.carousel-nav-iu span.active {
+  background: #ff8738;
+}
+
+.hotspot-container-iu {
+    position: relative;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.hotspot-image-iu {
+    width: 100%;
+    display: block;
+}
+
+.hotspot-iu {
+    position: absolute;
+    width: 22px;
+    height: 22px;
+    background: #3a3e5481;
+    border: 3px solid white;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0px 2px 6px #00000040;
+    transition: background 0.25s ease;
+}
+
+.hotspot-iu.active {
+    background: #ff8738;
+}
+
+.hotspot-popup-iu {
+    position: absolute;
+    background: white;
+    width: 280px;
+    padding: 14px 18px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+    font-size: 14px;
+    display: none;
+    z-index: 2;
+    animation: fadeInIU .25s ease;
+}
+
+.hotspot-close-btn-iu {
+    position: absolute;
+    right: 10px;
+    top: 8px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+  #p1{left:27%; top:15%;}
+  #p2{left:56%; top:25%;} 
+  #p3{left:58%; top:49%;} 
+  #p4{left:42%; top:11%;} 
+  #p5{left:33%; top:64%;} 
+  #p6{left:48%; top:41%;}   
+
+@keyframes fadeInIU {
+    from { opacity: 0; transform: translateY(10px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 1080px) {
+
+  .section-iu img,
+  .carousel-track-iu img {
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .text-block-iu {
+    left: 25px;
+    width: 400px;
+  }
+
+  .text-block-iu img {
+    width: 72px;
+    height: 72px !important;
+    margin-bottom: 12px;
+  }
+
+  .text-block-iu h3 {
+    font-size: 26px !important;
+    margin-bottom: 8px;
+  }
+
+  .text-block-iu p {
+    font-size: 15px !important;
+  }
+
+  .carousel-nav-iu span {
+    width: 10px;
+    height: 10px !important;
+  }
+  
+  #p1, #p2, #p3, #p4, #p5, #p6 {
+      left: 50% !important;
+      transform: translateX(-50%);
+  }
+  #p1{top: 60% !important;}
+  #p2{top: 35% !important;} 
+  #p3{top: 60% !important;} 
+  #p4{top: 20% !important;} 
+  #p5{top: 75% !important;} 
+  #p6{top: 50% !important;}   
+
+.overlay-text-iu h2 {
+  font-size: 20px !important;
+  line-height: 1.5em !important;
+}
+
+.overlay-text-iu p {
+  font-size: 12px !important;
+  line-height: 1.5em !important;
+}
+
+}
+
+@media (max-width: 480px) {
+
+  .section-iu img,
+  .carousel-track-iu img {
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .text-block-iu {
+    top: 50%;
+    left: 20px;
+    transform: translateY(-50%);
+    width: 310px;
+  }
+
+  .text-block-iu img {
+    width: 60px;
+    height: 60px !important;
+    margin-bottom: 10px;
+  }
+
+  .text-block-iu h3 {
+    font-size: 16px !important;
+    line-height: 1.2;
+    margin-bottom: 6px;
+  }
+
+  .text-block-iu p {
+    font-size: 12px !important;
+    line-height: 1.35;
+  }
+
+  .carousel-nav-iu {
+    bottom: 5px;
+  }
+
+.carousel-text-iu{
+  background-color: #ffffff90;
+  border-radius: 12px;
+  padding: 5px;
+}
+
+.carousel-text-iu h3 {
+    font-size: 12px !important;
+    line-height: 1.2em;
+    margin-bottom: 0px !important;
+}  
+
+.carousel-text-iu p {
+    font-size: 10px !important;
+    line-height: 1.35 !important;
+    margin-bottom: 0px !important;
+}  
+
+  .carousel-nav-iu span {
+    width: 8px;
+    height: 8px !important;
+  }
+
+.overlay-text-iu {
+  background-color: #00000090;
+  border-radius: 12px;
+  padding: 5px;
+  left: 15px !important;
+}
+
+.overlay-text-iu h2 {
+  font-size: 14px !important;
+  line-height: 1.5em !important;
+}
+
+.overlay-text-iu p {
+  font-size: 10px !important;
+  line-height: 1.5em !important;
+}
+
+}
+</style>
+<div class="product-wrapper-iu-v2">
+<section class="section-iu"><img alt="" src="/Content/UploadFiles/6d81eaf5-1.jpg" />
+    <div class="overlay-text-iu">
+        <h2>Lezzetli Izgara ve Tost Yapmak Artık Çok Kolay</h2>
+        <p>Izgarada pişmiş yemeklerin tadını zahmetsizce çıkarın. Kolay temizlenen çıkarılabilir plakalar ve hızlı ısıtma, rahat bir ızgara deneyimi sunar.</p>
+    </div>    
+</section>
+
+<section class="section-iu"><img alt="" src="/Content/UploadFiles/4125b173-2.jpg" />
+</section>
+
+<div class="hotspot-container-iu" id="hotspotWrapperIU">
+    <img src="/Content/UploadFiles/0702be72-3.jpg" class="hotspot-image-iu">
+
+    <div class="hotspot-iu" style="left:50%; top:45%;" onclick="openPopupIU(event,'p1', this)"></div>
+    <div id="p1" class="hotspot-popup-iu">
+        <span class="hotspot-close-btn-iu" onclick="closePopupIU('p1')">×</span>
+            <p style='font-weight: bold'>Yüksek güç</p>
+            <p>Izgara plakalarının hızlı ısınması için 2200 watt güç</p>
+    </div>
+
+    <div class="hotspot-iu" style="left:79%; top:19%;" onclick="openPopupIU(event,'p2', this)"></div>
+    <div id="p2" class="hotspot-popup-iu">
+        <span class="hotspot-close-btn-iu" onclick="closePopupIU('p2')">×</span>
+            <p style='font-weight: bold'>Çıkarılabilir yapışmaz plakalar</p>
+            <p>Temizliği kolaylaştırmak için</p>
+      </div>
+
+    <div class="hotspot-iu" style="left:80%; top:42%;" onclick="openPopupIU(event,'p3', this)"></div>
+    <div id="p3" class="hotspot-popup-iu">
+        <span class="hotspot-close-btn-iu" onclick="closePopupIU('p3')">×</span>
+            <p style='font-weight: bold'>Ayarlanabilir yükseklik</p>
+            <p>Daha kalın yiyecekler için üst ızgara plakasının yüksekliğini ayarlayın</p>            
+    </div>
+
+    <div class="hotspot-iu" style="left:65%; top:5%;" onclick="openPopupIU(event,'p4', this)"></div>
+    <div id="p4" class="hotspot-popup-iu">
+        <span class="hotspot-close-btn-iu" onclick="closePopupIU('p4')">×</span>
+            <p style='font-weight: bold'>Geniş yüzeyli ızgara</p>
+            <p>Geniş ızgara alanı ile tüm aileyi doyurun</p>
+    </div>
+
+    <div class="hotspot-iu" style="left:56%; top:58%;" onclick="openPopupIU(event,'p5', this)"></div>
+    <div id="p5" class="hotspot-popup-iu">
+        <span class="hotspot-close-btn-iu" onclick="closePopupIU('p5')">×</span>
+            <p style='font-weight: bold'>Ayarlanabilir sıcaklık</p>
+            <p>Her seferinde mükemmel sıcaklığı ayarlamak için</p>
+    </div>
+
+    <div class="hotspot-iu" style="left:71%; top:35%;" onclick="openPopupIU(event,'p6', this)"></div>
+    <div id="p6" class="hotspot-popup-iu">
+        <span class="hotspot-close-btn-iu" onclick="closePopupIU('p6')">×</span>
+            <p style='font-weight: bold'>180° açılım</p>
+            <p>Her iki tarafı aynı anda ızgara yapmak için bastırarak 180° açın</p>
+    </div>
+
+</div>
+
+<section class="section-iu">
+<div class="carousel-iu">
+
+    <div class="carousel-track-iu">
+
+        <div class="carousel-slide-iu">
+            <img src="/Content/UploadFiles/e1cc4430-41.jpg">
+            <div class="carousel-text-iu">
+                <h3>Kolay Temizlik İçin Çıkarılabilir Parçalar</h3>
+                <p>Yapışmaz plakalar ve yağ tepsisi kolayca çıkarılabildiğinden temizlik son derece kolaydır.</p>
+            </div>
+        </div>
+
+        <div class="carousel-slide-iu">
+            <img src="/Content/UploadFiles/b9888b14-42.jpg">
+            <div class="carousel-text-iu">
+                <h3>Hızlı Pişirme İçin Yüksek Güç</h3>
+                <p>2200 watt güç, ızgara plakalarını hızla ısıtır ve mükemmel sonuçlar için hassas ve kesintisiz sıcaklığı korur.</p>
+            </div>
+        </div>
+
+        <div class="carousel-slide-iu">
+            <img src="/Content/UploadFiles/5e6d3ab4-43.jpg">
+            <div class="carousel-text-iu">
+                <h3>Mükemmel Sonuçlar İçin Ayarlanabilir Sıcaklık</h3>
+                <p>Sandviçlerinizi, etlerinizi ve sebzelerinizi tam istediğiniz gibi pişirmek için her seferinde mükemmel sıcaklığı ayarlayın.</p>
+            </div>
+        </div>
+
+        <div class="carousel-slide-iu">
+            <img src="/Content/UploadFiles/6dbaeadd-44.jpg">
+            <div class="carousel-text-iu">
+                <h3>Ayarlanabilir Yükseklik Sevdiğiniz Tüm Yiyeceklere Uyum Sağlar</h3>
+                <p>Daha kalın yiyecekler veya açık sandviçler için üst ızgara plakasının yüksekliğini kolayca ayarlayın.</p>
+            </div>
+        </div>
+
+        <div class="carousel-slide-iu">
+            <img src="/Content/UploadFiles/0a4504bb-45.jpg">
+            <div class="carousel-text-iu">
+                <h3>Geniş Izgara Yüzeyi Tüm Aileyi Doyurur</h3>
+                <p>İster kendiniz ister kalabalık bir grup için yemek pişirin, geniş ızgara alanı her türlü ihtiyacınızı karşılar.</p>
+            </div>
+        </div>
+
+        <div class="carousel-slide-iu">
+            <img src="/Content/UploadFiles/149aad8e-46.jpg">
+            <div class="carousel-text-iu">
+                <h3>Kolay Izgara İçin Çıkarılabilir Yapışmaz Plakalar</h3>
+                <p>Ne pişirirseniz pişirin, çıkarılabilir yapışmaz ızgara plakaları ile ızgara yapmak ve temizlemek çok kolay.</p>
+            </div>
+        </div>
+
+        <div class="carousel-slide-iu">
+            <img src="/Content/UploadFiles/7ea70e76-47.jpg">
+            <div class="carousel-text-iu">
+                <h3>Tezgah Üstü Izgara İçin 180° Açılır</h3>
+                <p>Et ve sebzeleri her iki tarafta tek seferde pişirmek için sandviç makinesini 180° açın.</p>
+            </div>
+        </div>
+
+        <div class="carousel-slide-iu">
+            <img src="/Content/UploadFiles/512ca648-48.jpg">
+            <div class="carousel-text-iu">
+                <h3>Çıkarılabilir Damlama Tepsisi Artık Yağı Toplar</h3>
+                <p>Eriyen yağı kolay temizlik için çıkarılabilen damlama tepsisinde toplayın.</p>
+            </div>
+        </div>    
+        
+        <div class="carousel-slide-iu">
+            <img src="/Content/UploadFiles/040297c9-49.jpg">
+            <div class="carousel-text-iu">
+                <h3>Taşıma ve Saklama İçin Tutma Yeri Kilidi</h3>
+                <p>Izgaranızı kolayca taşımak ve saklamak için tutma yerini kapatıp kilitleyin.</p>
+            </div>
+        </div>        
+    </div>
+<div class="carousel-nav-iu">&nbsp;</div>
+</div>
+</section>
+
+<section class="section-iu"><img alt="" src="/Content/UploadFiles/318f5b1f-5.jpg"/>
+</section>
+
+</div>
+
+<script>
+document.querySelectorAll('.carousel-iu').forEach(carousel => {
+
+  let current = 0;
+  const track = carousel.querySelector('.carousel-track-iu');
+  const slides = Array.from(track.children);
+
+  const nav = carousel.querySelector('.carousel-nav-iu');
+
+  nav.innerHTML = "";
+  slides.forEach((_, i) => {
+    const dot = document.createElement('span');
+    dot.dataset.slide = i;
+    if (i === 0) dot.classList.add("active");
+    nav.appendChild(dot);
+  });
+
+  const dots = Array.from(nav.querySelectorAll("span"));
+  const total = slides.length;
+
+  function goTo(i) {
+    i = Number(i);
+    current = i;
+    track.style.transform = `translateX(-${i * 100}%)`;
+
+    dots.forEach(d => d.classList.remove('active'));
+    dots[i].classList.add('active');
+  }
+
+  dots.forEach(dot => {
+    dot.addEventListener('click', () => {
+      goTo(dot.dataset.slide);
+    });
+  });
+
+  setInterval(() => {
+    current = (current + 1) % total;
+    goTo(current);
+  }, 4000);
+
+});
+
+function openPopupIU(event, id, hotspotEl) {
+    event.stopPropagation(); 
+
+
+    document.querySelectorAll('.hotspot-popup-iu').forEach(p => p.style.display = 'none');
+
+    document.querySelectorAll('.hotspot-iu').forEach(h => h.classList.remove('active'));
+
+    hotspotEl.classList.add('active');
+
+    document.getElementById(id).style.display = 'block';
+}
+
+function closePopupIU(id) {
+    document.getElementById(id).style.display = 'none';
+
+    document.querySelectorAll('.hotspot-iu').forEach(h => h.classList.remove('active'));
+}
+
+document.getElementById("hotspotWrapperIU").addEventListener("click", function(e) {
+    if (e.target.classList.contains("hotspot-iu")) return;
+
+    document.querySelectorAll('.hotspot-popup-iu').forEach(p => p.style.display = 'none');
+    document.querySelectorAll('.hotspot-iu').forEach(h => h.classList.remove('active'));
+});
+</script>
+
+<style>
+.product-wrapper-iu {
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+
+  border: 6px solid #d60000;
+  border-radius: 14px;
+  padding: 18px;
+
+  box-shadow: 0 0 18px rgba(255,0,0,0.25);
+  box-sizing: border-box;   
+}
+
+.product-wrapper-iu::before {
+  content: "🎁 Hediye Ürün";
+  position: absolute;
+  top: -30px;
+  left: -10px;
+  background: #d60000;
+  color: white;
+  padding: 10px 45px;
+  font-size: 24px;
+  font-weight: bold;
+  transform: rotate(-10deg);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+  letter-spacing: 1px;
+  z-index: 2;
+}
+
+.product-gallery-iu {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  justify-items: center;
+  position: relative;
+  z-index: 1;
+  padding: 50px 40px;
+  background: linear-gradient(90deg, #1c673c,#398636, #7ea02f);
+}
+
+.product-gallery-iu-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  background: white;
+  padding: 20px 0px;
+  border-radius: 24px;
+}
+
+.img-box-iu {
+  width: 100%;
+  max-width: 200px;
+  border-radius: 14px;
+  margin-bottom: 20px;
+  transition: transform 0.3s ease;
+}
+
+.text-box-iu {
+  width: 200px;
+  padding: 22px;
+  border-radius: 18px;
+  transition: all 0.3s ease;
+}
+
+.product-gallery-iu-box h3 {
+  font-size: 1.15rem;
+  margin-bottom: 10px;
+  font-weight: 600;
+  line-height: 1.35;
+  text-align: center;
+}
+
+.product-gallery-iu-box p {
+  font-size: 0.92rem;
+  line-height: 1.5;
+  text-align: center;
+  margin: 0;
+}
+
+@media (max-width: 600px) {
+
+  .product-gallery-iu {
+    grid-template-columns: 1fr;
+    padding: 30px 20px;
+  }
+
+  .img-box-iu {
+    max-width: 100px;
+  }
+
+  .text-box-iu {
+    width: 100%;        
+    padding: 18px;
+  }
+
+  .product-gallery-iu-box h3 {
+    font-size: 1.05rem;
+  }
+
+  .product-gallery-iu-box p {
+    font-size: 0.85rem;
+  }
+
+  .product-wrapper-iu::before {
+    font-size: 14px !important;
+    padding: 8px 12px;
+    left: -30px !important;
+    top: -25px !important;
+  }
+
+}
+
+</style>
+
+<div class="product-wrapper-iu">
+<div class="product-banner-iu">
+<img src="/Content/UploadFiles/4b198a50-h1.jpg" alt="" style="    width: 100%; object-fit: cover; object-position: center;">
+</div>
+  <section class="product-gallery-iu">
+    <div class="product-gallery-iu-box">
+      <img src="/Content/UploadFiles/9caa7493-1.png" alt="" class="img-box-iu">
+      <div class="text-box-iu">
+      <h3>Otomatik Sıcak Tutma İşlevi</h3>
+      <p>Otomatik sıcak tutma işlevi sayesinde çayınız demlendikten sonra sıcak kalır. Bu işlev su kaynadığında otomatik olarak devreye girer ve siz çayınızı içene kadar ideal sıcaklığı korur. Ailece yapacağınız uzun çay sohbetleri için mükemmel bir yardımcıdır. ​</p>
+    </div>
+    </div>
+
+    <div class="product-gallery-iu-box">
+      <img src="/Content/UploadFiles/a6dc681f-2.png" alt="" class="img-box-iu">
+      <div class="text-box-iu">
+      <h3>1,9 L Su Isıtıcı Kapasitesi​</h3>
+      <p>1,9 litrelik geniş su ısıtıcı haznesi ile kalabalık aileler veya misafir ağırlama için idealdir. Tek seferde tüm ailenize yetecek kadar çay hazırlayabilir, tekrar tekrar su kaynatma derdinden kurtulabilirsiniz.</p>
+    </div>
+    </div>
+
+    <div class="product-gallery-iu-box">
+      <img src="/Content/UploadFiles/4a3b9b75-4.png" alt="" class="img-box-iu">
+      <div class="text-box-iu">
+      <h3>Şeffaf Cam Demlik ile Çay Keyfi</h3>
+      <p>Cam demlik, şeffaf yapısıyla çayın rengini görmenizi sağlar. Zarif tasarımı mutfağınıza şıklık katarken, kolay temizlenebilir yapısı ise kullanıcı dostudur. Üstelik sağlam ve dayanıklıdır.</p>
+    </div>
+    </div>  
+
+    <div class="product-gallery-iu-box">
+      <img src="/Content/UploadFiles/17f4ba35-6.png" alt="" class="img-box-iu">
+      <div class="text-box-iu">
+      <h3>Hızlı Kaynatma ve Kolay Temizlik İçin Yassı Isıtma Yüzeyleri</h3>
+      <p>Paslanmaz çelikten gizli ısıtma yüzeyi, hızlı kaynatma ve kolay temizlik sağlar.
+      </p>
+    </div>    
+    </div>    
+
+    <div class="product-gallery-iu-box">
+      <img src="/Content/UploadFiles/a6b7bbdd-3.png" alt="" class="img-box-iu">
+      <div class="text-box-iu">
+      <h3>0,9 L Cam Çaydanlık</h3>
+      <p>0,9 L cam çaydanlık, tüm aileye yetecek kadar çay yapmanıza olanak tanır.</p>
+    </div>
+    </div>
+
+    <div class="product-gallery-iu-box">
+      <img src="/Content/UploadFiles/46b8ddf3-5.png" alt="" class="img-box-iu">
+      <div class="text-box-iu">
+      <h3>360° Döner Taban</h3>
+      <p>Kolay kaldırma ve yerleştirme için kablosuz, 360° döner taban.</p>
+    </div>
+    </div>
+
+    <div class="product-gallery-iu-box">
+      <img src="/Content/UploadFiles/d95bbf1d-7.png" alt="" class="img-box-iu">
+      <div class="text-box-iu">
+      <h3>Kireç Önleyici Filtre</h3>
+      <p>Temiz bir bardak su ve daha temiz bir su ısıtıcı için çıkarılabilir kireç önleyici filtre.</p>
+    </div>
+    </div>
+
+    <div class="product-gallery-iu-box">
+      <img src="/Content/UploadFiles/0abe0ae2-8.png" alt="" class="img-box-iu">
+      <div class="text-box-iu">
+      <h3>Kolay Saklama İçin Güç Kablosu Sarıcı​</h3>
+      <p>Kabloyu tabana sararak su ısıtıcıyı mutfağınıza kolayca yerleştirebilirsiniz.​</p>
+    </div>
+    </div>     
+  </section>
+</div>

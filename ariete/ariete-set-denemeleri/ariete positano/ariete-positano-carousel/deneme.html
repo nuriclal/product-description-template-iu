@@ -1,0 +1,279 @@
+<style>
+.slider-container-iu * {
+  margin: 0 !important;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+.slider-container-iu {
+  height: 911px;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+}
+
+.main-iu {
+  position: relative;
+  width: 100%;
+  max-width: 1280px;
+  height: 100%;
+  max-height: 911px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.3);
+}
+
+.item-iu {
+  width: 300px;
+  height: 300px;
+  list-style-type: none;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1;
+  background-position: center;
+  background-size: cover;
+  border-radius: 20px;
+  box-shadow: 0 20px 30px #32364b inset;
+  transition: transform 0.1s, left 0.75s, top 0.75s, width 0.75s, height 0.75s;
+}
+
+.item-iu:nth-child(1),
+.item-iu:nth-child(2) {
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  transform: none;
+  border-radius: 0;
+  box-shadow: none;
+  opacity: 1;
+  z-index: 0;
+}
+
+.item-iu:nth-child(3) { left: 50%; }
+.item-iu:nth-child(4) { left: calc(50% + 320px); }
+.item-iu:nth-child(5) { left: calc(50% + 640px); }
+.item-iu:nth-child(6) { left: calc(50% + 960px); opacity: 0; }
+
+.content-iu {
+  width: min(40vw,500px);
+  position: absolute;
+  top: 50%;
+  left: 3rem;
+  transform: translateY(-50%);
+  font: 400 0.85rem helvetica,sans-serif;
+  color: white;
+  text-shadow: 0 3px 8px rgba(0,0,0,0.5);
+  opacity: 0;
+  display: none;
+  padding: 1rem;
+  background-color: #12143191; 
+  border-radius: 12px; 
+}
+
+.content-iu .title-iu {
+  font-size: 1.8rem !important;
+  text-transform: uppercase !important;
+}
+
+.content-iu .description-iu {
+  line-height: 1.4 !important;
+  margin: 1rem 0 1.5rem !important;
+  font-size: 1.2rem !important;
+}
+
+.content-iu button {
+  width: fit-content;
+  background-color: rgba(0,0,0,0.1);
+  color: white;
+  border: 2px solid white;
+  border-radius: 0.25rem;
+  padding: 0.75rem;
+  cursor: pointer;
+  font-size: 1rem !important;
+}
+
+.item-iu:nth-of-type(2) .content-iu {
+  display: block;
+  animation: show-iu 0.75s ease-in-out 0.3s forwards;
+}
+
+@keyframes show-iu {
+  0% {
+    filter: blur(5px);
+    transform: translateY(calc(-50% + 75px));
+  }
+  100% {
+    opacity: 1;
+    filter: blur(0);
+  }
+}
+
+.nav-iu {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+  user-select: none;
+}
+
+.nav-iu .btn-iu {
+  background-color: rgba(255,255,255,0.5);
+  color: #121431ce;
+  border: 2px solid #121431ce;
+  margin: 0 0.25rem;
+  padding: 0.75rem;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.nav-iu .btn-iu:hover {
+  background-color: rgba(255,255,255,0.1);
+}
+
+@media (width > 650px) and (width < 1230px) {
+  .content-iu .title-iu { font-size: 1.4rem !important; }
+  .content-iu .description-iu { font-size: 1.2rem !important; }
+  .content-iu button { font-size: 1rem !important; }
+
+  .item-iu {
+    width: 160px;
+    height: 270px;
+  }
+
+  .item-iu:nth-child(3) { left: 50%; }
+  .item-iu:nth-child(4) { left: calc(50% + 170px); }
+  .item-iu:nth-child(5) { left: calc(50% + 340px); }
+  .item-iu:nth-child(6) { left: calc(50% + 510px); opacity: 0; }
+}
+
+@media (width < 650px) {
+  .content-iu .title-iu { font-size: 1.3rem !important; }
+  .content-iu .description-iu { font-size: 1rem !important; }
+  .content-iu button { font-size: 1rem !important; }
+
+  .item-iu {
+    width: 160px;
+    height: 220px;
+    top: 75%;
+  }
+
+  .content-iu{
+    top: 40% !important;
+    width: 70vw !important;
+  }
+
+  .item-iu:nth-child(3) { left: 30%; }
+  .item-iu:nth-child(4) { left: calc(30% + 170px); }
+  .item-iu:nth-child(5) { left: calc(30% + 340px); }
+  .item-iu:nth-child(6) { left: calc(30% + 510px); opacity: 0; }
+}
+</style>
+
+<div class="slider-container-iu">
+  <main class="main-iu">
+    <ul class="slider-iu">
+      <li class="item-iu" style="background-image: url('/Content/UploadFiles/033dfbb1-1.jpg')">
+        <div class="content-iu">
+          <h2 class="title-iu">Positano Kettle</h2>
+          <p class="description-iu">
+            Günün yorgunluğunu atarken Positano Kettle ile hazırladığınız bitki çaylarının keyfini çıkarın...
+          </p>
+          <button class="view-btn-iu" data-link="https://www.jebinde.com/detay/ariete-positano-28690p-2000-w-17-l-kettle-92069">Ürünü Gör</button>
+        </div>
+      </li>
+      <li class="item-iu" style="background-image: url('/Content/UploadFiles/4b5ae7dd-2.jpg')">
+        <div class="content-iu">
+          <h2 class="title-iu">Positano Mutfak Şefi</h2>
+          <p class="description-iu">
+            Positano Mutfak Şefi ile yumuşak ve mükemmel kabarmış hamurlar hazırlayın...
+          </p>
+          <button class="view-btn-iu" data-link="https://www.jebinde.com/detay/ariete-positano-15880p-55-lt-1200-w-mutfak-sefi-92098">Ürünü Gör</button>
+        </div>
+      </li>
+      <li class="item-iu" style="background-image: url('/Content/UploadFiles/067a73f2-3.jpg')">
+        <div class="content-iu">
+          <h2 class="title-iu">Positano Ekmek Kızartma Makinesi</h2>
+          <p class="description-iu">
+            Positano Ekmek Kızartma Makinesi ile hazırladığınız her tost ve sandviç, altın rengi kıvamı ve çıtırlığıyla iştah kabartır...
+          </p>
+          <button class="view-btn-iu" data-link="https://www.jebinde.com/detay/ariete-positano-01551p-2-dilim-ekmek-kizartma-makinesi-92070">Ürünü Gör</button>
+        </div>
+      </li>
+      <li class="item-iu" style="background-image: url('/Content/UploadFiles/c5a9c0cb-4.jpg')">
+        <div class="content-iu">
+          <h2 class="title-iu">Positano Blender</h2>
+          <p class="description-iu">
+            Positano Blender ile smoothie, sos, krema, milkshake ve pürüzsüz karışımları saniyeler içinde hazırlayın...
+          </p>
+          <button class="view-btn-iu" data-link="https://www.jebinde.com/detay/ariete-positano-05830p-1000-w-surahi-blender-92067">Ürünü Gör</button>
+        </div>
+      </li>
+      <li class="item-iu" style="background-image: url('/Content/UploadFiles/5ea4359a-5.jpg')">
+        <div class="content-iu">
+          <h2 class="title-iu">Positano Narenciye Sıkacağı</h2>
+          <p class="description-iu">
+            Positano Narenciye Sıkacağı ile portakal ve limonları enerji ve ferahlık dolu içeceklere dönüştürün...
+          </p>
+          <button class="view-btn-iu" data-link="https://www.jebinde.com/detay/ariete-positano-04130p-narenciye-sikacagi-92068">Ürünü Gör</button>
+        </div>
+      </li>
+      <li class="item-iu" style="background-image: url('/Content/UploadFiles/ba01e628-6.jpg')">
+        <div class="content-iu">
+          <h2 class="title-iu">Positano Espresso Makinesi</h2>
+          <p class="description-iu">
+            Positano Espresso Makinesi ile güne sıcacık bir espresso ya da kremalı bir cappuccino ile başlayın...
+          </p>
+          <button class="view-btn-iu" data-link="https://www.jebinde.com/detay/ariete-positano-13891p-manuel-espresso-makinesi-92099">Ürünü Gör</button>
+        </div>
+      </li>
+    </ul>
+    <nav class="nav-iu">
+      <ion-icon class="btn-iu prev-iu" name="arrow-back-outline"></ion-icon>
+      <ion-icon class="btn-iu next-iu" name="arrow-forward-outline"></ion-icon>
+    </nav>
+  </main>
+</div>
+
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+<script>
+const sliderIU = document.querySelector('.slider-iu');
+
+function activateIU(e) {
+  const itemsIU = document.querySelectorAll('.item-iu');
+  
+  if (e.target.matches('.next-iu')) {
+    sliderIU.append(itemsIU[0]);
+  }
+  if (e.target.matches('.prev-iu')) {
+    sliderIU.prepend(itemsIU[itemsIU.length - 1]);
+  }
+
+  if (e.target.closest('.item-iu') && !e.target.closest('.content-iu')) {
+    const clickedItem = e.target.closest('.item-iu');
+
+    const itemsArr = Array.from(itemsIU);
+    const clickedIndex = itemsArr.indexOf(clickedItem);
+
+    if (clickedIndex === 1) return;
+
+    for (let i = 0; i < clickedIndex - 1; i++) {
+      sliderIU.append(sliderIU.firstElementChild);
+    }
+  }
+}
+
+document.addEventListener('click', activateIU, false);
+
+document.addEventListener("click", function(e) {
+  const btn = e.target.closest(".view-btn-iu");
+  if (btn) {
+    const url = btn.getAttribute("data-link");
+    window.open(url, "_blank");
+  }
+});
+
+</script>

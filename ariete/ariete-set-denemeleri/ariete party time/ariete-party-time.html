@@ -1,0 +1,365 @@
+<style type="text/css">.slider-container-iu * {
+  margin: 0 !important;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+.slider-container-iu {
+  height: 919px;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+}
+
+.main-iu {
+  position: relative;
+  width: 100%;
+  max-width: 1280px;
+  height: 100%;
+  max-height: 911px;
+  box-shadow: 0 3px 10px #0000004d;
+}
+
+.item-iu {
+  width: 400px;
+  height: 300px;
+  list-style-type: none;
+  position: absolute;
+  top: 20%;
+  transform: translateY(-50%);
+  z-index: 1;
+  background-position: center;
+  background-size: cover;
+  border-radius: 20px;
+  box-shadow: 0 20px 30px #3f3f3f inset;
+  transition: transform 0.1s, left 0.75s, top 0.75s, width 0.75s, height 0.75s;
+}
+
+.item-iu:nth-child(1),
+.item-iu:nth-child(2) {
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  transform: none;
+  border-radius: 0;
+  box-shadow: none;
+  opacity: 1;
+  z-index: 0;
+}
+
+.item-iu:nth-child(3) { left: 65%; }
+.item-iu:nth-child(4) { left: calc(65% + 460px); }
+.item-iu:nth-child(5) { left: calc(65% + 820px); }
+.item-iu:nth-child(6) { left: calc(65% + 1180px); opacity: 0; }
+
+.content-iu {
+  width: min(50vw, 500px); 
+  position: absolute;
+  top: 20px; 
+  left: 48px; 
+  transform: none; 
+  font: 400 0.85rem helvetica, sans-serif;
+  color: white;
+  text-shadow: 0 3px 8px rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  display: none;
+  padding: 1rem;
+  background-color: #00000091;
+  border-radius: 12px;
+}
+
+
+.content-iu .title-iu {
+  font-size: 1.8rem !important;
+  text-transform: uppercase !important;
+}
+
+.content-iu .description-iu {
+  line-height: 1.4 !important;
+  margin: 1rem 0 1.5rem !important;
+  font-size: 1.2rem !important;
+}
+
+.content-iu button {
+  width: fit-content;
+  background-color: rgba(0,0,0,0.1);
+  color: white;
+  border: 2px solid white;
+  border-radius: 0.25rem;
+  padding: 0.75rem;
+  cursor: pointer;
+  font-size: 1rem !important;
+}
+
+.item-iu:nth-of-type(2) .content-iu {
+  display: block;
+  animation: show-iu 0.75s ease-in-out 0.3s forwards;
+}
+
+@keyframes show-iu {
+  0% {
+    filter: blur(5px);
+    transform: translateY(calc(-50% + 75px));
+  }
+  100% {
+    opacity: 1;
+    filter: blur(0);
+  }
+}
+
+.nav-iu {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+  user-select: none;
+}
+
+.nav-iu .btn-iu {
+  background-color: rgba(255,255,255,0.5);
+  color: #2b2b2bce;
+  border: 2px solid #2b2b2bce;
+  margin: 0 0.25rem;
+  padding: 0.75rem;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.nav-iu .btn-iu:hover {
+  background-color: rgba(255,255,255,0.1);
+}
+
+.video-box-iu {
+  position: absolute;
+  bottom: 30px;      
+  left: 48px;       
+  width: 400px;
+  height: 300px;
+  border-radius: 12px;
+  overflow: hidden;
+  z-index: 2;
+  display: none;
+  transform: none;   
+}
+
+.item-iu:nth-of-type(2) .video-box-iu {
+  display: block;
+}
+
+
+@media (width > 650px) and (width < 1230px) {
+  .content-iu .title-iu { font-size: 1.4rem !important; }
+  .content-iu .description-iu { font-size: 1.2rem !important; }
+  .content-iu button { font-size: 1rem !important; }
+
+  .item-iu {
+    width: 180px;
+    height: 180px;
+  }
+
+  .nav-iu {
+  bottom: 8px;
+  }
+
+  .video-box-iu {
+    bottom: 55px;      
+    left: 48px;       
+    width: 220px;
+    height: 160px;
+  }
+
+  .item-iu:nth-child(3) { left: 68%; }
+  .item-iu:nth-child(4) { left: calc(68% + 170px); }
+  .item-iu:nth-child(5) { left: calc(68% + 340px); }
+  .item-iu:nth-child(6) { left: calc(68% + 510px); opacity: 0; }
+}
+
+@media (width < 650px) {
+  .content-iu .title-iu { font-size: 1.3rem !important; }
+  .content-iu .description-iu { font-size: 1rem !important; }
+  .content-iu button { font-size: 1rem !important; }
+
+  .item-iu {
+    width: 150px;
+    height: 150px;
+    top: 84%;
+  }
+
+  .content-iu{
+    top: 5% !important;
+    width: 70vw !important;
+  }
+
+  .video-box-iu {
+    bottom: 0px !important;
+    top: 76%;      
+    left: 8px;       
+    width: 200px;
+    height: 150px;
+    border-radius: 12px;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .video-box-iu iframe {
+    width: 100%;
+    height: 100%;
+  }
+
+  .nav-iu {
+  bottom: 5px;
+  }
+
+  .item-iu:nth-child(3) { left: 60%; }
+  .item-iu:nth-child(4) { left: calc(60% + 170px); }
+  .item-iu:nth-child(5) { left: calc(60% + 340px); }
+  .item-iu:nth-child(6) { left: calc(60% + 510px); opacity: 0; }
+}
+</style>
+<div class="slider-container-iu">
+  <main class="main-iu">
+    <ul class="slider-iu">
+      <li class="item-iu" style="background-image: url('/Content/UploadFiles/5ca5a2c0-1.jpg')">
+        <div class="content-iu">
+	<h2 class="title-iu">Part Time Waffle Makinesi</h2>
+
+	<p class="description-iu">Waffle severlerin en büyük hayali: Ariete Waffle Makinesi! Çikolata, çilek, pudra şekeri gibi klasik tatların ötesine geçmek ve bambaşka lezzetler yaratmak çok kolay! Bu makine ile sadece geleneksel waffle’lar değil, hayal gücünüzün sınırlarını zorlayarak farklı tarifler de hazırlayabilirsiniz.
+<br>
+Ariete Waffle Makinesi, her anı eğlenceye dönüştüren pratik tasarımı ve mükemmel sonuçlarıyla, waffle keyfini evinize taşıyor.
+<br><br>
+Lezzetli, pratik ve şık! Ariete ile waffle yapmak artık bir eğlence!</p>
+	<button class="view-btn-iu" data-link="https://www.jebinde.com/detay/ariete-party-time-waffle-makinesi-kirmizi-1973-00-92057">Ürünü Gör</button>
+        </div>
+        <div class="video-box-iu">
+          <iframe width="400" height="300" src="https://player.vimeo.com/video/1137401461?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479&autoplay=1&loop=1&muted=1&controls=0" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+        </div>
+      </li>
+
+      <li class="item-iu" style="background-image: url('/Content/UploadFiles/7ad3ad64-2.jpg')">
+        <div class="content-iu">
+	<h2 class="title-iu">Party Time Dondurma Makinesi</h2>
+
+	<p class="description-iu">Dondurma partilerinizi bir üst seviyeye taşımaya hazır mısınız? Ariete Dondurma Makinesi ile en sevdiğiniz ev yapımı dondurmayı sadece 30 dakikada hazırlayın! 1,5 L kapasiteli dondurma makinesi, soğutucu akışkanlı çıkarılabilir çift yalıtımlı kasesi ve malzemeleri eklemek için şeffaf delikli üst kapağı ile pratik bir kullanım sunar.
+<br>
+Kasesini 24 saat önceden soğutun, makineye yerleştirin ve sadece birkaç dakikada tatlı rüyanızı gerçeğe dönüştürün! Dondurma yapmanın keyfini çıkarırken, farklı tatlarla misafirlerinize yaratıcı lezzetler sunun.</p>
+	
+          <button class="view-btn-iu" data-link="https://www.jebinde.com/detay/ariete-party-time-dondurma-makinesi-0643-00-92060">Ürünü Gör</button>
+        </div>
+        <div class="video-box-iu">
+          <iframe width="400" height="300" src="https://player.vimeo.com/video/1137401690?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479&autoplay=1&loop=1&muted=1&controls=0" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+        </div>
+      </li>
+
+      <li class="item-iu" style="background-image: url('/Content/UploadFiles/09b7d4a4-3.jpg')">
+        <div class="content-iu">
+	<h2 class="title-iu">Party Time Mısır Patlatma Makinesi</h2>
+
+	<p class="description-iu">Ariete Mısır Patlatma Makinesi, ailenizle ya da arkadaşlarınızla geçirdiğiniz akşamları, çıtır çıtır, mis gibi kokulu ev yapımı patlamış mısırlarla zenginleştirecek. Sıcak hava pişirme teknolojisiyle, sadece 2 dakikada 60 gram mısırı sağlıklı ve lezzetli patlamış mısıra dönüştürür. Katkı maddesi veya yağ eklemenize gerek yok, sadece doğal ve hafif bir atıştırmalık!</p>
+	
+          <button class="view-btn-iu" data-link="https://www.jebinde.com/detay/ariete-party-time-popcorn-makinesi-kirmizi-2956-00-91557">Ürünü Gör</button>
+        </div>
+        <div class="video-box-iu">
+          <iframe width="400" height="300" src="https://player.vimeo.com/video/1137401625?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479&autoplay=1&loop=1&muted=1&controls=0" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+        </div>
+      </li>
+
+      <li class="item-iu" style="background-image: url('/Content/UploadFiles/0b46bf17-4.jpg')">
+        <div class="content-iu">
+	<h2 class="title-iu">Party Time Krep Makinesi</h2>
+
+	<p class="description-iu">Ariete Krep Makinesi, hem tatlı hem tuzlu kreplerin keyfini çıkarabileceğiniz pratik bir çözüm sunuyor. Elektrikli yapışmaz plakası, tahta spatulaları ve hamur açma aparatı sayesinde krepleri kolayca hazırlayıp çevirebilirsiniz. Tatlılardan tuzlulara, pankeklerden kreplere kadar yaratıcı tariflerle sofralarınıza eğlence katın!</p>
+	
+          <button class="view-btn-iu" data-link="https://www.jebinde.com/detay/ariete-party-time-krep-makinesi-kirmizi-0202-00-92058">Ürünü Gör</button>
+        </div>
+        <div class="video-box-iu">
+          <iframe width="400" height="300" src="https://player.vimeo.com/video/1137401522?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479&autoplay=1&loop=1&muted=1&controls=0" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+        </div>
+      </li>
+
+      <li class="item-iu" style="background-image: url('/Content/UploadFiles/7ed21d4e-5.jpg')">
+        <div class="content-iu">
+	<h2 class="title-iu">Party Time Hamburger Makinesi</h2>
+
+	<p class="description-iu">Ariete Hamburger Makinesi ile dakikalar içinde mükemmel burgerler hazırlayın! İki yapışmaz plaka sayesinde hem etinizi ızgara yapın hem de ekmeklerinizi ısıtarak lezzetli bir uyum yakalayın. Kompakt ve renkli tasarımıyla mutfağınıza neşeli bir hava katarken, her damak tadına hitap eden burgerler ve sosisli sandviçler hazırlayın. Akşam yemeği partinizi planlayın, eğlenceyi başlatın!</p>
+	
+          <button class="view-btn-iu" data-link="https://www.jebinde.com/detay/ariete-party-time-hamburger-makinesi-0205-00-91532">Ürünü Gör</button>
+        </div>
+        <div class="video-box-iu">
+          <iframe width="400" height="300" src="https://player.vimeo.com/video/1137401596?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479&autoplay=1&loop=1&muted=1&controls=0" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+        </div>
+      </li>
+    </ul>
+
+    <nav class="nav-iu">
+      <ion-icon class="btn-iu prev-iu" name="arrow-back-outline"></ion-icon>
+      <ion-icon class="btn-iu next-iu" name="arrow-forward-outline"></ion-icon>
+    </nav>
+  </main>
+</div>
+
+<script src="https://player.vimeo.com/api/player.js"></script>
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+<script>
+  const sliderIU = document.querySelector('.slider-iu');
+  const items = document.querySelectorAll('.item-iu');
+  const players = [];
+
+  items.forEach(item => {
+    const iframe = item.querySelector(".video-box-iu iframe");
+    const player = new Vimeo.Player(iframe);
+    player.setVolume(0);
+    players.push(player);
+  });
+
+  function updateActiveVideo() {
+    const currentItems = document.querySelectorAll(".item-iu");
+    const activeItem = currentItems[1];
+    const activeIndex = Array.from(items).indexOf(activeItem);
+
+    players.forEach((player, index) => {
+      if (index === activeIndex) {
+        player.play();
+      } else {
+        player.pause();
+      }
+    });
+  }
+
+  document.addEventListener("click", function (e) {
+    const btn = e.target.closest(".view-btn-iu");
+    if (btn) {
+      const url = btn.getAttribute("data-link");
+      window.open(url, "_blank");
+    }
+  });
+
+  document.addEventListener('click', activateIU, false);
+
+  function activateIU(e) {
+    const itemsIU = document.querySelectorAll('.item-iu');
+
+    if (e.target.matches('.next-iu')) sliderIU.append(itemsIU[0]);
+    if (e.target.matches('.prev-iu')) sliderIU.prepend(itemsIU[itemsIU.length - 1]);
+
+    if (e.target.closest('.item-iu') && !e.target.closest('.content-iu')) {
+      const clickedItem = e.target.closest('.item-iu');
+      const arr = Array.from(itemsIU);
+      const clickedIndex = arr.indexOf(clickedItem);
+      if (clickedIndex === 1) return;
+
+      for (let i = 0; i < clickedIndex - 1; i++) {
+        sliderIU.append(sliderIU.firstElementChild);
+      }
+    }
+
+    setTimeout(updateActiveVideo, 350);
+  }
+
+  updateActiveVideo();
+</script>
+

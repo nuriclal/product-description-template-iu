@@ -1,0 +1,175 @@
+<style type="text/css">
+.iu-section {
+  max-width: 100%;
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+.iu-section-1 {
+  background: linear-gradient(
+  to left,
+  #7e9ac1 70%, 
+  #9d86b3 80%, 
+  #cd93bb 100%
+);
+  padding: 40px 20px;
+}
+
+.iu-section-1 .iu-product {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 30px;
+  padding: 20px;
+  border-radius: 12px;
+}
+
+.iu-section-1 .iu-product-img {
+  width: 500px; 
+  border-radius: 12px;
+}
+
+.iu-section-2 {
+  background: linear-gradient(
+  180deg, 
+  #ffd99b 0%,   
+  #e6a56d 50%,  
+  #e89659 100%
+);
+  padding: 40px 20px;
+}
+
+.iu-section-2 .iu-product {
+  display: flex;
+  flex-direction: row-reverse; 
+  align-items: center;
+  gap: 30px;
+  padding: 20px;
+  border-radius: 12px;
+}
+
+.iu-section-2 .iu-product-img {
+  width: 500px; 
+  border-radius: 12px;
+}
+
+.iu-section-3 {
+  background: #1a1a1a; 
+  color: #f0f0f0;
+  padding: 30px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.iu-section-3 .iu-product {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+  background-color: #1a1a1a00;
+}
+
+.iu-section-3 .iu-product-img {
+  width: 100%;
+  max-width: 250px; 
+}
+
+.iu-product-info {
+  text-align: center;
+}
+
+.iu-product-title {
+  font-size: 1.2rem;
+  margin-bottom: 8px;
+}
+
+.iu-product-desc {
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+/* Mobil uyumluluk */
+@media (max-width: 991px) {
+  .iu-section-1 .iu-product,
+  .iu-section-2 .iu-product {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .iu-section-1 .iu-product-img,
+  .iu-section-2 .iu-product-img,
+  .iu-section-3 .iu-product-img {
+    width: 100%;
+    max-width: 400px;
+    margin-bottom: 15px;
+  }
+
+  .iu-section-3 {
+    grid-template-columns: 1fr;
+  }
+}
+</style>
+
+<section class="iu-section">
+
+<div class="iu-section-1">
+  <div class="iu-product iu-left"><img alt="" class="iu-product-img" src="/Content/UploadFiles/2b6b8d68-1.jpg" />
+    <div class="iu-product-info">
+<h3 class="iu-product-title">Güçlü Performansıyla Duyarlı</h3>
+
+<p class="iu-product-desc">
+IdeaPad Slim 3i dizüstü bilgisayar, hareket halindeyken iş, okul veya eğlence için idealdir. Intel® N100 işlemciden güç alan bu 15.6" cihaz, tüm uygulamalarınız için hızlı yanıt hızına sahiptir, böylece istediğiniz şekilde çoklu görev yapabilirsiniz. Ayrıca, büyük miktarda depolama alanı, multimedya kitaplığınızı ödün vermeden PC'nize kaydedebileceğiniz anlamına gelir.
+</p>
+    </div>
+  </div>
+</div>
+
+<div class="iu-section-2">
+  <div class="iu-product iu-right"><img alt="" class="iu-product-img" src="/Content/UploadFiles/a36382ea-2.jpg" />
+    <div class="iu-product-info">
+<h3 class="iu-product-title">Dayanıklılıktan Ödün Vermeyin</h3>
+
+<p class="iu-product-desc">
+İster kütüphaneye, ister kafeye, ister havaalanı terminaline gidin, gün içinde ne kadar hareket halinde olursanız olun, bu cihazın sağlam ve uzun ömürlü olacağına güvenebilirsiniz. Önceki nesle göre %10 daha ince olan IdeaPad Slim 3i dizüstü bilgisayar, sırt çantanıza veya seyahat çantanıza kolayca sığar. Sallantıya, toz ve zorlu seyahat koşullarına dayanacak şekilde tasarlanmıştır.
+ </p>
+    </div>
+  </div>
+</div>
+
+<div class="iu-section-3">
+  <div class="iu-product iu-left"><img alt="" class="iu-product-img" src="/Content/UploadFiles/1ef95cca-3.jpg" />
+    <div class="iu-product-info">
+<h3 class="iu-product-title">Kendinizi Bu Deneyime Kaptırın</h3>
+
+<p class="iu-product-desc">
+İnce çerçeveleri ve çarpıcı ekranıyla IdeaPad Slim 3i, siz 15.6 inç yüksek çözünürlüklü geniş açılı ekran görünümüne odaklanmış olsanız bile, kesinlikle bakışları üzerine çekecektir. TÜV Sertifikalı Düşük Mavi Işık göz yorgunluğunu önlemeye yardımcı olur. Dahası, Dolby Audio™ özelliği görüntülü görüşmelerde, film izlerken veya sadece en sevdiğiniz şarkıları dinlerken birinci sınıf ses kalitesinin keyfini çıkarmanızı sağlar.
+</p>
+    </div>
+  </div>
+
+  <div class="iu-product iu-right"><img alt="" class="iu-product-img" src="/Content/UploadFiles/9ddeda9c-4.jpg" />
+    <div class="iu-product-info">
+<h3 class="iu-product-title">Beklemeye Gerek Yok</h3>
+
+<p class="iu-product-desc">
+Hareket halindeyken cihazınızın buna ayak uydurabileceğine güvenmeniz gerekir. Hızlı şarj teknolojisine sahip IdeaPad Slim 3i dizüstü bilgisayar, 15 dakikalık şarjla 2 saate varan kullanım sunar. Gizliliğiniz ve korumanız söz konusu olduğunda, arkanızda biz varız. Web kamerası bir gizlilik deklanşörü içerir, böylece istediğiniz zaman kamera dışında olduğunuzdan emin olabilirsiniz. Ancak belki de hepsinden iyisi, sadece parmağınızın dokunuşuyla anında oturum açmanızı ve güvenli bir şekilde önyükleme yapmanızı sağlayan güç düğmesiyle entegre parmak izi okuyucusudur.
+</p>
+    </div>
+  </div>
+
+  <div class="iu-product iu-left"><img alt="" class="iu-product-img" src="/Content/UploadFiles/40cb6a09-5.jpg" />
+    <div class="iu-product-info">
+<h3 class="iu-product-title">Akıllı Özellikler Sizin İçin Çalışır</h3>
+
+<p class="iu-product-desc">
+IdeaPad Slim 3i dizüstü bilgisayar, Smart Power ile daha verimli çalışmak üzere performansı optimize etmek, pil ömrünü uzatmak ve termalleri düşürmek için kullanıma bağlı olarak otomatik olarak ayarlanır. Smart Wireless teknolojisi, bağlantıdaki herhangi bir kesintiyi sorunsuz bir şekilde algılar ve sizi gerçek zamanlı olarak yeniden bağlamak için dinamik olarak sorun giderir. Dahası, akıllı güvenlik özellikleri en hassas dosyalarınızı korur ve yetkisiz erişimi ve dosya hırsızlığını önler. Hatta yeni bir bilgisayara aktarırken tüm BIOS verilerinizi siler. Güvenlik söz konusu olduğunda, arkanızda biz varız.
+</p>
+    </div>
+  </div>
+</div>
+
+</section>

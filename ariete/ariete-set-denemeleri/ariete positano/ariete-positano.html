@@ -1,0 +1,760 @@
+<style type="text/css">.slider-container-iu * {
+  margin: 0 !important;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+.slider-container-iu {
+  height: 911px;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+}
+
+.main-iu {
+  position: relative;
+  width: 100%;
+  max-width: 1280px;
+  height: 100%;
+  max-height: 911px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.3);
+}
+
+.item-iu {
+  width: 300px;
+  height: 300px;
+  list-style-type: none;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1;
+  background-position: center;
+  background-size: cover;
+  border-radius: 20px;
+  box-shadow: 0 20px 30px #32364b inset;
+  transition: transform 0.1s, left 0.75s, top 0.75s, width 0.75s, height 0.75s;
+}
+
+.item-iu:nth-child(1),
+.item-iu:nth-child(2) {
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  transform: none;
+  border-radius: 0;
+  box-shadow: none;
+  opacity: 1;
+  z-index: 0;
+}
+
+.item-iu:nth-child(3) { left: 50%; }
+.item-iu:nth-child(4) { left: calc(50% + 320px); }
+.item-iu:nth-child(5) { left: calc(50% + 640px); }
+.item-iu:nth-child(6) { left: calc(50% + 960px); opacity: 0; }
+
+.content-iu {
+  width: min(40vw,500px);
+  position: absolute;
+  top: 50%;
+  left: 3rem;
+  transform: translateY(-50%);
+  font: 400 0.85rem helvetica,sans-serif;
+  color: white;
+  text-shadow: 0 3px 8px rgba(0,0,0,0.5);
+  opacity: 0;
+  display: none;
+  padding: 1rem;
+  background-color: #12143191; 
+  border-radius: 12px; 
+}
+
+.content-iu .title-iu {
+  font-size: 1.8rem !important;
+  text-transform: uppercase !important;
+}
+
+.content-iu .description-iu {
+  line-height: 1.4 !important;
+  margin: 1rem 0 1.5rem !important;
+  font-size: 1.2rem !important;
+}
+
+.content-iu button {
+  width: fit-content;
+  background-color: rgba(0,0,0,0.1);
+  color: white;
+  border: 2px solid white;
+  border-radius: 0.25rem;
+  padding: 0.75rem;
+  cursor: pointer;
+  font-size: 1rem !important;
+}
+
+.item-iu:nth-of-type(2) .content-iu {
+  display: block;
+  animation: show-iu 0.75s ease-in-out 0.3s forwards;
+}
+
+@keyframes show-iu {
+  0% {
+    filter: blur(5px);
+    transform: translateY(calc(-50% + 75px));
+  }
+  100% {
+    opacity: 1;
+    filter: blur(0);
+  }
+}
+
+.nav-iu {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+  user-select: none;
+}
+
+.nav-iu .btn-iu {
+  background-color: rgba(255,255,255,0.5);
+  color: #121431ce;
+  border: 2px solid #121431ce;
+  margin: 0 0.25rem;
+  padding: 0.75rem;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.nav-iu .btn-iu:hover {
+  background-color: rgba(255,255,255,0.1);
+}
+
+@media (width > 650px) and (width < 1230px) {
+  .content-iu .title-iu { font-size: 1.4rem !important; }
+  .content-iu .description-iu { font-size: 1.2rem !important; }
+  .content-iu button { font-size: 1rem !important; }
+
+  .item-iu {
+    width: 160px;
+    height: 270px;
+  }
+
+  .item-iu:nth-child(3) { left: 50%; }
+  .item-iu:nth-child(4) { left: calc(50% + 170px); }
+  .item-iu:nth-child(5) { left: calc(50% + 340px); }
+  .item-iu:nth-child(6) { left: calc(50% + 510px); opacity: 0; }
+}
+
+@media (width < 650px) {
+  .content-iu .title-iu { font-size: 1.3rem !important; }
+  .content-iu .description-iu { font-size: 1rem !important; }
+  .content-iu button { font-size: 1rem !important; }
+
+  .item-iu {
+    width: 160px;
+    height: 220px;
+    top: 75%;
+  }
+
+  .content-iu{
+    top: 45% !important;
+    width: 70vw !important;
+  }
+
+  .item-iu:nth-child(3) { left: 30%; }
+  .item-iu:nth-child(4) { left: calc(30% + 170px); }
+  .item-iu:nth-child(5) { left: calc(30% + 340px); }
+  .item-iu:nth-child(6) { left: calc(30% + 510px); opacity: 0; }
+}
+</style>
+<div class="slider-container-iu">
+<main class="main-iu">
+<ul class="slider-iu">
+	<li class="item-iu" style="background-image: url('/Content/UploadFiles/033dfbb1-1.jpg')">
+	<div class="content-iu">
+	<h2 class="title-iu">Positano Kettle</h2>
+
+	<p class="description-iu">G&uuml;n&uuml;n yorgunluğunu atarken Positano Kettle ile hazırladığınız bitki &ccedil;aylarının keyfini &ccedil;ıkarın.</p>
+	<button class="view-btn-iu" data-link="https://www.jebinde.com/detay/ariete-positano-28690p-2000-w-17-l-kettle-92069">&Uuml;r&uuml;n&uuml; G&ouml;r</button></div>
+	</li>
+	<li class="item-iu" style="background-image: url('/Content/UploadFiles/4b5ae7dd-2.jpg')">
+	<div class="content-iu">
+	<h2 class="title-iu">Positano Mutfak Şefi</h2>
+
+	<p class="description-iu">Positano Mutfak Şefi ile yumuşak ve m&uuml;kemmel kabarmış hamurlar hazırlayın.</p>
+	<button class="view-btn-iu" data-link="https://www.jebinde.com/detay/ariete-positano-15880p-55-lt-1200-w-mutfak-sefi-92098">&Uuml;r&uuml;n&uuml; G&ouml;r</button></div>
+	</li>
+	<li class="item-iu" style="background-image: url('/Content/UploadFiles/067a73f2-3.jpg')">
+	<div class="content-iu">
+	<h2 class="title-iu">Positano Ekmek Kızartma Makinesi</h2>
+
+	<p class="description-iu">Positano Ekmek Kızartma Makinesi ile hazırladığınız her tost ve sandvi&ccedil;, altın rengi kıvamı ve &ccedil;ıtırlığıyla iştah kabartır.</p>
+	<button class="view-btn-iu" data-link="https://www.jebinde.com/detay/ariete-positano-01551p-2-dilim-ekmek-kizartma-makinesi-92070">&Uuml;r&uuml;n&uuml; G&ouml;r</button></div>
+	</li>
+	<li class="item-iu" style="background-image: url('/Content/UploadFiles/c5a9c0cb-4.jpg')">
+	<div class="content-iu">
+	<h2 class="title-iu">Positano Blender</h2>
+
+	<p class="description-iu">Positano Blender ile smoothie, sos, krema, milkshake ve p&uuml;r&uuml;zs&uuml;z karışımları saniyeler i&ccedil;inde hazırlayın.</p>
+	<button class="view-btn-iu" data-link="https://www.jebinde.com/detay/ariete-positano-05830p-1000-w-surahi-blender-92067">&Uuml;r&uuml;n&uuml; G&ouml;r</button></div>
+	</li>
+	<li class="item-iu" style="background-image: url('/Content/UploadFiles/5ea4359a-5.jpg')">
+	<div class="content-iu">
+	<h2 class="title-iu">Positano Narenciye Sıkacağı</h2>
+
+	<p class="description-iu">Positano Narenciye Sıkacağı ile portakal ve limonları enerji ve ferahlık dolu i&ccedil;eceklere d&ouml;n&uuml;şt&uuml;r&uuml;n.</p>
+	<button class="view-btn-iu" data-link="https://www.jebinde.com/detay/ariete-positano-04130p-narenciye-sikacagi-92068">&Uuml;r&uuml;n&uuml; G&ouml;r</button></div>
+	</li>
+	<li class="item-iu" style="background-image: url('/Content/UploadFiles/ba01e628-6.jpg')">
+	<div class="content-iu">
+	<h2 class="title-iu">Positano Espresso Makinesi</h2>
+
+	<p class="description-iu">Positano Espresso Makinesi ile g&uuml;ne sıcacık bir espresso ya da kremalı bir cappuccino ile başlayın.</p>
+	<button class="view-btn-iu" data-link="https://www.jebinde.com/detay/ariete-positano-13891p-manuel-espresso-makinesi-92099">&Uuml;r&uuml;n&uuml; G&ouml;r</button></div>
+	</li>
+</ul>
+
+<nav class="nav-iu"><ion-icon class="btn-iu prev-iu" name="arrow-back-outline"></ion-icon> <ion-icon class="btn-iu next-iu" name="arrow-forward-outline"></ion-icon></nav>
+</main>
+</div>
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script><script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script><script>
+const sliderIU = document.querySelector('.slider-iu');
+
+function activateIU(e) {
+  const itemsIU = document.querySelectorAll('.item-iu');
+  
+  if (e.target.matches('.next-iu')) {
+    sliderIU.append(itemsIU[0]);
+  }
+  if (e.target.matches('.prev-iu')) {
+    sliderIU.prepend(itemsIU[itemsIU.length - 1]);
+  }
+
+  if (e.target.closest('.item-iu') && !e.target.closest('.content-iu')) {
+    const clickedItem = e.target.closest('.item-iu');
+
+    const itemsArr = Array.from(itemsIU);
+    const clickedIndex = itemsArr.indexOf(clickedItem);
+
+    if (clickedIndex === 1) return;
+
+    for (let i = 0; i < clickedIndex - 1; i++) {
+      sliderIU.append(sliderIU.firstElementChild);
+    }
+  }
+}
+
+document.addEventListener('click', activateIU, false);
+
+document.addEventListener("click", function(e) {
+  const btn = e.target.closest(".view-btn-iu");
+  if (btn) {
+    const url = btn.getAttribute("data-link");
+    window.open(url, "_blank");
+  }
+});
+
+</script>
+<style type="text/css">#cat-main-container {
+    --primary-color: #121431;
+    --secondary-color: #E9B142;
+    font-size: 16px !important;
+    line-height: 1.5 !important;
+    color: rgb(60, 64, 67);
+    box-sizing: border-box;
+    background: #fff;
+}
+
+#main-content {
+    min-height: calc(100vh - 220px);
+}
+
+.gr-scr-txt {
+    background: var(--primary-color);
+    color: white;
+    display: grid;
+    place-content: center;
+    font-size: min(130%, 5vmin);
+    padding: 120px 5vmin; 
+    text-align: center;
+}
+
+.gr-scr-txt div {
+    background: conic-gradient(
+        hsl(0, 0%, 100%), 
+        hsl(200, 100%, 60%), 
+        hsl(0, 0%, 100%)
+    ) fixed;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.gr-scr-txt h2 {
+    font-size: 6vmin !important;
+    line-height: 1.1 !important;
+    margin-bottom: 30px;
+    color: white;
+}
+
+.gr-scr-txt p {
+    margin-top: 1ch;
+    font-size: 1.4rem !important;
+    line-height: 1.35 !important;
+    max-inline-size: 40ch;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.gr-scr-txt p a {
+    font-weight: 900;
+    border-bottom: 1px solid #76B9DF;
+    text-decoration: none !important;
+    color: white !important;
+}
+
+.ar-padding--large { height: 50px; }
+.ar-padding--xlarge { height: 80px; }
+
+.ar-sidecard {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.ar-sidecard__text {
+    flex: 1;
+    padding: 15px 55px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+    font-size: 18px !important;
+    line-height: 1.8 !important;
+}
+
+.ar-sidecard__text a{
+    font-weight: 600;
+    border-bottom: 1px solid #131313;
+    text-decoration: none !important;
+}
+
+.ar-sidecard__media {
+    flex: 0 0 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ar-sidecard__media img {
+    max-width: 700px;
+    height: auto;
+    border-radius: 25px;
+}
+
+.shape-bg-1 {
+    position: relative; 
+    display: block;
+    width: 100%;
+    height: auto;
+    z-index: 0;
+    margin-top: -1px;
+}
+
+.container2,
+.parallax,
+.content2.gr-scr-txt {
+    position: relative;
+    z-index: 1; 
+}
+
+.content2.gr-scr-txt {
+    min-height: 10vh;
+    padding: 120px 5vmin; 
+}
+
+.parallax {
+    height: 150vh;
+    width: 100%;
+    background-size: 68% auto;
+    background-position: center center;
+    background-attachment: fixed;
+    position: relative;
+    color: #fff;
+}
+
+.parallax.second { background-image: url(/Content/UploadFiles/b48e1acf-4.jpg); }
+.parallax.third { background-image: url(/Content/UploadFiles/e99b679a-5.jpg); }
+.parallax.fourth { background-image: url(/Content/UploadFiles/49ef43d2-6.jpg); }
+
+.parallax h1, 
+.parallax h2, 
+.parallax h3, 
+.parallax h4, 
+.parallax h5, 
+.parallax h6, 
+.parallax p, 
+.parallax .btn, 
+.parallax img, 
+.parallax div {
+    position: relative;
+    z-index: 10;
+}
+
+@media (max-width: 1327px) {
+    .shape-bg-1 {
+        margin-top: -80px !important;
+    }
+
+    .gr-scr-txt h2 {
+        font-size: 9vmin !important;
+    }
+    .gr-scr-txt p {
+        font-size: 1.6rem !important;
+    }
+
+    .parallax {
+        height: 100vh;
+        background-size: 75% auto;
+    }
+
+    .ar-sidecard__media img {
+        max-width: 550px;
+    }
+
+    .ar-sidecard__text {
+        padding: 15px 30px;
+    }
+}
+
+@media (max-width: 833px) {
+    .shape-bg-1 {
+        margin-top: -60px !important;
+    }
+
+    .gr-scr-txt h2 {
+        font-size: 8vmin !important;
+    }
+    .gr-scr-txt p {
+        font-size: 1.4rem !important;
+    }
+
+    .parallax {
+        height: 100vh;
+        background-size: 75% auto;
+    }
+
+    .ar-sidecard__media img {
+        max-width: 550px;
+    }
+
+    .ar-sidecard__text {
+        padding: 15px 30px;
+    }
+}
+
+@media (max-width: 635px) {
+    .shape-bg-1 {
+        margin-top: -40px !important;
+    }
+
+    .parallax {
+        height: 80vh;
+        background-size: 90% auto;
+    }
+
+    .parallax.second {
+        background-image: url("/Content/UploadFiles/2c01a11c-4-phone.jpg");
+    }
+    .parallax.third {
+        background-image: url("/Content/UploadFiles/fe65f4d2-5-phone.jpg");
+    }
+    .parallax.fourth {
+        background-image: url("/Content/UploadFiles/93a9b8ff-6-phone.jpg");
+    }
+
+    .container2 .content2.gr-scr-txt {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 80px 20px;
+    }
+
+    .gr-scr-txt h2 {
+        font-size: 7vmin !important;
+        line-height: 1.2 !important;
+        text-align: center;
+    }
+    .gr-scr-txt p {
+        font-size: 1rem !important;
+    }
+
+    .ar-sidecard__media img {
+        max-width: 400px;
+    }
+
+    .ar-sidecard {
+        flex-direction: column;
+    }
+    .ar-sidecard__text {
+        text-align: center;
+        padding: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .shape-bg-1 {
+        margin-top: -30px !important;
+    }
+
+    .gr-scr-txt h2 {
+        font-size: 6vmin !important;
+        text-align: center;
+    }
+    .gr-scr-txt p {
+        font-size: 1rem !important;
+    }
+
+    .ar-sidecard__media img {
+        max-width: 320px;
+        border-radius: 15px;
+    }
+
+    .parallax {
+        height: 70vh;
+        background-size: 100% auto;
+    }
+}
+
+@supports (-webkit-touch-callout: none) {
+  .parallax {
+    background-attachment: scroll !important;
+    background-position: center center !important;
+    transform: translateZ(0); 
+    will-change: background-position;
+  }
+
+  .gr-scr-txt div {
+    color: transparent !important;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
+</style>
+<div id="cat-main-container"><svg class="shape-bg-1" fill="currentColor" preserveaspectratio="none" style="color:var(--primary-color); transform: rotateZ(180deg) !important;
+        width: 100% !important;
+        left: 0 !important;
+        bottom: 0 !important;
+        vertical-align: middle;
+        margin-bottom: -1px;
+     " viewbox="0 0 1200 120" xmlns="http://www.w3.org/2000/svg"> <path d="M0 0v46.29c47.79 22.2 103.59 32.17 158 28 70.36-5.37 136.33-33.31 206.8-37.5 73.84-4.36 147.54
+          16.88 218.2 35.26 69.27 18 138.3 24.88 209.4
+          13.08 36.15-6 69.85-17.84 104.45-29.34C989.49 25 1113-14.29 1200 52.47V0z" opacity=".25"></path> <path d="M0 0v15.81c13 21.11 27.64 41.05 47.69 56.24C99.41 111.27 165 111 224.58 91.58c31.15-10.15
+          60.09-26.07 89.67-39.8 40.92-19 84.73-46 130.83-49.67 36.26-2.85 70.9 9.42 98.6 31.56 31.77 25.39
+          62.32 62 103.63 73 40.44 10.79 81.35-6.69 119.13-24.28s75.16-39 116.92-43.05c59.73-5.85
+          113.28 22.88 168.9 38.84 30.2 8.66 59 6.17 87.09-7.5 22.43-10.89 48-26.93 60.65-49.24V0z" opacity=".5"></path> <path d="M0 0v5.63C149.93 59 314.09 71.32 475.83 42.57c43-7.64 84.23-20.12 127.61-26.46 59-8.63
+          112.48 12.24 165.56 35.4C827.93 77.22 886 95.24 951.2 90c86.53-7 172.46-45.71 248.8-84.81V0z"></path> </svg>
+<section class="b-0 p-0 relative" style="background: var(--primary-color);"><picture> <source media="(max-width: 577px)" srcset="/Content/UploadFiles/8f89bbb7-positano-600x400.png" /> <img alt="Ariete Positano Serisi" class="img-responsive" loading="eager" src="/Content/UploadFiles/c5e62596-positano-1912x800.png" /> </picture> <svg class="shape-bg-1" fill="currentColor" preserveaspectratio="none" style="color:var(--primary-color); transform: rotateZ(180deg) !important;
+        width: 100% !important;
+        left: 0 !important;
+        bottom: 0 !important;
+        vertical-align: middle;
+        margin-bottom: -1px;
+        margin-top: -120px; 
+        " viewbox="0 0 1200 120" xmlns="http://www.w3.org/2000/svg"> <path d="M0 0v46.29c47.79 22.2 103.59 32.17 158 28 70.36-5.37 136.33-33.31 206.8-37.5 73.84-4.36 147.54
+          16.88 218.2 35.26 69.27 18 138.3 24.88 209.4
+          13.08 36.15-6 69.85-17.84 104.45-29.34C989.49 25 1113-14.29 1200 52.47V0z" opacity=".25"></path> <path d="M0 0v15.81c13 21.11 27.64 41.05 47.69 56.24C99.41 111.27 165 111 224.58 91.58c31.15-10.15
+          60.09-26.07 89.67-39.8 40.92-19 84.73-46 130.83-49.67 36.26-2.85 70.9 9.42 98.6 31.56 31.77 25.39
+          62.32 62 103.63 73 40.44 10.79 81.35-6.69 119.13-24.28s75.16-39 116.92-43.05c59.73-5.85
+          113.28 22.88 168.9 38.84 30.2 8.66 59 6.17 87.09-7.5 22.43-10.89 48-26.93 60.65-49.24V0z" opacity=".5"></path> <path d="M0 0v5.63C149.93 59 314.09 71.32 475.83 42.57c43-7.64 84.23-20.12 127.61-26.46 59-8.63
+          112.48 12.24 165.56 35.4C827.93 77.22 886 95.24 951.2 90c86.53-7 172.46-45.71 248.8-84.81V0z"></path> </svg></section>
+
+<div class="gr-scr-txt landing-visual" id="positano-pres">
+<div>
+<h2>Majolika Desenleri</h2>
+
+<p><b>Positano &uuml;r&uuml;nlerinin</b> b&uuml;y&uuml;leyici cazibesine ve canlı enerjisine kendinizi bırakın. Stil ve geleneğin buluştuğu bu &ouml;zel koleksiyon, her mutfağa benzersiz bir atmosfer katıyor. El iş&ccedil;iliğiyle tek tek uygulanan dekorlar sayesinde her &uuml;r&uuml;n, kendine &ouml;zg&uuml; ve eşsiz bir karaktere sahip.</p>
+</div>
+</div>
+
+<div class="ar-padding ar-padding--xlarge">&nbsp;</div>
+
+<div class="ar-sidecard container">
+<div class="ar-sidecard__media"><img alt="Positano Su Isıtıcısı" class="img-responsive ar-radius" decoding="async" loading="lazy" src="/Content/UploadFiles/370c824f-1.jpg" /></div>
+
+<div class="ar-sidecard__text">
+<h2 class="uppercase wow fadeIn animated" style="visibility: visible; animation-name: fadeIn;">Keyifli Bir &Ccedil;ay Molası!</h2>
+
+<p class="wow fadeIn animated" style="visibility: visible; animation-name: fadeIn;">G&uuml;n&uuml;n yorgunluğunu atarken <a href="https://www.jebinde.com/detay/ariete-positano-28690p-2000-w-17-l-kettle-92069" title="Positano Su Isıtıcısı">Positano Kettle</a> ile hazırladığınız bitki &ccedil;aylarının keyfini &ccedil;ıkarın. Su, g&uuml;n batımının renkleri eşliğinde nazik&ccedil;e ısınır ve her yudum, deniz kıyısında bir huzur anını hatırlatır.</p>
+</div>
+</div>
+
+<div class="ar-padding ar-padding--large">&nbsp;</div>
+
+<div class="ar-sidecard container">
+<div class="ar-sidecard__media"><img alt="Positano Mikser" class="img-responsive ar-radius" decoding="async" loading="lazy" src="/Content/UploadFiles/e8fe5433-2.jpg" /></div>
+
+<div class="ar-sidecard__text">
+<h2 class="uppercase wow fadeIn animated" style="visibility: visible; animation-name: fadeIn;">M&uuml;kemmel Hamur, Kusursuz Lezzet!</h2>
+
+<p class="wow fadeIn animated" style="visibility: visible; animation-name: fadeIn;"><a href="https://www.jebinde.com/detay/ariete-positano-15880p-55-lt-1200-w-mutfak-sefi-92098" title="Positano Mikser">Positano Mutfak Şefi</a> ile yumuşak ve m&uuml;kemmel kabarmış hamurlar, lezzetli tatlılar hazırlayın. Un, su ve maya uyum i&ccedil;inde birleşir; ger&ccedil;ek İtalyan ev pizzası ve daha fazlası i&ccedil;in ideal kıvamı yakalayabilirsiniz.</p>
+</div>
+</div>
+
+<div class="ar-padding ar-padding--large">&nbsp;</div>
+
+<div class="ar-sidecard container">
+<div class="ar-sidecard__media"><img alt="Positano Tost Makinesi" class="img-responsive ar-radius" decoding="async" loading="lazy" src="/Content/UploadFiles/45b5ac5b-3.jpg" /></div>
+
+<div class="ar-sidecard__text">
+<h2 class="uppercase wow fadeIn animated" style="visibility: visible; animation-name: fadeIn;">Kahvaltınıza&nbsp;Lezzet Katın!</h2>
+
+<p class="wow fadeIn animated" style="visibility: visible; animation-name: fadeIn;"><a href="https://www.jebinde.com/detay/ariete-positano-01551p-2-dilim-ekmek-kizartma-makinesi-92070" title="Positano Ekmek Kızartma Makinesi">Positano Ekmek Kızartma Makinesi</a> ile hazırladığınız her tost ve sandvi&ccedil;, altın rengi kıvamı ve &ccedil;ıtırlığıyla iştah kabartır. Taze sebzeler, peynir ve şark&uuml;teri &uuml;r&uuml;nleriyle zenginleştirin; farkı hissedin.</p>
+</div>
+</div>
+
+<div class="ar-padding ar-padding--large">&nbsp;</div>
+<svg class="shape-bg-1" fill="currentColor" preserveaspectratio="none" style="color:var(--primary-color); transform: rotateZ(180deg) !important;
+        width: 100% !important;
+        left: 0 !important;
+        bottom: 0 !important;
+        vertical-align: middle;
+        margin-bottom: -1px;
+     " viewbox="0 0 1200 120" xmlns="http://www.w3.org/2000/svg"> <path d="M0 0v46.29c47.79 22.2 103.59 32.17 158 28 70.36-5.37 136.33-33.31 206.8-37.5 73.84-4.36 147.54
+          16.88 218.2 35.26 69.27 18 138.3 24.88 209.4
+          13.08 36.15-6 69.85-17.84 104.45-29.34C989.49 25 1113-14.29 1200 52.47V0z" opacity=".25"></path> <path d="M0 0v15.81c13 21.11 27.64 41.05 47.69 56.24C99.41 111.27 165 111 224.58 91.58c31.15-10.15
+          60.09-26.07 89.67-39.8 40.92-19 84.73-46 130.83-49.67 36.26-2.85 70.9 9.42 98.6 31.56 31.77 25.39
+          62.32 62 103.63 73 40.44 10.79 81.35-6.69 119.13-24.28s75.16-39 116.92-43.05c59.73-5.85
+          113.28 22.88 168.9 38.84 30.2 8.66 59 6.17 87.09-7.5 22.43-10.89 48-26.93 60.65-49.24V0z" opacity=".5"></path> <path d="M0 0v5.63C149.93 59 314.09 71.32 475.83 42.57c43-7.64 84.23-20.12 127.61-26.46 59-8.63
+          112.48 12.24 165.56 35.4C827.93 77.22 886 95.24 951.2 90c86.53-7 172.46-45.71 248.8-84.81V0z"></path> </svg>
+
+<div class="container2">
+<div class="content2 gr-scr-txt">
+<div>
+<h2>Sofranız i&ccedil;in M&uuml;kemmel Karışımı Hazırlayın!</h2>
+
+<p><a href="https://www.jebinde.com/detay/ariete-positano-05830p-1000-w-surahi-blender-92067" title="Positano Blender">Positano Blender</a> ile smoothie, sos, krema, milkshake ve p&uuml;r&uuml;zs&uuml;z karışımları saniyeler i&ccedil;inde hazırlayın. Arkadaşlarınızla ge&ccedil;ireceğiniz &ouml;zel anlara taptaze lezzetler katın.</p>
+</div>
+</div>
+
+<div class="second parallax">&nbsp;</div>
+
+<div class="content2 gr-scr-txt">
+<div>
+<h2>Akdeniz Narenciyesinin Tazeliğini Sofranıza Taşıyın!</h2>
+
+<p><a href="https://www.jebinde.com/detay/ariete-positano-04130p-narenciye-sikacagi-92068" title="Positano Narenciye Sıkacağı">Positano Narenciye Sıkacağı</a> ile portakal ve limonları enerji ve ferahlık dolu i&ccedil;eceklere d&ouml;n&uuml;şt&uuml;r&uuml;n. G&uuml;ne zinde başlamanın en doğal yolunu keşfedin.</p>
+</div>
+</div>
+
+<div class="third parallax">&nbsp;</div>
+
+<div class="content2 gr-scr-txt">
+<div>
+<h2>Kahve ya da Cappuccino, Keyif Her Zaman Aynı!</h2>
+
+<p><a href="https://www.jebinde.com/detay/ariete-positano-13891p-manuel-espresso-makinesi-92099" title="Positano Espresso Makinesi">Positano Espresso Makinesi</a> ile g&uuml;ne sıcacık bir espresso ya da kremalı bir cappuccino ile başlayın. Toz kahve veya ESE kaps&uuml;l se&ccedil;enekleriyle tam damak zevkinize g&ouml;re hazırlayın.</p>
+</div>
+</div>
+
+<div class="fourth parallax">&nbsp;</div>
+</div>
+
+<div class="gr-scr-txt pt-200 pb-150">
+<div>
+<h2>Mutfağınızın B&uuml;y&uuml;s&uuml;</h2>
+
+<p>Positano serisinin zarafetini keşfedin!</p>
+</div>
+</div>
+</div>
+<script>
+window.width = jQuery(window).width();
+window.height = jQuery(window).height();
+
+jQuery(window).ready(function() {
+    loadScript(plugin_path + 'bootstrap/js/bootstrap.min.js', function() {
+        Init(false);
+    });
+});
+
+function Init(is_ajax) {
+    if (is_ajax !== true) {
+        _afterResize?.();
+        _slider_full?.();
+    }
+    _parallax();
+}
+
+function _parallax() {
+    if (jQuery().parallax) {
+        jQuery(".parallax.second, .parallax.third, .parallax.fourth").each(function() {
+            jQuery(this).parallax("50%", "0.2");
+        });
+    }
+
+    const _slider = jQuery('#slider');
+    if (_slider.length > 0 && _slider.hasClass('parallax-slider')) {
+        if (window.width < 768 && _slider.hasClass('pallax-slider-mobile-deisable')) return false;
+
+        jQuery(window).scroll(function() {
+            const _currentTop = jQuery(document).scrollTop();
+            const _offset = Number(_slider.attr('data-parallax-offset')) || 0;
+
+            if (_currentTop < 768) {
+                const _sliderH = jQuery('#slider').height();
+                jQuery('#slider>div').css('top', (_currentTop * 0.5 - _offset));
+                if (!_slider.hasClass('parallax-slider-noopacity')) {
+                    jQuery('#slider>div').css('opacity', (1 - _currentTop / _sliderH));
+                }
+            }
+        });
+    }
+}
+
+function safariParallaxFix() {
+  const ua = navigator.userAgent.toLowerCase();
+  const isSafari = ua.includes('safari') && !ua.includes('chrome') && !ua.includes('android');
+  if (!isSafari) return;
+
+  const parallaxEls = document.querySelectorAll('.parallax');
+  if (!parallaxEls.length) return;
+
+  const updatePositions = () => {
+    const scrollY = window.scrollY;
+
+    parallaxEls.forEach(el => {
+      const rect = el.getBoundingClientRect();
+      const elTop = rect.top + scrollY;
+      const elHeight = el.offsetHeight;
+
+      if (scrollY + window.innerHeight > elTop && scrollY < elTop + elHeight) {
+        const speed = parseFloat(el.dataset.parallaxSpeed) || 0.4; 
+        const offset = (scrollY - elTop) * speed;
+        el.style.backgroundPosition = `center ${offset}px`;
+      }
+    });
+  };
+
+  let ticking = false;
+  window.addEventListener('scroll', () => {
+    if (!ticking) {
+      window.requestAnimationFrame(() => {
+        updatePositions();
+        ticking = false;
+      });
+      ticking = true;
+    }
+  });
+
+  updatePositions();
+}
+document.addEventListener('DOMContentLoaded', safariParallaxFix);
+
+</script>

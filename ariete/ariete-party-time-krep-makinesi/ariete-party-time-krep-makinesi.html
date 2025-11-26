@@ -1,0 +1,173 @@
+<style type="text/css">
+.product-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  padding: 10px 40px;
+  align-items: center;
+}
+
+.product-info {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.product-info h2 {
+  font-size: 1.3rem !important;
+  font-weight: 700;
+  margin: 0;
+}
+
+.product-info h3 {
+  font-size: 1.1rem !important;
+  font-weight: 500;
+  color: #444;
+  margin-top: -5px;
+}
+
+.product-info ul {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+}
+
+.product-info ul li {
+  margin-bottom: 8px;
+  font-size: 1rem !important;
+  position: relative;
+  padding-left: 20px;
+}
+
+.product-info ul li::before {
+  content: "✔";
+  color: #c50a1d;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.product-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.product-image img {
+  width: 100%;
+  max-width: 450px;
+  border-radius: 10px;
+}
+
+.product-gallery {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+  text-align: center;
+  padding: 10px 20px;
+}
+
+.product-gallery div{
+    flex:1;
+}
+
+.product-gallery img {
+  width: 120px;
+  height: auto;
+}
+
+.product-gallery p {
+  text-align: center;
+  font-size: 0.8rem;
+  margin-top: 6px;
+}
+
+.footer-bar {
+  background-color: #c50a1d;
+  padding: 10px 60px;
+  letter-spacing: 1px;
+}
+
+.product-wrapper {
+  background-color: #fff;
+  border: 2px solid #e0e0e0; 
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08); 
+  max-width: 1100px;         
+  margin: 40px auto;         
+  overflow: hidden;          
+}
+
+@media (max-width: 800px) {
+  .product-section {
+    grid-template-columns: 1fr;
+    padding: 20px;
+  }
+
+  .product-gallery {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    justify-items: center;
+  }
+
+  .product-gallery img {
+    width: 100%;
+    max-width: 150px;
+  }
+
+  .footer-bar {
+    text-align: center;
+    padding: 15px;
+  }
+}
+</style>
+<div class="product-wrapper">
+<section class="product-section">
+<div class="product-info">
+<h2>Ariete Party Time Krep Makinesi</h2>
+
+<h3>0202/00</h3>
+
+<ul>
+	<li>1000 Watt</li>
+	<li>30 cm Yapışmaz Plakalar</li>
+    <li>Sıcaklık Ayarı</li>
+	<li>Sıcaklık Hazır Işığı</li>
+    <li>Tahta Spatula ve Hamur Yuvarlama Aleti</li>
+	<li>Kablo Sarma</li>
+    <li>Kolay Temizleme</li>
+</ul>
+</div>
+
+<div class="product-image"><img alt="" src="/Content/UploadFiles/b2be1802-1.jpg" /></div>
+</section>
+
+<section class="product-gallery">
+<div><img alt="" src="/Content/UploadFiles/a70e624c-2.jpg" />
+<p> 50'li yılların Mutlu Günlerini hatırlatan pürüzsüz çizgiler ve pop art renkleri. </p>
+</div>
+
+<div><img alt="" src="/Content/UploadFiles/999638b9-3.jpg" />
+<p>30 cm yapışmaz plakalar</p>
+</div>
+
+<div><img alt="" src="/Content/UploadFiles/ce83f6d4-4.jpg" />
+<p>Sıcaklık ayarı ile istediğiniz kıvamda krepler</p>
+</div>
+
+<div><img alt="" src="/Content/UploadFiles/7efc134e-5.jpg" />
+<p>Ariete ile her zaman parti zamanı</p>
+</div>
+
+<div><img alt="" src="/Content/UploadFiles/55db143f-6.jpg" />
+<p>Arkadaşlara tatlı sürprizler</p>
+</div>
+
+<div><img alt="" src="/Content/UploadFiles/d50aca51-7.jpg" />
+<p>Eğlenceli kahvaltılar için tatlı veya tuzlu krepler</p>
+</div>
+</section>
+
+<div class="footer-bar">&nbsp;</div>
+</div>

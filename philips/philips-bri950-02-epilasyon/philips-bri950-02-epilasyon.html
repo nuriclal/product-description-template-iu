@@ -1,0 +1,209 @@
+<style>
+.section-iu {
+  padding: 60px 40px;
+  background: linear-gradient(180deg, #cd9fa3, #ffd3eb);
+  overflow: hidden;
+  color: #ffffff;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.section-iu .big-item-iu {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 80px;
+  gap: 60px;
+}
+
+.section-iu .big-item-iu img {
+  width: 400px;
+  border-radius: 12px;
+  object-fit: cover;
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+.section-iu .big-item-iu img:hover {
+  transform: scale(1.03);
+}
+
+.section-iu .text-iu {
+  width: 100%;
+  animation: fadeIn-iu 1s ease forwards;
+  opacity: 0;
+}
+
+.section-iu .text-iu h2 {
+  font-size: 1.5rem !important;
+  margin-bottom: 15px;
+  position: relative;
+  color: #ffffff;
+}
+
+.section-iu .text-iu h2::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(90deg, #c24e57, #960956);
+  margin-top: 8px;
+  border-radius: 2px;
+  margin-left: 30%;
+  margin-right: auto;
+}
+
+.big-item-iu.right-image-iu .text-iu{
+  text-align: right;
+}
+
+.section-iu .text-iu p {
+  font-size: 16px !important;
+  line-height: 1.6em !important;
+  color: #ffffff;
+}
+
+.section-iu .small-gallery-iu {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 25px;
+  margin-top: 60px;
+}
+
+.section-iu .small-item-iu {
+  text-align: center;
+  background: #eb8d95;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+}
+
+.section-iu .small-item-iu:hover {
+  transform: translateY(-8px);
+  background: #68073c;
+  box-shadow: 0 12px 25px #960956;
+}
+
+.section-iu .small-item-iu img {
+  width: 80%;
+  border-radius: 8px;
+  object-fit: cover;
+  transition: all 0.4s ease;
+}
+
+.section-iu .small-item-iu img:hover {
+  transform: scale(1.05);
+  filter: brightness(1.1);
+}
+
+.section-iu .small-item-iu h4 {
+  margin-top: 10px;
+  font-weight: 500;
+  color: #ffffff;
+}
+
+.section-iu .small-item-iu p {
+  margin-top: 10px;
+  font-weight: 400;
+  color: #d1d1d1;
+}
+
+@keyframes fadeIn-iu {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 992px) {
+  .section-iu .big-item-iu {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .section-iu .big-item-iu img {
+    width: 100%;
+  }
+
+  .section-iu .text-iu {
+    width: 100%;
+    opacity: 1;
+    text-align: center;
+  }
+
+  .section-iu .small-gallery-iu {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .big-item-iu.right-image-iu .text-iu{
+  text-align: center !important;
+}
+
+.section-iu .text-iu h2::after {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+}
+
+@media (max-width: 500px) {
+  .section-iu .small-gallery-iu {
+    grid-template-columns: 1fr;
+  }
+}
+
+</style>
+
+<section class="section-iu">
+  <div class="big-item-iu left-image-iu">
+    <img src="/Content/UploadFiles/643491c6-1.png" alt="">
+    <div class="text-iu">
+      <h2>Yalnızca 2 haftada bir uygulamayla hızlı sonuçlar</h2>
+      <p>
+Yalnızca 2 haftada bir 4 uygulamadan oluşan ilk aşamaya başlayın. Bu uygulama sayısı, diğer markaların uygulama sayısının yarısı kadardır. Ardından sonuçları korumak için aylık rötuşlar yapın.
+      </p>
+    </div>
+  </div>
+
+  <div class="big-item-iu right-image-iu">
+    <div class="text-iu">
+      <h2 >Rahat kullanım için kablolu ve kablosuz seçenekler</h2>
+      <p>Philips Lumea, rahat ve kullanımı kolay olacak şekilde tasarlandı. Cihazı, bacaklarınız gibi geniş vücut bölgelerinde hızlı uygulama için kablolu olarak kullanın veya ulaşılması zor bölgelerde hassas uygulama için kablosuz pil modunu tercih edin.</p>
+    </div>
+    <img src="/Content/UploadFiles/a86ddea1-2.png" alt="">
+  </div>
+
+  <div class="big-item-iu left-image-iu">
+    <div class="text-iu" style="text-align: center;">
+      <h2>Baştan sona tutarlı ve güçlü performans</h2>
+      <p>
+Dayanıklı lityum pil, güçlü ve kesintisiz tıraş deneyimi için 60 dakikaya kadar kullanım süresi sunar.
+      </p>
+    </div>
+  </div>  
+
+  <div class="small-gallery-iu">
+    <div class="small-item-iu">
+      <img src="/Content/UploadFiles/e5098195-3.png" alt="">
+      <h4><strong>SenseIQ ile hassas ve rahat bir kullanım</strong></h4>
+      <p>
+Lumea 9900 Serisi, kolay ayarlanabilir beş ışık ayarına sahiptir. SmartSkin sensörümüz, cilt tonunuzu algılar ve en konforlu ayarı bulmanıza yardımcı olur. Akıllı başlıklar, her vücut bölgesine uygun bir uygulama sağlar.
+      </p>
+    </div>
+    <div class="small-item-iu">
+      <img src="/Content/UploadFiles/a38f6949-4.png" alt="">
+      <h4><strong>Yüz ve vücut için 2 akıllı başlıklı, eksiksiz çözüm</strong></h4>
+      <p>
+Vücudunuzun kıvrımlarına mükemmel şekilde uyum sağlayan, özel olarak tasarlanmış uygulama başlıkları takıldığında her vücut bölgesi için en etkili programları tetikler. Yüz: Düz tasarım ve UV filtreli küçük pencere. Vücut: İçe doğru kıvrımlı tasarım ve geniş pencere.
+    </p>
+    </div>
+    <div class="small-item-iu">
+      <img src="/Content/UploadFiles/7210ec9f-5.png" alt="">
+      <h4><strong>SkinAI ile Akıllı Vücut tüyü analizi</strong></h4>
+      <p>Ücretsiz rehberlik uygulamamız, vücut tüylerinizi analiz etmek ve tüylerde azalmayı takip etmek için özel SkinAI teknolojisiyle adım adım rehberlik sunar.</p>
+    </div>
+        <div class="small-item-iu">
+      <img src="/Content/UploadFiles/47a9efd4-6.png" alt="">
+      <h4><strong>Çoğu cilt tonu ve tüy rengi için uygundur</strong></h4>
+      <p>IPL uygulaması için tüy rengindeki pigmentle cilt tonundaki pigment arasında kontrast olması gerekir. Bu nedenle bu teknoloji doğal koyu sarı, kahverengi ve siyah tüylerde ve açık ila koyu kahverengi cilt tonlarında etkilidir (I-V).</p>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,211 @@
+<style>
+.section-iu {
+  padding: 60px 40px;
+  background: linear-gradient(180deg, #4b6379, #5b83a7);
+  overflow: hidden;
+  color: #ffffff;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.section-iu .big-item-iu {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 80px;
+  gap: 60px;
+}
+
+.section-iu .big-item-iu img {
+  width: 400px;
+  border-radius: 12px;
+  object-fit: cover;
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+.section-iu .big-item-iu img:hover {
+  transform: scale(1.03);
+}
+
+.section-iu .text-iu {
+  width: 100%;
+  animation: fadeIn-iu 1s ease forwards;
+  opacity: 0;
+}
+
+.big-item-iu.right-image-iu .text-iu h2::after {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.section-iu .text-iu h2 {
+  font-size: 1.5rem !important;
+  margin-bottom: 15px;
+  position: relative;
+  color: #ffffff;
+}
+
+.section-iu .text-iu h2::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(90deg, #54595f, #a1b5ce);
+  margin-top: 8px;
+  border-radius: 2px;
+}
+
+.big-item-iu.right-image-iu .text-iu{
+  text-align: right;
+}
+
+.section-iu .text-iu p {
+  font-size: 16px !important;
+  line-height: 1.6em !important;
+  color: #ffffff;
+}
+
+.section-iu .small-gallery-iu {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 25px;
+  margin-top: 60px;
+}
+
+.section-iu .small-item-iu {
+  text-align: center;
+  background: #3e4144;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+}
+
+.section-iu .small-item-iu:hover {
+  transform: translateY(-8px);
+  background: #4c607d;
+  box-shadow: 0 12px 25px #5b83a7;
+}
+
+.section-iu .small-item-iu img {
+  width: 80%;
+  border-radius: 8px;
+  object-fit: cover;
+  transition: all 0.4s ease;
+}
+
+.section-iu .small-item-iu img:hover {
+  transform: scale(1.05);
+  filter: brightness(1.1);
+}
+
+.section-iu .small-item-iu h4 {
+  margin-top: 10px;
+  font-weight: 500;
+  color: #ffffff;
+}
+
+.section-iu .small-item-iu p {
+  margin-top: 10px;
+  font-weight: 400;
+  color: #cfcfcf;
+}
+
+@keyframes fadeIn-iu {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 992px) {
+  .section-iu .big-item-iu {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .section-iu .big-item-iu img {
+    width: 100%;
+  }
+
+  .section-iu .text-iu {
+    width: 100%;
+    opacity: 1;
+    text-align: center;
+  }
+
+  .section-iu .small-gallery-iu {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .big-item-iu.right-image-iu .text-iu{
+  text-align: center !important;
+}
+
+.section-iu .text-iu h2::after {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+}
+
+@media (max-width: 500px) {
+  .section-iu .small-gallery-iu {
+    grid-template-columns: 1fr;
+  }
+}
+
+</style>
+
+<section class="section-iu">
+  <div class="big-item-iu left-image-iu">
+    <img src="/Content/UploadFiles/8d00f0e6-1.png" alt="">
+    <div class="text-iu">
+      <h2>Düzeltme Sırasında Daha Fazla Kontrol ve Konfor İçin</h2>
+      <p>
+360 derece kontrollü tutuş sağlayan yüzeye sahip ergonomik tasarımı sayesinde cihazı rahatça kavrayıp kolayca kontrol edebilirsiniz. Bu sayede, istediğiniz görünüme konforlu ve kontrollü bir şekilde ulaşabilirsiniz.
+      </p>
+    </div>
+  </div>
+
+  <div class="big-item-iu right-image-iu">
+    <div class="text-iu">
+      <h2 >Kolay Temizlik ile Rutininizi Basitleştirin</h2>
+      <p>Bu makine tamamen yıkanabilir olduğundan, sadece musluk altında durulayarak kolayca temizleyebilir ve bakım rutininizi basitleştirebilirsiniz.</p>
+    </div>
+    <img src="/Content/UploadFiles/d24d87c2-2.png" alt="">
+  </div>
+
+  <div class="big-item-iu left-image-iu">
+    <img src="/Content/UploadFiles/cfed4ffa-3.png" alt="">
+    <div class="text-iu">
+      <h2>Baştan sona tutarlı ve güçlü performans</h2>
+      <p>
+Dayanıklı lityum pil, güçlü ve kesintisiz tıraş deneyimi için 60 dakikaya kadar kullanım süresi sunar.
+      </p>
+    </div>
+  </div>  
+
+  <div class="small-gallery-iu">
+    <div class="small-item-iu">
+      <img src="/Content/UploadFiles/b265e279-4.png" alt="">
+      <h4><strong>Rahat ve Etkili Bir Bakım Deneyimi İçin Tasarlanmıştır</strong></h4>
+      <p>
+        Kendi kendini bileyen çelik bıçaklar, ekstra dayanıklı yapısıyla her kesimde net ve kontrollü sonuçlar sunar. İlk günkü keskinliğini uzun süre korur, üstelik yağlama gerektirmez. Paslanmaz yapısı sayesinde temizliği de son derece kolaydır.
+      </p>
+    </div>
+    <div class="small-item-iu">
+      <img src="/Content/UploadFiles/c635c4f8-5.png" alt="">
+      <h4><strong>Sakalınızı İhtiyacınız Olan Netlikte Şekillendirin</strong></h4>
+      <p>Sakal düzelticinin Hassas Kadranı 0,5 mm'lik adımlarla 20 uzunluk ayarına sahiptir ve sakalınızı istediğiniz hassaslıkta şekillendirmenize yardımcı olur. Bu sakal düzelticinin Kesim Ayarı (Precision Dial) 0,5 mm aralıklarla 20 farklı uzunluk seçeneği sunar, böylece sakalınızı tam istediğiniz netlikte ve uzunlukta şekillendirmenize yardımcı olur.</p>
+    </div>
+    <div class="small-item-iu">
+      <img src="/Content/UploadFiles/d984d420-6.png" alt="">
+      <h4><strong>İdeal Görünümünüz İçin Etkili ve Eşit Düzeltme</strong></h4>
+      <p>Gelişmiş Lift&Trim taraklar, kılları bıçağa doğru kaldırarak etkili ve eşit düzeltme için her geçişte kılları yakalar.</p>
+    </div>
+        <div class="small-item-iu">
+      <img src="/Content/UploadFiles/826064f0-7.png" alt="">
+      <h4><strong>Hiçbir Tıraşta Kontrolü Elden Bırakmayın</strong></h4>
+      <p>Işık göstergesi, pil durumunuzu ve tam şarj olup olmadığını size net olarak bildirir, böylece bir sonraki kişisel bakım rutininize her zaman hazır olmanızı sağlar.</p>
+    </div>
+  </div>
+</section>

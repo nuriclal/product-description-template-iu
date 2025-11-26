@@ -1,0 +1,394 @@
+<style>
+.chefxl-container-iu {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  color: #222;
+  box-sizing: border-box; 
+}
+
+.chefxl-banner-iu {
+  position: relative;
+  width: 100%;
+  overflow: hidden; 
+}
+.chefxl-banner-img-iu {
+  width: 100%;
+  display: block;
+  height: auto;
+  object-fit: cover;
+}
+.chefxl-banner-title-iu {
+  position: absolute;
+  top: 20px;
+  background: rgba(0,0,0,0.65);
+  color: #fff;
+  padding: 12px 18px;
+  font-size: 46px;    
+  line-height: 1;
+  border-radius: 2px;
+  z-index: 2;
+}
+
+.chefxl-banner-badges-iu {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  z-index: 2;
+}
+.chefxl-badge-iu {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  font-weight: 600;
+  background: rgba(0,0,0,0.55);
+  box-sizing: border-box;
+}
+
+.chefxl-section-iu {
+  margin: 40px 0;
+  box-sizing: border-box;
+}
+.chefxl-title-iu {
+  font-size: 28px;
+  margin-bottom: 35px;
+  text-align: center;
+}
+
+.chefxl-row3-iu {
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+  flex-wrap: wrap; 
+  align-items: center;
+}
+.chefxl-card3-iu {
+  text-align: center;
+  box-sizing: border-box;
+}
+.chefxl-card3-img-iu {
+  width: 160px;
+  height: 160px;
+  object-fit: contain;
+  display: block;
+}
+.chefxl-card3-text-iu {
+  margin-top: 8px;
+  font-size: 16px;
+}
+
+.chefxl-cols-iu {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.chefxl-col-left-iu {
+  box-sizing: border-box;
+  flex: 0 1 33%;        
+  min-width: 260px;     
+  display: flex;
+  flex-direction: column;
+  gap: 70px;
+  align-items: flex-start;
+}
+.chefxl-left-item-iu {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+}
+.chefxl-left-icon-iu {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  flex: 0 0 80px;
+}
+.chefxl-left-content-iu {
+  flex: 1 1 auto;
+}
+.chefxl-left-head-iu {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+.chefxl-left-desc-iu {
+  font-size: 14px;
+  line-height: 1.45;
+  color: #444;
+  margin: 0;
+}
+
+.chefxl-col-mid-iu {
+  box-sizing: border-box;
+  flex: 0 1 34%;
+  min-width: 320px; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.chefxl-mid-img-iu {
+  width: 100%;
+  max-width: 420px;
+  height: auto;
+  object-fit: contain;
+  display: block;
+}
+
+.chefxl-col-right-iu {
+  box-sizing: border-box;
+  flex: 0 1 33%;
+  min-width: 220px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.chefxl-right-item-iu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.chefxl-right-img-iu {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+}
+.chefxl-right-text-iu {
+  font-size: 14px;
+  color: #444;
+}
+.chefxl-right-plus-iu {
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 1;
+  margin-top: 5px;
+}
+
+.chefxl-section-iu {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 0;
+}
+
+.chefxl-title-iu {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.chefxl-reason-wrap-iu {
+  position: relative;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.chefxl-reason-img-iu {
+  width: 100%;
+  display: block;
+}
+
+.chefxl-reason-note-iu {
+  position: absolute;
+  background: #fff;
+  padding: 12px 16px;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  width: 250px;
+  font-size: 18px;
+}
+
+.r1-iu {
+  left: -220px;    
+  top: 0;
+}
+
+.r2-iu {
+  right: -250px;
+  top: -50px;
+}
+.r3-iu {
+  left: -280px;
+  bottom: 75px;
+}
+
+.r4-iu {
+  right: -300px;
+  bottom: 175px;
+}
+
+@media (max-width: 1200px) {
+  .chefxl-cols-iu { flex-direction: column; align-items: stretch; gap: 24px; }
+  .chefxl-col-left-iu, .chefxl-col-mid-iu, .chefxl-col-right-iu {
+    flex: 1 1 auto;
+    min-width: 0;
+    width: 100%;
+  }
+
+  .chefxl-banner-badges-iu { position: absolute; right: 12px; top: 52px; gap: 10px; }
+  .chefxl-badge-iu { width: 80px; height: 80px; font-size: 14px; }
+  .chefxl-banner-title-iu { font-size: 20px; top: 12px; }
+
+  .chefxl-row3-iu { gap: 5px; padding: 20px 0px;}
+  .chefxl-card3-img-iu { width: 120px; height: 120px; }
+
+  .chefxl-right-item-iu { justify-content: flex-start; gap: 12px; align-items: center; }
+  .chefxl-right-img-iu { width: 60px; height: 60px; }
+  .chefxl-right-plus-iu { font-size: 20px; }
+  .chefxl-reason-note-iu {
+    position: static;
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .chefxl-reason-wrap-iu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+}
+
+</style>
+
+<div class="chefxl-container-iu">
+
+  <section class="chefxl-banner-iu">
+    <img src="/Content/UploadFiles/f66b1520-1.jpg" class="chefxl-banner-img-iu" alt="">
+
+    <div class="chefxl-banner-title-iu">
+      KVL4100S | Chef XL Mutfak Şefi
+    </div>
+
+    <div class="chefxl-banner-badges-iu">
+      <div class="chefxl-badge-iu">1200 Watt</div>
+      <div class="chefxl-badge-iu">6,7 Litre</div>
+    </div>
+  </section>
+
+  <section class="chefxl-section-iu">
+  <p style="max-width:1200px; margin:0 auto; font-size:16px; line-height:1.6; padding: 0px 10px;">
+    Kenwood KVL4100 Mutfak Şefi misafirlerinizi ağırlarken ya da sevdiklerinize özenli sofralar kurarken birbirinden leziz yemekleri ve ikramları zorlanmadan, büyük bir keyifle hazırlamanız için en büyük yardımcınız olur. Mutfaklarda şık bir duruş sergileyen Kenwood KVL4100 Mutfak Şefi ve sizin maharetli elleriniz bir araya gelince muhteşem tariflerinizi pratik bir şekilde yapabilir, sevdiklerinizin hem kalplerini hem de damaklarını şenlendirebilirsiniz.
+  </p>
+</section>
+
+
+  <section class="chefxl-section-iu">
+    <h2 class="chefxl-title-iu">Kutudan Neler Çıkıyor</h2>
+
+    <div class="chefxl-row3-iu">
+      <div class="chefxl-card3-iu">
+        <img src="/Content/UploadFiles/59412d03-2.jpg" class="chefxl-card3-img-iu">
+        <div class="chefxl-card3-text-iu">K-Çırpıcı</div>
+      </div>
+
+      <div class="chefxl-card3-iu">
+        <img src="/Content/UploadFiles/853ddf88-3.jpg" class="chefxl-card3-img-iu">
+        <div class="chefxl-card3-text-iu">Güçlü Çırpıcı</div>
+      </div>
+
+      <div class="chefxl-card3-iu">
+        <img src="/Content/UploadFiles/199635fd-4.jpg" class="chefxl-card3-img-iu">
+        <div class="chefxl-card3-text-iu">Hamur Kancası</div>
+      </div>
+    </div>
+  </section>
+    <section class="chefxl-section-iu">
+        <p style="max-width:1200px; margin:0 auto; font-size:16px; line-height:1.6; padding: 0px 10px;">
+          6 değişken hız kademesi ile çırpma, yoğurma ve karıştırma aşamalarında tüm kontrol sizin elinizde olur. Hamuru tam kıvamında yoğururken zaman tasarrufu sağlar.
+      </p>
+    </section>
+
+<section class="chefxl-section-iu">
+  <h2 class="chefxl-title-iu">Neler Yapabilirim</h2>
+
+  <div class="chefxl-cols-iu">
+
+    <div class="chefxl-col-left-iu">
+
+      <div class="chefxl-left-item-iu">
+        <img src="/Content/UploadFiles/38b9a029-5.jpg" class="chefxl-left-icon-iu">
+        <div class="chefxl-left-content-iu">
+          <div class="chefxl-left-head-iu">K-Çırpıcı</div>
+          <p class="chefxl-left-desc-iu">
+            Kek, bisküvi, pasta ürünleri, kaplama, dolgu, ekler ve
+            patates püresi yapımında kullanılır.
+          </p>
+        </div>
+      </div>
+
+      <div class="chefxl-left-item-iu">
+        <img src="/Content/UploadFiles/4c8cdf1b-6.jpg" class="chefxl-left-icon-iu">
+        <div class="chefxl-left-content-iu">
+          <div class="chefxl-left-head-iu">Güçlü Çırpıcı</div>
+          <p class="chefxl-left-desc-iu">
+            Yumurta, krema, pasta hamuru, beze, cheesecake,
+            mus ve sufleler için kullanılır.
+          </p>
+        </div>
+      </div>
+
+      <div class="chefxl-left-item-iu">
+        <img src="/Content/UploadFiles/93f636da-7.jpg" class="chefxl-left-icon-iu">
+        <div class="chefxl-left-content-iu">
+          <div class="chefxl-left-head-iu">Hamur Kancası</div>
+          <p class="chefxl-left-desc-iu">
+            Ekmek, pizza ve makarna gibi sert hamurların yapımında
+            kullanılır.
+          </p>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="chefxl-col-mid-iu">
+      <img src="/Content/UploadFiles/d05082a9-8.jpg" class="chefxl-mid-img-iu">
+    </div>
+
+    <div class="chefxl-col-right-iu">
+
+      <div class="chefxl-right-item-iu">
+        <img src="/Content/UploadFiles/05ad776e-9.png" class="chefxl-right-img-iu">
+        <div class="chefxl-right-text-iu">6,7 litre paslanmaz çelik kase</div>
+        <div class="chefxl-right-plus-iu">+</div>
+      </div>
+
+      <div class="chefxl-right-item-iu">
+        <img src="/Content/UploadFiles/2e1a5f48-10.jpg" class="chefxl-right-img-iu">
+        <div class="chefxl-right-text-iu">Spatula</div>
+        <div class="chefxl-right-plus-iu">+</div>
+      </div>
+
+      <div class="chefxl-right-item-iu">
+        <img src="/Content/UploadFiles/16fcfc02-11.jpg" class="chefxl-right-img-iu">
+        <div class="chefxl-right-text-iu">Sıçrama önleyici kapak</div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+  <section class="chefxl-section-iu">
+    <h2 class="chefxl-title-iu">Neden Chef XL</h2>
+
+    <div class="chefxl-reason-wrap-iu">
+      <img src="/Content/UploadFiles/47c7b5de-12.jpg" class="chefxl-reason-img-iu">
+
+      <div class="chefxl-reason-note-iu r1-iu">Kıyma makinesi, makarna kesici, yavaş sıkım meyve/sebze presi gibi aparatlar için düşük hız aparatı girişi *ayrı satılır</div>
+      <div class="chefxl-reason-note-iu r2-iu">Smoothie blender, dilimleme ve doğrayıcı, narenciye sıkacağı gibi aparatlar için yüksek hız girişi</div>
+      <div class="chefxl-reason-note-iu r3-iu">6.7 litre paslanmaz çelik kase</div>
+      <div class="chefxl-reason-note-iu r4-iu">Kademeli artan hız ayarı ve turbo özelliği</div>
+    </div>
+  </section>
+
+</div>

@@ -1,0 +1,173 @@
+<style type="text/css">
+.product-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  padding: 10px 40px;
+  align-items: center;
+}
+
+.product-info {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.product-info h2 {
+  font-size: 1.3rem !important;
+  font-weight: 700;
+  margin: 0;
+}
+
+.product-info h3 {
+  font-size: 1.1rem !important;
+  font-weight: 500;
+  color: #444;
+  margin-top: -5px;
+}
+
+.product-info ul {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+}
+
+.product-info ul li {
+  margin-bottom: 8px;
+  font-size: 1rem !important;
+  position: relative;
+  padding-left: 20px;
+}
+
+.product-info ul li::before {
+  content: "✔";
+  color: #c50a1d;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.product-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.product-image img {
+  width: 100%;
+  max-width: 450px;
+  border-radius: 10px;
+}
+
+.product-gallery {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+  text-align: center;
+  padding: 10px 20px;
+}
+
+.product-gallery div{
+    flex:1;
+}
+
+.product-gallery img {
+  width: 120px;
+  height: auto;
+}
+
+.product-gallery p {
+  text-align: center;
+  font-size: 0.8rem;
+  margin-top: 6px;
+}
+
+.footer-bar {
+  background-color: #c50a1d;
+  padding: 10px 60px;
+  letter-spacing: 1px;
+}
+
+.product-wrapper {
+  background-color: #fff;
+  border: 2px solid #e0e0e0; 
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08); 
+  max-width: 1100px;         
+  margin: 40px auto;         
+  overflow: hidden;          
+}
+
+@media (max-width: 800px) {
+  .product-section {
+    grid-template-columns: 1fr;
+    padding: 20px;
+  }
+
+  .product-gallery {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    justify-items: center;
+  }
+
+  .product-gallery img {
+    width: 100%;
+    max-width: 150px;
+  }
+
+  .footer-bar {
+    text-align: center;
+    padding: 15px;
+  }
+}
+</style>
+<div class="product-wrapper">
+<section class="product-section">
+<div class="product-info">
+<h2>Ariete Party Time Waffle Makinesi</h2>
+
+<h3>1973/00</h3>
+
+<ul>
+	<li>700 Watt</li>
+	<li>Çıkarılabilir Yapışmaz Plakalar</li>
+	<li>Sıcaklık Hazır Işığı</li>
+	<li>Kablo Sarma</li>
+    <li>Kolay Temizleme</li>
+    <li>Emniyet Kilit Sistemi</li>
+    <li>25x21x9.5 cm</li>
+</ul>
+</div>
+
+<div class="product-image"><img alt="" src="/Content/UploadFiles/2c3f6e4e-1.jpg" /></div>
+</section>
+
+<section class="product-gallery">
+<div><img alt="" src="/Content/UploadFiles/e87d6852-2.jpg" />
+<p> 50'li yılların Mutlu Günlerini hatırlatan pürüzsüz çizgiler ve pop art renkleri. </p>
+</div>
+
+<div><img alt="" src="/Content/UploadFiles/e7b4df10-3.jpg" />
+<p>Çıkarılabilir yapışmaz plakalar</p>
+</div>
+
+<div><img alt="" src="/Content/UploadFiles/ddfae054-4.jpg" />
+<p>Birkaç dakika içinde lezzetli ve yumuşak waffle'lar</p>
+</div>
+
+<div><img alt="" src="/Content/UploadFiles/8f1a2002-5.jpg" />
+<p>Zahmetsiz saklama imkanı</p>
+</div>
+
+<div><img alt="" src="/Content/UploadFiles/b73f097c-6.jpg" />
+<p>Arkadaşlara tatlı sürprizler</p>
+</div>
+
+<div><img alt="" src="/Content/UploadFiles/3755f91b-7.jpg" />
+<p>Tadı damağınızda kalacak lezzetli waffle'lar</p>
+</div>
+</section>
+
+<div class="footer-bar">&nbsp;</div>
+</div>

@@ -1,0 +1,255 @@
+<style>
+    .urun-container-iu {
+    max-width: 1200px;
+    margin: auto;
+}
+
+.banner-iu {
+    position: relative;
+}
+
+.banner-img-iu {
+    width: 100%;
+    height: auto;
+}
+
+.carousel-container-iu {
+    position: relative;
+    overflow: hidden;
+}
+
+.carousel-iu {
+    display: flex;
+    transition: transform 0.4s;
+}
+
+.carousel-item-iu {
+    min-width: 100%;
+    position: relative;
+}
+
+.carousel-item-iu img {
+    width: 100%;
+}
+
+.carousel-text-iu {
+    max-width: 50%;
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    background: rgba(0,0,0,0.55);
+    color: white;
+    padding: 10px 15px;
+    font-size: 18px;
+    border-radius: 4px;
+}
+.arrow-left-iu,
+.arrow-right-iu {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: black;
+    color: white;
+    border: none;
+    padding: 12px;
+    cursor: pointer;
+    font-size: 22px;
+}
+.arrow-left-iu { left: 10px; }
+.arrow-right-iu { right: 10px; }
+
+.grid-section-iu{
+    background: linear-gradient(200deg, #6a0f3a, #b45b67);
+    padding: 20px;
+}
+
+.grid-container-iu {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+    margin-top: 30px;
+    color: white;
+
+}
+
+.grid-item-iu img {
+    width: 100%;
+    border-radius: 4px;
+}
+
+.grid-item-iu p {
+    margin-top: 8px;
+    font-size: 16px;
+    text-align: center;
+}
+
+@media (max-width: 900px) {
+    .grid-container-iu {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+
+    .carousel-text-iu {
+        padding: 8px 12px;
+        max-width: 80% !important;
+        top: 8% !important;
+        line-height: 1.5em !important;
+    }
+
+    .carousel-text-iu h3{
+        font-size: 12px !important;
+    }    
+
+    .carousel-text-iu p{
+        font-size: 10px !important;
+        margin-bottom: 0px !important;
+        line-height: 1.5em !important;
+    }
+
+    .grid-container-iu {
+        grid-template-columns: 1fr;
+    }
+}
+
+</style>
+
+<div class="urun-container-iu">
+
+    <section class="banner-iu">
+        <img src="/Content/UploadFiles/1f04a711-1.jpg" alt="Banner" class="banner-img-iu">
+    </section>
+
+    <section class="carousel-section-iu">
+        <div class="carousel-container-iu">
+            <div class="carousel-iu" id="carouselIu">
+
+                <div class="carousel-item-iu">
+                    <img src="/Content/UploadFiles/8e32168c-2.jpg">
+                    <div class="carousel-text-iu">
+                        <h3>Eşit Isı Dağıtımı Teknolojisi Sayesinde Saçın Aşırı Isınması Önlenir</h3>
+                        <p>Eşit Isı Dağıtımı teknolojisi aşırı ısınmaya karşı maksimum koruma sağlayarak saçlarınızın sağlıklı ve parlak görünmesine yardımcı olur.</p>
+                    </div>
+                </div>
+
+                <div class="carousel-item-iu">
+                    <img src="/Content/UploadFiles/3dbc66b2-3.jpg">
+                    <div class="carousel-text-iu">
+                        <h3>4 Kat Daha Fazla İyonik Bakım*</h3>
+                        <p>Bu hava üflemeli saç şekillendirici, iyonik bakımla saçınızı anında canlandırır. Yüklü negatif iyonlar statik elektriği ortadan kaldırır, saça bakım yapar ve saçları açarak parlaklığını ve canlılığını arttırır. Sonuç son derece parlak, pürüzsüz ve elektriklenmeyen saçlardır.</p>
+                    </div>
+                </div>
+
+                <div class="carousel-item-iu">
+                    <img src="/Content/UploadFiles/686c3bc6-4.jpg">
+                    <div class="carousel-text-iu">
+                        <h3>Kolay Kontrol İçin Üç Esnek Isı ve Hız Ayarı</h3>
+                        <p>Eşit Isı Dağıtımı teknolojisi aşırı ısınmaya karşı maksimum koruma sağlayarak saçlarınızın sağlıklı ve parlak görünmesine yardımcı olur.</p>
+                    </div>
+                </div>
+
+                <div class="carousel-item-iu">
+                    <img src="/Content/UploadFiles/0bf3e108-5.jpg">
+                    <div class="carousel-text-iu">
+                        <h3>Nazik Kurutma İçin Soğuk Hava Ayarı</h3>
+                        <p>Soğuk hava ayarı, düşük ısı kullanarak saçlarınızı nazikçe kurutur. Özellikle ince, kuru veya zarar görmüş saçlar için idealdir.</p>
+                    </div>
+                </div>
+
+                <div class="carousel-item-iu">
+                    <img src="/Content/UploadFiles/e80455d4-6.jpg">
+                    <div class="carousel-text-iu">
+                        <h3>İpeksi Saçlar İçin Argan Yağı Katkılı Seramik Plakalar</h3>
+                        <p>Düzleştirici, hızlı ve zahmetsiz bir şekillendirme için argan yağı katkılı seramik plakalara sahiptir. Bu plakalar saçınızda kayarak saçlarınızın ipeksi bir görünüm ve yumuşaklık kazanmasını sağlar.</p>
+                    </div>
+                </div>
+
+            </div>
+
+            <button class="arrow-left-iu" onclick="prevIu()">‹</button>
+            <button class="arrow-right-iu" onclick="nextIu()">›</button>
+        </div>
+    </section>
+
+    <section class="grid-section-iu">
+        <div class="grid-container-iu">
+
+            <div class="grid-item-iu">
+                <img src="/Content/UploadFiles/8fc4031d-1.png">
+                <p><strong>Doğal görünümlü düz sonuçlar için palet şekilli düzleştirme fırçası</strong></p>
+                <p>Palet şekilli düzleştirme fırçası, tek seferde doğal görünümlü düz sonuçlar elde etmenize yardımcı olmak için tasarlanmıştır.</p>
+            </div>
+
+            <div class="grid-item-iu">
+                <img src="/Content/UploadFiles/40559231-2.png">
+                <p><strong>Mükemmel modeller ve dalgalar için 38 mm ThermoBrush</strong></p>
+                <p>ThermoBrush, 38 mm'lik ekstra geniş bir çapa sahiptir. Bigudinin genişliği, onu düz modeller ve dalgalar için mükemmel bir şekillendirme aleti haline getirir.</p>
+            </div>
+
+            <div class="grid-item-iu">
+                <img src="/Content/UploadFiles/2ac32cd7-3.png">
+                <p><strong>Mükemmel dalgalar için 30 mm boyu ayarlanabilir sert fırça</strong></p>
+                <p>30 mm'lik boyu ayarlanabilir sert fırça, kolay şekillendirme için tasarlanmıştır. Mükemmel dalgalar için fırçanın ucunu çevirin ve çıkarın.</p>
+            </div>
+
+            <div class="grid-item-iu">
+                <img src="/Content/UploadFiles/df4febd2-4.png">
+                <p><strong>Odaklanmış hava akışı için daraltıcı kurutma başlığı</strong></p>
+                <p>Dar şekillendirme başlığını kullanarak hassas şekillendirme veya rötuşlar için odaklı hava akışı sağlayabilirsiniz.</p>
+            </div>
+
+            <div class="grid-item-iu">
+                <img src="/Content/UploadFiles/fd97b5fd-5.png">
+                <p><strong>Daha korumalı kurutma ve şekillendirme için bakım ayarı</strong></p>
+                <p>"Bakım" ayarı, optimum kurutma sıcaklığını sağlar ve aşırı ısınmaya karşı koruma sağlar. Saçlar, aynı güçlü hava akışıyla, sabit bakım sıcaklığında hızlı kurur.</p>
+            </div>
+
+            <div class="grid-item-iu">
+                <img src="/Content/UploadFiles/86173ca9-6.png">
+                <p><strong>Saç köklerini daha fazla hacimlendiren hacimlendirici</strong></p>
+                <p>Özel olarak tasarlanmış hacimlendirme başlığıyla hacimli saç kökleri yaratın.</p>
+            </div>
+
+            <div class="grid-item-iu">
+                <img src="/Content/UploadFiles/04e1c3d6-7.png">
+                <p><strong>5 Aksesuarlı</strong></p>
+                <p>Air Styler, 5 farklı başlık seçeneği ile doğal görünümlü düz saçlardan mükemmel dalgalara ve hacimli saç köklerine kadar farklı stiller oluşturmanızı sağlar.</p>
+            </div>
+
+            <div class="grid-item-iu">
+                <img src="/Content/UploadFiles/825459c9-8.png">
+                <p><strong>Ekstra bakım ile çok sayıda saç modeli</strong></p>
+                <p>Her gün kolay saç stilleri sunan Philips Saç Şekillendirici 5000. Ilık hava fırçanın her yerine eşit olarak dağılırken İyonik bakım, saçınızın daha parlak görünmesini sağlar.</p>
+            </div>
+
+        </div>
+    </section>
+
+</div>
+
+<script>
+    let indexIu = 0;
+
+function showSlideIu() {
+    const carousel = document.getElementById("carouselIu");
+    const items = document.querySelectorAll(".carousel-item-iu");
+    const total = items.length;
+
+    if (indexIu >= total) indexIu = 0;
+    if (indexIu < 0) indexIu = total - 1;
+
+    carousel.style.transform = `translateX(-${indexIu * 100}%)`;
+}
+
+function nextIu() {
+    indexIu++;
+    showSlideIu();
+}
+
+function prevIu() {
+    indexIu--;
+    showSlideIu();
+}
+
+</script>

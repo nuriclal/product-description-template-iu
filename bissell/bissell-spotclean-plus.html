@@ -1,0 +1,120 @@
+<style>
+.product-gallery-iu {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, auto);
+  gap: 25px;
+  justify-items: center;
+  text-align: center;
+  padding: 30px 60px;
+  position: relative;
+  z-index: 1;
+}
+
+.product-gallery-iu div {
+  background-color: #ffffff;
+  border-radius: 24px;
+  padding: 20px 15px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.product-gallery-iu div:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+.product-gallery-iu img {
+  width: 250px;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+
+.product-gallery-iu h3 {
+  font-size: 1.05rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.product-gallery-iu p {
+  font-size: 0.9rem;
+  line-height: 1.4;
+  text-align: center;
+  margin: 0;
+  word-break: break-word;
+}
+
+@media (max-width: 800px) {
+
+  .product-gallery-iu {
+    grid-template-columns: 1fr; 
+    grid-template-rows: repeat(8, auto);
+    gap: 20px;
+    padding: 20px;
+  }
+
+  .product-gallery-iu div {
+    width: 100%;
+    max-width: 400px;
+  }
+
+  .product-gallery-iu img {
+    width: 100%;
+    max-width: 250px;
+  }
+
+  .product-gallery-iu h3 {
+    font-size: 1rem;
+  }
+
+  .product-gallery-iu p {
+    font-size: 0.85rem;
+  }
+}
+</style>
+
+<div class="product-wrapper-iu">
+  <section class="product-gallery-iu">
+    <div>
+      <img src="/Content/UploadFiles/9e532ea6-1.jpg" alt="">
+      <h3>Temiz ve Kirli Su İçin İki Ayrı Tank</h3>
+      <p>İki hazne sayesinde temiz su ile kirli su hiçbir zaman karışmaz. Doldurma ve boşaltma işlemlerini kolaylaştıran çıkarılabilir haznelere sahiptir.</p>
+    </div>
+
+    <div>
+      <img src="/Content/UploadFiles/a12b1f35-2.jpg" alt="">
+      <h3>Hafif ve Kompakt</h3>
+      <p>Hafif ve kompakt tasarımı sayesinde kolayca taşınır. Kompakt yapısı dar alanlarda bile rahatça saklamaya imkân tanır.</p>
+    </div>
+
+    <div>
+      <img src="/Content/UploadFiles/2dc88034-3.jpg" alt="">
+      <h3>Güçlü Temizleme</h3>
+      <p>İnatçı kir ve lekeler için özel Bissell deterjanına sahiptir.</p>
+    </div>
+
+    <div>
+      <img src="/Content/UploadFiles/70b9666a-4.jpg" alt="">
+      <h3>2,2 m Esnek Hortum</h3>
+      <p>2,2 metre uzunluğundaki hortumu ve 5 metre uzunluğundaki güç kablosu ile çok geniş bir alanda temizlik yapabilirsiniz.</p>
+    </div>
+
+    <div>
+      <img src="/Content/UploadFiles/2c1739f7-5.jpg" alt="">
+      <h3>Tüm Yüzeylerin Temizliği</h3>
+      <p>Halı, döşeme, merdiven, kilim, araç içi döşemeler ve daha birçok yerdeki lekeleri ve kirleri temizler.</p>
+    </div>
+
+    <div>
+      <img src="/Content/UploadFiles/dc074bde-6.jpg" alt="">
+      <h3>Hydrorinse Kendini Temizleyen Başlık</h3>
+      <p>Kullanım sonrası makinenizi temizlemek için HydroRinse başlığı bulunmaktadır.</p>
+    </div>
+
+  </section>
+</div>
