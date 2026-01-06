@@ -1,0 +1,178 @@
+<style>
+.hair-section-iu {
+  padding: 60px 40px;
+  background: linear-gradient(135deg, #f6e9e4, #e6b6aa);
+  overflow: hidden;
+}
+
+.hair-section-iu .big-item-iu {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 80px;
+  gap: 60px;
+}
+
+.hair-section-iu .big-item-iu img {
+  width: 45%;
+  border-radius: 12px;
+  object-fit: cover;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+.hair-section-iu .big-item-iu img:hover {
+  transform: scale(1.03);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.25);
+}
+
+.hair-section-iu .text-iu {
+  width: 50%;
+  animation: fadeIn-iu 1s ease forwards;
+  opacity: 0;
+}
+
+.hair-section-iu .text-iu h2 {
+  font-size: 1.5rem !important; 
+  margin-bottom: 15px;
+  position: relative;
+  color: #141414;
+}
+
+.hair-section-iu .text-iu h2::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(90deg, #d18a7a, #e6b6aa);
+  margin-top: 8px;
+  border-radius: 2px;
+}
+
+.hair-section-iu .text-iu p {
+  font-size: 16px !important;
+  line-height: 1.6em !important;
+}
+
+.hair-section-iu .small-gallery-iu {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 25px;
+  margin-top: 60px;
+}
+
+.hair-section-iu .small-item-iu {
+  text-align: center;
+  background: #fff;
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 0 6px 15px rgba(209, 138, 122, 0.25);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hair-section-iu .small-item-iu:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 25px rgba(209, 138, 122, 0.4);
+}
+
+.hair-section-iu .small-item-iu img {
+  width: 80%;
+  border-radius: 8px;
+  object-fit: cover;
+  transition: all 0.4s ease;
+}
+
+.hair-section-iu .small-item-iu img:hover {
+  transform: scale(1.05);
+  filter: brightness(1.08);
+}
+
+.hair-section-iu .small-item-iu h4{
+  margin-top: 10px;
+  font-weight: 500;
+  color: #000000;
+}
+
+.hair-section-iu .small-item-iu p {
+  margin-top: 10px;
+  font-weight: 500;
+  color: #4a4a4a;
+}
+
+@keyframes fadeIn-iu {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 992px) {
+  .hair-section-iu .big-item-iu {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hair-section-iu .big-item-iu img {
+    width: 100%;
+  }
+
+  .hair-section-iu .text-iu {
+    width: 100%;
+    opacity: 1;
+  }
+
+  .hair-section-iu .small-gallery-iu {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 500px) {
+  .hair-section-iu .small-gallery-iu {
+    grid-template-columns: 1fr;
+  }
+}
+</style>
+
+<section class="hair-section-iu">
+  <div class="big-item-iu left-image-iu">
+    <img src="/Content/UploadFiles/d23f75bd-1.jpg" alt="Saç Şekillendirici 1">
+    <div class="text-iu">
+      <h2>Kolay ve Pürüzsüz Bukleler</h2>
+      <p>
+        Zahmetsiz ve hızlı şekilde saça şekil veren, profesyonel kalitede, konik şeklinde, kuvars-seramik ince maşa ile doğal bukleler ve pürüzsüz bir bitiriş sağlar.
+      </p>
+    </div>
+  </div>
+
+  <div class="big-item-iu right-image-iu">
+    <div class="text-iu">
+      <h2>Ekstra uzun 25-13mm gövde, uzun saçları kıvırmak için idealdir.</h2>
+      <p>
+        Hızlı ve kolay şekillendirme için 160° C - 210 ° C'ye arası ultra hızlı ısınabilen, 6 ısı ayarı ve ısı derecesini sabitlemek için Advanced Ceramics ısıtma sistemi bulunmaktadır.
+      </p>
+    </div>
+    <img src="/Content/UploadFiles/1e8468e9-2.jpg" alt="Saç Şekillendirici 2">
+  </div>
+
+  <div class="small-gallery-iu">
+    <div class="small-item-iu">
+      <img src="/Content/UploadFiles/e1858a71-3.jpg" alt="Model 1">
+      <h4><strong>Kuvars - Seramik Kaplama</strong></h4>
+      <p>Düzgün kayma için kuvars seramik kaplamalı plaka</p>
+    </div>
+    <div class="small-item-iu">
+      <img src="/Content/UploadFiles/d3c73ec1-4.jpg" alt="Model 2">
+      <h4><strong>6 Isı Ayarı</strong></h4>
+      <p>160°C - 210°C arası 6 ısı ayarı</p>
+    </div>
+    <div class="small-item-iu">
+      <img src="/Content/UploadFiles/f9a3108e-5.jpg" alt="Model 3">
+      <h4><strong>Hızlı Isınma</strong></h4>
+      <p>40 saniye içerisinde kullanıma hazır hale gelir.</p>
+    </div>
+    <div class="small-item-iu">
+      <img src="/Content/UploadFiles/da031063-6.jpg" alt="Model 4">
+      <h4><strong>Otomatik Kapanma</strong></h4>
+      <p>60 dakika sonunda otomatik kapanır ve güvenli kullanım sağlar.</p>
+    </div>
+  </div>
+</section>
+

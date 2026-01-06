@@ -1,0 +1,156 @@
+<script>
+    (function () {
+
+    var canvas = document.createElement("canvas");
+    canvas.id = "jb-heavy-snow-canvas";
+    document.body.appendChild(canvas);
+
+    var ctx = canvas.getContext("2d");
+    var w, h;
+    var flakes = [];
+    var maxFlakes = 250; 
+
+    function resize() {
+        w = window.innerWidth;
+        h = window.innerHeight;
+        canvas.width = w;
+        canvas.height = h;
+    }
+
+    window.addEventListener("resize", resize);
+    resize();
+
+    canvas.style.position = "fixed";
+    canvas.style.top = "0";
+    canvas.style.left = "0";
+    canvas.style.pointerEvents = "none";
+    canvas.style.zIndex = "999999";
+
+    function createFlake() {
+        return {
+            x: Math.random() * w,
+            y: Math.random() * h,
+            r: Math.random() * 2.5 + 1,
+            vy: Math.random() * 2 + 1.2,
+            vx: Math.random() * 1 - 0.5,
+            a: Math.random() * 0.5 + 0.5
+        };
+    }
+
+    for (var i = 0; i < maxFlakes; i++) {
+        flakes.push(createFlake());
+    }
+
+    function draw() {
+        ctx.clearRect(0, 0, w, h);
+        flakes.forEach(function (f) {
+            ctx.beginPath();
+            ctx.fillStyle = "rgba(255,255,255," + f.a + ")";
+            ctx.arc(f.x, f.y, f.r, 0, Math.PI * 2);
+            ctx.fill();
+        });
+    }
+
+    function update() {
+        flakes.forEach(function (f) {
+            f.y += f.vy;
+            f.x += f.vx + Math.sin(f.y * 0.01) * 0.3;
+
+            if (f.y > h) {
+                f.y = -10;
+                f.x = Math.random() * w;
+            }
+
+            if (f.x > w) f.x = 0;
+            if (f.x < 0) f.x = w;
+        });
+    }
+
+    function loop() {
+        draw();
+        update();
+        requestAnimationFrame(loop);
+    }
+
+    loop();
+
+    var logoArea = document.querySelector(".logo-area .container");
+    if (!logoArea) {
+        console.error(".logo-area .container bulunamadı!");
+        return;
+    }
+
+    var logoStyle = window.getComputedStyle(logoArea);
+    if (logoStyle.position === "static") {
+        logoArea.style.position = "relative";
+    }
+
+    var tree = document.createElement("img");
+    tree.src = "/Content/UploadFiles/3a51be0f-png-transparent-christmas-tree-christmas-decoration-party-christmas-tree-child-holidays-decor-Photoroom.png";
+    tree.style.position = "absolute";
+    tree.style.top = "0";             
+    tree.style.right = "28.5%";      
+    tree.style.width = "100px";
+    tree.style.height = "auto";
+    tree.style.zIndex = "3";
+    tree.style.pointerEvents = "none";
+
+    logoArea.appendChild(tree);
+
+    var treering = document.createElement("img");
+    treering.src = "/Content/UploadFiles/c9924a11-image-Photoroom.png";
+    treering.style.position = "absolute";
+    treering.style.top = "5px";        
+    treering.style.left = "14.5%";      
+    treering.style.width = "60px";
+    treering.style.height = "auto";
+    treering.style.zIndex = "3";
+    treering.style.pointerEvents = "none";
+
+    logoArea.appendChild(treering);
+
+
+    var santa = document.createElement("img");
+    santa.src = "/Content/UploadFiles/61b48368-image-Photoroom (1).png"; 
+    santa.style.position = "absolute";
+    santa.style.bottom = "2px";     
+    santa.style.left = "-150px";    
+    santa.style.width = "100px";
+    santa.style.height = "auto";
+    santa.style.zIndex = "3";
+
+    var container = document.querySelector(".top-bar");
+    if (!container) {
+        console.error(".top-bar bulunamadı!");
+        return;
+    }
+    
+    var containerStyle = window.getComputedStyle(container);
+    if (containerStyle.position === "static") {
+        container.style.position = "relative";
+    }
+
+    container.appendChild(santa);
+
+    var containerWidth = container.offsetWidth;
+    var posX = -150;          
+    var speed = 0.5;          
+    
+    function animate() {
+        posX += speed;         
+        if (posX > containerWidth) {
+        posX = -150;        
+        }
+        santa.style.left = posX + "px";
+        requestAnimationFrame(animate);
+    }
+
+    animate();
+
+    window.addEventListener("resize", function() {
+        containerWidth = container.offsetWidth;
+    });
+
+})();
+
+</script>

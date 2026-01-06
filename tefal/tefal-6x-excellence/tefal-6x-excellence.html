@@ -1,0 +1,333 @@
+<style type="text/css">.product-section {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 35px;
+}
+
+.product {
+  background-color: #fff;
+  border-radius: 16px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+  transition: all 0.35s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+}
+
+.product:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+}
+
+.product-img {
+  width: 100%;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 25px;
+  transition: all 0.3s ease;
+}
+
+.product:hover .product-img img {
+  transform: scale(1.05);
+  transition: transform 0.4s ease;
+}
+
+.product-img img {
+  width: 85%;
+  height: auto;
+  object-fit: contain;
+  border-radius: 10px;
+}
+
+.product-description {
+  width: 100%;
+  text-align: center;
+  padding: 20px 15px 30px;
+}
+
+.product-description h4 {
+  color: #111;
+  font-size: 1.15rem;
+  margin: 0 0 10px;
+  font-weight: 600;
+}
+
+.product-description p {
+  font-size: 0.95rem;
+  color: #555;
+  line-height: 1.5;
+  opacity: 0;
+  max-height: 0;
+  transition: all 0.4s ease;
+  overflow: hidden;
+}
+
+.product:hover .product-description p {
+  opacity: 1;
+  max-height: 200px;
+  margin-top: 10px;
+}
+
+@media (max-width: 1200px) {
+  .product-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .product-description p {
+    opacity: 0;
+    max-height: 0;
+    margin-top: 0;
+    transform: translateY(10px);
+    transition: opacity 0.35s ease, max-height 0.35s ease, margin-top 0.35s ease, transform 0.35s ease;
+    overflow: hidden;
+  }
+  .product-description p.visible {
+    opacity: 1;
+    max-height: 200px;
+    margin-top: 10px;
+    transform: translateY(0);
+  }
+
+  .product-img img {
+    transform: scale(1);
+    transition: transform 0.4s ease;
+    will-change: transform;
+  }
+  .product-img img.zoomed {
+    transform: scale(1.05);
+  }
+}
+
+@media (max-width: 800px) {
+
+  .product-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .product-description p {
+    opacity: 0;
+    max-height: 0;
+    margin-top: 0;
+    transform: translateY(10px);
+    transition: opacity 0.35s ease, max-height 0.35s ease, margin-top 0.35s ease, transform 0.35s ease;
+    overflow: hidden;
+  }
+  .product-description p.visible {
+    opacity: 1;
+    max-height: 200px;
+    margin-top: 10px;
+    transform: translateY(0);
+  }
+
+  .product-img img {
+    transform: scale(1);
+    transition: transform 0.4s ease;
+    will-change: transform;
+  }
+  .product-img img.zoomed {
+    transform: scale(1.05);
+  }
+}
+
+@media (max-width: 500px) {
+  .product-grid {
+    grid-template-columns: 1fr;
+  }
+  .product-description p {
+    opacity: 0;
+    max-height: 0;
+    margin-top: 0;
+    transform: translateY(10px);
+    transition: opacity 0.35s ease, max-height 0.35s ease, margin-top 0.35s ease, transform 0.35s ease;
+    overflow: hidden;
+  }
+  .product-description p.visible {
+    opacity: 1;
+    max-height: 200px;
+    margin-top: 10px;
+    transform: translateY(0);
+  }
+
+  .product-img img {
+    transform: scale(1);
+    transition: transform 0.4s ease;
+    will-change: transform;
+  }
+  .product-img img.zoomed {
+    transform: scale(1.05);
+  }
+}
+</style>
+<section class="product-section">
+<div class="product-grid">
+<div class="product">
+<div class="product-img"><img alt="" src="/Content/UploadFiles/7cc64274-1.jpg" /></div>
+
+<div class="product-description">
+<h4>Titanyum Yapışmaz Kaplama</h4>
+
+<p>Zamanla maksimum dayanıklılık sunan Titanium anti-scratch yapışmaz kaplama, Tefal’in standart Titanyum kaplamalarına göre 6 kata kadar daha uzun ömürlüdür.</p>
+</div>
+</div>
+
+<div class="product">
+<div class="product-img"><img alt="" src="/Content/UploadFiles/5466155c-2.jpg" /></div>
+
+<div class="product-description">
+<h4>Mükemmel Mühürleme</h4>
+
+<p>Tefal’in Thermo-Signal™ teknolojisi, pişirme için ideal zamanı göstererek her yemeği başarılı bir sonuca dönüştürür.</p>
+</div>
+</div>
+
+<div class="product">
+<div class="product-img"><img alt="" src="/Content/UploadFiles/fe7026c6-3.jpg" /></div>
+
+<div class="product-description">
+<h4>Gelişmiş İndüksiyon Tabanı</h4>
+
+<p>Thermo-Fusion™+ tabanı, hızlı ısınma ve eşit pişirme sonuçları sunar. Gaz, elektrikli, seramik ve indüksiyonlu ocaklarla uyumludur.</p>
+</div>
+</div>
+
+<div class="product">
+<div class="product-img"><img alt="" src="/Content/UploadFiles/116321bc-4.jpg" /></div>
+
+<div class="product-description">
+<h4>Olmazsa Olmaz Boyut</h4>
+
+<p>Restoran kalitesinde sole meunière ya da mükemmel mühürlenmiş rib-eye steak gibi tarifleri profesyonel gibi uygulamak için ideal.</p>
+</div>
+</div>
+
+<div class="product">
+<div class="product-img"><img alt="" src="/Content/UploadFiles/ff0aeb17-5.jpg" /></div>
+
+<div class="product-description">
+<h4>Olağanüstü Soteleme</h4>
+
+<p>Cömert hafta içi yemekleri veya dumanlı jambalaya, tavuk yahni veya orzo ile Yunan kuzusu gibi unutulmaz ziyafetler için.</p>
+</div>
+</div>
+
+<div class="product">
+<div class="product-img"><img alt="" src="/Content/UploadFiles/b6bc420c-6.jpg" /></div>
+
+<div class="product-description">
+<h4>Kolay Temizleme</h4>
+
+<p>Tüm günlük pişirme ihtiyaçlarınızı karşılamak üzere tasarlanan, kolay temizlik ve rahat pişirme için içi ve dışı yüksek performanslı yapışmaz kaplamalı pişirme gereçlerini keşfedin.</p>
+</div>
+</div>
+
+<div class="product">
+<div class="product-img"><img alt="" src="/Content/UploadFiles/0d90db35-7.jpg" /></div>
+
+<div class="product-description">
+<h4>Thermo-Signal™ teknolojisi</h4>
+
+<p>Geliştirilmiş Thermo-Signal™ teknolojisi, tencere ideal başlangıç sıcaklığına ulaştığında tamamen kırmızıya döner ve her seferinde mükemmel renk, doku ve lezzete sahip lezzetli yemekler sağlar.</p>
+</div>
+</div>
+
+<div class="product">
+<div class="product-img"><img alt="" src="/Content/UploadFiles/54e129e6-8.jpg" /></div>
+
+<div class="product-description">
+<h4>Güvenli Yapışmaz Kaplama</h4>
+
+<p>Tavizsiz güvenlik standartlarına olan bağlılığımızın bir parçası olarak, gıda ile temas eden yapışmaz kaplamalarımızın tamamı PFOA, kurşun ve kadmiyum içermez. Testler, mevcut gıda ile temas yönetmeliklerinin gerektirdiğinden daha sıkı kontrollere sahip harici bağımsız laboratuvarlar tarafından gerçekleştirilmektedir.</p>
+</div>
+</div>
+
+<div class="product">
+<div class="product-img"><img alt="" src="/Content/UploadFiles/1487ea26-9.jpg" /></div>
+
+<div class="product-description">
+<h4>Tefal: Dünyada 1 Numara*</h4>
+
+<p>Mükemmel pişirme sonuçları için çok çalışıyoruz! *Kaynak: Euromonitor International Limited, Home and Garden 2023 ed., 2022 verileri, marka perakende değeri (RSP)</p>
+</div>
+</div>
+
+<div class="product">
+<div class="product-img"><img alt="" src="/Content/UploadFiles/77c1d3a2-10.jpg" /></div>
+
+<div class="product-description">
+<h4>Kalite ve Uzmanlık</h4>
+
+<p>Yapışmaz tavaların mucidi olan Tefal, ürünlerini yüksek kalite ve uzmanlıkla üretmektedir.</p>
+</div>
+</div>
+
+<div class="product">
+<div class="product-img"><img alt="" src="/Content/UploadFiles/59c89dc3-11.jpg" /></div>
+
+<div class="product-description">
+<h4>Tam Uyumluluk</h4>
+
+<p>Geliştirilmiş Thermo-Signal™ teknolojisi, tencere ideal başlangıç sıcaklığına ulaştığında tamamen kırmızıya döner ve her seferinde mükemmel renk, doku ve lezzete sahip lezzetli yemekler sağlar.</p>
+</div>
+</div>
+
+<div class="product">
+<div class="product-img"><img alt="" src="/Content/UploadFiles/845aad09-12.jpg" /></div>
+
+<div class="product-description">
+<h4>Fransa’da Üretilmiştir</h4>
+
+<p>Yenilik odaklı ürünlerimiz, yüksek kaliteli malzemeler kullanılarak ve Fransız uzmanlığına yakışır özenle üretilmektedir.</p>
+</div>
+</div>
+
+</div>
+</section>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  if (window.innerWidth <= 800) {
+    const products = document.querySelectorAll(".product");
+    let activeCard = null;
+    let timeout = null;
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        const el = entry.target;
+        const p = el.querySelector(".product-description p");
+        const img = el.querySelector(".product-img img");
+
+        if (entry.intersectionRatio === 1) {
+          if (activeCard && activeCard !== el) {
+            const oldP = activeCard.querySelector(".product-description p");
+            const oldImg = activeCard.querySelector(".product-img img");
+            oldP.classList.remove("visible");
+            oldImg.classList.remove("zoomed");
+          }
+          clearTimeout(timeout);
+          timeout = setTimeout(() => {
+            activeCard = el;
+            p.classList.add("visible");
+            img.classList.add("zoomed");
+          }, 100);
+        } 
+        else if (activeCard === el && entry.intersectionRatio < 0.8) {
+          clearTimeout(timeout);
+          timeout = setTimeout(() => {
+            p.classList.remove("visible");
+            img.classList.remove("zoomed");
+            activeCard = null;
+          }, 100);
+        }
+      });
+    }, { threshold: [0, 0.8, 1] });
+
+    products.forEach(p => observer.observe(p));
+  }
+});
+</script>

@@ -1,0 +1,961 @@
+<style type="text/css">.product-wrapper-iu-v2 {
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.section-iu {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.section-iu img,
+.carousel-track-iu img {
+  width: 100%;
+  object-fit: cover;
+  display: block;
+  width: 100%;
+}
+
+.overlay-text-iu {
+  position: absolute;
+  transform: translateY(-50%);
+  z-index: 2;
+  max-width: 410px;
+  top: 45%; 
+  left: 60px;
+}
+
+.overlay-text-2-iu {
+  position: absolute;
+  transform: translateY(-50%);
+  z-index: 2;
+  top: 30%; 
+  left: 80px; 
+  max-width: 500px !important; 
+  text-align: center;
+  color: white;
+}
+
+.overlay-text-3-iu {
+  position: absolute;
+  transform: translateY(-50%);
+  z-index: 2;
+  max-width: 410px;
+  color: black; 
+  line-height: 1.4em !important;
+  top: 37%; 
+  left: 59%;
+  text-align: center;
+}
+
+.overlay-text-iu h2 {
+  font-size: 36px !important;
+  margin-bottom: 0px;
+  font-weight: 700;
+  color: black;
+}
+
+.overlay-text-iu p {
+  font-size: 16px !important;
+  line-height: 1.8 !important;
+  border-radius: 12px;
+  padding: 10px;  
+  color: white;
+}
+
+.carousel-iu {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  height: 490px;
+}
+
+.carousel-iu-2 {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  height: 490px;
+}
+
+.carousel-track-iu {
+  display: flex;
+  height: 100%;
+  transition: transform 0.7s ease;
+}
+
+.carousel-slide-iu {
+  position: relative;
+  flex-shrink: 0;
+  width: 100%;
+}
+
+.carousel-iu-2 {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  height: 490px; 
+}
+
+.carousel-iu-2 .carousel-track-iu {
+  display: flex;
+  height: 100%;
+  transition: transform 0.7s ease;
+}
+
+.carousel-2-slide-iu {
+  width: 100%;
+  display: flex;
+  height: 100%;
+}
+
+.carousel-2-slide-iu .carousel-image-left {
+  width: 490px;
+  height: 100%;
+  flex-shrink: 0;
+}
+
+.carousel-2-slide-iu .carousel-image-left img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.carousel-2-slide-iu .carousel-2-text-iu {
+  width: 220px;
+  height: 100%;
+  padding: 20px;
+  flex-shrink: 0;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  text-align: center;
+  background: linear-gradient(130deg, #1f2d3a, #1c2837, #2a3443);
+  color: #fff;
+}
+
+.carousel-2-slide-iu .carousel-image-right {
+  width: 490px;
+  height: 100%;
+  flex-shrink: 0;
+}
+
+.carousel-2-slide-iu .carousel-image-right img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.carousel-text-iu {
+  position: absolute;
+  top: 55%;
+  left: 10%;
+  transform: translateY(-50%);
+  color: rgb(0, 0, 0);
+  z-index: 2;
+  max-width: 365px;
+  padding: 20px;
+  border-radius: 25px;
+  text-align: center;
+}
+
+.carousel-text-iu h3 {
+  font-size: 24px !important;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.carousel-text-iu p {
+  font-size: 16px !important;
+  line-height: 1.4 !important;
+  margin-bottom: 0px !important;
+}
+
+.carousel-track-iu img {
+  flex-shrink: 0;
+  width: 100%;
+  height: 490px;
+  object-fit: cover;
+}
+
+.carousel-nav-iu {
+  position: absolute;
+  bottom: 25px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+  z-index: 2;
+}
+
+.carousel-nav-iu span {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #055794;
+  cursor: pointer;
+}
+
+.carousel-nav-iu span.active {
+  background: #ff8738;
+}
+
+.bottom-description-text-iu{
+   padding: 0px 50px; 
+}
+
+.bottom-description-text-iu p{
+     font-size: 12px !important;
+}
+
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.5);
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  z-index: 2;
+  border-radius: 50%;
+  font-size: 24px;
+}
+
+.carousel-btn-left {
+  left: 10px;
+}
+
+.carousel-btn-right {
+  right: 10px;
+}
+
+.carousel-btn:hover {
+  background: rgba(0,0,0,0.7);
+}
+
+@media (max-width: 1024px) {
+
+  .section-iu img,
+  .carousel-track-iu img,
+  .carousel-2-slide-iu img,
+  .carousel-iu {
+    width: 100% !important;
+    height: auto !important;
+    object-fit: cover;
+  }
+
+  .overlay-text-iu {
+      left: 40px !important;
+      max-width: 360px !important;
+  }
+
+  .overlay-text-iu h2 {
+      font-size: 28px !important;
+  }
+
+  .overlay-text-2-iu {
+      left: 40px !important;
+      max-width: 420px !important;
+  }
+
+  .overlay-text-2-iu h2 {
+      font-size: 20px !important;
+  }
+
+  .overlay-text-2-iu p {
+      font-size: 14px !important;
+  }
+
+  .overlay-text-3-iu {
+      left: 62%;
+      max-width: 260px;
+      top: 36%;
+      background-color: #fffffff0;
+      padding: 5px;
+      margin-top: 0px !important;
+  }
+
+  .overlay-text-3-iu p{
+      font-size: 12px !important;
+      line-height: 1.4em !important;
+  }
+
+  .carousel-text-iu {
+      left: 9% !important;
+      max-width: 300px !important;
+      top: 45% !important;
+  }
+
+  .carousel-text-iu h3 {
+      font-size: 20px !important;
+  }
+
+  .carousel-text-iu p {
+      font-size: 13px !important;
+  }
+
+}
+
+@media (max-width: 520px){
+
+  .section-iu img,
+  .carousel-track-iu img,
+  .carousel-2-slide-iu img {
+    width: 100% !important;
+    height: auto !important;
+    object-fit: cover;
+  }
+
+  .carousel-2-slide-iu {
+    flex-direction: column !important;
+    width: 100% !important;
+    height: auto !important;
+  }
+
+  .carousel-2-slide-iu .carousel-image-left,
+  .carousel-2-slide-iu .carousel-image-right {
+    width: 385px !important;
+    height: auto !important;
+  }
+
+  .carousel-2-slide-iu .carousel-2-text-iu {
+    width: 100% !important;
+    height: 200px !important;
+  }
+
+.carousel-nav-iu { 
+  bottom: 5px; 
+} 
+
+.carousel-iu, .carousel-iu-2{ 
+  width: 100%; 
+  height: auto !important; 
+}
+
+.carousel-text-iu { 
+  left: 32px !important; 
+  top: 59% !important; 
+  padding: 5px; width: 
+  135px !important; 
+} 
+
+.carousel-text-iu h3 { 
+  font-size: 10px !important; 
+  line-height: 1.2em; 
+  margin-bottom: 0px !important; 
+} 
+
+.carousel-text-iu p { 
+  font-size: 10px !important; 
+  line-height: 1.35 !important; 
+  margin-bottom: 0px !important; 
+} 
+
+.carousel-nav-iu span { 
+  width: 8px; 
+  height: 8px !important; 
+}
+
+.carousel-btn{ 
+  padding: 5px 10px; 
+  font-size: 15px; 
+}
+
+.overlay-text-iu h2 {
+  font-size: 14px !important;
+  line-height: 1.5em !important;
+}
+
+.overlay-text-iu {
+  left: 10px !important;
+}
+
+.overlay-text-2-iu {
+  top: 16%; 
+  left: 15px; 
+  max-width: 200px !important; 
+}
+
+.overlay-text-2-iu h2 {
+  font-size: 12px !important;
+  line-height: 1.2em !important;
+}
+
+.overlay-text-2-iu p {
+  font-size: 10px !important;
+  line-height: 1.2em !important;
+}
+
+.overlay-text-3-iu {
+  max-width: 135px;
+  top: 18%; 
+  left: 58.8%;
+  background-color: #fffffff0;
+  padding: 5px;
+}
+
+.overlay-text-3-iu p{
+  margin-bottom: 0px !important;
+  font-size: 10px !important;
+  line-height: 1.2em !important;
+
+}
+
+}
+
+@media (max-width: 415px) {
+
+  .section-iu img,
+  .carousel-track-iu img,
+  .carousel-2-slide-iu img {
+    width: 100% !important;
+    height: auto !important;
+    object-fit: cover;
+  }
+
+  .carousel-2-slide-iu {
+    flex-direction: column !important;
+    width: 100% !important;
+    height: auto !important;
+  }
+
+  .carousel-2-slide-iu .carousel-image-left,
+  .carousel-2-slide-iu .carousel-image-right {
+    width: 385px !important;
+    height: auto !important;
+  }
+
+  .carousel-2-slide-iu .carousel-2-text-iu {
+    width: 100% !important;
+    height: 200px !important;
+  }
+
+.carousel-nav-iu { 
+  bottom: 5px; 
+} 
+
+.carousel-iu, .carousel-iu-2{ 
+  width: 100%; 
+  height: auto !important; 
+}
+
+.carousel-text-iu { 
+  left: 32px !important; 
+  top: 59% !important; 
+  padding: 5px; width: 
+  135px !important; 
+} 
+
+.carousel-text-iu h3 { 
+  font-size: 10px !important; 
+  line-height: 1.2em; 
+  margin-bottom: 0px !important; 
+} 
+
+.carousel-text-iu p { 
+  font-size: 10px !important; 
+  line-height: 1.35 !important; 
+  margin-bottom: 0px !important; 
+} 
+
+.carousel-nav-iu span { 
+  width: 8px; 
+  height: 8px !important; 
+}
+
+.carousel-btn{ 
+  padding: 5px 10px; 
+  font-size: 15px; 
+}
+
+.overlay-text-iu h2 {
+  font-size: 14px !important;
+  line-height: 1.5em !important;
+}
+
+.overlay-text-iu {
+  left: 10px !important;
+}
+
+.overlay-text-2-iu {
+  top: 16%; 
+  left: 15px; 
+  max-width: 200px !important; 
+}
+
+.overlay-text-2-iu h2 {
+  font-size: 12px !important;
+  line-height: 1.2em !important;
+}
+
+.overlay-text-2-iu p {
+  font-size: 10px !important;
+  line-height: 1.2em !important;
+}
+
+.overlay-text-3-iu {
+  max-width: 135px;
+  top: 18%; 
+  left: 58.8%;
+  background-color: #fffffff0;
+  padding: 5px;
+}
+
+.overlay-text-3-iu p{
+  margin-bottom: 0px !important;
+  font-size: 10px !important;
+  line-height: 1.2em !important;
+
+}
+
+}
+
+@media (max-width: 390px) {
+
+  .section-iu img,
+  .carousel-track-iu img,
+  .carousel-2-slide-iu img {
+      width: 100% !important;
+      height: auto !important;
+  }
+
+  .carousel-iu,
+  .carousel-iu-2 {
+      height: auto !important;
+  }
+
+  .overlay-text-iu h2 {
+      font-size: 12px !important;
+      line-height: 1.3em !important;
+  }
+
+  .overlay-text-iu {
+      left: 8px !important;
+      top: 45% !important;
+      max-width: 150px !important;
+  }
+
+  .overlay-text-2-iu {
+      top: 14% !important;
+      left: 10px !important;
+      max-width: 170px !important;
+  }
+
+  .overlay-text-2-iu h2 {
+      font-size: 11px !important;
+  }
+
+  .overlay-text-2-iu p {
+      font-size: 9px !important;
+  }
+
+  .overlay-text-3-iu {
+      top: 18% !important;
+      left: 59% !important;
+      max-width: 120px !important;
+      padding: 4px !important;
+  }
+
+  .overlay-text-3-iu p {
+      font-size: 9px !important;
+      line-height: 1.15em !important;
+  }
+
+  .carousel-text-iu {
+      left: 30px !important;
+      top: 58% !important;
+      width: 120px !important;
+      padding: 4px !important;
+  }
+
+  .carousel-text-iu h3 {
+      font-size: 9px !important;
+      margin-bottom: 0px !important;
+  }
+
+  .carousel-text-iu p {
+      font-size: 9px !important;
+      line-height: 1.3em !important;
+  }
+
+  .carousel-nav-iu span {
+      width: 7px !important;
+      height: 7px !important;
+  }
+
+  .carousel-nav-iu {
+      bottom: 5px !important;
+  }
+
+  .carousel-btn {
+      padding: 4px 8px !important;
+      font-size: 13px !important;
+  }
+
+  .carousel-2-slide-iu {
+      flex-direction: column !important;
+  }
+
+  .carousel-2-slide-iu .carousel-image-left,
+  .carousel-2-slide-iu .carousel-image-right {
+      width: 350px !important;
+      height: auto !important;
+  }
+
+  .carousel-2-slide-iu .carousel-2-text-iu {
+      width: 100% !important;
+      height: 180px !important;
+      padding: 15px !important;
+  }
+
+  .carousel-2-text-iu h3 {
+      font-size: 12px !important;
+  }
+
+  .carousel-2-text-iu p {
+      font-size: 11px !important;
+      max-width: 250px !important;
+  }
+
+}
+
+/* === CAROUSEL 2 – responsive 3-column scalable layout === */
+.carousel-2-slide-iu {
+    display: flex;
+    width: 100%;
+    height: auto !important;
+    aspect-ratio: 16 / 5; /* 3lü yapıya göre ideal oran – istersen değiştiririm */
+}
+
+.carousel-image-left,
+.carousel-image-right,
+.carousel-2-text-iu {
+    flex: 1 1 33.33%;
+    height: 100%;
+}
+
+/* Görseller orantılı küçülsün */
+.carousel-image-left img,
+.carousel-image-right img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Orta metin kutusu da orantı ile küçülsün */
+.carousel-2-text-iu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+    text-align: center;
+}
+
+/* === Küçük ekranlarda — flex column değil, 3’lü birlikte küçülsün === */
+@media (max-width: 620px) {
+    .carousel-2-slide-iu {
+        aspect-ratio: auto;
+        height: auto !important;
+        flex-direction: column;
+    }
+
+    .carousel-image-left,
+    .carousel-image-right {
+        height: auto !important;
+        width: 100%;
+    }
+
+    .carousel-2-text-iu {
+        width: 100%;
+        height: auto !important;
+    }
+}
+
+
+</style>
+<div class="product-wrapper-iu-v2">
+<section class="section-iu"><img alt="" src="/Content/UploadFiles/37329d7a-1.jpg" />
+    <div class="overlay-text-iu">
+        <h2>Uzun Süreli Performans</h2>
+    </div>        
+</section>
+
+<section class="section-2-iu"><img alt="" src="/Content/UploadFiles/a2e3435d-2.jpg" /> 
+        <div class="overlay-text-2-iu">
+        <h2>Ice Force Teknolojisi ile Optimum Kesme Deneyiminin Keyfini Çıkarın</h2>
+        <p style="font-size: 20px; padding: 0px !important;">Bıçaklar ısıtıldıktan sonra -120°C'ye konarak mükemmel keskinlik, optimum performans, güç ve paslanmaya karşı dayanım kazandırılır.</p>
+
+    </div>  
+    <div class="overlay-text-3-iu">
+        <p>Uzun süreli performans 2 kata kadar daha yüksektir* *Diğer Tefal Paslanmaz Çelik Bıçaklara göre (Comfort, Ingenio)<br>
+        Yüksek dayanıklılık için Yüksek kaliteli bıçaklar</p>
+    </div>       
+</section>
+
+<section class="section-iu">
+<div class="carousel-iu">
+
+    <div class="carousel-track-iu">
+
+        <div class="carousel-slide-iu">
+            <img src="/Content/UploadFiles/c08f7d09-3.jpg">
+            <div class="carousel-text-iu">
+                <h3>Geniş Kesim Yelpazesi</h3>
+                <p>Tatlı patates doğramaktan tavuk dilimlemeye, soğan doğramaktan balık fileto etmeye kadar tüm malzemeler için ideal.</p>
+            </div>
+        </div>
+
+        <div class="carousel-slide-iu">
+            <img src="/Content/UploadFiles/074cf51c-4.jpg">
+            <div class="carousel-text-iu">
+                <h3>Alman Paslanmaz Çeliği</h3>
+                <p>Uzun ömür, daha yüksek dayanım ve uzun süren kullanım.</p>
+            </div>
+        </div>
+
+        <div class="carousel-slide-iu">
+            <img src="/Content/UploadFiles/5f453fc3-5.jpg">
+            <div class="carousel-text-iu">
+                <h3>Tam Kontrol</h3>
+                <p>Mükemmel dengeli tasarım, güvenli kullanım için parmak koruması ve ergonomik sap—şık ama geleneksel bir görünümle.</p>
+            </div>
+        </div>
+
+        <div class="carousel-slide-iu">
+            <img src="/Content/UploadFiles/c587978f-6.jpg">
+            <div class="carousel-text-iu">
+                <h3>Keskin tasarım</h3>
+                <p>Uzun süren kesme performansı modern tasarımla buluşuyor</p>
+            </div>
+        </div>
+    </div>
+<div class="carousel-nav-iu"></div>
+<button class="carousel-btn carousel-btn-left">&#10094;</button>
+<button class="carousel-btn carousel-btn-right">&#10095;</button>
+</div>
+</section>
+
+<section class="section-iu">
+  <div class="carousel-iu carousel-iu-2">
+    <div class="carousel-track-iu">
+      
+<div class="carousel-2-slide-iu">
+
+    <div class="carousel-image-left">
+        <img src="/Content/UploadFiles/6b7d8554-7.jpg">
+    </div>
+
+    <div class="carousel-2-text-iu">
+        <h3>5 Parça Bıçak Seti</h3>
+        <p>Şef, çok amaçlı ve soyma bıçakları ile evrensel ahşap blok sayesinde üstün ve uzun ömürlü keskinliğin keyfini çıkarın. Bulaşık makinesinde yıkanabilir şekilde tasarlanmıştır. </p>
+    </div>
+
+    <div class="carousel-image-right">
+        <img src="/Content/UploadFiles/2b7add2b-8.jpg">
+    </div>
+
+</div>
+
+<div class="carousel-2-slide-iu">
+
+    <div class="carousel-image-left">
+        <img src="/Content/UploadFiles/9ff84e7a-9.jpg">
+    </div>
+
+    <div class="carousel-2-text-iu">
+        <h3>Ultra Keskin Bıçaklar</h3>
+        <p>Ultra keskin 26° kesme açısı sayesinde temiz ve hassas kesimler.</p>
+    </div>
+
+    <div class="carousel-image-right">
+        <img src="/Content/UploadFiles/f16dbd69-10.jpg">
+    </div>
+
+</div>
+
+<div class="carousel-2-slide-iu">
+
+    <div class="carousel-image-left">
+        <img src="/Content/UploadFiles/d1266d33-11.jpg">
+    </div>
+
+    <div class="carousel-2-text-iu">
+        <h3>Zamana Meydan Okuyan Performans</h3>
+        <p>Yüksek kaliteli Alman paslanmaz çelikten üstün dayanıklılık ve paslanma direnci.</p>
+    </div>
+
+    <div class="carousel-image-right">
+        <img src="/Content/UploadFiles/c4a724db-12.jpg">
+    </div>
+
+</div>
+
+<div class="carousel-2-slide-iu">
+
+    <div class="carousel-image-left">
+        <img src="/Content/UploadFiles/5f870319-13.jpg">
+    </div>
+
+    <div class="carousel-2-text-iu">
+        <h3>Mükemmel Kesim Sonuçları</h3>
+        <p>Orta boy sebzeleri çok amaçlı bıçakla kesmekten ananası şef bıçağıyla doğramaya kadar her seferinde mükemmel kesimler.</p>
+    </div>
+
+    <div class="carousel-image-right">
+        <img src="/Content/UploadFiles/bf7b5b0c-14.jpg">
+    </div>
+
+</div>
+
+    </div>
+    <div class="carousel-nav-iu"></div>
+    <button class="carousel-btn carousel-btn-left">&#10094;</button>
+    <button class="carousel-btn carousel-btn-right">&#10095;</button>
+  </div>
+</section>
+
+</div>
+
+<script>
+document.querySelectorAll('.carousel-iu').forEach(carousel => {
+
+    let startX = 0;
+    let startY = 0;
+    let isMoving = false;
+
+    carousel.addEventListener("touchstart", (e) => {
+    startX = e.touches[0].clientX;
+    startY = e.touches[0].clientY;
+    isMoving = true;
+    });
+
+    carousel.addEventListener("touchmove", (e) => {
+    if (!isMoving) return;
+
+    const dx = e.touches[0].clientX - startX;
+    const dy = e.touches[0].clientY - startY;
+
+    if (Math.abs(dx) > Math.abs(dy)) {
+        e.preventDefault(); 
+    }
+    });
+
+    carousel.addEventListener("touchend", (e) => {
+    if (!isMoving) return;
+    isMoving = false;
+
+    const dx = e.changedTouches[0].clientX - startX;
+
+    if (dx < -50) {
+        current = (current + 1) % total;
+        goTo(current);
+        resetAutoSlide();
+    }
+
+    if (dx > 50) {
+        current = (current - 1 + total) % total;
+        goTo(current);
+        resetAutoSlide();
+    }
+    });
+
+  let current = 0;
+  const track = carousel.querySelector('.carousel-track-iu');
+  const slides = Array.from(track.children);
+
+  const nav = carousel.querySelector('.carousel-nav-iu');
+
+  nav.innerHTML = "";
+  slides.forEach((_, i) => {
+    const dot = document.createElement('span');
+    dot.dataset.slide = i;
+    if (i === 0) dot.classList.add("active");
+    nav.appendChild(dot);
+  });
+
+  const dots = Array.from(nav.querySelectorAll("span"));
+  const total = slides.length;
+
+  function goTo(i) {
+    i = Number(i);
+    current = i;
+    track.style.transform = `translateX(-${i * 100}%)`;
+
+    dots.forEach(d => d.classList.remove('active'));
+    dots[i].classList.add('active');
+  }
+
+  dots.forEach(dot => {
+    dot.addEventListener('click', () => {
+      goTo(dot.dataset.slide);
+      resetAutoSlide(); 
+    });
+  });
+
+  const prevBtn = carousel.querySelector('.carousel-btn-left');
+  const nextBtn = carousel.querySelector('.carousel-btn-right');
+
+  prevBtn.addEventListener('click', () => {
+    current = (current - 1 + total) % total;
+    goTo(current);
+  });
+
+  nextBtn.addEventListener('click', () => {
+    current = (current + 1) % total;
+    goTo(current);
+  });
+
+});
+
+document.querySelectorAll('.carousel-iu-2').forEach(carousel => {
+  let current = 0;
+  const track = carousel.querySelector('.carousel-track-iu');
+  const slides = Array.from(track.children);
+  const nav = carousel.querySelector('.carousel-nav-iu');
+  
+  nav.innerHTML = "";
+  slides.forEach((_, i) => {
+    const dot = document.createElement('span');
+    dot.dataset.slide = i;
+    if (i === 0) dot.classList.add("active");
+    nav.appendChild(dot);
+  });
+
+  const dots = Array.from(nav.querySelectorAll("span"));
+  const total = slides.length;
+
+  function goTo(i) {
+    i = Number(i);
+    current = i;
+    track.style.transform = `translateX(-${i * 100}%)`;
+
+    dots.forEach(d => d.classList.remove('active'));
+    dots[i].classList.add('active');
+  }
+
+  dots.forEach(dot => {
+    dot.addEventListener('click', () => {
+      goTo(dot.dataset.slide);
+    });
+  });
+
+  const prevBtn = carousel.querySelector('.carousel-btn-left');
+  const nextBtn = carousel.querySelector('.carousel-btn-right');
+
+  prevBtn.addEventListener('click', () => {
+    current = (current - 1 + total) % total;
+    goTo(current);
+  });
+
+  nextBtn.addEventListener('click', () => {
+    current = (current + 1) % total;
+    goTo(current);
+  });
+});
+
+</script>

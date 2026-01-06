@@ -1,0 +1,384 @@
+<style>
+.urun-container-iu {
+    max-width: 1200px;
+    margin: auto;
+}
+
+.banner-iu {
+    position: relative;
+    width: 100%;
+    height: 800px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    background: linear-gradient(150deg, #406136 30%, #6d9a5f, #6a9162, #406136);
+}
+.banner-iu img {
+    position: absolute;
+    width: auto;
+    height: 100% !important;
+    left: 50%;
+    transform: translateX(-50%);
+    object-fit: cover;
+    border-radius: 4px;
+}
+.banner-iu h2 {
+    position: relative;
+    z-index: 2;
+    color: rgb(224, 224, 224);
+    font-size: 40px;
+    text-align: center;
+    bottom: 40%;
+    background-color: #40613694;
+    padding: 10px;
+    border-radius: 18px;
+}
+
+.carousel-container-iu {
+    position: relative;
+    overflow: hidden;
+}
+.carousel-iu {
+    display: flex;
+    transition: transform 0.4s;
+    width: 100%;
+}
+.carousel-item-iu {
+    min-width: 100%;
+    display: flex;
+    width: 100%;
+}
+.carousel-text-iu {
+    width: 50%;
+    padding: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: white;
+    background: linear-gradient(150deg, #ad8056, #cca68e);
+}
+
+.carousel-text-iu h3 {
+    font-size: 24px !important;
+    margin-bottom: 10px !important;
+}
+
+.carousel-text-iu p {
+    font-size: 16px !important;
+}
+
+.carousel-img-side {
+    width: 100%;
+    height: 100%;
+}
+.carousel-img-side img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.arrow-left-iu,
+.arrow-right-iu {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: black;
+    color: white;
+    border: none;
+    padding: 12px;
+    cursor: pointer;
+    font-size: 22px;
+}
+.arrow-left-iu { left: 10px; }
+.arrow-right-iu { right: 10px; }
+
+.grid-section-iu{
+    background: linear-gradient(150deg, #406136, #6d9a5f, #6a9162, #406136);
+    padding: 20px;
+}
+.grid-container-iu {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+    margin-top: 30px;
+    color: white;
+}
+.grid-item-iu img {
+    width: 100%;
+    border-radius: 4px;
+}
+.grid-item-iu p {
+    margin-top: 8px;
+    font-size: 16px;
+    text-align: center;
+}
+
+@media (max-width: 900px) {
+    .grid-container-iu {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .carousel-item-iu {
+        flex-direction: column;
+        height: auto;
+    }
+    .carousel-text-iu {
+        width: 100%;
+    }
+    .carousel-img-side {
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media (max-width: 600px) {
+    .carousel-text-iu {
+        padding: 12px;
+        max-width: 100%;
+    }
+    .carousel-text-iu h3{
+        font-size: 14px;
+    }    
+    .carousel-text-iu p{
+        font-size: 12px;
+    }
+    .grid-container-iu {
+        grid-template-columns: 1fr;
+    }
+    .banner-iu{
+        height: 400px !important;
+    }
+}
+</style>
+
+<div class="urun-container-iu">
+
+<section class="banner-iu">
+    <img src="/Content/UploadFiles/23d0bf44-banner-ceramic-renew.png" alt="">
+    <h2>Ceramic Renew</h2>
+</section>
+
+
+<section class="carousel-section-iu">
+    <div class="carousel-container-iu">
+        <div class="carousel-iu" id="carouselIu1">
+
+            <div class="carousel-item-iu">
+                <div class="carousel-text-iu">
+                    <h3>Kolay Yapışmaz Pişirme</h3>
+                    <p>Yeni nesil yapışmaz seramik kaplama olan Inoceram Glide; kolay ve az yağlı pişirme için uzun ömürlü kayma deneyimi sunar.</p>
+                </div>
+                <div class="carousel-img-side">
+                    <img src="/Content/UploadFiles/18a84f44-1a.jpg">
+                </div>
+            </div>
+
+            <div class="carousel-item-iu">
+                <div class="carousel-text-iu">
+                    <h3>%100 Geri Dönüşümlü Alüminyum Gövde</h3>
+                    <p>Tefal'in eko-tasarım yaklaşımı: %100 geri dönüşümlü alüminyum gövde, geri dönüştürülebilir metal ve %90 geri dönüşümlü fiber ambalaj.</p>
+                </div>
+                <div class="carousel-img-side">
+                    <img src="/Content/UploadFiles/6daee51f-1b.jpg">
+                </div>
+            </div>
+
+            <div class="carousel-item-iu">
+                <div class="carousel-text-iu">
+                    <h3>Sağlıklı ve Lezzetli Pişirme</h3>
+                    <p>Gelişmiş Thermo-Signal™ teknolojisi ile tava ideal başlangıç ısısına ulaştığında tamamen kırmızıya döner ve mükemmel sonuçlar sunar.</p>
+                </div>
+                <div class="carousel-img-side">
+                    <img src="/Content/UploadFiles/5322f218-1c.jpg">
+                </div>
+            </div>
+
+            <div class="carousel-item-iu">
+                <div class="carousel-text-iu">
+                    <h3>Hızlı ve Eşit Pişirme</h3>
+                    <p>Thermo-Fusion™ taban, hızlı ısıtma ve eşit pişirme sonuçları sağlar. Gazlı, elektrikli, seramik ve indüksiyonlu set üstü ocaklarla uyumludur.</p>
+                </div>
+                <div class="carousel-img-side">
+                    <img src="/Content/UploadFiles/db5cbee3-1d.jpg">
+                </div>
+            </div>
+
+            <div class="carousel-item-iu">
+                <div class="carousel-text-iu">
+                    <h3>Cam Kapak</h3>
+                    <p>Cam kapak, malzemelerinizin tam lezzetini ve nemini koruyan güvenli ve kolay pişirme için buhar tahliye menfezi ile öne çıkmaktadır.</p>
+                </div>
+                <div class="carousel-img-side">
+                    <img src="/Content/UploadFiles/ab49e468-1e.jpg">
+                </div>
+            </div>            
+
+        </div>
+
+        <button class="arrow-left-iu" onclick="prevIu(1)">‹</button>
+        <button class="arrow-right-iu" onclick="nextIu(1)">›</button>
+    </div>
+</section>
+
+<section class="carousel-section-iu">
+    <div class="carousel-container-iu">
+        <div class="carousel-iu" id="carouselIu2">
+
+            <div class="carousel-item-iu">
+                <div class="carousel-text-iu">
+                    <h3>%100 Geri Dönüştürülmüş Alüminyum Gövde</h3>
+                    <p>%100 geri dönüştürülmüş alüminyum gövdesi sayesinde birincil alüminyuma göre %90 daha az CO2 salımı ile çevresel etkisi azaltılmıştır. Ürün tasarımı tamamen geri dönüştürülebilir olup, ambalajı da %90 geri dönüştürülmüş liftendir.</p>
+                </div>
+                <div class="carousel-img-side">
+                    <img src="/Content/UploadFiles/82f8cb81-2b.jpg">
+                </div>
+            </div>
+
+            <div class="carousel-item-iu">
+                <div class="carousel-text-iu">
+                    <h3>Kolay Yapışmaz Pişirme</h3>
+                    <p>Inoceram Glide teknolojisi, uzun ömürlü ve günlük kullanımda zahmetsiz kayganlık sağlayan yeni nesil yapışmaz seramik kaplamadır—düşük yağla, sağlıklı ve lezzetli yemekler için idealdir.</p>
+                </div>
+                <div class="carousel-img-side">
+                    <img src="/Content/UploadFiles/3888e1c9-2a.jpg">
+                </div>
+            </div>
+
+            <div class="carousel-item-iu">
+                <div class="carousel-text-iu">
+                    <h3>Sağlıklı ve Lezzetli Pişirme</h3>
+                    <p>Geliştirilmiş Thermo-Signal™ teknolojisi, tava ideal başlangıç sıcaklığına ulaştığında tamamen kırmızıya döner—böylece yemekler her seferinde mükemmel renk, doku ve lezzetle pişer.</p>
+                </div>
+                <div class="carousel-img-side">
+                    <img src="/Content/UploadFiles/3ed81212-2c.jpg">
+                </div>
+            </div>
+
+            <div class="carousel-item-iu">
+                <div class="carousel-text-iu">
+                    <h3>Hızlı ve Eşit Pişirme</h3>
+                    <p>Gelişmiş indüksiyon teknolojisine sahip Thermo-Fusion™ taban, hızlı ısınma ve eşit pişirme sonuçları sunar. Gaz, elektrikli, seramik ve indüksiyonlu ocaklarla uyumludur.</p>
+                </div>
+                <div class="carousel-img-side">
+                    <img src="/Content/UploadFiles/0335bc9f-2d.jpg">
+                </div>
+            </div>
+
+        </div>
+
+        <button class="arrow-left-iu" onclick="prevIu(2)">‹</button>
+        <button class="arrow-right-iu" onclick="nextIu(2)">›</button>
+    </div>
+</section>
+
+<section class="carousel-section-iu">
+    <div class="carousel-container-iu">
+        <div class="carousel-iu" id="carouselIu3">
+
+            <div class="carousel-item-iu">
+                <div class="carousel-text-iu">
+                    <h3>Sağlıklı ve lezzetli pişirme</h3>
+                    <p>Geliştirilmiş Thermo-Signal™ teknolojisi, tava ideal sıcaklığa ulaştığında tamamen kırmızıya döner. Bu sayede yemekler her seferinde mükemmel renk, doku ve lezzete ulaşır.</p>
+                </div>
+                <div class="carousel-img-side">
+                    <img src="/Content/UploadFiles/249b2930-3c.jpg">
+                </div>
+            </div>             
+
+            <div class="carousel-item-iu">
+                <div class="carousel-text-iu">
+                    <h3>Kolay yapışmaz pişirme</h3>
+                    <p>Inoceram Glide teknolojisi, uzun süreli ve zahmetsiz kayganlık sunan yeni nesil yapışmaz seramik kaplamadır—düşük yağlı, sağlıklı ve lezzetli pişirme için idealdir.</p>
+                </div>
+                <div class="carousel-img-side">
+                    <img src="/Content/UploadFiles/00063b4f-3a.jpg">
+                </div>
+            </div>
+
+            <div class="carousel-item-iu">
+                <div class="carousel-text-iu">
+                    <h3>%100 Geri Dönüştürülmüş Alüminyum Gövde</h3>
+                    <p>%100 geri dönüştürülmüş alüminyum gövde, birincil alüminyuma göre %90 daha az CO₂ emisyonu sağlar (ham madde kaynaklı). %100 geri dönüştürülebilir tasarımı ve %90 geri dönüştürülmüş liflerden oluşan ambalajıyla çevre dostudur.</p>
+                </div>
+                <div class="carousel-img-side">
+                    <img src="/Content/UploadFiles/2ceb7768-3b.jpg">
+                </div>
+            </div> 
+            
+            <div class="carousel-item-iu">
+                <div class="carousel-text-iu">
+                    <h3>Hızlı ve eşit pişirme</h3>
+                    <p>Gelişmiş indüksiyon teknolojisine sahip Thermo-Fusion™ taban, hızlı ısınma ve eşit pişirme sonuçları sağlar. Gaz, elektrik, seramik ve indüksiyonlu ocaklarla uyumludur.</p>
+                </div>
+                <div class="carousel-img-side">
+                    <img src="/Content/UploadFiles/bb7fe775-3d.jpg">
+                </div>
+            </div>              
+
+        </div>
+
+        <button class="arrow-left-iu" onclick="prevIu(3)">‹</button>
+        <button class="arrow-right-iu" onclick="nextIu(3)">›</button>
+    </div>
+</section>
+
+<section class="grid-section-iu">
+    <div class="grid-container-iu">
+
+        <div class="grid-item-iu">
+            <img src="/Content/UploadFiles/19e8edc2-4.jpg">
+            <p><strong>Kolay Temizlik</strong></p>
+            <p>Günlük pişirme ihtiyaçlarınızı karşılamak üzere tasarlanan bu pişirme gereci, iç ve dış yüzeyinde yüksek performanslı yapışmaz kaplama ile kolay temizlik ve pratik kullanım sunar.</p>
+        </div>
+
+        <div class="grid-item-iu">
+            <img src="/Content/UploadFiles/3c4f7f21-5.jpg">
+            <p><strong>Zarif Tasarım</strong></p>
+            <p>Modern çizgileri Fransız ustalığıyla birleştiren bu tava, ahşap görünümlü kaplaması ve çevre dostu tasarım detayları gibi en ince ayrıntılarına kadar özenle hazırlanmıştır.</p>
+        </div>
+
+        <div class="grid-item-iu">
+            <img src="/Content/UploadFiles/c1e6a818-6.jpg">
+            <p><strong>Fransa’da Üretilmiştir</strong></p>
+            <p>En yüksek kalite standartlarında Fransa’da tasarlanmış ve üretilmiştir. Üstün işçilik ve uzmanlıkla hazırlanmıştır.</p>
+        </div>
+
+        <div class="grid-item-iu">
+            <img src="/Content/UploadFiles/778fc04e-7.jpg">
+            <p><strong>Kalite ve Uzmanlık</strong></p>
+            <p>Yapışmaz tava mucidi Tefal, ürünlerini yüksek kalite ve uzmanlıkla üretmektedir.</p>
+        </div>
+
+    </div>
+</section>
+
+</div>
+
+<script>
+let sliderIndex = {
+    1: 0,
+    2: 0,
+    3: 0
+};
+
+function showSlideIu(id) {
+    const carousel = document.getElementById("carouselIu" + id);
+    const items = carousel.querySelectorAll(".carousel-item-iu");
+    const total = items.length;
+
+    if (sliderIndex[id] >= total) sliderIndex[id] = 0;
+    if (sliderIndex[id] < 0) sliderIndex[id] = total - 1;
+
+    carousel.style.transform = `translateX(-${sliderIndex[id] * 100}%)`;
+}
+
+function nextIu(id) {
+    sliderIndex[id]++;
+    showSlideIu(id);
+}
+
+function prevIu(id) {
+    sliderIndex[id]--;
+    showSlideIu(id);
+}
+</script>

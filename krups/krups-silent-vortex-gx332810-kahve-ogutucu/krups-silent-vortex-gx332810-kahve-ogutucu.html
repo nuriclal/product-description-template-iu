@@ -1,6 +1,4 @@
-<style>
-
-.product-slider-wrapper-iu * {
+<style type="text/css">.product-slider-wrapper-iu * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -9,13 +7,15 @@
 .product-slider-wrapper-iu {
   position: relative;
   z-index: 1; 
-  min-height: 100vh;
+  min-height: 100dvh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   user-select: none;
   padding: 0px 20px;
+  height: auto;
+  overflow: hidden;
 }
 
 .header-iu {
@@ -46,7 +46,9 @@
   cursor: grab;
   width: 100%;
   max-width: 1200px;
-  overflow: hidden;
+  overflow: visible; 
+  -webkit-transform-style: preserve-3d; 
+  transform-style: preserve-3d;
 }
 
 .product-slider-iu.dragging-iu {
@@ -74,6 +76,10 @@
   border-radius: 10px;
   transition: transform 0.5s ease, opacity 0.5s ease;
   will-change: transform, opacity; 
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  transform-origin: center center;
+  will-change: transform;
 }
 
 .product-card-iu::before {
@@ -97,22 +103,25 @@
   position: relative;
   z-index: 1;
   border-radius: inherit;
+  user-drag: none;
+  -webkit-user-drag: none;
+  pointer-events: none;
 }
 
-.hover-overlay-iu {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.7);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  opacity: 0;
-  transition: opacity 0.3s ease;
-  z-index: 2;
-  border-radius: inherit;
+.hover-overlay-iu { 
+  position: absolute; 
+  bottom: 0; 
+  left: 0; 
+  width: 100%; 
+  height: 40px; 
+  background: rgba(0, 0, 0, 0.7); 
+  display: flex; 
+  align-items: center; 
+  justify-content: center; 
+  opacity: 1; 
+  z-index: 2; 
+  border-radius: 0 0 10px 10px; /* Sadece alt köşeleri yuvarlat */ 
+  pointer-events: auto;
 }
 
 .product-card-iu:hover .hover-overlay-iu {
@@ -121,7 +130,7 @@
 
 .hover-overlay-iu span {
   color: white;
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -133,7 +142,7 @@
 }
 
 .product-card-iu.expanded-iu {
-  z-index: 1000 !important;
+  z-index: 1 !important;
 }
 
 .product-details-iu {
@@ -157,6 +166,7 @@
 .product-details-iu.visible-iu {
   opacity: 1;
   pointer-events: all;
+  z-index: 2 !important;
 }
 
 .product-details-iu h2 {
@@ -246,7 +256,7 @@
 
   .product-slider-wrapper-iu {
     padding: 0 10px;
-    min-height: 60vh;
+    min-height: 40vh;
   }
 
   .main-title-iu {
@@ -269,7 +279,7 @@
   }
 
   .product-card-iu {
-    width: 90px; 
+    width: 180px; 
     aspect-ratio: 1/1;
   }
 
@@ -284,7 +294,7 @@
     padding: 0.8rem !important;
     font-size: 12px !important;
     max-width: 90vw;
-    margin-top: 120px;
+    transform: translate(-50%, -50%) !important;
   }
 
   .product-details-iu h2 {
@@ -308,86 +318,145 @@
     width: 100%;
     height: auto;
   }
+
+  .hover-overlay-iu span{
+    color: white;
+    font-size: 9px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
 }
 
+@media (max-width: 420px) {
+
+  .product-slider-wrapper-iu {
+    padding: 0 10px;
+    min-height: 40vh;
+  }
+
+  .main-title-iu {
+    font-size: clamp(24px, 6vw, 36px);
+  }
+
+  .subtitle-iu {
+    font-size: 14px;
+  }
+
+  .product-slider-iu {
+    max-width: 100%;
+    perspective: 600px; 
+  }
+
+  .product-carousel-iu {
+    gap: 12px;
+    transform-style: preserve-3d;
+    justify-content: center;
+  }
+
+  .product-card-iu {
+    width: 180px; 
+    aspect-ratio: 1/1;
+  }
+
+  .clone-iu {
+    max-width: 90vw;
+    max-height: 90vw;
+  }
+
+  .product-details-iu {
+    position: relative;
+    top: 75%;
+    padding: 0.8rem !important;
+    font-size: 12px !important;
+    max-width: 90vw;
+    transform: translate(-50%, -50%) !important;
+  }
+
+  .product-details-iu h2 {
+    font-size: 14px !important; 
+  }
+
+  .product-close-btn-iu {
+    top: 10px;
+    right: 10px;
+    width: 40px;
+    height: 40px;
+  }
+
+  .video-wrapper-iu {
+    max-width: 100%; 
+    margin: 20px 0;
+  }
+
+  .video-wrapper-iu iframe, 
+  .video-wrapper-iu video {
+    width: 100%;
+    height: auto;
+  }
+
+    .hover-overlay-iu span{
+    color: white;
+    font-size: 9px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+
+}
 </style>
-
 <div class="product-slider-wrapper-iu">
+<div class="header-iu">
+<h1 class="main-title-iu">Krups Silent Vortex</h1>
 
-  <div class="header-iu">
-    <h1 class="main-title-iu">Krups Silent Vortex</h1>
-    <p class="subtitle-iu">GX332810 Kahve Öğütücü</p>
-  </div>
-
-  <div class="video-wrapper-iu">
-    <iframe 
-      allow="autoplay; fullscreen; picture-in-picture" 
-      allowfullscreen 
-      frameborder="0" 
-      height="360" 
-      width="640" 
-      src="https://player.vimeo.com/video/1130221074?autoplay=1&loop=1&muted=1&controls=0">
-    </iframe>
-  </div>
-
-  <div class="product-slider-iu" id="productSlider-iu">
-    <div class="product-carousel-iu" id="productCarousel-iu">
-
-      <div class="product-card-iu" data-title="Güçlü ve Etkin Öğütme" data-desc="Güçlü ve benzersiz Vortex Spin Teknolojisi verimli, hızlı ve sessiz öğütme sağlar.">
-        <img src="/Content/UploadFiles/a5c71c05-1.jpg" alt="Güçlü ve Etkin Öğütme">
-        <div class="hover-overlay-iu"><span>Daha Fazla Gör</span></div>
-      </div>
-
-      <div class="product-card-iu" data-title="Hızlıca İstenen Kahve İnceliği" data-desc="Sadece 15 saniyede 12 fincana kadar filtre kahve öğütün ve farklı inceliklerin tadını çıkarın.">
-        <img src="/Content/UploadFiles/cdc58df1-2.jpg" alt="Hızlıca İstenen Kahve İnceliği">
-        <div class="hover-overlay-iu"><span>Daha Fazla Gör</span></div>
-      </div>
-
-      <div class="product-card-iu" data-title="Çok Yönlü Öğütme" data-desc="Kahve çekirdeklerinden baharatlara ve kurutulmuş bitkilere kadar farklı malzemeleri kolayca öğütün.">
-        <img src="/Content/UploadFiles/07751696-3.jpg" alt="Çok Yönlü Öğütme">
-        <div class="hover-overlay-iu"><span>Daha Fazla Gör</span></div>
-      </div>
-
-      <div class="product-card-iu" data-title="Kullanışlı Öğütücü" data-desc="Geniş kapasiteli çıkarılabilir öğütme haznesi ile pratik ve rahat kullanım sunar.">
-        <img src="/Content/UploadFiles/a94fe5b8-4.jpg" alt="Kullanışlı Öğütücü">
-        <div class="hover-overlay-iu"><span>Daha Fazla Gör</span></div>
-      </div>
-
-      <div class="product-card-iu" data-title="Kolay Saklama" data-desc="Kahvenizi ve baharatlarınızı daha uzun süre saklamanıza ve taze tutmanıza yardımcı olmak için özel saklama kapağını kullanın.">
-        <img src="/Content/UploadFiles/ea4088d9-5.jpg" alt="Kolay Saklama">
-        <div class="hover-overlay-iu"><span>Daha Fazla Gör</span></div>
-      </div>
-
-      <div class="product-card-iu" data-title="Kolay Temizlik" data-desc="Bulaşık makinesinde yıkanabilen paslanmaz çelik kaplaması ve temizleme fırçası sayesinde hızlı ve etkili temizlik sunar.">
-        <img src="/Content/UploadFiles/04b70dd2-6.jpg" alt="Kolay Temizlik">
-        <div class="hover-overlay-iu"><span>Daha Fazla Gör</span></div>
-      </div>
-
-      <div class="product-card-iu" data-title="Tek Dokunuşla İşlem" data-desc="Tek bir düğmeye dokunarak yüksek performanslı sürekli ve darbeli (pulse fonksiyonu ile) öğütme garanti edilir.">
-        <img src="/Content/UploadFiles/4c5327ae-7.jpg" alt="Tek Dokunuşla İşlem">
-        <div class="hover-overlay-iu"><span>Daha Fazla Gör</span></div>
-      </div>
-
-      <div class="product-card-iu" data-title="15 Yıl Tamir Edilebilirlik" data-desc="Dünya çapında 6200 onaylı teknik servis merkezi ile 15 yıl boyunca uygun fiyata ürün ve parça desteğinden faydalanın.">
-        <img src="/Content/UploadFiles/b6230b3c-8.jpg" alt="15 Yıl Tamir Edilebilirlik">
-        <div class="hover-overlay-iu"><span>Daha Fazla Gör</span></div>
-      </div>
-
-    </div>
-  </div>
-
-  <button class="product-close-btn-iu" id="productCloseBtn-iu">
-    <svg viewBox="0 0 24 24" fill="none">
-      <path d="M18 6L6 18M6 6L18 18" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" />
-    </svg>
-  </button>
-
-  <div class="product-details-iu" id="productDetails-iu">
-    <h2 id="productTitle-iu"></h2>
-    <p id="productDesc-iu"></p>
-  </div>
+<p class="subtitle-iu">GX332810 Kahve &Ouml;ğ&uuml;t&uuml;c&uuml;</p>
 </div>
 
+<div class="video-wrapper-iu"><iframe allow="autoplay; fullscreen; picture-in-picture" allowfullscreen="" frameborder="0" height="360" src="https://player.vimeo.com/video/1130221074?autoplay=1&amp;loop=1&amp;muted=1&amp;controls=0" width="640"></iframe></div>
+
+<div class="product-slider-iu" id="productSlider-iu">
+<div class="product-carousel-iu" id="productCarousel-iu">
+<div class="product-card-iu" data-desc="Güçlü ve benzersiz Vortex Spin Teknolojisi verimli, hızlı ve sessiz öğütme sağlar." data-title="Güçlü ve Etkin Öğütme"><img alt="Güçlü ve Etkin Öğütme" src="/Content/UploadFiles/a5c71c05-1.jpg" />
+<div class="hover-overlay-iu"><span>Detaylı Bilgi İ&ccedil;in Tıklayın</span></div>
+</div>
+
+<div class="product-card-iu" data-desc="Sadece 15 saniyede 12 fincana kadar filtre kahve öğütün ve farklı inceliklerin tadını çıkarın." data-title="Hızlıca İstenen Kahve İnceliği"><img alt="Hızlıca İstenen Kahve İnceliği" src="/Content/UploadFiles/cdc58df1-2.jpg" />
+<div class="hover-overlay-iu"><span>Detaylı Bilgi İ&ccedil;in Tıklayın</span></div>
+</div>
+
+<div class="product-card-iu" data-desc="Kahve çekirdeklerinden baharatlara ve kurutulmuş bitkilere kadar farklı malzemeleri kolayca öğütün." data-title="Çok Yönlü Öğütme"><img alt="Çok Yönlü Öğütme" src="/Content/UploadFiles/07751696-3.jpg" />
+<div class="hover-overlay-iu"><span>Detaylı Bilgi İ&ccedil;in Tıklayın</span></div>
+</div>
+
+<div class="product-card-iu" data-desc="Geniş kapasiteli çıkarılabilir öğütme haznesi ile pratik ve rahat kullanım sunar." data-title="Kullanışlı Öğütücü"><img alt="Kullanışlı Öğütücü" src="/Content/UploadFiles/a94fe5b8-4.jpg" />
+<div class="hover-overlay-iu"><span>Detaylı Bilgi İ&ccedil;in Tıklayın</span></div>
+</div>
+
+<div class="product-card-iu" data-desc="Kahvenizi ve baharatlarınızı daha uzun süre saklamanıza ve taze tutmanıza yardımcı olmak için özel saklama kapağını kullanın." data-title="Kolay Saklama"><img alt="Kolay Saklama" src="/Content/UploadFiles/ea4088d9-5.jpg" />
+<div class="hover-overlay-iu"><span>Detaylı Bilgi İ&ccedil;in Tıklayın</span></div>
+</div>
+
+<div class="product-card-iu" data-desc="Bulaşık makinesinde yıkanabilen paslanmaz çelik kaplaması ve temizleme fırçası sayesinde hızlı ve etkili temizlik sunar." data-title="Kolay Temizlik"><img alt="Kolay Temizlik" src="/Content/UploadFiles/04b70dd2-6.jpg" />
+<div class="hover-overlay-iu"><span>Detaylı Bilgi İ&ccedil;in Tıklayın</span></div>
+</div>
+
+<div class="product-card-iu" data-desc="Tek bir düğmeye dokunarak yüksek performanslı sürekli ve darbeli (pulse fonksiyonu ile) öğütme garanti edilir." data-title="Tek Dokunuşla İşlem"><img alt="Tek Dokunuşla İşlem" src="/Content/UploadFiles/4c5327ae-7.jpg" />
+<div class="hover-overlay-iu"><span>Detaylı Bilgi İ&ccedil;in Tıklayın</span></div>
+</div>
+
+<div class="product-card-iu" data-desc="Dünya çapında 6200 onaylı teknik servis merkezi ile 15 yıl boyunca uygun fiyata ürün ve parça desteğinden faydalanın." data-title="15 Yıl Tamir Edilebilirlik"><img alt="15 Yıl Tamir Edilebilirlik" src="/Content/UploadFiles/b6230b3c-8.jpg" />
+<div class="hover-overlay-iu"><span>Detaylı Bilgi İ&ccedil;in Tıklayın</span></div>
+</div>
+</div>
+</div>
+<button class="product-close-btn-iu" id="productCloseBtn-iu"><svg fill="none" viewbox="0 0 24 24"> <path d="M18 6L6 18M6 6L18 18" stroke="currentColor" stroke-linecap="round" stroke-width="2.5"></path> </svg></button>
+
+<div class="product-details-iu" id="productDetails-iu">
+<h2 id="productTitle-iu">&nbsp;</h2>
+
+<p id="productDesc-iu">&nbsp;</p>
+</div>
+</div>
 <script>
 document.addEventListener("DOMContentLoaded", () => {
   const container = document.getElementById("productSlider-iu");
@@ -407,18 +476,43 @@ document.addEventListener("DOMContentLoaded", () => {
   let isHorizontalSwipe = false;
   const isMobile = window.innerWidth <= 768;
 
+  let autoRotateInterval;
+  const autoRotateDelay = 4000; 
+
+  function startAutoRotate() {
+    if (autoRotateInterval) clearInterval(autoRotateInterval);
+    autoRotateInterval = setInterval(() => {
+      if (!expanded && !dragging) rotate("next");
+    }, autoRotateDelay);
+  }
+
+  function stopAutoRotate() {
+    if (autoRotateInterval) clearInterval(autoRotateInterval);
+  }
+
+  container.addEventListener("mousedown", stopAutoRotate);
+  container.addEventListener("touchstart", stopAutoRotate);
+  container.addEventListener("mouseup", startAutoRotate);
+  container.addEventListener("touchend", startAutoRotate);
+  document.addEventListener("visibilitychange", () => {
+    if (document.hidden) stopAutoRotate();
+    else startAutoRotate();
+  });
+
+  startAutoRotate();
+
   function applyPositions() {
     if (isMobile) {
 
       const positions = [
-        { z: 100, rotateY: 20, scale: 0.9 },
-        { z: 50, rotateY: 10, scale: 0.95 },
+        { z: 150, rotateY: 30, scale: 0.7 },
+        { z: 100, rotateY: 15, scale: 0.8 },
         { z: 0, rotateY: 0, scale: 1 },
         { z: 0, rotateY: 0, scale: 1 },
-        { z: 0, rotateY: 0, scale: 1 },
-        { z: 50, rotateY: -10, scale: 0.95 },
-        { z: 100, rotateY: -20, scale: 0.9 },
-        { z: 150, rotateY: -30, scale: 0.85 }
+        { z: 100, rotateY: -15, scale: 0.8 },
+        { z: 150, rotateY: -30, scale: 0.7 },
+        { z: 200, rotateY: -45, scale: 0.6 },
+        { z: 250, rotateY: -60, scale: 0.5 }
       ];
 
       cards.forEach((card, i) => {
@@ -477,7 +571,7 @@ document.addEventListener("DOMContentLoaded", () => {
     setTimeout(() => {
       if (isMobile) {
         clone.style.width = "90vw";
-        clone.style.height = "90vw";
+        clone.style.height = "60vw";
       } else {
         clone.style.width = "90vw";
         clone.style.height = "90vw";

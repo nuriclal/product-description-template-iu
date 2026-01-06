@@ -1,0 +1,292 @@
+<style>
+    .product-section-iu {
+  max-width: 1200px; /* 👉 İSTEDİĞİN max-width eklendi */
+  margin: 0 auto;
+}
+
+.product-grid-iu {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 35px;
+}
+
+.product-iu {
+  background-color: #fff;
+  border-radius: 16px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+  transition: all 0.35s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+}
+
+.product-iu:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+}
+
+.product-img-iu {
+  width: 100%;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 25px;
+  transition: all 0.3s ease;
+}
+
+.product-iu:hover .product-img-iu img {
+  transform: scale(1.05);
+}
+
+.product-img-iu img {
+  width: 85%;
+  object-fit: contain;
+  border-radius: 10px;
+}
+
+.product-description-iu {
+  width: 100%;
+  text-align: center;
+  padding: 20px 15px 30px;
+}
+
+.product-description-iu h4 {
+  color: #111;
+  font-size: 1.15rem;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.product-description-iu p {
+  font-size: 0.95rem;
+  color: #555;
+  line-height: 1.5;
+  opacity: 0;
+  max-height: 0;
+  transition: all 0.4s ease;
+  overflow: hidden;
+}
+
+.product-iu:hover .product-description-iu p {
+  opacity: 1;
+  max-height: 200px;
+  margin-top: 10px;
+}
+
+/* 1200px */
+@media (max-width: 1200px) {
+
+  .product-grid-iu {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .product-description-iu p {
+    opacity: 0;
+    max-height: 0;
+    margin-top: 0;
+    transform: translateY(10px);
+    transition: opacity 0.35s ease, max-height 0.35s ease, margin-top 0.35s ease, transform 0.35s ease;
+  }
+
+  .product-description-iu p.visible-iu {
+    opacity: 1;
+    max-height: 200px;
+    margin-top: 10px;
+    transform: translateY(0);
+  }
+
+  .product-img-iu img {
+    transform: scale(1);
+    transition: transform 0.4s ease;
+  }
+
+  .product-img-iu img.zoomed-iu {
+    transform: scale(1.05);
+  }
+}
+
+/* 800px */
+@media (max-width: 800px) {
+
+  .product-grid-iu {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .product-description-iu p {
+    opacity: 0;
+    max-height: 0;
+    margin-top: 0;
+    transform: translateY(10px);
+    transition: opacity 0.35s ease, max-height 0.35s ease, margin-top 0.35s ease, transform 0.35s ease;
+  }
+
+  .product-description-iu p.visible-iu {
+    opacity: 1;
+    max-height: 200px;
+    margin-top: 10px;
+    transform: translateY(0);
+  }
+
+  .product-img-iu img.zoomed-iu {
+    transform: scale(1.05);
+  }
+}
+
+/* 500px */
+@media (max-width: 500px) {
+
+  .product-grid-iu {
+    grid-template-columns: 1fr;
+  }
+
+  .product-description-iu p.visible-iu {
+    opacity: 1;
+    max-height: 200px;
+    margin-top: 10px;
+    transform: translateY(0);
+  }
+
+  .product-img-iu img.zoomed-iu {
+    transform: scale(1.05);
+  }
+}
+
+</style>
+
+<section class="product-section-iu">
+<div class="product-grid-iu">
+
+<div class="product-iu">
+  <div class="product-img-iu">
+    <img src="/Content/UploadFiles/8de0c394-1.jpg">
+  </div>
+  <div class="product-description-iu">
+    <h4>Dayanıklı Kaplama</h4>
+    <p>Günlük kullanıma uygun olarak tasarlanmıştır. Tefal'in titanyum parçacıklarıyla güçlendirilmiş kaplaması Tefal'in standart kaplamalarına göre 3 kata kadar dayanıklıdır.</p>
+  </div>
+</div>
+
+<div class="product-iu">
+  <div class="product-img-iu">
+    <img src="/Content/UploadFiles/b144e3f0-2.jpg">
+  </div>
+  <div class="product-description-iu">
+    <h4>%100 Güvenli Yapışmaz Kaplama</h4>
+    <p>0% PFOA, 0% kurşun, 0% kadmiyum* * Gıda temas regülasyonlarının gerektiği testlerden daha katı kontroller. Uygulanan regülasyonlarla uyumlu olarak PFOA içermemektedir. Kurşun ve kadmiyum içermemektedir ( Pb ve Cd içermemektedir) demek kaplamaların içine Pb ve Cd eklenmediği anlamına gelir. 0.005mg/kg seviyesinde bir geçiş yoktur.</p>
+  </div>
+</div>
+
+<div class="product-iu">
+  <div class="product-img-iu">
+    <img src="/Content/UploadFiles/2a9e19e0-3.jpg">
+  </div>
+  <div class="product-description-iu">
+    <h4>THERMO-SIGNAL</h4>
+    <p>THERMO-SIGNAL teknolojisi mükemmel kıvam, lezzet ve mühürleme için pişirmeye başlama zamanını gösterir.</p>
+  </div>
+</div>
+
+<div class="product-iu">
+  <div class="product-img-iu">
+    <img src="/Content/UploadFiles/59edfa66-4.jpg">
+  </div>
+  <div class="product-description-iu">
+    <h4>THERMO-FUSION Üstün İndüksiyon Teknolojisi</h4>
+    <p>Kalın ve geniş indüksiyon tabanı sayesinde, daha hızlı ısınma ve homojen ısı dağılımı Thermo-Fusion garantisi altında.</p>
+  </div>
+</div>
+
+<div class="product-iu">
+  <div class="product-img-iu">
+    <img src="/Content/UploadFiles/cdc12378-5.jpg">
+  </div>
+  <div class="product-description-iu">
+    <h4>Ocak Uyumu</h4>
+    <p>İndüksiyon dahil tüm ocaklarla uyumludur ( gaz, elektrik, seramik, indüksiyon).</p>
+  </div>
+</div>
+
+<div class="product-iu">
+  <div class="product-img-iu">
+    <img src="/Content/UploadFiles/d9d3f01e-6.jpg">
+  </div>
+  <div class="product-description-iu">
+    <h4>Fransa'da Üretilmiştir</h4>
+    <p>Fransa'da uzmanlıkla tasarlanmış ve üretilmiştir.</p>
+  </div>
+</div>
+
+<div class="product-iu">
+  <div class="product-img-iu">
+    <img src="/Content/UploadFiles/1a645e8c-7.jpg">
+  </div>
+  <div class="product-description-iu">
+    <h4>Yüksek Performans</h4>
+    <p>Günlük pişirme ihtiyaçlarınıza yönelik, yüksek performanslı, iç ve dışta temizliği kolaylaştıran yapışmaz kaplama ile tasarlanmıştır.</p>
+  </div>
+</div>
+
+<div class="product-iu">
+  <div class="product-img-iu">
+    <img src="/Content/UploadFiles/1758d232-8.jpg">
+  </div>
+  <div class="product-description-iu">
+    <h4>Tefal: Dünyanın 1 numaralı tava tencere markası*</h4>
+    <p>Tefal mutfaktaki işleri kolaylaştırmak için sizinle. *Kaynak : Euromonitor, Ev ve Bahçe 2019 raporu, marka değer, 2018 verileri.</p>
+  </div>
+</div>
+
+</div>
+</section>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+  if (window.innerWidth <= 800) {
+
+    const products = document.querySelectorAll(".product-iu");
+    let activeCard = null;
+    let timeout = null;
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+
+        const el = entry.target;
+        const p = el.querySelector(".product-description-iu p");
+        const img = el.querySelector(".product-img-iu img");
+
+        if (entry.intersectionRatio === 1) {
+
+          if (activeCard && activeCard !== el) {
+            const oldP = activeCard.querySelector(".product-description-iu p");
+            const oldImg = activeCard.querySelector(".product-img-iu img");
+            oldP.classList.remove("visible-iu");
+            oldImg.classList.remove("zoomed-iu");
+          }
+
+          clearTimeout(timeout);
+          timeout = setTimeout(() => {
+            activeCard = el;
+            p.classList.add("visible-iu");
+            img.classList.add("zoomed-iu");
+          }, 100);
+
+        } else if (activeCard === el && entry.intersectionRatio < 0.8) {
+
+          clearTimeout(timeout);
+          timeout = setTimeout(() => {
+            p.classList.remove("visible-iu");
+            img.classList.remove("zoomed-iu");
+            activeCard = null;
+          }, 100);
+        }
+      });
+    }, { threshold: [0, 0.8, 1] });
+
+    products.forEach(p => observer.observe(p));
+  }
+});
+
+</script>

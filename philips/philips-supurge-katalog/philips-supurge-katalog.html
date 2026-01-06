@@ -1,0 +1,384 @@
+<style type="text/css">.container-iu {
+    width: 100%;
+    max-width: 1280px !important;
+    box-sizing: border-box;
+    margin: 0 auto;
+    padding: 0 28px;
+    line-height: 1.75;
+    border-radius: 16px;
+    animation: fadeIn 0.8s ease forwards;
+    opacity: 0;
+    overflow: hidden;
+}
+
+.container-iu h2 {
+    font-size: 30px !important;
+    margin: 30px 0 14px;
+    color: #1C3A5A;
+    font-weight: 700;
+    letter-spacing: .5px;
+    position: relative;
+    padding-left: 14px;
+}
+
+.container-iu h2::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 4px;
+    width: 5px;
+    height: 90%;
+    background: linear-gradient(90deg, #1f3c88, #A4B9C4);
+    border-radius: 2px;
+}
+
+.container-iu p {
+    font-size: 16px !important;
+    color: #4B4A40;
+    margin: 14px 0;
+}
+
+.container-iu a {
+    color: #0040ff;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.container-iu a:hover {
+    text-decoration: underline;
+}
+
+.block-iu {
+    background: linear-gradient(145deg, #ffffff 0%, #f4f6ff 100%);
+    padding: 24px;
+    border: 1px solid #e2e6f3;
+    border-radius: 14px;
+    margin: 26px 0;
+    transition: 0.3s ease;
+    overflow: hidden;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: slideFadeIn .8s ease forwards;
+}
+
+@keyframes slideFadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.block-iu:hover {
+    transform: translateY(-3px) scale(1.01);
+    box-shadow: 0 8px 18px rgba(0,0,0,0.08);
+    
+}
+
+.header-iu {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    flex-wrap: nowrap;
+    overflow: hidden;
+}
+
+.header-img-iu {
+    width: 450px;
+    height: 450px;
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 12px;
+    background: #ffffff;
+    border: 1px solid #e5e8ef;
+    padding: 0;
+    transition: .4s ease;
+ 
+    flex-shrink: 0;
+}
+.header-img-iu:hover {
+    transform: scale(1.03);
+}
+.header-text-iu {
+    flex: 1; 
+    min-width: 0;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+.clickable-img {
+    position: relative;
+    display: inline-block;
+}
+
+.live-button {
+    position: absolute;
+    top: 18px;
+    left: 18px;
+    width: 20px;
+    height: 20px;
+    background: #ec6907;
+    border-radius: 50%;
+    animation: pulse 1.2s infinite;
+    box-shadow: 0 0 0 #ffb276c5;
+    pointer-events: none; 
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 #ffb276c5;
+    }
+    70% {
+        transform: scale(1.3);
+        box-shadow: 0 0 10px 10px #ffb1765e;
+    }
+    100% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 #ffb17600;
+    }
+}
+
+
+@media (max-width: 1100px) {
+    .container-iu {
+        padding: 16px;
+    }
+
+    .container-iu h2 {
+        font-size: 22px !important;
+    }
+
+    .header-iu {
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100% !important;
+    }
+
+    .header-img-iu {
+        width: 100% !important;
+        max-width: 100% !important;
+        height: auto !important;
+        max-height: 260px;
+        object-fit: cover;
+    }
+
+    .header-text-iu {
+        width: 100% !important;
+    }
+
+    .block-iu {
+        padding: 18px;
+    }
+
+    .container-iu p {
+        font-size: 15px !important;
+    }
+    .live-button{
+        top: 16px;
+        left: 16px;
+    }
+}
+</style>
+<div class="container-iu">
+<div class="block-iu" style="margin-top: 0px !important;">
+<p>
+Ev temizliği söz konusu olduğunda güvenilir, güçlü ve uzun ömürlü bir süpürge seçmek temizlik konforunuzu doğrudan etkiler. Philips süpürge seçenekleri, hem teknolojisi hem de kullanıcı odaklı tasarımlarıyla ev işlerinde size yardımcı olur.
+</p>
+
+<p>
+Günlük temizlik rutininizi hızlandırmak, daha hijyenik bir yaşam alanı oluşturmak ve minimum eforla maksimum performans almak için doğru süpürge tercihi önemli rol oynar. Philips’in süpürge modelleri arasında temizlik rutininize ve evinizin boyutuna, oda sayısına ve eşyalarınıza göre bir seçim yapabilirsiniz.  
+</p>
+
+<p>
+Kendi ihtiyaçlarınızı netleştirmek için temizlik sıklığınızı, yaşam alanınızdaki zemin tiplerini ve beklentilerinizi gözden geçirmeniz süreci kolaylaştırır. Böylece hem uzun vadede memnun kalacağınız hem de pratik kullanım sunan bir modele yönelmeniz mümkün olur. Doğru süpürge seçimi, evinizdeki genel temizlik kalitesini artırırken harcadığınız zamanı da önemli ölçüde azaltır.
+</p>
+
+<p>
+Ürün seçimine karar veremiyorsanız Philips’in sektördeki konumunu, farklı model seçeneklerini, filtre sistemlerini ve kullanıcı deneyimlerini detaylı biçimde inceleyerek fikir edinebilirsiniz.
+</p>
+</div>
+
+<div class="block-iu">
+<div class="header-iu"><a class="clickable-img" href="https://www.jebinde.com/detay/philips-6000-serisi-xc6557-01-sarjli-dikey-supurge-91698" rel="nofollow" target="_blank">
+    <img class="header-img-iu" src="1.jpg" /> </a>
+
+<div class="live-button">&nbsp;</div>
+
+<div class="header-text-iu">
+<h2>Philips Süpürge Neden Tercih Edilmeli? Marka Özellikleri ve Avantajları</h2>
+
+<p>
+Philips elektrikli süpürge kategorisi, markanın uzun yıllara dayanan global güvenilirliği ve yenilikçi yaklaşımı sayesinde dünya çapında yüksek memnuniyet oranına sahip. Philips, elektrikli süpürge teknolojilerinde sektör standartlarını belirleyen markalardan biri olarak tanınır.
+</p>
+
+<p>
+Philips’in avantajları arasında özellikle yüksek emme gücü, enerji tasarruflu motor yapısı, dayanıklılık ve kolay bakım sunan tasarımlar bulunur. Birçok modelde kullanılan PowerCyclone teknolojisi, havayla tozu hızlı şekilde ayrıştırarak daha verimli bir temizlik sağlar. Bunun yanında TriActive başlık, tek geçişte daha geniş alanı temizlemenize yardımcı olur.
+</p>
+</div>
+</div>
+
+<p>
+Kullanıcıların Philips’i tercih etmesinin başlıca sebepleri şöyle sıralanabilir:
+</p>
+
+<ul>
+    <li>Güçlü motor performansı ve PowerBlade motor desteği</li>
+    <li>Uzun yıllar kullanılabilen dayanıklı gövde yapısı</li>
+    <li>Kolay bulunabilir orijinal filtre ve aksesuarlar</li>
+    <li>Türkiye genelinde geniş servis ağı</li>
+    <li>Kalite–fiyat dengesi</li>
+    <li>Evcil hayvanlı yaşam, geniş metrekare ya da hassas zemin fark etmeksizin kullanıcıya uygun model çeşitliliği</li>
+</ul>
+
+<p>
+    Sahip olduğu özelliklerle Philips süpürge gamı, güvenilir performans arayan kullanıcılar için sıkça önerilir.
+</p>
+</div>
+
+<div class="block-iu">
+<div class="header-iu"><a class="clickable-img" href="https://www.jebinde.com/detay/philips-marathon-ultimate-xb9125-07-899-w-torbasiz-supurge-91703" rel="nofollow" target="_blank">
+    <img class="header-img-iu" src="2.jpg" /> </a>
+
+<div class="live-button">&nbsp;</div>
+
+<div class="header-text-iu">
+<h2>Philips Elektrikli Süpürge Modelleri ve Teknolojileri</h2>
+
+<p>
+Philips’in ürün gamı oldukça geniştir ve farklı kullanım şekillerine göre size uygun modeli bulabilirsiniz. Philips toz torbalı süpürge seçenekleri, özellikle hijyen beklentisi yüksek kullanıcıların ilk tercihi olur. Torbaların tek seferde çıkarılıp atılması hem kolaylık hem de daha hijyenik bir boşaltma süreci sunar. Ayrıca Philips toz torbalı süpürge modellerinde gelişmiş HEPA filtre sistemi sık görülür. Böylece alerjik bünyeler için alerji dostu temizlik mümkün olur.
+</p>
+
+<p>
+Torbasız modellerde yine PowerCyclone teknolojisi ile güçlü hava akımı sağlanır. Süpürgeler toz haznesinin kolay boşaltılması sayesinde kolay bakım sunar. Maliyet olarak da torba gerektirmediği için avantajlı olabilir.
+</p>
+
+</div>
+</div>
+
+<p>
+Kesintisiz güç isteyen kullanıcılar için Philips kablolu süpürge modelleri, uzun kablo boyları ve yüksek watt değerleriyle öne çıkar. Modeller geniş alanlarda verimli kullanım sunar.
+</p>
+
+<p>
+Philips elektrikli süpürge modellerinde diğer öne çıkan teknolojiler şöyledir:
+</p>
+
+<ul>
+    <li>PowerBlade motor ile verimli hava akışı</li>
+    <li>TriActive başlık ile tek seferde daha etkili temizlik</li>
+    <li>Sessiz çalışma sağlayan motor izolasyonu</li>
+    <li>Hafif ve ergonomik tasarımlar</li>
+    <li>Uzun kablo uzunlukları ve farklı güç seviyeleri</li>
+    <li>Geniş aksesuar yelpazesi</li>
+</ul>
+
+<p>
+Çeşitlilik sayesinde Philips elektrikli süpürge kategorisinde ihtiyaçlarınıza en uygun modeli kolayca bulabilirsiniz.
+</p>
+</div>
+
+<div class="block-iu">
+<div class="header-iu"><a class="clickable-img" href="https://www.jebinde.com/detay/philips-homerun-5000-serisi-xu5100-20-cop-stasyonlu-akilli-robot-supurge-92074" rel="nofollow" target="_blank">
+    <img class="header-img-iu" src="3.jpg" /> </a>
+
+<div class="live-button">&nbsp;</div>
+
+<div class="header-text-iu">
+<h2>Philips Süpürge Modelleri: Hangi Model Kime Uygun?</h2>
+
+<p>
+Doğru süpürge seçimi yaşam alanınız ve kullanım alışkanlıklarınıza göre değişir. Farklı senaryolara göre kullanım şekilleri de değişiklik gösterebilir. Küçük evler için kompakt gövdeye sahip Philips süpürge modelleri, dar alanlarda rahat manevra yapmanızı kolaylaştırır. Hafif yapıları sayesinde günlük temizlik için ideal seçenek olabilir.
+</p>
+
+<p>
+Kullanım sıklığına göre günlük yoğun temizlik yapanlar için dayanıklı gövdeli, yüksek motor performanslı modeller ideal olabilir. Haftalık temizlik yapanlar için standart güç seviyesine sahip ekonomik seçenekler değerlendirilebilir. Kendi temizlik rutitinize uygun seçeneği belirledikten sonra ev temizliğini daha kolay ve hızlı şekilde gerçekleştirebilir, aynı zamanda daha efektif sonuçlar alabilirsiniz.
+</p>
+
+</div>
+</div>
+
+<p>
+Büyük evler için geniş toz haznesi ve uzun kablosu bulunan modeller daha konforlu kullanım sağlayabilir. Yüksek motor gücü büyük metrekarelerde zaman kazandırır. Evcil hayvan besliyorsanız tüy toplama kapasitesi yüksek pet hair süpürge başlıklarına sahip modeller tercih edebilirsiniz. Böylece zeminde, eşyalarda ve mobilyalarda biriken tüyleri hızlı ve kolay bir şekilde temizleyebilirsiniz. Mini turbo fırça kategoride en çok önerilen aksesuarlar arasında bulunur. Benzer şekilde alerjisi olanlar için HEPA filtre sistemi bulunan modeller, ince partikülleri hapsederek daha sağlıklı bir ortam oluşturur. Evdeki toz oranının büyük ölçüde azalması, toz alerjisinin kontrol altına alınmasına katkıda bulunur.   
+</p>
+
+<p>
+Zemin tipine göre parke ve laminat için yumuşak kıllı başlıklar, halı için daha güçlü emişli başlıklar seçilebilir. Zemine uygun başlık seçimi yapmak yüzeyde biriken kir ve tozları en iyi şekilde temizlemek açısından faydalı olur. Çok sayıdaki seçenek arasından Philips süpürge modelleri size en uygun performansı sunan özellikleriyle temizlik rutinini zahmetsiz hâle getirir.
+</p>
+</div>
+
+<div class="block-iu">
+<div class="header-iu"><a class="clickable-img" href="https://www.jebinde.com/detay/philips-aqua-plus-8000-serisi-xc8054-01-islak-kuru-sarjli-dikey-supurge-91920" rel="nofollow" target="_blank">
+    <img class="header-img-iu" src="4.jpg" /> </a>
+
+<div class="live-button">&nbsp;</div>
+
+<div class="header-text-iu">
+<h2>
+Philips Süpürge Filtresi ve Aksesuar Sistemleri
+</h2>
+
+<p>
+Her süpürgenin performansı, filtre sistemiyle doğru orantılı olur. Bu noktada Philips süpürge filtresi çeşitleri HEPA filtre, EPA filtre ve Yıkanabilir filtre seçenekleriyle her kullanım ihtiyacına yanıt verir. Her filtre kendi model grubuna özel tasarlandığı için uyumluluğa dikkat etmek gerekir.
+</p>
+
+<p>
+Orijinal filtre kullanmak hem yüksek performans sağlar hem de cihazın uzun ömürlü kullanım göstermesine destek olur. Filtre değişim önerileri HEPA filtre için 6–12 ay, yıkanabilir filtreler için belirli aralıklarla suyla temizleme şeklindedir.   
+</p>
+</div>
+</div>
+
+<p>
+ Aksesuar tarafında da Philips aşağıda inceleyeceğiniz şekilde, oldukça zengin bir içerik sunar
+</p>
+
+<ul>
+    <li>TriActive başlık (geniş yüzey temizliği)</li>
+    <li>Mini turbo fırça (evcil hayvan tüyleri)</li>
+    <li>Dar alan ucu</li>
+    <li>Mobilya fırçası</li>
+    <li>Parke başlığı</li>
+</ul>
+</div>
+
+<div class="block-iu">
+<div class="header-iu"><a class="clickable-img" href="https://www.jebinde.com/detay/philips-marathon-ultimate-xb9185-07-899-w-toz-torbasiz-supurge-91704" rel="nofollow" target="_blank">
+    <img class="header-img-iu" src="5.jpg" /> </a>
+
+<div class="live-button">&nbsp;</div>
+
+<div class="header-text-iu">
+<h2>Philips Süpürge Fiyatları, Kullanıcı Yorumları ve Jebinde Avantajları</h2>
+
+<p>
+Piyasada giriş, orta ve üst segmentte birçok Philips modeli bulunur. Philips süpürge fiyatları, modelin motor gücü, filtre teknolojisi ve aksesuar çeşitliliğine göre değişiklik gösterir. Bütçenize göre doğru modeli belirlerken kullanım sıklığı, evin büyüklüğü ve zemin tipini göz önünde bulundurabilirsiniz. Kullanıcı yorumları incelendiğinde Philips süpürge makinesi modellerinin özellikle şu alanlarda yüksek puan aldığı görülür:
+</p>
+
+<ul>
+    <li>Performans ve emiş gücü</li>
+    <li>Düşük ses seviyesi</li>
+    <li>Dayanıklı gövde yapısı</li>
+    <li>Kolay kullanım ve saklama</li>
+    <li>Toz yönetimi</li>
+</ul>
+
+</div>
+</div>
+
+<p>
+Rutin bakım önerileri de oldukça basit. Filtrelerin düzenli temizlenmesi, toz haznesinin veya torbanın zamanında değiştirilmesi ve fırçaların periyodik bakımının yapılması cihazın performansını artırır. Philips alışverişini Jebinde ile yapmanın birçok avantajları var. Philips’in resmi satıcısı Jebinde, %100 orijinal ürün garantisi sunar. Orijinal filtre ve aksesuar temini ile süpürgenin kalitesinden ödün vermeden temizlik yapabilirsiniz.
+</p>
+
+<p>
+Jebinde’de 75+ kişilik uzman ekip desteği bulunuyor. İhtiyaç duyduğunuz noktada tüm sorularınız için uzman ekiple görüşerek destek alabilirsiniz. Hızlı ve güvenilir teslimat imkânı ürünü kolayca teslima almanızı mümkün kılıyor. Ek olarak iade etmek isterseniz kolay iade süreçleriyle kullanıcıya yardımcı olunuyor. Görüntülü görüşme hizmeti ve Profesyonel müşteri desteği sayesinde Jebinde ile güvenli alışverişin tadını çıkarabilirsiniz.
+</p>
+
+<p>
+Bütün avantajları sayesinde Philips süpürge makinesi veya aksesuar alışverişinizi güvenle gerçekleştirebilirsiniz. Aynı şekilde yedek filtre ve bakım parçalarında da Philips filtre seçeneklerine kolayca ulaşabilirsiniz.
+</p>
+
+</div>
+</div>

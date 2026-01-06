@@ -1,0 +1,370 @@
+<style type="text/css">.top-section-iu {
+  max-width: 1200px;
+  margin: 0px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  background: linear-gradient(150deg, #406136, #6d9a5f, #6a9162, #406136);
+  padding: 20px;
+}
+
+.top-item-iu {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+  transition: 0.3s ease;
+}
+
+.top-item-iu:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.top-item-iu img {
+  width: 400px;
+  object-fit: cover;
+}
+
+.top-text-iu h3 {
+  padding: 20px;
+  margin: 0 0 12px;
+  font-size: 1.8rem !important;
+  color: #111;
+}
+
+.top-text-iu p {
+  padding: 20px;
+  margin: 0;
+  color: #555;
+  font-size: 1.3rem !important;
+  line-height: 1.6 !important;
+}
+
+@media(max-width: 850px) {
+  .top-item-iu {
+    flex-direction: column;
+    text-align: center;
+  }
+  .top-item-iu img {
+    width: 100%;
+  }
+}
+
+.product-section-iu {
+  max-width: 1200px;
+  margin: 0 auto;
+  background: linear-gradient(130deg, #406136, #6d9a5f, #6a9162, #406136);
+  padding: 20px;
+}
+
+.product-grid-iu {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 35px;
+}
+
+.product-iu {
+  background-color: #fff;
+  border-radius: 16px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+  transition: all 0.35s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+}
+
+.product-iu:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+}
+
+.product-img-iu {
+  width: 100%;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 25px;
+  transition: all 0.3s ease;
+}
+
+.product-iu:hover .product-img-iu img {
+  transform: scale(1.05);
+}
+
+.product-img-iu img {
+  width: 85%;
+  object-fit: contain;
+  border-radius: 10px;
+}
+
+.product-description-iu {
+  width: 100%;
+  text-align: center;
+  padding: 20px 15px 30px;
+}
+
+.product-description-iu h4 {
+  color: #111;
+  font-size: 1.15rem;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.product-description-iu p {
+  font-size: 0.95rem;
+  color: #555;
+  line-height: 1.5;
+  opacity: 0;
+  max-height: 0;
+  transition: all 0.4s ease;
+  overflow: hidden;
+}
+
+.product-iu:hover .product-description-iu p {
+  opacity: 1;
+  max-height: 200px;
+  margin-top: 10px;
+}
+
+@media (max-width: 1200px) {
+
+  .product-grid-iu {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .product-description-iu p {
+    opacity: 0;
+    max-height: 0;
+    margin-top: 0;
+    transform: translateY(10px);
+    transition: opacity 0.35s ease, max-height 0.35s ease, margin-top 0.35s ease, transform 0.35s ease;
+  }
+
+  .product-description-iu p.visible-iu {
+    opacity: 1;
+    max-height: 200px;
+    margin-top: 10px;
+    transform: translateY(0);
+  }
+
+  .product-img-iu img {
+    transform: scale(1);
+    transition: transform 0.4s ease;
+  }
+
+  .product-img-iu img.zoomed-iu {
+    transform: scale(1.05);
+  }
+}
+
+@media (max-width: 800px) {
+
+  .product-grid-iu {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .product-description-iu p {
+    opacity: 0;
+    max-height: 0;
+    margin-top: 0;
+    transform: translateY(10px);
+    transition: opacity 0.35s ease, max-height 0.35s ease, margin-top 0.35s ease, transform 0.35s ease;
+  }
+
+  .product-description-iu p.visible-iu {
+    opacity: 1;
+    max-height: 200px;
+    margin-top: 10px;
+    transform: translateY(0);
+  }
+
+  .product-img-iu img.zoomed-iu {
+    transform: scale(1.05);
+  }
+}
+
+@media (max-width: 500px) {
+
+  .product-grid-iu {
+    grid-template-columns: 1fr;
+  }
+
+  .product-description-iu p.visible-iu {
+    opacity: 1;
+    max-height: 200px;
+    margin-top: 10px;
+    transform: translateY(0);
+  }
+
+  .product-img-iu img.zoomed-iu {
+    transform: scale(1.05);
+  }
+}
+</style>
+<section class="top-section-iu">
+<div class="top-item-iu"><img src="/Content/UploadFiles/b2dbc335-1.jpg" />
+<div class="top-text-iu">
+<h3>Kolay Yapışmaz Pişirme</h3>
+
+<p>Inoceram Glide teknolojisi, uzun &ouml;m&uuml;rl&uuml; ve g&uuml;nl&uuml;k kullanımda zahmetsiz kayganlık sağlayan yeni nesil yapışmaz seramik kaplamadır&mdash;d&uuml;ş&uuml;k yağla, sağlıklı ve lezzetli yemekler i&ccedil;in idealdir.</p>
+</div>
+</div>
+
+<div class="top-item-iu">
+<div class="top-text-iu">
+<h3>Sağlıklı ve Lezzetli Pişirme</h3>
+
+<p>Geliştirilmiş Thermo-Signal&trade; teknolojisi, tava ideal başlangı&ccedil; sıcaklığına ulaştığında tamamen kırmızıya d&ouml;ner&mdash;b&ouml;ylece yemekler her seferinde m&uuml;kemmel renk, doku ve lezzetle pişer.</p>
+</div>
+<img src="/Content/UploadFiles/2d833116-2.jpg" /></div>
+
+<div class="top-item-iu"><img src="/Content/UploadFiles/4e5a3130-3.jpg" />
+<div class="top-text-iu">
+<h3>%100 Geri D&ouml;n&uuml;şt&uuml;r&uuml;lm&uuml;ş Al&uuml;minyum G&ouml;vde</h3>
+
+<p>%100 geri d&ouml;n&uuml;şt&uuml;r&uuml;lm&uuml;ş al&uuml;minyum g&ouml;vdesi sayesinde birincil al&uuml;minyuma g&ouml;re %90 daha az CO2 salımı ile &ccedil;evresel etkisi azaltılmıştır. &Uuml;r&uuml;n tasarımı tamamen geri d&ouml;n&uuml;şt&uuml;r&uuml;lebilir olup, ambalajı da %90 geri d&ouml;n&uuml;şt&uuml;r&uuml;lm&uuml;ş liftendir.</p>
+</div>
+</div>
+
+<div class="top-item-iu">
+<div class="top-text-iu">
+<h3>Hızlı ve Eşit Pişirme</h3>
+
+<p>Gelişmiş ind&uuml;ksiyon teknolojisine sahip Thermo-Fusion&trade; taban, hızlı ısınma ve eşit pişirme sonu&ccedil;ları sunar. Gaz, elektrikli, seramik ve ind&uuml;ksiyonlu ocaklarla uyumludur.</p>
+</div>
+<img src="/Content/UploadFiles/70e6bdb3-4.jpg" /></div>
+
+<div class="top-item-iu"><img src="/Content/UploadFiles/e5a8ad28-5.jpg" />
+<div class="top-text-iu">
+<h3>Temizlemesi Kolay</h3>
+
+<p>G&uuml;nl&uuml;k pişirme ihtiya&ccedil;larınızı karşılamak &uuml;zere tasarlanan bu tencere, i&ccedil; ve dış y&uuml;zeyinde y&uuml;ksek performanslı yapışmaz kaplama ile kolay temizlik ve pratik kullanım sunar.</p>
+</div>
+</div>
+
+<div class="top-item-iu">
+<div class="top-text-iu">
+<h3>Kalite ve Uzmanlık</h3>
+
+<p>Yapışmaz tavaların mucidi Tefal, &uuml;r&uuml;nlerini y&uuml;ksek kalite ve uzmanlıkla &uuml;retmektedir.</p>
+</div>
+<img src="/Content/UploadFiles/70c9e55d-6.jpg" /></div>
+</section>
+
+<section class="product-section-iu">
+<div class="product-grid-iu">
+<div class="product-iu">
+<div class="product-img-iu"><img src="/Content/UploadFiles/4d0a5d0b-7.jpg" /></div>
+
+<div class="product-description-iu">
+<h4>Mineralia+ Yapışmaz Kaplama</h4>
+
+<p>Doğal minerallerle zenginleştirilmiş Tefal Mineralia+ yapışmaz kaplama, her g&uuml;n kolay ve az yağlı pişirme i&ccedil;in dayanıklı bir yapışmaz performans sunar.</p>
+</div>
+</div>
+
+<div class="product-iu">
+<div class="product-img-iu"><img src="/Content/UploadFiles/203231a2-8.jpg" /></div>
+
+<div class="product-description-iu">
+<h4>Tam Uyumlu</h4>
+
+<p>Gazlı, elektrikli, seramik ve ind&uuml;ksiyon ocaklarla tam uyumludur &ndash; mutfağınızda tam esneklik sağlar.</p>
+</div>
+</div>
+
+<div class="product-iu">
+<div class="product-img-iu"><img src="/Content/UploadFiles/5d7e612e-9.jpg" /></div>
+
+<div class="product-description-iu">
+<h4>THERMO-SIGNAL&trade;</h4>
+
+<p>THERMO-SIGNAL&trade; teknolojisi, m&uuml;kemmel doku, renk ve lezzet i&ccedil;in ideal pişirme başlangı&ccedil; sıcaklığını g&ouml;stererek her g&uuml;n lezzetli ve tam kıvamında yemekler hazırlamayı sağlar.</p>
+</div>
+</div>
+
+<div class="product-iu">
+<div class="product-img-iu"><img src="/Content/UploadFiles/6331f13f-10.jpg" /></div>
+
+<div class="product-description-iu">
+<h4>&Uuml;st&uuml;n İnd&uuml;ksiyon Teknolojisi</h4>
+
+<p>Ekstra geniş ızgara yapısı ve kalın tabanı sayesinde Thermo-Fusion&trade;+ teknolojisi, tavanın tamamında hızlı ısınma ve eşit ısı dağılımı sağlayarak yiyeceklerin homojen şekilde pişmesini garanti eder.</p>
+</div>
+</div>
+
+<div class="product-iu">
+<div class="product-img-iu"><img src="/Content/UploadFiles/8b6c9be0-11.jpg" /></div>
+
+<div class="product-description-iu">
+<h4>Fransa&rsquo;da &Uuml;retilmiştir</h4>
+
+<p>Y&uuml;ksek kaliteli malzemelerden, b&uuml;y&uuml;k bir &ouml;zenle &uuml;retilen yenilik&ccedil;i &uuml;r&uuml;nlerimiz, Fransız uzmanlığının m&uuml;kemmelliğini yansıtır.</p>
+</div>
+</div>
+
+<div class="product-iu">
+<div class="product-img-iu"><img src="/Content/UploadFiles/ab6b56da-12.jpg" /></div>
+
+<div class="product-description-iu">
+<h4>D&uuml;nyanın 1 Numaralı Tencere ve Tava Markası*</h4>
+
+<p>Tefal, m&uuml;kemmel pişirme sonu&ccedil;ları sunmak i&ccedil;in durmaksızın &ccedil;alışır &ndash; Tefal&rsquo;i tercih etmek i&ccedil;in bir başka g&uuml;&ccedil;l&uuml; neden! [*Kaynak: Euromonitor International Limited, Home and Garden 2021 baskısı, marka perakende değeri RSP, 2020 verileri]</p>
+</div>
+</div>
+</div>
+</section>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+  if (window.innerWidth <= 800) {
+
+    const products = document.querySelectorAll(".product-iu");
+    let activeCard = null;
+    let timeout = null;
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+
+        const el = entry.target;
+        const p = el.querySelector(".product-description-iu p");
+        const img = el.querySelector(".product-img-iu img");
+
+        if (entry.intersectionRatio === 1) {
+
+          if (activeCard && activeCard !== el) {
+            const oldP = activeCard.querySelector(".product-description-iu p");
+            const oldImg = activeCard.querySelector(".product-img-iu img");
+            oldP.classList.remove("visible-iu");
+            oldImg.classList.remove("zoomed-iu");
+          }
+
+          clearTimeout(timeout);
+          timeout = setTimeout(() => {
+            activeCard = el;
+            p.classList.add("visible-iu");
+            img.classList.add("zoomed-iu");
+          }, 100);
+
+        } else if (activeCard === el && entry.intersectionRatio < 0.8) {
+
+          clearTimeout(timeout);
+          timeout = setTimeout(() => {
+            p.classList.remove("visible-iu");
+            img.classList.remove("zoomed-iu");
+            activeCard = null;
+          }, 100);
+        }
+      });
+    }, { threshold: [0, 0.8, 1] });
+
+    products.forEach(p => observer.observe(p));
+  }
+});
+
+</script>

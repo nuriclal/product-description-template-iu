@@ -1,0 +1,309 @@
+<style>
+    .product-section-iu {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.product-grid-iu {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 35px;
+}
+
+.product-iu {
+  background-color: #fff;
+  border-radius: 16px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+  transition: all 0.35s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+}
+
+.product-iu:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+}
+
+.product-img-iu {
+  width: 100%;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 25px;
+  transition: all 0.3s ease;
+}
+
+.product-iu:hover .product-img-iu img {
+  transform: scale(1.05);
+}
+
+.product-img-iu img {
+  width: 85%;
+  object-fit: contain;
+  border-radius: 10px;
+}
+
+.product-description-iu {
+  width: 100%;
+  text-align: center;
+  padding: 20px 15px 30px;
+}
+
+.product-description-iu h4 {
+  color: #111;
+  font-size: 1.15rem;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.product-description-iu p {
+  font-size: 0.95rem;
+  color: #555;
+  line-height: 1.5;
+  opacity: 0;
+  max-height: 0;
+  transition: all 0.4s ease;
+  overflow: hidden;
+}
+
+.product-iu:hover .product-description-iu p {
+  opacity: 1;
+  max-height: 350px;
+  margin-top: 10px;
+}
+
+@media (max-width: 1200px) {
+
+  .product-grid-iu {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .product-description-iu p {
+    opacity: 0;
+    max-height: 0;
+    margin-top: 0;
+    transform: translateY(10px);
+    transition: opacity 0.35s ease, max-height 0.35s ease, margin-top 0.35s ease, transform 0.35s ease;
+  }
+
+  .product-description-iu p.visible-iu {
+    opacity: 1;
+    max-height: 200px;
+    margin-top: 10px;
+    transform: translateY(0);
+  }
+
+  .product-img-iu img {
+    transform: scale(1);
+    transition: transform 0.4s ease;
+  }
+
+  .product-img-iu img.zoomed-iu {
+    transform: scale(1.05);
+  }
+}
+
+@media (max-width: 800px) {
+
+  .product-grid-iu {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .product-description-iu p {
+    opacity: 0;
+    max-height: 0;
+    margin-top: 0;
+    transform: translateY(10px);
+    transition: opacity 0.35s ease, max-height 0.35s ease, margin-top 0.35s ease, transform 0.35s ease;
+  }
+
+  .product-description-iu p.visible-iu {
+    opacity: 1;
+    max-height: 200px;
+    margin-top: 10px;
+    transform: translateY(0);
+  }
+
+  .product-img-iu img.zoomed-iu {
+    transform: scale(1.05);
+  }
+}
+
+@media (max-width: 500px) {
+
+  .product-grid-iu {
+    grid-template-columns: 1fr;
+  }
+
+  .product-description-iu p.visible-iu {
+    opacity: 1;
+    max-height: 200px;
+    margin-top: 10px;
+    transform: translateY(0);
+  }
+
+  .product-img-iu img.zoomed-iu {
+    transform: scale(1.05);
+  }
+}
+
+</style>
+
+<section class="product-section-iu">
+<div class="product-grid-iu">
+
+<div class="product-iu">
+  <div class="product-img-iu">
+    <img src="/Content/UploadFiles/b923f8ef-1.jpg">
+  </div>
+  <div class="product-description-iu">
+    <h4>Çizilmeye En Dayanıklı, Çizilme Karşıtı Yapışmaz Kaplama</h4>
+    <p>Titanyum Çizilme Karşıtı Kaplamayı Keşfet: Çizilmeye en dayanıklı yapışmaz kaplama*, Tefal'in standart kaplamalarına göre 6 kata kadar daha dayanıklı . * Tefal'in diğer yapışmaz kaplamalarıyla karşılaştırıldığında.</p>
+  </div>
+</div>
+
+<div class="product-iu">
+  <div class="product-img-iu">
+    <img src="/Content/UploadFiles/0f8c5430-2.jpg">
+  </div>
+  <div class="product-description-iu">
+    <h4>100% Güvenli Yapışmaz Kaplama</h4>
+    <p>0% PFOA, 0% kurşun, 0% kadmiyum* * Gıda temas regülasyonlarının gerektiği testlerden daha katı kontroller. Uygulanan regülasyonlarla uyumlu olarak PFOA içermemektedir. Kurşun ve kadmiyum içermemektedir ( Pb ve Cd içermemektedir) demek kaplamaların içine Pb ve Cd eklenmediği anlamına gelir. 0.005mg/kg seviyesinde bir geçiş yoktur.</p>
+  </div>
+</div>
+
+<div class="product-iu">
+  <div class="product-img-iu">
+    <img src="/Content/UploadFiles/220c1989-3.jpg">
+  </div>
+  <div class="product-description-iu">
+    <h4>Thermo-Signal™ teknolojisi</h4>
+    <p>Geliştirilmiş Thermo-Signal™ teknolojisi, tencere ideal başlangıç sıcaklığına ulaştığında tamamen kırmızıya döner ve her seferinde mükemmel renk, doku ve lezzete sahip lezzetli yemekler sağlar.</p>
+  </div>
+</div>
+
+<div class="product-iu">
+  <div class="product-img-iu">
+    <img src="/Content/UploadFiles/59edfa66-4.jpg">
+  </div>
+  <div class="product-description-iu">
+    <h4>Thermo-Fusion™ Üstün İndüksiyon</h4>
+    <p>Ekstra geniş bir ızgarayı kalın bir tabanla birleştiren Thermo-Fusion™+, her gün eşit pişmiş sonuçlar için hızlı ısınmayı ve tencere yüzeyi boyunca eşit ısı dağılımını garanti eder.</p>
+  </div>
+</div>
+
+<div class="product-iu">
+  <div class="product-img-iu">
+    <img src="/Content/UploadFiles/429610fd-5.jpg">
+  </div>
+  <div class="product-description-iu">
+    <h4>Farklı Pişirme Yöntemleri İçin İdeal Tasarım</h4>
+    <p>Derin ve geniş tasarımı sayesinde ister tava ister wok tava ister tencere gibi kullanım imkanı.</p>
+  </div>
+</div>
+
+<div class="product-iu">
+  <div class="product-img-iu">
+    <img src="/Content/UploadFiles/71e245e0-6.jpg">
+  </div>
+  <div class="product-description-iu">
+    <h4>Cam Kapak</h4>
+    <p>Şık cam kapağı sayesinde yemek pişirme işlemlerinizi kolaylıkla takip edin.</p>
+  </div>
+</div>
+
+<div class="product-iu">
+  <div class="product-img-iu">
+    <img src="/Content/UploadFiles/9a9e2011-7.jpg">
+  </div>
+  <div class="product-description-iu">
+    <h4>Tüm Ocak Tipleriyle Uyumludur</h4>
+    <p>İndüksiyon dahil tüm ocaklarla uyumludur ( gaz, elektrik, seramik, indüksiyon).</p>
+  </div>
+</div>
+
+<div class="product-iu">
+  <div class="product-img-iu">
+    <img src="/Content/UploadFiles/29fb1b96-8.jpg">
+  </div>
+  <div class="product-description-iu">
+    <h4>Yüksek Performans</h4>
+    <p>Günlük pişirme ihtiyaçlarınıza yönelik, yüksek performanslı, iç ve dışta temizliği kolaylaştıran yapışmaz kaplama ile tasarlanmıştır</p>
+  </div>
+</div>
+
+<div class="product-iu">
+  <div class="product-img-iu">
+    <img src="/Content/UploadFiles/bc4465b8-9.jpg">
+  </div>
+  <div class="product-description-iu">
+    <h4>Fransa'da Üretilmiştir</h4>
+    <p>Birinci sınıf işçilik ve uzmanlıkla Fransa'da tasarlandı ve üretildi.</p>
+  </div>
+</div>
+
+<div class="product-iu">
+  <div class="product-img-iu">
+    <img src="/Content/UploadFiles/7657493c-10.jpg">
+  </div>
+  <div class="product-description-iu">
+    <h4>Tefal: Dünyanın 1 Numaralı Tava Tencere Markası*</h4>
+    <p>Tefal mutfaktaki işleri kolaylaştırmak için sizinle. *Kaynak : Euromonitor, Ev ve Bahçe 2019 raporu, marka değer, 2018 verileri.</p>
+  </div>
+</div>
+
+</div>
+</section>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+  if (window.innerWidth <= 800) {
+
+    const products = document.querySelectorAll(".product-iu");
+    let activeCard = null;
+    let timeout = null;
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+
+        const el = entry.target;
+        const p = el.querySelector(".product-description-iu p");
+        const img = el.querySelector(".product-img-iu img");
+
+        if (entry.intersectionRatio === 1) {
+
+          if (activeCard && activeCard !== el) {
+            const oldP = activeCard.querySelector(".product-description-iu p");
+            const oldImg = activeCard.querySelector(".product-img-iu img");
+            oldP.classList.remove("visible-iu");
+            oldImg.classList.remove("zoomed-iu");
+          }
+
+          clearTimeout(timeout);
+          timeout = setTimeout(() => {
+            activeCard = el;
+            p.classList.add("visible-iu");
+            img.classList.add("zoomed-iu");
+          }, 100);
+
+        } else if (activeCard === el && entry.intersectionRatio < 0.8) {
+
+          clearTimeout(timeout);
+          timeout = setTimeout(() => {
+            p.classList.remove("visible-iu");
+            img.classList.remove("zoomed-iu");
+            activeCard = null;
+          }, 100);
+        }
+      });
+    }, { threshold: [0, 0.8, 1] });
+
+    products.forEach(p => observer.observe(p));
+  }
+});
+
+</script>

@@ -1,0 +1,589 @@
+<style type="text/css">.product-wrapper-iu-v2 {
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.section-iu {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.section-iu img,
+.carousel-track-iu img {
+  object-fit: cover;
+  display: block;
+  width: 100%;
+}
+
+.overlay-text-iu {
+  position: absolute;
+  top: 50%;
+  left: 60px;
+  transform: translateY(-50%);
+  color: white;
+  z-index: 2;
+  max-width: 500px;
+}
+
+.overlay-text-iu h2 {
+  font-size: 36px;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.overlay-text-iu p {
+  font-size: 18px;
+  line-height: 1.4;
+}
+
+.carousel-iu {
+  position: relative;
+  overflow: hidden;
+}
+
+.carousel-track-iu {
+  display: flex;
+  transition: transform 0.7s ease;
+}
+
+.carousel-slide-iu {
+  position: relative;
+  flex-shrink: 0;
+  width: 100%;
+}
+
+.carousel-text-iu {
+  position: absolute;
+  top: 55%;
+  left: 40px;
+  transform: translateY(-50%);
+  color: rgb(0, 0, 0);
+  z-index: 2;
+  max-width: 350px;
+}
+
+.carousel-text-iu h3 {
+  font-size: 24px !important;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.carousel-text-iu p {
+  font-size: 16px !important;
+  line-height: 1.4 !important;
+}
+
+.carousel-track-iu img {
+  flex-shrink: 0;
+  width: 100%;
+  object-fit: cover;
+}
+
+.carousel-nav-iu {
+  position: absolute;
+  bottom: 25px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+  z-index: 2;
+}
+
+.carousel-nav-iu span {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #327889;
+  cursor: pointer;
+}
+
+.carousel-nav-iu span.active {
+  background: #ff8738;
+}
+
+.hotspot-container-iu {
+    position: relative;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.hotspot-image-iu {
+    width: 100%;
+    display: block;
+}
+
+.hotspot-iu {
+    position: absolute;
+    width: 22px;
+    height: 22px;
+    background: #32788970;
+    border: 3px solid white;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0px 2px 6px #00000040;
+    transition: background 0.25s ease;
+}
+
+.hotspot-iu.active {
+    background: #ff8738;
+}
+
+.hotspot-popup-iu {
+    position: absolute;
+    background: white;
+    width: 280px;
+    padding: 14px 18px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+    font-size: 14px;
+    display: none;
+    z-index: 2;
+    animation: fadeInIU .25s ease;
+}
+
+.hotspot-close-btn-iu {
+    position: absolute;
+    right: 10px;
+    top: 8px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+  #p1{left:25%; top:68%;}
+  #p2{left:34%; top:24%;} 
+  #p3{left:42%; top:60%;}  
+
+@keyframes fadeInIU {
+    from { opacity: 0; transform: translateY(10px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 1080px) {
+
+  .section-iu img,
+  .carousel-track-iu img {
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .text-block-iu {
+    left: 25px;
+    width: 400px;
+  }
+
+  .text-block-iu img {
+    width: 72px;
+    height: 72px !important;
+    margin-bottom: 12px;
+  }
+
+  .text-block-iu h3 {
+    font-size: 26px !important;
+    margin-bottom: 8px;
+  }
+
+  .text-block-iu p {
+    font-size: 15px !important;
+  }
+
+  .carousel-nav-iu span {
+    width: 10px;
+    height: 10px !important;
+  }
+  
+  #p1, #p2, #p3{
+      left: 50% !important;
+      transform: translateX(-50%);
+  }
+  #p1{top: 78% !important;}
+  #p2{top: 63% !important;} 
+  #p3{top: 70% !important;} 
+
+.overlay-text-iu h2 {
+  font-size: 20px !important;
+  line-height: 1.5em !important;
+}
+
+.overlay-text-iu p {
+  font-size: 12px !important;
+  line-height: 1.5em !important;
+}
+
+}
+
+@media (max-width: 480px) {
+
+  .section-iu img,
+  .carousel-track-iu img {
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .text-block-iu {
+    top: 50%;
+    left: 20px;
+    transform: translateY(-50%);
+    width: 310px;
+  }
+
+  .text-block-iu img {
+    width: 60px;
+    height: 60px !important;
+    margin-bottom: 10px;
+  }
+
+  .text-block-iu h3 {
+    font-size: 14px !important;
+    line-height: 1.2;
+    margin-bottom: 6px;
+  }
+
+  .text-block-iu p {
+    font-size: 12px !important;
+    line-height: 1.35;
+  }
+
+  .carousel-nav-iu {
+    bottom: 5px;
+  }
+
+.carousel-text-iu{
+  background-color: #ffffff90;
+  border-radius: 12px;
+  padding: 5px;
+  left: 30px;
+  top: 57%;
+}
+
+.carousel-text-iu h3 {
+    font-size: 12px !important;
+    line-height: 1.2em;
+    margin-bottom: 0px !important;
+}  
+
+.carousel-text-iu p {
+    font-size: 10px !important;
+    line-height: 1.35 !important;
+    margin-bottom: 0px !important;
+}  
+
+  .carousel-nav-iu span {
+    width: 8px;
+    height: 8px !important;
+  }
+
+.overlay-text-iu {
+  background-color: #00000090;
+  border-radius: 12px;
+  padding: 5px;
+  left: 15px !important;
+}
+
+.overlay-text-iu h2 {
+  font-size: 14px !important;
+  line-height: 1.5em !important;
+}
+
+.overlay-text-iu p {
+  font-size: 10px !important;
+  line-height: 1.5em !important;
+}
+
+}
+</style>
+<div class="product-wrapper-iu-v2">
+<section class="section-iu"><img alt="" src="/Content/UploadFiles/7419fdcc-1.jpg" />
+    <div class="overlay-text-iu">
+        <h2>Yeni temizlenmiş bir eve dönmenin kolaylığını keşfedin</h2>
+        <p>Robotumuz iki kat emiş gücüyle¹ siler ve süpürür, size de zahmetsiz temizliğin keyfini çıkarmak kalır. Şık Otomatik Boşaltma istasyonuyla 70 gün² boyunca zahmetsiz temizliğin konforunu yaşayın. Evinizin ihtiyaçlarına uyarlanmış gelişmiş temizlik performansı sizinle.</p>
+    </div>        
+</section>
+
+<section class="section-iu"><img alt="" src="/Content/UploadFiles/380fc5ad-2.jpg" />
+</section>
+
+<div class="hotspot-container-iu" id="hotspotWrapperIU">
+    <img src="/Content/UploadFiles/2322ceea-3.jpg" class="hotspot-image-iu">
+
+    <div class="hotspot-iu" style="left:24%; top:62%;" onclick="openPopupIU(event,'p1', this)"></div>
+    <div id="p1" class="hotspot-popup-iu">
+        <span class="hotspot-close-btn-iu" onclick="closePopupIU('p1')">×</span>
+            <p style='font-weight: bold'>Otomatik Toz Boşaltma İstasyonu</p>
+            <p>70 gün boyunca zahmetsiz temizlik sunar</p>
+    </div>
+
+    <div class="hotspot-iu" style="left:33%; top:47%;" onclick="openPopupIU(event,'p2', this)"></div>
+    <div id="p2" class="hotspot-popup-iu">
+        <span class="hotspot-close-btn-iu" onclick="closePopupIU('p2')">×</span>
+            <p style='font-weight: bold'>Tek seferde süpürün ve silin</p>
+            <p>Zahmetsiz günlük ıslak ve kuru emizlik</p>
+      </div>
+
+    <div class="hotspot-iu" style="left:40%; top:55%;" onclick="openPopupIU(event,'p3', this)"></div>
+    <div id="p3" class="hotspot-popup-iu">
+        <span class="hotspot-close-btn-iu" onclick="closePopupIU('p3')">×</span>
+            <p style='font-weight: bold'>Rutin temizlik</p>
+            <p>Günlük temizlik için idealdir</p>            
+    </div>
+</div>
+
+<section class="section-iu">
+<div class="carousel-iu">
+
+    <div class="carousel-track-iu">
+
+        <div class="carousel-slide-iu">
+            <img src="/Content/UploadFiles/0ac10e25-4.jpg">
+            <div class="carousel-text-iu">
+                <h3>Tek Seferde Süpürüp Siler, Tozu ve Kiri Zahmetsizce Temizler</h3>
+                <p>Robot, sert zeminleri tek seferde süpürüp silerek her gün zeminde biriken ince toz tabakasını ortadan kaldırır. Yalnızca süpürmeye kıyasla daha fazla ince tozu yok eder, böylece çıplak ayakla dolaşsanız bile ayaklarınızın tabanı temiz kalır.</p>
+            </div>
+        </div>
+
+        <div class="carousel-slide-iu">
+            <img src="/Content/UploadFiles/9f58e4ed-5.jpg">
+            <div class="carousel-text-iu">
+                <h3>Toz ve Kiri Toplamak İçin 6000 PA Emiş Gücü</h3>
+                <p>Robot, 6000 PA emiş gücü¹ sayesinde kırıntı ve evcil hayvan tüyü gibi büyük kirleri toplayabilir. Yerde günlük olarak biriken kirleri gidermenin yanı sıra halı ve kilimlerdeki daha ince tozları da ortadan kaldırır³.</p>
+            </div>
+        </div>
+
+        <div class="carousel-slide-iu">
+            <img src="/Content/UploadFiles/5b029d61-6.jpg">
+            <div class="carousel-text-iu">
+                <h3>Zemininizde Maksimum Alan Temizliği: Hiçbir Noktayı Kaçırmayın</h3>
+                <p>Robot süpürgemizin, evinizi titiz bir şekilde haritalamak için 360 derece tarama özelliğine sahip LDS radar teknolojisiyle temizlik deneyiminiz bambaşka bir seviyeye çıkar. Robot süpürgemiz benzersiz hassasiyetle birden fazla odada zahmetsizce gezinir, tüm zeminin kapsama alınmasını sağlar. Düşük ışık koşullarında bile tertemiz bir ortamın keyfini çıkarabilirsiniz.</p>
+            </div>
+        </div>
+
+        <div class="carousel-slide-iu">
+            <img src="/Content/UploadFiles/f662909a-7.jpg">
+            <div class="carousel-text-iu">
+                <h3>Otomatik Boşaltma İstasyonuyla 70 Gün Boyunca Zahmetsiz Kolaylık</h3>
+                <p>Şık Otomatik Boşaltma istasyonuyla 70 gün² boyunca zahmetsiz temizliğin konforunu yaşayın. Robot kendini otomatik olarak Otomatik Boşaltma istasyonuna boşaltır. İstasyonda toz ve diğer kirleri 70 güne kadar tutabilen ve sizi hazne boşaltma zahmetinden kurtaran 3,0 litrelik bir S-bag bulunur. Evrensel S-bag, toz bulutu oluşturmadan hijyenik olarak atılabildiğinden astım ve alerji sorunu olan kişiler için idealdir.</p>
+            </div>
+        </div>
+
+        <div class="carousel-slide-iu">
+            <img src="/Content/UploadFiles/49beb070-8.jpg">
+            <div class="carousel-text-iu">
+                <h3>Tek Pil Şarjıyla 120 Dakikaya Kadar Temizlik</h3>
+                <p>Tek şarjla 120 m²'ye kadar alana yetecek ve 120 dakikaya⁴ kadar çalışma sağlayacak kapasitesiyle güç kaybı endişesi olmadan kesintisiz temizlik. Robot, pil seviyesi azaldığında şarj olmak üzere otomatik olarak istasyona döner. Pil şarj olduktan sonra da temizliğe devam etmek için kaldığı yere geri döner.</p>
+            </div>
+        </div>
+
+        <div class="carousel-slide-iu">
+            <img src="/Content/UploadFiles/4f65fd3e-9.jpg">
+            <div class="carousel-text-iu">
+                <h3>Halı Üzerinde Emiş Gücünü Otomatik Olarak Artırır</h3>
+                <p>Robot, halı veya kilim üzerine çıktığında halının derinliklerine gizlenmiş ince toz parçacıklarını yakalamak için emiş gücünü otomatik olarak artırır³.</p>
+            </div>
+        </div>
+    </div>
+<div class="carousel-nav-iu">&nbsp;</div>
+</div>
+</section>
+
+<section class="section-iu">
+<div class="carousel-iu">
+
+    <div class="carousel-track-iu">
+
+        <div class="carousel-slide-iu">
+            <img src="/Content/UploadFiles/e405fe72-10.jpg">
+            <div class="carousel-text-iu">
+                <h3>Temizliğinizi Kişiselleştirin ve Evinizin İhtiyaçlarına Uyarlayın</h3>
+                <p>Philips HomeRun robot uygulaması, pratik ve kolay kullanım sunacak şekilde tasarlanmıştır. Adım adım rehberlik ve faydalı videolarla robotunuzdan en iyi şekilde faydalanmanızı sağlar. Temizlik performansını kontrol etmek, raporlamak ve güncellemek için robotunuzla her yerden iletişim kurabilirsiniz.</p>
+            </div>
+        </div>
+
+        <div class="carousel-slide-iu">
+            <img src="/Content/UploadFiles/956d833a-11.jpg">
+            <div class="carousel-text-iu">
+                <h3>Gerçek Zamanlı Görüntüleme ve Akıllı Planlama</h3>
+                <p>Uygulama, robotun temizlediği alanları gerçek zamanlı olarak gösterir. Her odanın nasıl temizleneceğini belirleyebilir, robotun girmesini istemediğiniz bölgeleri sınırlandırabilir ve temizlik zamanını planlayabilirsiniz. Eve döndüğünüzde temiz bir ortam sizi karşılar.</p>
+            </div>
+        </div>
+
+        <div class="carousel-slide-iu">
+            <img src="/Content/UploadFiles/3793a845-12.jpg">
+            <div class="carousel-text-iu">
+                <h3>Evinize Uyumlu Şık ve Kompakt İstasyon</h3>
+                <p>Şık tasarımlı istasyonumuz, evinize mükemmel şekilde uyum sağlarken %30'dan fazla⁵ alan tasarrufu imkanı sunar. 360° lazer navigasyon ile hassas ve kapsamlı bir haritalama yapar.</p>
+            </div>
+        </div>
+
+        <div class="carousel-slide-iu">
+            <img src="/Content/UploadFiles/ffaccfac-13.jpg">
+            <div class="carousel-text-iu">
+                <h3>Girilmeyecek Bölge</h3>
+                <p>Kırılacak nesneleri korumak için veya odalarınızı girilmeyecek bölge olarak belirleyebiliriz.</p>
+            </div>
+        </div>
+
+        <div class="carousel-slide-iu">
+            <img src="/Content/UploadFiles/56625033-14.jpg">
+            <div class="carousel-text-iu">
+                <h3>Moplanmayacak Bölge</h3>
+                <p>Moplanmayacak bölgeleri ayarlayın, böylece robot bir odada Islak ve Kuru temizlik yaparken halılardan kaçınır</p>
+            </div>
+        </div>
+
+        <div class="carousel-slide-iu">
+            <img src="/Content/UploadFiles/62b85c90-15.jpg">
+            <div class="carousel-text-iu">
+                <h3>5 Adede Kadar Haritayı Hafızasında Depolar</h3>
+                <p>Evinizin 5 adede kadar ayrıntılı zemin haritasını oluşturun ve saklayın.</p>
+            </div>
+        </div>
+    </div>
+<div class="carousel-nav-iu">&nbsp;</div>
+</div>
+</section>
+
+<section class="section-iu"><img alt="" src="/Content/UploadFiles/aa61d0b4-16.jpg"/>
+    <p style="padding: 0px 50px; font-size: 12px !important;">
+        *1 - XU2100/10 & XU2100/20 ile kıyaslandığında.
+        <br>*2 - Kullanım şekline ve durumuna bağlıdır
+        <br>*3 - Süpürme ve silme modunda en düşük emiş gücü ve paspas ıslaklığı ayarıyla test edilmiştir.
+        <br>*4 - Yalnızca süpürme modunda en düşük emiş gücü ayarıyla test edilmiştir.
+    </p>
+</section>
+
+</div>
+
+<script>
+document.querySelectorAll('.carousel-iu').forEach(carousel => {
+
+    // --- Swipe Controls (sağa-sola kaydırma) ---
+    let startX = 0;
+    let startY = 0;
+    let isMoving = false;
+
+    carousel.addEventListener("touchstart", (e) => {
+    startX = e.touches[0].clientX;
+    startY = e.touches[0].clientY;
+    isMoving = true;
+    });
+
+    carousel.addEventListener("touchmove", (e) => {
+    if (!isMoving) return;
+
+    const dx = e.touches[0].clientX - startX;
+    const dy = e.touches[0].clientY - startY;
+
+    // Dikeyden daha fazla yatay hareket varsa → swipe kabul edilir
+    if (Math.abs(dx) > Math.abs(dy)) {
+        e.preventDefault(); // yukarı aşağı kaydırmayı engellemez
+    }
+    });
+
+    carousel.addEventListener("touchend", (e) => {
+    if (!isMoving) return;
+    isMoving = false;
+
+    const dx = e.changedTouches[0].clientX - startX;
+
+    // Sağ -> Sol (ileri)
+    if (dx < -50) {
+        current = (current + 1) % total;
+        goTo(current);
+        resetAutoSlide();
+    }
+
+    // Sol -> Sağ (geri)
+    if (dx > 50) {
+        current = (current - 1 + total) % total;
+        goTo(current);
+        resetAutoSlide();
+    }
+    });
+
+  let current = 0;
+  const track = carousel.querySelector('.carousel-track-iu');
+  const slides = Array.from(track.children);
+
+  const nav = carousel.querySelector('.carousel-nav-iu');
+
+  nav.innerHTML = "";
+  slides.forEach((_, i) => {
+    const dot = document.createElement('span');
+    dot.dataset.slide = i;
+    if (i === 0) dot.classList.add("active");
+    nav.appendChild(dot);
+  });
+
+  const dots = Array.from(nav.querySelectorAll("span"));
+  const total = slides.length;
+
+  let autoSlide;
+
+  function startAutoSlide() {
+    stopAutoSlide();
+    autoSlide = setInterval(() => {
+      current = (current + 1) % total;
+      goTo(current);
+    }, 8000);
+  }
+
+  function stopAutoSlide() {
+    if (autoSlide) clearInterval(autoSlide);
+  }
+
+  function resetAutoSlide() {
+    stopAutoSlide();
+    startAutoSlide();
+  }
+  // -----------------------------------------------------
+
+  function goTo(i) {
+    i = Number(i);
+    current = i;
+    track.style.transform = `translateX(-${i * 100}%)`;
+
+    dots.forEach(d => d.classList.remove('active'));
+    dots[i].classList.add('active');
+  }
+
+  dots.forEach(dot => {
+    dot.addEventListener('click', () => {
+      goTo(dot.dataset.slide);
+      resetAutoSlide(); 
+    });
+  });
+
+  carousel.addEventListener('touchstart', resetAutoSlide);
+  carousel.addEventListener('mousedown', resetAutoSlide);
+
+  startAutoSlide();
+
+});
+
+
+function openPopupIU(event, id, hotspotEl) {
+    event.stopPropagation(); 
+
+    document.querySelectorAll('.hotspot-popup-iu').forEach(p => p.style.display = 'none');
+    document.querySelectorAll('.hotspot-iu').forEach(h => h.classList.remove('active'));
+
+    hotspotEl.classList.add('active');
+    document.getElementById(id).style.display = 'block';
+}
+
+function closePopupIU(id) {
+    document.getElementById(id).style.display = 'none';
+    document.querySelectorAll('.hotspot-iu').forEach(h => h.classList.remove('active'));
+}
+
+document.getElementById("hotspotWrapperIU").addEventListener("click", function(e) {
+    if (e.target.classList.contains("hotspot-iu")) return;
+
+    document.querySelectorAll('.hotspot-popup-iu').forEach(p => p.style.display = 'none');
+    document.querySelectorAll('.hotspot-iu').forEach(h => h.classList.remove('active'));
+});
+</script>

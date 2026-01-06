@@ -1,0 +1,161 @@
+<style>
+.section-iu {
+  background: linear-gradient(180deg, #cd9fa3, #916964, #b4908b, #775853);
+  overflow: hidden;
+  color: #ffffff;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.section-iu .big-item-iu {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 60px;
+  padding: 20px 40px;
+}
+
+.section-iu .big-item-iu img {
+  width: 400px;
+  border-radius: 12px;
+  object-fit: cover;
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+.section-iu .big-item-iu img:hover {
+  transform: scale(1.03);
+}
+
+.section-iu .text-iu {
+  width: 100%;
+  animation: fadeIn-iu 1s ease forwards;
+  opacity: 0;
+}
+
+.section-iu .text-iu h2 {
+  font-size: 1.5rem !important;
+  margin-bottom: 15px;
+  position: relative;
+  color: #ffffff;
+}
+
+.section-iu .text-iu h2::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(90deg, #c24e57, #960928);
+  margin-top: 8px;
+  border-radius: 2px;
+}
+
+.big-item-iu.right-image-iu .text-iu{
+  text-align: leftt;
+}
+
+.section-iu .text-iu p {
+  font-size: 16px !important;
+  line-height: 1.6em !important;
+  color: #ffffff;
+}
+
+@keyframes fadeIn-iu {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 992px) {
+  .section-iu .big-item-iu {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .section-iu .big-item-iu img {
+    width: 100%;
+  }
+
+  .section-iu .text-iu {
+    width: 100%;
+    opacity: 1;
+    text-align: center;
+  }
+
+  .big-item-iu.right-image-iu .text-iu{
+  text-align: center !important;
+}
+
+.section-iu .text-iu h2::after {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+}
+
+</style>
+
+<section class="section-iu">
+  <div class="big-item-iu left-image-iu">
+    <img src="/Content/UploadFiles/9a1403e3-1.jpg" alt="">
+    <div class="text-iu">
+      <h2>Hızlı Sonuçlar İçin Sadece Ayda 2 Kez Uygulama Yapın</h2>
+      <p>
+Başlangıçta 2 haftada bir, yani diğer markalara göre yarı yarıya daha az uygulama. Ardından ayda sadece bir kez rötuş. Hepsi bu kadar. İki alt bacağı tamamlamak 8,5 dakika sürer.
+      </p>
+    </div>
+  </div>
+
+  <div class="big-item-iu right-image-iu">
+    <div class="text-iu">
+      <h2 >SenseIQ ile Hassas ve Rahat Bir Kullanım</h2>
+      <p>Lumea 9000 Serisi, kolay ayarlanabilir beş ışık ayarına sahiptir. SmartSkin sensörümüz, cilt tonunuzu algılar ve en konforlu ayarı bulmanıza yardımcı olur. Akıllı başlıklar, her vücut bölgesine uygun bir uygulama sağlar.</p>
+    </div>
+    <img src="/Content/UploadFiles/2ec97917-2.jpg" alt="">
+  </div>
+
+  <div class="big-item-iu left-image-iu">
+    <img src="/Content/UploadFiles/4ed7e525-3.jpg" alt="">
+    <div class="text-iu">
+      <h2>Rahat Kullanım İçin Kablolu ve Kablosuz Seçenekler</h2>
+      <p>
+Philips Lumea, rahat ve kullanımı kolay olacak şekilde tasarlandı. Cihazı, bacaklarınız gibi geniş vücut bölgelerinde hızlı uygulama için kablolu olarak kullanın veya ulaşılması zor bölgelerde hassas uygulama için kablosuz pil modunu tercih edin.
+      </p>
+    </div>
+  </div>
+
+  <div class="big-item-iu right-image-iu">
+    <div class="text-iu">
+      <h2>Yüz ve Vücut İçin 2 Akıllı Başlıklı, Eksiksiz Çözüm</h2>
+      <p>Vücudunuzun kıvrımlarına mükemmel şekilde uyum sağlayan, özel olarak tasarlanmış uygulama başlıkları takıldığında her vücut bölgesi için en etkili programları tetikler. Yüz: Düz tasarım ve UV filtreli küçük pencere. Vücut: İçe doğru kıvrımlı tasarım ve geniş pencere.</p>
+    </div>
+    <img src="/Content/UploadFiles/51640728-4.jpg" alt="">
+  </div>
+
+  <div class="big-item-iu left-image-iu">
+    <img src="/Content/UploadFiles/437c1c70-5.jpg" alt="">
+    <div class="text-iu">
+      <h2>Kolay ve Etkili Olması İçin Dermatologlarla Geliştirilmiştir</h2>
+      <p>
+Sağlık teknolojisinde lider olan Philips; evinizde kolay, etkili ve güvenli bir şekilde kullanabilmeniz için dermatologlara danışarak Lumea IPL'yi geliştirdi. Profesyonel salonlarda kullanılan teknolojiden türetilen Lumea IPL, hassas bölgelerde bile hassas uygulama sunar.
+      </p>
+    </div>
+  </div>
+
+  <div class="big-item-iu right-image-iu">
+    <div class="text-iu">
+      <h2>Philips Lumea IPL uygulamasıyla rutin işlerinizi optimize edin</h2>
+      <p>Ücretsiz koçluk uygulamamız, tedavi programınızı planlamanıza ve bu plana bağlı kalmanıza yardımcı olur, ardından sizi her seansta adım adım yönlendirir. 2,1 milyondan fazla kullanıcı tarafından indirildi.</p>
+    </div>
+    <img src="/Content/UploadFiles/440de13e-6.jpg" alt="">
+  </div>
+  
+  <div class="big-item-iu left-image-iu">
+    <img src="/Content/UploadFiles/14a3c7b5-7.jpg" alt="">
+    <div class="text-iu">
+      <h2>Çoğu Cilt Tonu ve Tüy Rengi İçin Uygundur</h2>
+      <p>
+IPL uygulaması için tüy rengindeki pigmentle cilt tonundaki pigment arasında kontrast olması gerekir. Bu nedenle bu teknoloji doğal koyu sarı, kahverengi ve siyah tüylerde ve açık ila koyu kahverengi cilt tonlarında etkilidir (I-V).
+      </p>
+    </div>
+  </div>
+
+</section>

@@ -1,0 +1,402 @@
+<style type="text/css">.product-wrapper-iu-v2 {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.section-iu {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.section-iu img,
+.carousel-track-iu img {
+  width: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.carousel-iu {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.carousel-track-iu {
+  display: flex;
+  height: 100%;
+  transition: transform 0.7s ease;
+}
+
+.carousel-track-iu img {
+  flex-shrink: 0;
+  width: 100%;
+  object-fit: cover;
+}
+
+.carousel-nav-iu {
+  position: absolute;
+  bottom: 25px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+  z-index: 2;
+}
+
+.carousel-nav-iu span {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #0038a1;
+  cursor: pointer;
+}
+
+.carousel-nav-iu span.active {
+  background: #ac42c4;
+}
+
+.carousel-arrow-iu {
+  position: absolute;
+  top: 94%;
+  transform: translateY(-50%);
+  background: #001b4d9a;
+  color: #f8daff;
+  border: none;
+  font-size: 32px;
+  line-height: 1;
+  padding: 0px;
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.carousel-arrow-iu.prev { left: 40%; }
+.carousel-arrow-iu.next { right: 40%; }
+
+.carousel-arrow-iu:hover {
+  background: #001b4dcc;
+}
+
+.carousel-arrow-iu:hover .arrow-icon-iu {
+  transform: translateX(2px);
+}
+
+.carousel-arrow-iu.prev:hover .arrow-icon-iu {
+  transform: translateX(-2px);
+}
+
+.arrow-icon-iu {
+  width: 20px;
+  height: 20px;
+  fill: none;
+  stroke: #f8daff;
+  stroke-width: 2.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  transition: transform 0.2s ease;  
+}
+
+.hotspot-container-iu {
+    position: relative;
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.hotspot-image-iu {
+    width: 100%;
+    display: block;
+}
+
+.hotspot-iu {
+    position: absolute;
+    width: 22px;
+    height: 22px;
+    background: #3a3e5481;
+    border: 3px solid white;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0px 2px 6px rgba(0,0,0,0.25);
+    transition: background 0.25s ease;
+}
+
+.hotspot-iu.active {
+    background: #ff8738;
+}
+
+.hotspot-popup-iu {
+    position: absolute;
+    background: white;
+    width: 280px;
+    padding: 14px 18px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+    font-size: 14px;
+    display: none;
+    z-index: 2;
+    animation: fadeInIU .25s ease;
+}
+
+.hotspot-close-btn-iu {
+    position: absolute;
+    right: 10px;
+    top: 8px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+  #p1{left:55%; top:72%;}
+  #p2{left:17%; top:40%;} 
+  #p3{left:75%; top:52%;} 
+  #p4{left:52%; top:20%;} 
+
+@keyframes fadeInIU {
+    from { opacity: 0; transform: translateY(10px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 1080px) {
+
+  .section-iu img,
+  .carousel-track-iu img {
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .text-block-iu {
+    left: 25px;
+    width: 400px;
+  }
+
+  .text-block-iu img {
+    width: 72px;
+    height: 72px !important;
+    margin-bottom: 12px;
+  }
+
+  .text-block-iu h3 {
+    font-size: 26px !important;
+    margin-bottom: 8px;
+  }
+
+  .text-block-iu p {
+    font-size: 15px !important;
+  }
+
+  .carousel-nav-iu span {
+    width: 10px;
+    height: 10px !important;
+  }
+  
+  #p1, #p2, #p3, #p4 {
+      left: 50% !important;
+      transform: translateX(-50%);
+  }
+  #p1{top: -73% !important;}
+  #p2{top: -35% !important;} 
+  #p3{top: -72% !important;} 
+  #p4{top: 30% !important;} 
+}
+
+
+@media (max-width: 480px) {
+
+  .section-iu img,
+  .carousel-track-iu img {
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .text-block-iu {
+    top: 50%;
+    left: 20px;
+    transform: translateY(-50%);
+    width: 310px;
+  }
+
+  .text-block-iu img {
+    width: 60px;
+    height: 60px !important;
+    margin-bottom: 10px;
+  }
+
+  .text-block-iu h3 {
+    font-size: 16px !important;
+    line-height: 1.2;
+    margin-bottom: 6px;
+  }
+
+  .text-block-iu p {
+    font-size: 12px !important;
+    line-height: 1.35;
+  }
+
+  .carousel-nav-iu {
+    bottom: 18px;
+  }
+
+  .carousel-nav-iu span {
+    width: 8px;
+    height: 8px !important;
+  }
+}
+</style>
+<div class="product-wrapper-iu-v2">
+<section class="section-iu"><img alt="" src="/Content/UploadFiles/5c1af869-1.jpg" />
+</section>
+
+<section class="section-iu"><img alt="" src="/Content/UploadFiles/4568c601-2.jpg" />
+</section>
+
+<div class="hotspot-container-iu" id="hotspotWrapperIU">
+    <img src="/Content/UploadFiles/ba62d840-3.jpg" class="hotspot-image-iu">
+
+    <div class="hotspot-iu" style="left:55%; top:65%;" onclick="openPopupIU(event,'p1', this)"></div>
+    <div id="p1" class="hotspot-popup-iu">
+        <span class="hotspot-close-btn-iu" onclick="closePopupIU('p1')">×</span>
+        <p style='font-weight: bold'>Kullanışlı Toz Fırçası</p>
+        <p>Tutma yerine yerleștirilen toz fırçası aleti mobilyalarınız, düz yüzeyler ve döșemeler için her zaman kullanıma hazırdır</p>
+    </div>
+
+    <div class="hotspot-iu" style="left:40%; top:65%;" onclick="openPopupIU(event,'p2', this)"></div>
+    <div id="p2" class="hotspot-popup-iu">
+        <span class="hotspot-close-btn-iu" onclick="closePopupIU('p2')">×</span>
+        <p style='font-weight: bold'>Evcil Hayvan Sahipleri için İdeal</p>
+        <p>Süper Turbo Fırça halıları, evcil hayvan tüylerini ve tozları derinlemesine ve kolayca temizler</p>
+      </div>
+
+    <div class="hotspot-iu" style="left:75%; top:45%;" onclick="openPopupIU(event,'p3', this)"></div>
+    <div id="p3" class="hotspot-popup-iu">
+        <span class="hotspot-close-btn-iu" onclick="closePopupIU('p3')">×</span>
+        <p style='font-weight: bold'>Alerjisi Olanlar için İdeal</p>
+        <p>Allergy H13 filtresi polen, evcil hayvan tüyü ve toz akarları dahil ince toz partiküllerinin %99,9'unu* yakalar</p>
+    </div>
+
+    <div class="hotspot-iu" style="left:73%; top:15%;" onclick="openPopupIU(event,'p4', this)"></div>
+    <div id="p4" class="hotspot-popup-iu">
+        <span class="hotspot-close-btn-iu" onclick="closePopupIU('p4')">×</span>
+        <p style='font-weight: bold'>Dar Alanlarda Kolay Kullanım</p>
+        <p>ErgoGrip bașlığı, dar alanlara kolayca ulașabilmeniz amacıyla konfor ve verimlilik için tasarlanmıștır.</p>
+    </div>
+
+</div>
+
+<section class="section-iu">
+<div class="carousel-iu">
+
+<button class="carousel-arrow-iu prev">
+  <svg viewBox="0 0 24 24" class="arrow-icon-iu">
+    <path d="M15 18l-6-6 6-6" />
+  </svg>
+</button>
+
+
+<div class="carousel-track-iu">
+    <img src="/Content/UploadFiles/b3da029c-4.jpg" /> 
+    <img src="/Content/UploadFiles/391019f8-5.jpg" /> 
+    <img src="/Content/UploadFiles/a14cd490-6.jpg" /> 
+    <img src="/Content/UploadFiles/fe019a01-7.jpg" /> 
+    <img src="/Content/UploadFiles/f26b8954-8.jpg" /> 
+    <img src="/Content/UploadFiles/4f2782be-9.jpg" /> 
+</div>
+
+<button class="carousel-arrow-iu next">
+  <svg viewBox="0 0 24 24" class="arrow-icon-iu">
+    <path d="M9 6l6 6-6 6" />
+  </svg>
+</button>
+
+
+<div class="carousel-nav-iu">&nbsp;</div>
+</div>
+</section>
+
+<section class="section-iu"><img alt="" src="/Content/UploadFiles/f5c7e55a-10.jpg" />
+    
+</section>
+</div>
+
+<script>
+document.querySelectorAll('.carousel-iu').forEach(carousel => {
+
+  let current = 0;
+  const track = carousel.querySelector('.carousel-track-iu');
+  const slides = Array.from(track.children);
+
+  const nav = carousel.querySelector('.carousel-nav-iu');
+
+  nav.innerHTML = "";
+  slides.forEach((_, i) => {
+    const dot = document.createElement('span');
+    dot.dataset.slide = i;
+    if (i === 0) dot.classList.add("active");
+    nav.appendChild(dot);
+  });
+
+  const dots = Array.from(nav.querySelectorAll("span"));
+  const total = slides.length;
+
+  function goTo(i) {
+    i = Number(i);
+    current = i;
+    track.style.transform = `translateX(-${i * 100}%)`;
+
+    dots.forEach(d => d.classList.remove('active'));
+    dots[i].classList.add('active');
+  }
+
+  dots.forEach(dot => {
+    dot.addEventListener('click', () => {
+      goTo(dot.dataset.slide);
+    });
+  });
+
+  const prevBtn = carousel.querySelector('.carousel-arrow-iu.prev');
+const nextBtn = carousel.querySelector('.carousel-arrow-iu.next');
+
+prevBtn.addEventListener('click', () => {
+  current = (current - 1 + total) % total;
+  goTo(current);
+});
+
+nextBtn.addEventListener('click', () => {
+  current = (current + 1) % total;
+  goTo(current);
+});
+
+});
+
+function openPopupIU(event, id, hotspotEl) {
+    event.stopPropagation(); 
+
+
+    document.querySelectorAll('.hotspot-popup-iu').forEach(p => p.style.display = 'none');
+
+    document.querySelectorAll('.hotspot-iu').forEach(h => h.classList.remove('active'));
+
+    hotspotEl.classList.add('active');
+
+    document.getElementById(id).style.display = 'block';
+}
+
+function closePopupIU(id) {
+    document.getElementById(id).style.display = 'none';
+
+    document.querySelectorAll('.hotspot-iu').forEach(h => h.classList.remove('active'));
+}
+
+document.getElementById("hotspotWrapperIU").addEventListener("click", function(e) {
+    if (e.target.classList.contains("hotspot-iu")) return;
+
+    document.querySelectorAll('.hotspot-popup-iu').forEach(p => p.style.display = 'none');
+    document.querySelectorAll('.hotspot-iu').forEach(h => h.classList.remove('active'));
+});
+</script>

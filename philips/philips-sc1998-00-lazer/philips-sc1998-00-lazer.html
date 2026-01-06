@@ -1,0 +1,168 @@
+<style>
+.section-iu {
+  background: linear-gradient(180deg, #cd9fa3, #916964, #b4908b, #775853);
+  overflow: hidden;
+  color: #ffffff;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.banner-iu{
+    width: 100%;
+}
+
+.section-iu .big-item-iu {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 60px;
+  padding: 20px 40px;
+}
+
+.section-iu .big-item-iu img {
+  width: 400px;
+  border-radius: 12px;
+  object-fit: cover;
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+.section-iu .big-item-iu img:hover {
+  transform: scale(1.03);
+}
+
+.section-iu .text-iu {
+  width: 100%;
+  animation: fadeIn-iu 1s ease forwards;
+  opacity: 0;
+}
+
+.section-iu .text-iu h2 {
+  font-size: 1.5rem !important;
+  margin-bottom: 15px;
+  position: relative;
+  color: #ffffff;
+}
+
+.section-iu .text-iu h2::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(90deg, #c24e57, #960928);
+  margin-top: 8px;
+  border-radius: 2px;
+}
+
+.big-item-iu.right-image-iu .text-iu{
+  text-align: leftt;
+}
+
+.section-iu .text-iu p {
+  font-size: 16px !important;
+  line-height: 1.6em !important;
+  color: #ffffff;
+}
+
+@keyframes fadeIn-iu {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 992px) {
+  .section-iu .big-item-iu {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .section-iu .big-item-iu img {
+    width: 100%;
+  }
+
+  .section-iu .text-iu {
+    width: 100%;
+    opacity: 1;
+    text-align: center;
+  }
+
+  .big-item-iu.right-image-iu .text-iu{
+  text-align: center !important;
+}
+
+.section-iu .text-iu h2::after {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+}
+
+</style>
+
+<section class="section-iu">
+  <div class="banner-iu">
+    <img src="/Content/UploadFiles/49f38bbe-BANNER.png">
+  </div>
+  <div class="big-item-iu left-image-iu">
+    <img src="/Content/UploadFiles/c0be930e-1.png" alt="">
+    <div class="text-iu">
+      <h2>Yalnızca 2 Haftada Bir Uygulamayla Hızlı Sonuçlar</h2>
+      <p>
+Yalnızca 2 haftada bir 4 uygulamadan oluşan ilk aşamaya başlayın. Bu uygulama sayısı, diğer markaların uygulama sayısının yarısı kadardır. Ardından sonuçları korumak için aylık rötuşlar yapın.
+      </p>
+    </div>
+  </div>
+
+  <div class="big-item-iu right-image-iu">
+    <div class="text-iu">
+      <h2 >Yüz ve Vücut İçin 2 Aparatlı, Eksiksiz Çözüm</h2>
+      <p>Hassas bölgelerde bile nazik kullanım için farklı vücut ve yüz başlıkları hızlı ve hassas bir şekilde çalışır. Yüz aparatında hassas uygulama için entegre bir ışık filtresi bulunur.</p>
+    </div>
+    <img src="/Content/UploadFiles/fc3dd11f-2.png" alt="">
+  </div>
+
+  <div class="big-item-iu left-image-iu">
+    <img src="/Content/UploadFiles/b877949a-3.png" alt="">
+    <div class="text-iu">
+      <h2>Nazik ve Etkili Uygulama</h2>
+      <p>
+Sağlık teknolojisinde lider olan Philips, uzman bilim adamları ve dermatologlarla birlikte Lumea IPL'i hassas bölgelerde bile güvenli, rahat ve etkili olacak şekilde geliştirdi.
+      </p>
+    </div>
+  </div>
+
+  <div class="big-item-iu right-image-iu">
+    <div class="text-iu">
+      <h2>Cilt Tonu Sensörü ve 5 Yoğunluk Ayarı</h2>
+      <p>Rahat bir deneyim için 5 yoğunluk ayarı arasından seçim yapın. Cilt Tonu Sensörü, cildinizin IPL uygulaması için çok koyu olan bölgelerine uygulama yapmanızı engeller.</p>
+    </div>
+    <img src="/Content/UploadFiles/ae7816d8-4.png" alt="">
+  </div>
+
+  <div class="big-item-iu left-image-iu">
+    <img src="/Content/UploadFiles/da425778-5.png" alt="">
+    <div class="text-iu">
+      <h2>Ekstra Uzun Kablo ile Uygulama Sırasında Daha Fazla Esneklik</h2>
+      <p>
+Kolay erişim ve gelişmiş manevra kabiliyeti sağlayan ekstra uzun kablo sayesinde kullanımı kolaydır.
+      </p>
+    </div>
+  </div>
+
+  <div class="big-item-iu right-image-iu">
+    <div class="text-iu">
+      <h2>Çeşitli Cilt Tonları ve Tüy Renkleri için Uygundur</h2>
+      <p>IPL uygulaması için tüy rengindeki pigmentle cilt tonundaki pigment arasında kontrast olması gerekir. Bu nedenle bu teknoloji doğal koyu sarı, kahverengi ve siyah tüylerde ve açık ila orta kahverengi tonlarındaki ciltlerde etkilidir (I-IV).</p>
+    </div>
+    <img src="/Content/UploadFiles/c14dd83d-6.png" alt="">
+  </div>
+  
+  <div class="big-item-iu left-image-iu">
+    <img src="/Content/UploadFiles/aa8afb01-7.png" alt="">
+    <div class="text-iu">
+      <h2>Philips Lumea IPL Uygulamasıyla Rutin İşlerinizi Optimize Edin</h2>
+      <p>
+Ücretsiz koçluk uygulaması, tedavi programı planlamanıza ve bu plana bağlı kalmanıza yardımcı olur, ardından sizi her seansta adım adım yönlendirir. 2,1 milyondan fazla kullanıcı tarafından indirildi.
+      </p>
+    </div>
+  </div>
+
+</section>
