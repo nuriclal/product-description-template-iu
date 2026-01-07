@@ -215,6 +215,29 @@ The project avoids unnecessary external libraries to keep pages **lightweight**.
 This project is intended for **personal or internal use**.  
 Commercial usage terms can be defined based on project requirements.
 
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+
 # product-description-template-iu
 
 ## Product Description Template IU
