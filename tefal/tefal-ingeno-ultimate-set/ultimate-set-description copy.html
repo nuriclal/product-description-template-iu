@@ -1,0 +1,458 @@
+<style type="text/css">
+  .section-iu {
+    max-width: 1300px;
+    margin: 80px auto;
+    padding: 60px 30px;
+    background: linear-gradient(
+      135deg,
+      #ffecd2 0%,
+      #fcb69f 20%,
+      #b4c5ff 80%,
+      #7b8cff 100%
+    );
+    border-radius: 25px;
+    overflow: hidden;
+    box-shadow: 0 8px 40px rgba(0, 0, 0, 0.08);
+  }
+
+  .item-iu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 60px;
+    margin-bottom: 70px;
+    padding: 40px;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    box-shadow: 0 12px 35px rgba(255, 135, 50, 0.1);
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.6s ease;
+  }
+
+  .item-iu.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  @media (hover: hover) and (pointer: fine) {
+    .item-iu:hover {
+      box-shadow: 0 15px 45px #ff782833;
+      transform: translateY(-8px) scale(1.02);
+    }
+
+    .item-iu:hover img {
+      transform: scale(1.05);
+    }
+
+    .item-iu:hover h5::after {
+      width: 90px;
+    }
+  }
+
+  .item-iu.mobile-hover {
+    box-shadow: 0 15px 45px #ff782833;
+    transform: translateY(-8px) scale(1.02);
+  }
+
+  .item-iu.mobile-hover img {
+    transform: scale(1.05);
+  }
+
+  .item-iu.mobile-hover h5::after {
+    width: 90px;
+  }
+
+  .j-left-iu picture {
+    display: block;
+    width: 500px;
+    height: 500px;
+    border-radius: 20px;
+    overflow: hidden;
+    background: #fff;
+  }
+
+  .j-left-iu img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transition: transform 0.5s ease;
+  }
+
+  .j-right-iu h5 {
+    font-size: 26px;
+    font-weight: 600;
+    color: #1e2a44;
+    margin-bottom: 20px;
+    position: relative;
+  }
+
+  .j-right-iu h5::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 3px;
+    background: linear-gradient(90deg, #f07b10, #ff9a44);
+    border-radius: 2px;
+    margin-top: 8px;
+    transition: width 0.3s ease;
+  }
+
+  .j-right-iu p {
+    line-height: 1.7;
+    color: #2f2f2f;
+  }
+
+  @media (max-width: 992px) {
+    .item-iu {
+      flex-direction: column !important;
+      text-align: center;
+      padding: 30px;
+    }
+
+    .j-left-iu picture {
+      width: 100%;
+      height: auto;
+    }
+
+    .j-left-iu img {
+      width: 100%;
+      height: auto;
+    }
+  }
+</style>
+<div class="section-mb-iu">
+  <div class="item-iu">
+    <div class="j-right-iu">
+      <h2>Tefal Ingenio Ultimate Titanyum</h2>
+
+      <p>
+        Mutfakta zaman kazanmak, alanı verimli kullanmak, yemek hazırlama
+        sürecini daha pratik hale getirmek herkesin ortak isteği. Bu yazıda,
+        mutfakta daha az yer kaplayan, daha çok iş yapan çözümler arayanlar için
+        Tefal’in çığır açan Ingenio Ultimate Titanyum serisini yakında
+        tanıyacak, kolaylaştırıcı ipuçlarını ve fikirleri keşfedeceksiniz.
+        Ayrıca farklı kullanım ihtiyaçlarına göre hangi özelliklerin önemli
+        olduğunu, hangi çözümlerin günlük hayatta gerçekten fark yarattığını da
+        ele alıyor olacağız.
+      </p>
+    </div>
+  </div>
+
+  <div class="item-iu">
+    <div class="j-right-iu">
+      <h2>Tefal Ingenio Ultimate ile Mutfakta Alan ve Konfor Avantaj&#305;</h2>
+      <p>
+        Modern mutfaklarda en b&uuml;y&uuml;k ihtiya&ccedil;lardan biri, yer
+        tasarrufu sa&#287;layan ekipmanlard&#305;r. Fransada &uuml;retilen Tefal
+        Ingenio Ultimate, ak&#305;ll&#305; tasar&#305;m&#305; sayesinde mutfak
+        dolaplar&#305;nda, &ccedil;ekmecelerde kaplad&#305;&#287;&#305;
+        alan&#305; minimuma indirir. &Uuml;st &uuml;ste yerle&#351;tirilebilen
+        tava ve tencereler, da&#287;&#305;n&#305;kl&#305;&#287;&#305;
+        azalt&#305;rken, en k&uuml;&ccedil;&uuml;k mutfaklar&#305;n bile
+        d&uuml;zenli kalmas&#305;na yard&#305;mc&#305; olur. Bu
+        y&ouml;n&uuml;yle Ingenio Ultimate, i&#351;levselli&#287;i konforla
+        birle&#351;tiren pratik
+        <a href="https://www.jebinde.com/kucuk-ev-aletleri/mutfak"
+          >mutfak yard&#305;mc&#305;lar&#305;</a
+        >&nbsp;aras&#305;na girer.
+      </p>
+      <p>
+        Setin en dikkat &ccedil;eken &ouml;zelliklerinden biri olan
+        &ccedil;&#305;kar&#305;labilir sapl&#305; tava tencere seti sistemi,
+        mutfakta hareket &ouml;zg&uuml;rl&uuml;&#287;&uuml; sa&#287;lar.
+        Sap&#305;n g&uuml;venli kilit mekanizmas&#305;, kullan&#305;m
+        s&#305;ras&#305;nda sa&#287;lam bir tutu&#351; sa&#287;lar.
+        G&uuml;nl&uuml;k yemek pi&#351;irme rutininde az par&ccedil;ayla
+        &ccedil;ok i&#351; yapabilme imkan&#305; veren Tefal Ingenio Ultimate,
+        zamandan ve alandan tasarruf etmek isteyenler i&ccedil;in
+        b&uuml;y&uuml;k bir yard&#305;mc&#305;d&#305;r.
+      </p>
+    </div>
+    <div class="j-left-iu">
+      <picture
+        ><img alt="" src="/Content/UploadFiles/0106c482-1.jpg"
+      /></picture>
+    </div>
+  </div>
+
+  <div class="item-iu">
+    <div class="j-left-iu">
+      <picture
+        ><img alt="" src="/Content/UploadFiles/699da6d9-9.jpg"
+      /></picture>
+    </div>
+
+    <div class="j-right-iu">
+      <h2>
+        Tefal Ingenio Ultimate Titanyum 3X B&uuml;y&uuml;k Set 12 Par&ccedil;a
+        &#304;&ccedil;eri&#287;i
+      </h2>
+      <p>
+        Tefal&rsquo;in en sevilen &ccedil;ok ama&ccedil;l&#305; seti Ingenio
+        Ultimate, 12 par&ccedil;al&#305;k zengin i&ccedil;eri&#287;iyle
+        farkl&#305; pi&#351;irme ihtiya&ccedil;lar&#305;n&#305; tek
+        &ccedil;&ouml;z&uuml;mde bulu&#351;turur. Tefal Ingenio Ultimate
+        Titanyum 3x b&uuml;y&uuml;k set 12 par&ccedil;a donan&#305;m&#305;
+        sayesinde ciddi bir tava-tencere &ccedil;e&#351;itlili&#287;i
+        olu&#351;turur. 26 cm ve 28 cm &ccedil;aplar&#305;ndaki tavalar
+        g&uuml;nl&uuml;k kullan&#305;m i&ccedil;in idealdir. Geni&#351;
+        y&uuml;zeye sahip wok tava ise 26 cm&rsquo;lik geni&#351; y&uuml;zeyiyle
+        sote ve sebze yemekleri i&ccedil;in uygundur.
+      </p>
+      <p>
+        24 cm&rsquo;lik k&#305;sa tencere &ccedil;orba, sos gibi
+        g&uuml;nl&uuml;k yemekler i&ccedil;in idealken; 20 cm&rsquo;lik derin
+        tencere ile daha b&uuml;y&uuml;k porsiyonlar haz&#305;rlanabilir. Sette
+        20, 24, 28 cm ebatlar&#305;nda cam kapaklar ve 20, 24 cm
+        ebatlar&#305;nda plastik kapaklar yer al&#305;r. Cam kapaklar
+        pi&#351;irme s&uuml;recini kontrol etmeyi, plastik kapaklar artan
+        yemeklerin saklanmas&#305;n&#305; kolayla&#351;t&#305;r&#305;r. &#304;ki
+        adet &ccedil;&#305;kar&#305;labilir sap; par&ccedil;alar&#305;n
+        g&uuml;venli &#351;ekilde tutulmas&#305;na olanak tan&#305;r.
+      </p>
+      <p>
+        Tefal&rsquo;in Ingenio Ultimate Titanyum serisi, yo&#287;un mutfak
+        temposuna sahip kullan&#305;c&#305;lar, b&uuml;y&uuml;k aileler ve
+        s&#305;k yemek yapanlar&#305;n hayat&#305;n&#305;
+        kolayla&#351;t&#305;r&#305;r. Bu set, farkl&#305; boyut ve formlardaki
+        par&ccedil;alar sayesinde tek setle pek &ccedil;ok tarifi ayn&#305; anda
+        haz&#305;rlamay&#305; m&uuml;mk&uuml;n k&#305;lar. B&ouml;ylece hem
+        zamandan tasarruf edilir hem de s&uuml;rekli ekipman
+        de&#287;i&#351;tirme ihtiyac&#305; ortadan kalkar.
+      </p>
+      <p>
+        Patentli, g&uuml;venli &ccedil;&#305;kar&#305;labilir sap sistemi 10
+        kg&rsquo;a kadar a&#287;&#305;rl&#305;k kald&#305;rabilir. Pi&#351;en
+        yeme&#287;in ayn&#305; kapta servis edilebilmesi, ard&#305;ndan
+        kapa&#287;&#305; tak&#305;larak buzdolab&#305;nda saklanabilmesi, rutini
+        kolayla&#351;t&#305;r&#305;r. Dayan&#305;kl&#305; titanyum kaplama tava
+        ve tencere yap&#305;s&#305; s&#305;k kullan&#305;mda performans
+        kayb&#305; ya&#351;amadan uzun s&uuml;reli kullan&#305;m sunar. T&uuml;m
+        bu &ouml;zellikler bir araya geldi&#287;inde, Ingenio Ultimate Titanyum
+        3X set; mutfa&#287;&#305;nda h&#305;z, d&uuml;zen, g&uuml;ven arayanlar
+        i&ccedil;in g&uuml;&ccedil;l&uuml; bir yard&#305;mc&#305; haline gelir.
+      </p>
+    </div>
+  </div>
+
+  <div class="item-iu">
+    <div class="j-right-iu">
+      <h2>Tefal Titanium Ingenio Ultimate Kaplama Teknolojisi</h2>
+      <p>
+        Tefal Titanium Ingenio Ultimate, yo&#287;un mutfak temposuna dayanacak
+        &#351;ekilde geli&#351;tirilen Titanyum 3X kaplama teknolojisine
+        sahiptir. Standart kaplamalara k&#305;yasla 6 kata kadar daha fazla
+        dayan&#305;kl&#305;d&#305;r ve uzun &ouml;m&uuml;rl&uuml; kullan&#305;m
+        performans&#305; g&ouml;sterir. PFOA, kur&#351;un, kadmiyum
+        i&ccedil;ermeyen Titanyum 3X kaplama y&uuml;zey
+        a&#351;&#305;nmas&#305;n&#305; minimumda tutar.
+      </p>
+      <p>
+        Y&uuml;ksek &#305;s&#305; performans&#305;, Tefal Ingenio Ultimate
+        serisinin bir di&#287;er g&uuml;&ccedil;l&uuml; y&ouml;n&uuml;d&uuml;r.
+        Ani &#305;s&#305; art&#305;&#351;lar&#305;nda ya da y&uuml;ksek
+        ate&#351;te yap&#305;lan pi&#351;irmelerde kaplama yap&#305;s&#305;
+        stabil kal&#305;r ve yeme&#287;in y&uuml;zeye
+        yap&#305;&#351;mas&#305;n&#305; engeller. &Ouml;rne&#287;in sabah
+        h&#305;zl&#305;ca haz&#305;rlanan omlet, &ouml;&#287;len y&uuml;ksek
+        ate&#351;te pi&#351;irilen sebze sote ya da ak&#351;am uzun s&uuml;re
+        ocakta kalan tencere yemekleri&hellip; Farkl&#305; pi&#351;irme
+        senaryolar&#305;nda ayn&#305; performans&#305; sunmas&#305;, bu seriyi
+        g&uuml;nl&uuml;k kullan&#305;m i&ccedil;in g&uuml;venilir k&#305;lar.
+      </p>
+      <p>
+        &Ccedil;izilmeye dayan&#305;kl&#305; yap&#305;&#351;maz kaplama, daha az
+        ya&#287;la pi&#351;irme imkan&#305; sunarak hem pratik hem de dengeli
+        bir pi&#351;irme deneyimi sa&#287;lar. Tefal Titanium Ingenio Ultimate
+        kaplama teknolojisi sayesinde temizlik a&#351;amas&#305;nda y&uuml;zeyin
+        kolayca ar&#305;nmas&#305;, yo&#287;un g&uuml;nlerde mutfakta
+        ge&ccedil;irilen s&uuml;reyi k&#305;salt&#305;r.
+      </p>
+    </div>
+    <div class="j-left-iu">
+      <picture
+        ><img alt="" src="/Content/UploadFiles/495c33ee-4.jpg"
+      /></picture>
+    </div>
+  </div>
+
+  <div class="item-iu">
+    <div class="j-left-iu">
+      <picture
+        ><img alt="" src="/Content/UploadFiles/21e68cbb-5.jpg"
+      /></picture>
+    </div>
+
+    <div class="j-right-iu">
+      <h2>
+        Tefal Ingenio Ultimate Set ile Ocaktan F&#305;r&#305;na Pratik
+        Kullan&#305;m
+      </h2>
+      <p>
+        Tefal Ingenio Ultimate Set, mutfakta tek bir kapla birden fazla i&#351;i
+        yapabilme konforu sunarak
+        <a href="https://www.jebinde.com/mutfak/yiyecek-hazirlama"
+          >yiyecek haz&#305;rlama</a
+        >&nbsp;a&#351;amalar&#305;n&#305; sadele&#351;tirir.
+        &Ccedil;&#305;kar&#305;labilir sap sayesinde tava ve tencereler ocakta
+        g&uuml;venle kullan&#305;l&#305;rken, sap
+        &ccedil;&#305;kar&#305;ld&#305;&#287;&#305;nda f&#305;r&#305;na
+        girebilecek hale gelir. Bu &ouml;zellik, yeme&#287;i &ouml;nce ocakta
+        ba&#351;lay&#305;p ard&#305;ndan f&#305;r&#305;nda tamamlamay&#305;
+        gerektiren tariflerde b&uuml;y&uuml;k kolayl&#305;k sa&#287;lar. Ocaktan
+        f&#305;r&#305;na, sofradan bula&#351;&#305;k makinesine
+        kullan&#305;labilen tencere dizayn&#305; mutfakta esneklik sa&#287;lar.
+      </p>
+      <p>
+        F&#305;r&#305;ndan &ccedil;&#305;kan yeme&#287;in ayn&#305; kapta
+        sofraya ta&#351;&#305;nabilmesi, ekstra servis taba&#287;&#305;
+        ihtiyac&#305;n&#305; ortadan kald&#305;r&#305;r. Yemek
+        artt&#305;&#287;&#305;nda sap &ccedil;&#305;kar&#305;l&#305;p uygun
+        kapak tak&#305;larak do&#287;rudan buzdolab&#305;nda saklanabilir.
+        &#304;nd&uuml;ksiyon taban sayesinde homojen pi&#351;irme deneyimi sunan
+        set, gaz, elektrik, seramik dahil t&uuml;m ocaklarla uyumludur.
+        Thermo-Signal&trade; teknolojisi sayesinde tava pi&#351;irmeye
+        haz&#305;r oldu&#287;unda k&#305;rm&#305;z&#305;ya d&ouml;nerek
+        kullan&#305;ma haz&#305;r oldu&#287;unu g&ouml;sterir.
+      </p>
+    </div>
+  </div>
+
+  <div class="item-iu">
+    <div class="j-right-iu">
+      <h2>Tefal Ingenio Ultimate Exclusive Serisinin Fark&#305;</h2>
+      <p>
+        Tefal Ingenio Ultimate Exclusive, Ingenio ailesinin i&#351;levsel
+        temelini korurken tasar&#305;m detaylar&#305;nda daha premium bir
+        deneyim sunan &ouml;zel bir seridir. Standart Tefal Ingenio Ultimate
+        setlerdeki pratiklik, Exclusive seride daha rafine bir tasar&#305;mla
+        bulu&#351;ur. Mat y&uuml;zeyler &uuml;r&uuml;ne g&uuml;&ccedil;l&uuml;
+        bir estetik g&ouml;r&uuml;n&uuml;m kazand&#305;r&#305;r. Exclusive
+        serinin en belirgin farklar&#305;ndan biri de istiflenebilir tava
+        tencere tasar&#305;m&#305;d&#305;r. Par&ccedil;alar &uuml;st &uuml;ste
+        yerle&#351;tirildi&#287;inde g&ouml;rsel olarak daha d&uuml;zenli bir
+        g&ouml;r&uuml;n&uuml;m olu&#351;ur. Benzersiz sap ergonomisi, y&uuml;zey
+        dokusunun verdi&#287;i kalite hissi ve genel biti&#351; detaylar&#305;,
+        &uuml;r&uuml;n&uuml; standart setlerden ay&#305;r&#305;r. Performans
+        a&ccedil;&#305;s&#305;ndan ayn&#305; y&uuml;ksek kalite korunurken,
+        Exclusive seri mutfakta sadece bir ara&ccedil; de&#287;il, ayn&#305;
+        zamanda &#351;&#305;k bir tamamlay&#305;c&#305;d&#305;r.
+      </p>
+    </div>
+    <div class="j-left-iu">
+      <picture
+        ><img alt="" src="/Content/UploadFiles/a5a97237-6.jpg"
+      /></picture>
+    </div>
+  </div>
+
+  <div class="item-iu">
+    <div class="j-left-iu">
+      <picture
+        ><img alt="" src="/Content/UploadFiles/4a2bd02d-7.jpg"
+      /></picture>
+    </div>
+    <div class="j-right-iu">
+      <h2>Tefal Ingenio Ultimate Set Kimler &#304;&ccedil;in Uygun?</h2>
+      <p>
+        Tefal Ingenio Ultimate Set, mutfakta pratiklik ve d&uuml;zen arayan
+        geni&#351; bir kullan&#305;c&#305; kitlesine hitap eder. &Ouml;zellikle
+        kalabal&#305;k aileler i&ccedil;in b&uuml;y&uuml;k tencere seti
+        arayanlar i&ccedil;in idealdir. Mutfa&#287;&#305;nda d&uuml;zeni &ouml;n
+        planda tutan kullan&#305;c&#305;lar i&ccedil;in setin istiflenebilir
+        tasar&#305;m&#305; ve &ccedil;&#305;kar&#305;labilir sap sistemi
+        b&uuml;y&uuml;k avantaj sa&#287;lar. Ayn&#305; zamanda estetik
+        detaylar&#305;yla &ouml;ne &ccedil;&#305;kan Tefal Ingenio Ultimate
+        Exclusive serisi, fonksiyonelli&#287;in yan&#305;nda &#351;&#305;k bir
+        g&ouml;r&uuml;n&uuml;m arayanlar i&ccedil;in iyi bir alternatiftir. Tek
+        setle &ccedil;ok i&#351; yapmak isteyen kullan&#305;c&#305;lar
+        a&ccedil;&#305;s&#305;ndan bak&#305;ld&#305;&#287;&#305;nda, Ingenio
+        Ultimate serisi pi&#351;irme, servis ve saklama s&uuml;re&ccedil;lerini
+        tek bir ak&#305;&#351;ta birle&#351;tirir. Bu da hem zamandan hem de
+        enerjiden tasarruf etmek isteyen, mutfa&#287;&#305;nda pratik
+        &ccedil;&ouml;z&uuml;mler arayan herkes i&ccedil;in seriyi
+        g&uuml;&ccedil;l&uuml; bir se&ccedil;enek haline getirir.
+      </p>
+    </div>
+  </div>
+
+  <div class="item-iu">
+    <div class="j-right-iu">
+      <h2>
+        Tefal Ingenio Ultimate Titanyum 3X B&uuml;y&uuml;k Set 12 Par&ccedil;a
+        Jebinde&rsquo;de
+      </h2>
+      <p>
+        Mutfakta pratiklik, d&uuml;zen ve uzun &ouml;m&uuml;rl&uuml;
+        kullan&#305;m arayanlar i&ccedil;in Tefal Ingenio Ultimate set,
+        farkl&#305; ihtiya&ccedil;lara hitap eden geni&#351; bir &uuml;r&uuml;n
+        &ccedil;e&#351;itlili&#287;i sunar. Titanyum 3X b&uuml;y&uuml;k set 12
+        par&ccedil;a kapsam&#305;nda g&uuml;nl&uuml;k kullan&#305;ma uygun
+        par&ccedil;alardan, kalabal&#305;k sofralar i&ccedil;in tasarlanan
+        se&ccedil;eneklere kadar her kullan&#305;m
+        al&#305;&#351;kanl&#305;&#287;&#305;na g&ouml;re alternatifler bulunur.
+        Tefal Titanium Ingenio Ultimate kaplama teknolojisiyle &ouml;ne
+        &ccedil;&#305;kan bu setler, hem performans hem de kullan&#305;m konforu
+        a&ccedil;&#305;s&#305;ndan klasik pi&#351;irme gere&ccedil;lerine
+        g&ouml;re tek bir &uuml;r&uuml;nle bir&ccedil;ok i&#351; yapmay&#305;,
+        mutfakta daha d&uuml;zenli &ccedil;al&#305;&#351;may&#305; sa&#287;lar.
+        Ingenio Ultimate serisini
+        <a href="http://jebinde.com">Jebinde.com</a
+        >&nbsp;arac&#305;l&#305;&#287;&#305;yla ke&#351;fedebilirsin.
+        Farkl&#305; set i&ccedil;eriklerini ve serileri inceleyerek, mutfak
+        al&#305;&#351;kanl&#305;klar&#305;na en uygun se&ccedil;imi
+        rahat&ccedil;a yapabilirsin.
+      </p>
+    </div>
+  </div>
+</div>
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const items = document.querySelectorAll(".item-iu");
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          const item = entry.target;
+
+          if (entry.isIntersecting) {
+            item.classList.add("visible");
+
+            if ("ontouchstart" in window || navigator.maxTouchPoints > 0) {
+              item.classList.add("mobile-hover");
+            }
+          } else {
+            if ("ontouchstart" in window || navigator.maxTouchPoints > 0) {
+              item.classList.remove("mobile-hover");
+            }
+          }
+        });
+      },
+      { threshold: 0.3 },
+    );
+
+    items.forEach((item) => observer.observe(item));
+
+    if (!("ontouchstart" in window || navigator.maxTouchPoints > 0)) {
+      items.forEach((item) => {
+        item.addEventListener("mousemove", (e) => {
+          const rect = item.getBoundingClientRect();
+          const x = e.clientX - rect.left;
+          const y = e.clientY - rect.top;
+          item.style.background = `
+          radial-gradient(circle at ${x}px ${y}px,
+          rgba(255,180,90,0.1),
+          rgba(255,255,255,0.7))
+        `;
+        });
+
+        item.addEventListener("mouseleave", () => {
+          item.style.background = "rgba(255, 255, 255, 0.6)";
+        });
+      });
+    }
+  });
+</script>

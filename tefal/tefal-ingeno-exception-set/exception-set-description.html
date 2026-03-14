@@ -1,265 +1,339 @@
-<style type="text/css">.p-product__section {
-  max-width: 1400px;
-  margin: 0 auto;
-}
-
-.p-product__grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 35px;
-}
-
-.p-product__item {
-  background-color: #fff;
-  border-radius: 16px;
-  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
-  transition: all 0.35s ease;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  overflow: hidden;
-  position: relative;
-}
-
-.p-product__item:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 12px 30px rgba(0,0,0,0.15);
-}
-
-.p-product__image-container {
-  width: 100%;
-  background-color: #fff;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 25px;
-  transition: all 0.4s ease;
-}
-
-.p-product__item:hover .p-product__image-container img {
-  transform: scale(1.05);
-  transition: transform 0.4s ease;
-}
-
-.p-product__image-container img {
-  width: 85%;
-  height: auto;
-  object-fit: contain;
-  border-radius: 10px;
-}
-
-.p-product__description-area {
-  width: 100%;
-  text-align: center;
-  padding: 20px 15px 30px;
-}
-
-.p-product__description-area h4 {
-  color: #111;
-  font-size: 1.15rem;
-  margin: 0 0 10px;
-  font-weight: 600;
-}
-
-.p-product__description-area p {
-  font-size: 0.95rem;
-  color: #555;
-  line-height: 1.5;
-  opacity: 0;
-  max-height: 0;
-  transition: all 0.4s ease;
-  overflow: hidden;
-}
-
-.p-product__item:hover .p-product__description-area p {
-  opacity: 1;
-  max-height: 200px;
-  margin-top: 10px;
-}
-
-@media (max-width: 1200px) {
-  .p-product__grid {
-    grid-template-columns: repeat(3, 1fr);
+<style type="text/css">
+  .p-product__section {
+    max-width: 1400px;
+    margin: 0 auto;
   }
-}
 
-@media (max-width: 800px) {
   .p-product__grid {
-    grid-template-columns: repeat(2, 1fr);
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 35px;
   }
-}
 
-@media (max-width: 500px) {
-  .p-product__grid {
-    grid-template-columns: 1fr;
+  .p-product__item {
+    background-color: #fff;
+    border-radius: 16px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+    transition: all 0.35s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
   }
-}
+
+  .p-product__item:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+  }
+
+  .p-product__image-container {
+    width: 100%;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 25px;
+    transition: all 0.4s ease;
+  }
+
+  .p-product__item:hover .p-product__image-container img {
+    transform: scale(1.05);
+    transition: transform 0.4s ease;
+  }
+
+  .p-product__image-container img {
+    width: 85%;
+    height: auto;
+    object-fit: contain;
+    border-radius: 10px;
+  }
+
+  .p-product__description-area {
+    width: 100%;
+    text-align: center;
+    padding: 20px 15px 30px;
+  }
+
+  .p-product__description-area h4 {
+    color: #111;
+    font-size: 1.15rem;
+    margin: 0 0 10px;
+    font-weight: 600;
+  }
+
+  .p-product__description-area p {
+    font-size: 0.95rem;
+    color: #555;
+    line-height: 1.5;
+    opacity: 0;
+    max-height: 0;
+    transition: all 0.4s ease;
+    overflow: hidden;
+  }
+
+  .p-product__item:hover .p-product__description-area p {
+    opacity: 1;
+    max-height: 200px;
+    margin-top: 10px;
+  }
+
+  @media (max-width: 1200px) {
+    .p-product__grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  @media (max-width: 800px) {
+    .p-product__grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: 500px) {
+    .p-product__grid {
+      grid-template-columns: 1fr;
+    }
+  }
 </style>
 <section class="p-product__section">
-<div class="p-product__grid">
-<div class="p-product__item">
-<div class="p-product__image-container"><img alt="" src="/Content/UploadFiles/d0600efe-1.jpg" /></div>
+  <div class="p-product__grid">
+    <div class="p-product__item">
+      <div class="p-product__image-container">
+        <img alt="" src="/Content/UploadFiles/d0600efe-1.jpg" />
+      </div>
 
-<div class="p-product__description-area">
-<h4>Ingenio: Mutfağınızda Yer A&ccedil;ın</h4>
+      <div class="p-product__description-area">
+        <h4>Ingenio: Mutfağınızda Yer A&ccedil;ın</h4>
 
-<p>Ocaktan, fırına, sofraya, buzdolabına* ve bulaşık makinesine, ideal saklama &ouml;zelliğine sahiptir. (*Asitli yiyecekleri uzun s&uuml;re saklamayın.)</p>
-</div>
-</div>
+        <p>
+          Ocaktan, fırına, sofraya, buzdolabına* ve bulaşık makinesine, ideal
+          saklama &ouml;zelliğine sahiptir. (*Asitli yiyecekleri uzun s&uuml;re
+          saklamayın.)
+        </p>
+      </div>
+    </div>
 
-<div class="p-product__item">
-<div class="p-product__image-container"><img alt="" src="/Content/UploadFiles/88be9616-2.jpg" /></div>
+    <div class="p-product__item">
+      <div class="p-product__image-container">
+        <img alt="" src="/Content/UploadFiles/88be9616-2.jpg" />
+      </div>
 
-<div class="p-product__description-area">
-<h4>&Ccedil;ıkarılabilir Sap</h4>
+      <div class="p-product__description-area">
+        <h4>&Ccedil;ıkarılabilir Sap</h4>
 
-<p>Patentli, g&uuml;venli ve &ccedil;ıkarılabilen sapı 10 kg&rsquo;ya kadar ağırlığı kaldırabilir**</p>
-</div>
-</div>
+        <p>
+          Patentli, g&uuml;venli ve &ccedil;ıkarılabilen sapı 10 kg&rsquo;ya
+          kadar ağırlığı kaldırabilir**
+        </p>
+      </div>
+    </div>
 
-<div class="p-product__item">
-<div class="p-product__image-container"><img alt="" src="/Content/UploadFiles/63b66eb8-3.jpg" /></div>
+    <div class="p-product__item">
+      <div class="p-product__image-container">
+        <img alt="" src="/Content/UploadFiles/63b66eb8-3.jpg" />
+      </div>
 
-<div class="p-product__description-area">
-<h4>G&uuml;venli Yapışmaz Kaplama</h4>
+      <div class="p-product__description-area">
+        <h4>G&uuml;venli Yapışmaz Kaplama</h4>
 
-<p>G&uuml;venli yapışmaz kaplama, PFOA, kurşun ve kadmiyum i&ccedil;ermez****</p>
-</div>
-</div>
+        <p>
+          G&uuml;venli yapışmaz kaplama, PFOA, kurşun ve kadmiyum
+          i&ccedil;ermez****
+        </p>
+      </div>
+    </div>
 
-<div class="p-product__item">
-<div class="p-product__image-container"><img alt="" src="/Content/UploadFiles/709efad9-4.jpg" /></div>
+    <div class="p-product__item">
+      <div class="p-product__image-container">
+        <img alt="" src="/Content/UploadFiles/709efad9-4.jpg" />
+      </div>
 
-<div class="p-product__description-area">
-<h4>Titanyum Yapışmaz Kaplama</h4>
+      <div class="p-product__description-area">
+        <h4>Titanyum Yapışmaz Kaplama</h4>
 
-<p>Titanium 6X kaplama standart Tefal kaplamalarına g&ouml;re 6 kata kadar daha dayanıklıdır.</p>
-</div>
-</div>
+        <p>
+          Titanium 6X kaplama standart Tefal kaplamalarına g&ouml;re 6 kata
+          kadar daha dayanıklıdır.
+        </p>
+      </div>
+    </div>
 
-<div class="p-product__item">
-<div class="p-product__image-container"><img alt="" src="/Content/UploadFiles/218cdc8a-5.jpg" /></div>
+    <div class="p-product__item">
+      <div class="p-product__image-container">
+        <img alt="" src="/Content/UploadFiles/218cdc8a-5.jpg" />
+      </div>
 
-<div class="p-product__description-area">
-<h4>Thermo-Signal&trade; teknolojisi</h4>
+      <div class="p-product__description-area">
+        <h4>Thermo-Signal&trade; teknolojisi</h4>
 
-<p>Tavanız pişirmeye hazır olduğunda tamamen kırmızıya d&ouml;ner ve ideal zamanı size g&ouml;sterir</p>
-</div>
-</div>
+        <p>
+          Tavanız pişirmeye hazır olduğunda tamamen kırmızıya d&ouml;ner ve
+          ideal zamanı size g&ouml;sterir
+        </p>
+      </div>
+    </div>
 
-<div class="p-product__item">
-<div class="p-product__image-container"><img alt="" src="/Content/UploadFiles/27f884f0-6.jpg" /></div>
+    <div class="p-product__item">
+      <div class="p-product__image-container">
+        <img alt="" src="/Content/UploadFiles/27f884f0-6.jpg" />
+      </div>
 
-<div class="p-product__description-area">
-<h4>Kolay Temizlik</h4>
+      <div class="p-product__description-area">
+        <h4>Kolay Temizlik</h4>
 
-<p>Hem i&ccedil; hem dış y&uuml;zeyde kolay temizlenebilir kaplama bulunur. Yemek sonrası temizlik zahmetsiz hale gelir, bulaşık makinesinde de g&uuml;venle yıkanabilir.</p>
-</div>
-</div>
+        <p>
+          Hem i&ccedil; hem dış y&uuml;zeyde kolay temizlenebilir kaplama
+          bulunur. Yemek sonrası temizlik zahmetsiz hale gelir, bulaşık
+          makinesinde de g&uuml;venle yıkanabilir.
+        </p>
+      </div>
+    </div>
 
-<div class="p-product__item">
-<div class="p-product__image-container"><img alt="" src="/Content/UploadFiles/0a4da250-7.jpg" /></div>
+    <div class="p-product__item">
+      <div class="p-product__image-container">
+        <img alt="" src="/Content/UploadFiles/0a4da250-7.jpg" />
+      </div>
 
-<div class="p-product__description-area">
-<h4>Ocak Uyumu</h4>
+      <div class="p-product__description-area">
+        <h4>Ocak Uyumu</h4>
 
-<p>İnd&uuml;ksiyon dahil t&uuml;m ocaklarla uyumludur-gaz, elektrik ve seramik.</p>
-</div>
-</div>
+        <p>
+          İnd&uuml;ksiyon dahil t&uuml;m ocaklarla uyumludur-gaz, elektrik ve
+          seramik.
+        </p>
+      </div>
+    </div>
 
-<div class="p-product__item">
-<div class="p-product__image-container"><img alt="" src="/Content/UploadFiles/bd86e48d-8.jpg" /></div>
+    <div class="p-product__item">
+      <div class="p-product__image-container">
+        <img alt="" src="/Content/UploadFiles/bd86e48d-8.jpg" />
+      </div>
 
-<div class="p-product__description-area">
-<h4>Fransa&#39;da &Uuml;retilmiştir</h4>
+      <div class="p-product__description-area">
+        <h4>Fransa&#39;da &Uuml;retilmiştir</h4>
 
-<p>Fransa&rsquo;da, y&uuml;ksek kalite standartlarına g&ouml;re &uuml;retilmiştir. Homojen pişirme performansı ve uzun &ouml;m&uuml;rl&uuml; dayanıklılığıyla &ouml;ne &ccedil;ıkar.</p>
-</div>
-</div>
+        <p>
+          Fransa&rsquo;da, y&uuml;ksek kalite standartlarına g&ouml;re
+          &uuml;retilmiştir. Homojen pişirme performansı ve uzun
+          &ouml;m&uuml;rl&uuml; dayanıklılığıyla &ouml;ne &ccedil;ıkar.
+        </p>
+      </div>
+    </div>
 
-<div class="p-product__item">
-<div class="p-product__image-container"><img alt="" src="/Content/UploadFiles/421f09e4-9.jpg" /></div>
+    <div class="p-product__item">
+      <div class="p-product__image-container">
+        <img alt="" src="/Content/UploadFiles/421f09e4-9.jpg" />
+      </div>
 
-<div class="p-product__description-area">
-<h4>12 Par&ccedil;a Set İ&ccedil;eriği</h4>
+      <div class="p-product__description-area">
+        <h4>12 Par&ccedil;a Set İ&ccedil;eriği</h4>
 
-<p>Set i&ccedil;eriğinde; 26/28 cm tava, 28 cm wok tava, 24 cm kısa tencere, 22 cm derin tencere, 2 adet &ccedil;ıkarılabilir sap, 22/24 cm plastik kapak ve 22/24/28 cm cam kapak bulunur. Eksiksiz donanımıyla mutfakta t&uuml;m ihtiya&ccedil;larınıza yanıt verir.</p>
-</div>
-</div>
+        <p>
+          Set i&ccedil;eriğinde; 26/28 cm tava, 28 cm wok tava, 24 cm kısa
+          tencere, 22 cm derin tencere, 2 adet &ccedil;ıkarılabilir sap, 22/24
+          cm plastik kapak ve 22/24/28 cm cam kapak bulunur. Eksiksiz
+          donanımıyla mutfakta t&uuml;m ihtiya&ccedil;larınıza yanıt verir.
+        </p>
+      </div>
+    </div>
 
-<div class="p-product__item">
-<div class="p-product__image-container"><img alt="" src="/Content/UploadFiles/96a8a87e-10.jpg" /></div>
+    <div class="p-product__item">
+      <div class="p-product__image-container">
+        <img alt="" src="/Content/UploadFiles/96a8a87e-10.jpg" />
+      </div>
 
-<div class="p-product__description-area">
-<h4>Lezzetli Yemekler</h4>
+      <div class="p-product__description-area">
+        <h4>Lezzetli Yemekler</h4>
 
-<p>Ingenio ile yemek pişirmek sadece pratik değil, aynı zamanda eğlenceli! Mutfakta yaratıcılığınızı artıran fonksiyonel yapısı sayesinde her &ouml;ğ&uuml;n &ouml;zel hale gelir.</p>
-</div>
-</div>
+        <p>
+          Ingenio ile yemek pişirmek sadece pratik değil, aynı zamanda
+          eğlenceli! Mutfakta yaratıcılığınızı artıran fonksiyonel yapısı
+          sayesinde her &ouml;ğ&uuml;n &ouml;zel hale gelir.
+        </p>
+      </div>
+    </div>
 
-<div class="p-product__item">
-<div class="p-product__image-container"><img alt="" src="/Content/UploadFiles/6d68c5ee-11.jpg" /></div>
+    <div class="p-product__item">
+      <div class="p-product__image-container">
+        <img alt="" src="/Content/UploadFiles/6d68c5ee-11.jpg" />
+      </div>
 
-<div class="p-product__description-area">
-<h4>Keyifli Pişirme Deneyimi</h4>
+      <div class="p-product__description-area">
+        <h4>Keyifli Pişirme Deneyimi</h4>
 
-<p>&Ccedil;ıkarılabilir sap, ısıya dayanıklı y&uuml;zey ve m&uuml;kemmel ısı dağılımı bir araya gelerek pişirmeyi keyifli hale getirir. Her seferinde profesyonel sonu&ccedil;lar elde etmenizi sağlar.</p>
-</div>
-</div>
+        <p>
+          &Ccedil;ıkarılabilir sap, ısıya dayanıklı y&uuml;zey ve m&uuml;kemmel
+          ısı dağılımı bir araya gelerek pişirmeyi keyifli hale getirir. Her
+          seferinde profesyonel sonu&ccedil;lar elde etmenizi sağlar.
+        </p>
+      </div>
+    </div>
 
-<div class="p-product__item">
-<div class="p-product__image-container"><img alt="" src="/Content/UploadFiles/2cc4b582-12.jpg" />
-<p>&nbsp;</p>
-</div>
+    <div class="p-product__item">
+      <div class="p-product__image-container">
+        <img alt="" src="/Content/UploadFiles/2cc4b582-12.jpg" />
+        <p>&nbsp;</p>
+      </div>
 
-<div class="p-product__description-area">
-<h4>Kolay Kullanım</h4>
+      <div class="p-product__description-area">
+        <h4>Kolay Kullanım</h4>
 
-<p>Ingenio serisi, her pişirme adımında kolaylık sunar.Tavadan fırına, sofradan buzdolabına kadar tek kapla ge&ccedil;iş yapabilme &ouml;zg&uuml;rl&uuml;ğ&uuml; sağlar.</p>
-</div>
-</div>
-</div>
+        <p>
+          Ingenio serisi, her pişirme adımında kolaylık sunar.Tavadan fırına,
+          sofradan buzdolabına kadar tek kapla ge&ccedil;iş yapabilme
+          &ouml;zg&uuml;rl&uuml;ğ&uuml; sağlar.
+        </p>
+      </div>
+    </div>
+  </div>
 </section>
 <script>
-document.addEventListener("DOMContentLoaded", function() {
-  if (window.innerWidth <= 800) {
-    const products = document.querySelectorAll(".p-product__item");
-    let activeCard = null;
-    let timeout = null;
+  document.addEventListener("DOMContentLoaded", function () {
+    if (window.innerWidth <= 800) {
+      const products = document.querySelectorAll(".p-product__item");
+      let activeCard = null;
+      let timeout = null;
 
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        const el = entry.target;
-        const p = el.querySelector(".p-product__description-area p");
-        const img = el.querySelector(".p-product__image-container img");
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            const el = entry.target;
+            const p = el.querySelector(".p-product__description-area p");
+            const img = el.querySelector(".p-product__image-container img");
 
-        if (entry.intersectionRatio === 1) {
-          if (activeCard && activeCard !== el) {
-            const oldP = activeCard.querySelector(".p-product__description-area p");
-            const oldImg = activeCard.querySelector(".p-product__image-container img");
-            oldP.style.opacity = 0;
-            oldP.classList.remove("visible");
-            oldImg.classList.remove("zoomed");
-          }
-          clearTimeout(timeout);
-          timeout = setTimeout(() => {
-            activeCard = el;
-            oldP.classList.remove("visible");
-            oldImg.classList.remove("zoomed");
-          }, 100);
-        } 
-        else if (activeCard === el && entry.intersectionRatio < 0.8) {
-          clearTimeout(timeout);
-          timeout = setTimeout(() => {
-            oldP.classList.remove("visible");
-            oldImg.classList.remove("zoomed");
-            activeCard = null;
-          }, 100);
-        }
-      });
-    }, { threshold: [0, 0.8, 1] });
+            if (entry.intersectionRatio === 1) {
+              if (activeCard && activeCard !== el) {
+                const oldP = activeCard.querySelector(
+                  ".p-product__description-area p",
+                );
+                const oldImg = activeCard.querySelector(
+                  ".p-product__image-container img",
+                );
+                oldP.style.opacity = 0;
+                oldP.classList.remove("visible");
+                oldImg.classList.remove("zoomed");
+              }
+              clearTimeout(timeout);
+              timeout = setTimeout(() => {
+                activeCard = el;
+                oldP.classList.remove("visible");
+                oldImg.classList.remove("zoomed");
+              }, 100);
+            } else if (activeCard === el && entry.intersectionRatio < 0.8) {
+              clearTimeout(timeout);
+              timeout = setTimeout(() => {
+                oldP.classList.remove("visible");
+                oldImg.classList.remove("zoomed");
+                activeCard = null;
+              }, 100);
+            }
+          });
+        },
+        { threshold: [0, 0.8, 1] },
+      );
 
-    products.forEach(p => observer.observe(p));
-  }
-});
+      products.forEach((p) => observer.observe(p));
+    }
+  });
 </script>

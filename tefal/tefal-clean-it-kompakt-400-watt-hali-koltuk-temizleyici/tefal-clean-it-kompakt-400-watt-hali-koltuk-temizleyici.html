@@ -1,0 +1,288 @@
+<style>
+  .product-section-iu {
+    background: linear-gradient(135deg, #616568, #a3b3b0, #548eb4);
+    color: #000;
+    max-width: 1200px;
+    margin: auto;
+  }
+
+  .product-section-iu .hero-iu {
+    text-align: center;
+    padding: 20px;
+    position: relative;
+  }
+
+  .product-section-iu .hero-iu h2 {
+    font-size: clamp(34px, 2vw, 52px);
+    line-height: 1;
+    margin: 0;
+    margin-top: 20px;
+    font-weight: 600;
+  }
+
+  .product-section-iu .product-description-iu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    padding: 40px 5%;
+    opacity: 0;
+    transform: translateY(60px);
+    transition: all 0.8s ease-out;
+  }
+
+  .product-section-iu .product-description-iu.revealed {
+    opacity: 1;
+    transform: translateY(0);
+    transition: all 1s ease-out;
+  }
+
+  .product-section-iu .image-iu {
+    width: 100%;
+    border-radius: 12px;
+    overflow: hidden;
+    transition:
+      transform 1s ease,
+      box-shadow 1s ease;
+  }
+
+  .product-section-iu .image-iu img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transform: scale(1);
+    transition:
+      transform 1s ease,
+      opacity 1s ease;
+  }
+
+  .product-section-iu .image-iu.zoomed img {
+    transform: scale(1.05);
+    opacity: 1;
+  }
+
+  .product-section-iu .text-iu,
+  .product-section-iu .text-left-iu,
+  .product-section-iu .text-right-iu,
+  .product-section-iu .text-center-iu {
+    color: #000;
+    transition: transform 0.3s ease;
+  }
+
+  .product-section-iu h3 {
+    font-size: 24px !important;
+    margin-bottom: 16px !important;
+    position: relative;
+  }
+
+  .product-section-iu p {
+    font-size: 20px !important;
+    line-height: 1.6 !important;
+  }
+
+  .product-section-iu .layout-1-iu,
+  .product-section-iu .layout-3-iu,
+  .product-section-iu .layout-6-iu,
+  .product-section-iu .layout-7-iu {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 40px;
+  }
+
+  .product-section-iu .layout-2-iu,
+  .product-section-iu .layout-4-iu,
+  .product-section-iu .layout-5-iu {
+    display: grid;
+    grid-template-columns: 30% 40% 30%;
+    align-items: center;
+    gap: 40px;
+  }
+
+  .product-section-iu .layout-2-iu .text-left-iu,
+  .product-section-iu .layout-2-iu .text-right-iu,
+  .product-section-iu .layout-4-iu .text-left-iu,
+  .product-section-iu .layout-4-iu .text-right-iu,
+  .product-section-iu .layout-5-iu .text-center-iu {
+    text-align: center;
+  }
+
+  @media (max-width: 900px) {
+    .product-section-iu .layout-1-iu,
+    .product-section-iu .layout-2-iu,
+    .product-section-iu .layout-3-iu,
+    .product-section-iu .layout-4-iu,
+    .product-section-iu .layout-5-iu,
+    .product-section-iu .layout-6-iu,
+    .product-section-iu .layout-7-iu {
+      grid-template-columns: 1fr;
+    }
+    .product-section-iu .product-description-iu {
+      padding: 40px 5%;
+    }
+  }
+</style>
+
+<section class="product-section-iu">
+  <div class="hero-iu">
+    <h2>
+      Tefal Clean It Kompakt 400 Watt 1,4 Litre Kapasiteli Halı Yıkama Makinesi
+    </h2>
+  </div>
+
+  <div class="product-description-iu layout-1-iu reveal-iu">
+    <div class="image-iu">
+      <img src="/Content/UploadFiles/920bbd9e-1.jpg" alt="" />
+    </div>
+    <div class="text-iu">
+      <h3>Kolay günlük temizlik</h3>
+      <p>
+        Evcil hayvan lekeleri, dökülmeler, kazalar ve daha fazlası dahil günlük
+        kirleri hızlı ve etkili bir şekilde temizleyen, tertemiz bir ev için
+        pratik bir çözüm.
+      </p>
+    </div>
+  </div>
+
+  <div class="product-description-iu layout-2-iu reveal-iu">
+    <div class="text-left-iu">
+      <h3>Tefal Clean It Compact ile tanışın:</h3>
+      <p>
+        <strong
+          >Günlük dökülme ve kirler için basit ve etkili bir çözüm.</strong
+        >
+      </p>
+    </div>
+    <div class="image-iu">
+      <img src="/Content/UploadFiles/77bd2c7d-2.jpg" alt="" />
+    </div>
+    <div class="text-right-iu">
+      <h3>Kompakt ve hafif tasarım</h3>
+      <p>
+        Her gün kusursuz temizlik sunan güçlü bir cihaz—ince, kompakt yapısıyla
+        evinizin her köşesinde zahmetsizce saklanabilir.
+      </p>
+    </div>
+  </div>
+
+  <div class="product-description-iu layout-3-iu reveal-iu">
+    <div class="text-iu">
+      <h3>Hortum temizleme aksesuarı</h3>
+      <p>
+        Günlük kullanım kolaylığı için kendini temizleyen tasarım: Her
+        kullanımdan sonra hortumu kolayca durulamak için oto-temizleme
+        aksesuarını takmanız yeterli..
+      </p>
+    </div>
+    <div class="image-iu">
+      <img src="/Content/UploadFiles/4929700d-6.jpg" alt="" />
+    </div>
+  </div>
+
+  <div class="product-description-iu layout-4-iu reveal-iu">
+    <div class="text-left-iu">
+      <h3>Çoklu temizlik aksiyonu</h3>
+      <p>
+        Su/deterjan, fırçalama ve güçlü emişi (11.5 kPa, 400 W’a kadar) bir
+        araya getiren çoklu temizlik performansı.
+      </p>
+    </div>
+
+    <div class="image-iu">
+      <img src="/Content/UploadFiles/17db9f6e-4.jpg" alt="" />
+    </div>
+
+    <div class="text-right-iu">
+      <h3>Çok yönlü temizlik başlıkları</h3>
+      <p>
+        Halılar, koltuklar, araba içi ve daha fazlası için değiştirilebilir
+        temizlik başlıkları; ayrıca her yere ulaşmayı sağlayan geniş bir
+        kullanım alanı.
+      </p>
+    </div>
+  </div>
+
+  <div class="product-description-iu layout-5-iu reveal-iu">
+    <div class="image-left-iu image-iu">
+      <img src="/Content/UploadFiles/a37ca14a-5.jpg" alt="" />
+    </div>
+    <div class="text-center-iu">
+      <h3>Evcil hayvan temizleme spreyi</h3>
+      <p>
+        Evcil hayvanlardan kalan leke ve kirlerin üzerine doğrudan püskürtün—hoş
+        kokulu, kusursuz günlük temizlik için.
+      </p>
+    </div>
+    <div class="image-right-iu image-iu">
+      <img src="/Content/UploadFiles/4f1aeb0b-3.jpg" alt="" />
+    </div>
+  </div>
+
+  <div class="product-description-iu layout-6-iu reveal-iu">
+    <div class="image-iu">
+      <img src="/Content/UploadFiles/6566fa35-7.jpg" alt="" />
+    </div>
+    <div class="text-iu">
+      <h3>Çıkarılabilir su tankları</h3>
+      <p>
+        Kolay temizlik ve kolay doldurma için 1.4 L temiz su tankı ve 0.85 L
+        kirli su tankı; uzun süreli temizlik imkânı sunar.
+      </p>
+    </div>
+  </div>
+
+  <div class="product-description-iu layout-7-iu reveal-iu">
+    <div class="text-iu">
+      <h3>15 yıl tamir edilebilir</h3>
+      <p>
+        Dünya genelindeki 6.200 tamir uzmanımız sayesinde uygun fiyata tamir
+        imkânı; ürününüzü tamir ettirmenizi öneririz—çok daha uzun ömürlü olur.
+      </p>
+    </div>
+    <div class="image-iu">
+      <img src="/Content/UploadFiles/070eaa6f-8.jpg" alt="" />
+    </div>
+  </div>
+</section>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const reveals = document.querySelectorAll(".product-section-iu .reveal-iu");
+    const images = document.querySelectorAll(".product-section-iu .image-iu");
+
+    const options = {
+      threshold: 0.4,
+    };
+
+    const handleIntersection = (entries, observer) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("revealed");
+
+          if (entry.target.classList.contains("image-iu")) {
+            entry.target.classList.add("zoomed");
+          }
+        } else {
+          if (entry.target.classList.contains("image-iu")) {
+            entry.target.classList.remove("zoomed");
+          }
+        }
+      });
+    };
+
+    const observer = new IntersectionObserver(handleIntersection, options);
+
+    reveals.forEach((el) => observer.observe(el));
+    images.forEach((el) => observer.observe(el));
+
+    const wing = document.querySelector(
+      '.text-left-iu img[src="/Content/UploadFiles/b26f7c76-wing.png"]',
+    );
+    if (wing) {
+      const randomDelay = Math.random() * 3;
+      const randomDuration = 9 + Math.random() * 4;
+      wing.style.animationDuration = `${randomDuration}s`;
+      wing.style.animationDelay = `${randomDelay}s`;
+    }
+  });
+</script>

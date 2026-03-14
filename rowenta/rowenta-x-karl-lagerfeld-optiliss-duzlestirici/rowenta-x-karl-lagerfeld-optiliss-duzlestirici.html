@@ -1,0 +1,219 @@
+<style type="text/css">
+  .section-iu {
+    width: 100%;
+    background: radial-gradient(
+      circle at 35% 30%,
+      #7a7a7a 0%,
+      #2c2c2c 40%,
+      #0a0a0a 85%,
+      #7a7a7a 0%,
+      #2c2c2c 40%,
+      #0a0a0a 85%
+    );
+    padding: 60px 20px;
+    display: flex;
+    justify-content: center;
+    max-width: 1280px !important;
+    margin: 0 auto;
+  }
+
+  .galeri-iu {
+    width: 100%;
+    max-width: 1200px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 60px 80px;
+  }
+
+  .kart-iu {
+    text-align: center;
+  }
+
+  .foto-iu {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: 8px;
+    display: block;
+  }
+
+  .kart-iu h3 {
+    margin: 30px 0 15px;
+    font-size: 22px;
+    color: #fff;
+  }
+
+  .kart-iu p {
+    font-size: 18px;
+    color: #f3f3f3;
+    line-height: 1.7;
+  }
+
+  .middle-kart-iu {
+    grid-column: span 3;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .middle-kart-iu .kart-iu {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    text-align: left;
+  }
+
+  .middle-kart-iu .foto-iu {
+    width: 50%;
+    aspect-ratio: auto;
+    border-radius: 0;
+    margin: 0;
+    display: block;
+  }
+
+  .middle-kart-iu .middle-kart-text {
+    width: 50%;
+    padding: 0 60px;
+  }
+
+  .middle-kart-iu .middle-kart-text h3 {
+    margin: 0 0 15px 0;
+  }
+
+  .middle-kart-iu .middle-kart-text p {
+    margin: 0;
+  }
+
+  @media (max-width: 992px) {
+    .galeri-iu {
+      display: grid;
+      grid-template-columns: 1fr !important;
+      gap: 40px;
+    }
+
+    .kart-iu {
+      display: block !important;
+      text-align: center !important;
+    }
+
+    .foto-iu {
+      width: 100% !important;
+      aspect-ratio: 1 / 1;
+      border-radius: 8px;
+    }
+
+    /* Middle section tamamen dikey */
+    .middle-kart-iu {
+      display: block !important;
+      grid-column: span 1 !important;
+    }
+
+    .middle-kart-iu .kart-iu {
+      display: block !important;
+    }
+
+    .middle-kart-iu .foto-iu {
+      width: 100% !important;
+      aspect-ratio: 1 / 1;
+      border-radius: 8px;
+    }
+
+    .middle-kart-iu .middle-kart-text {
+      width: 100% !important;
+      padding: 20px 0 0 0 !important;
+      text-align: center;
+    }
+  }
+</style>
+<section class="section-iu">
+  <div class="galeri-iu">
+    <div class="kart-iu">
+      <img class="foto-iu" src="/Content/UploadFiles/861a41bb-1.png" />
+      <h3>Işıltılı Parlaklık</h3>
+      <p>
+        Özel Keratin & Glow kaplamamız, profesyonel protein Keratin ile iyon
+        yayan mineral Turmalin’i bir araya getirerek saçlardaki kabarmayı
+        azaltır, pürüzsüz, göz alıcı ve ışıltılı bir görünüm kazandırır.
+      </p>
+    </div>
+
+    <div class="kart-iu">
+      <img class="foto-iu" src="/Content/UploadFiles/3f5e0dbf-2.png" />
+      <h3>Yüksek Sıcaklık</h3>
+
+      <p>
+        230°C’ye kadar sabit ısı, hızlı sonuçlar ve yüksek verimlilikte
+        düzleştirme sağlar – en iyi halinizle kısa sürede hazır olmanızı sağlar.
+      </p>
+    </div>
+
+    <div class="kart-iu">
+      <img class="foto-iu" src="/Content/UploadFiles/0b96e027-6.png" />
+      <h3>İnce Plakalar</h3>
+
+      <p>
+        2,5 cm genişliğindeki ince plakalar sayesinde daha hassas ve kolay
+        şekillendirme imkanı sunar.
+      </p>
+    </div>
+
+    <div class="kart-iu">
+      <img class="foto-iu" src="/Content/UploadFiles/53fd0ad2-3.png" />
+      <h3>Tam Isı Kontrolü</h3>
+
+      <p>
+        130°C ile 230°C arasında 10 farklı kolay sıcaklık ayarı ile çeşitli saç
+        tiplerine uygun, mükemmel kontrol ve çok yönlülük sunan yüksek
+        performanslı saç düzleştirici. Hızlı Isınma
+      </p>
+    </div>
+
+    <div class="kart-iu">
+      <img class="foto-iu" src="/Content/UploadFiles/0b3be7f1-4.png" />
+
+      <h3>Hızlı Isınma</h3>
+
+      <p>
+        Maksimum kullanım kolaylığı için tasarlanan 30 saniyelik hızlı ısınma
+        süresi, ihtiyacınız olduğunda anında şekillendirmeye hazır olmanızı
+        sağlar.
+      </p>
+    </div>
+
+    <div class="kart-iu">
+      <img class="foto-iu" src="/Content/UploadFiles/0bcbac78-7.png" />
+      <h3>Kolay Saklama</h3>
+
+      <p>
+        Plaka kilitleme sistemi, güvenli ve kolay saklama olanağı sunarak günlük
+        kullanımda pratiklik sağlar.
+      </p>
+    </div>
+
+    <div class="middle-kart-iu">
+      <div class="kart-iu">
+        <img class="foto-iu" src="/Content/UploadFiles/9f78a409-5.png" />
+        <div class="middle-kart-text">
+          <h3>Tek Hamlede Etkililik</h3>
+          <p>
+            Yüzer plaka sistemi, saç tutamının kalınlığına göre her iki plakayı
+            da ayarlayarak tek hamlede etkili düzleştirme ve her hareketle
+            optimum basınç sağlar.
+          </p>
+        </div>
+      </div>
+
+      <div class="kart-iu">
+        <img class="foto-iu" src="/Content/UploadFiles/75fe2d8b-8.png" />
+        <div class="middle-kart-text">
+          <h3>Düzleştir & Bukle Yap</h3>
+          <p>
+            Rowenta x KARL LAGERFELD Optiliss Saç Düzleştirici, çok yönlü
+            Straight & Curl özelliği sayesinde dilediğiniz saç stilini
+            oluşturmanız için tüm şekillendirme ihtiyaçlarınıza cevap verir.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

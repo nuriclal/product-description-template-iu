@@ -1,0 +1,624 @@
+<style type="text/css">
+  .category-section {
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+  }
+
+  .category-block {
+    max-width: 1200px;
+    margin: 0 auto 70px;
+    padding: 40px;
+    border-radius: 25px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+    transition: all 0.3s ease;
+    background-color: white;
+  }
+
+  .category-block:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 18px 60px rgba(0, 0, 0, 0.1);
+  }
+
+  .block-left {
+    direction: rtl;
+  }
+  .block-left > * {
+    direction: ltr;
+  }
+
+  .category-text h2,
+  .category-text h3 {
+    font-weight: 800;
+    color: #2c2f3a;
+    margin-bottom: 20px;
+    position: relative;
+  }
+
+  .category-text h2::after,
+  .category-text h3::after {
+    content: "" !important;
+    display: block !important;
+    width: 120px !important;
+    height: 4px !important;
+    background: linear-gradient(90deg, #ec6907, #f6b142);
+    border-radius: 2px !important;
+    margin-top: 10px !important;
+  }
+
+  .category-text h2 {
+    font-size: 34px;
+    text-transform: uppercase;
+  }
+  .category-text h3 {
+    font-size: 28px;
+  }
+
+  .category-text p {
+    font-size: 17px;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 15px;
+  }
+
+  .category-text ul {
+    list-style: none;
+    padding-left: 0;
+    margin: 30px 0;
+  }
+  .category-text ul li {
+    padding-left: 32px;
+    position: relative;
+    margin-bottom: 12px;
+    font-size: 17px;
+    font-weight: 500;
+    color: #444;
+  }
+  .category-text ul li::before {
+    content: "✓";
+    color: #ec6907;
+    font-size: 1.3em;
+    font-weight: 700;
+    position: absolute;
+    left: 0;
+    top: -2px;
+  }
+
+  .highlight {
+    font-size: 19px;
+    font-weight: 600;
+    color: #212121;
+    margin-top: 35px;
+    border-left: 6px solid #ef8434;
+    background: linear-gradient(90deg, #fff9f3 0%, #e3f6ff 100%);
+    padding: 15px 20px 15px 25px;
+    border-radius: 10px;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.05);
+  }
+
+  .category-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .image-placeholder {
+    width: 80%;
+    aspect-ratio: 1 / 1;
+    max-width: 550px;
+    background: linear-gradient(145deg, #3a3e54 0%, #ec6907 100%);
+    border-radius: 30px;
+    box-shadow: 0 15px 45px rgba(0, 0, 0, 0.15);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    transition: all 0.4s ease;
+  }
+  .image-placeholder:hover {
+    transform: scale(1.05);
+    box-shadow: 0 20px 55px #ec6a07af;
+  }
+  .image-placeholder img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .block-center {
+    grid-template-columns: 1fr;
+    text-align: left;
+    background: linear-gradient(to top, #e3f6ff, #ffffff);
+    border: 2px solid #f3f3f3;
+  }
+  .block-center .image-placeholder {
+    max-width: 420px;
+    margin: 40px auto;
+    background: linear-gradient(45deg, #3a3e54, #ec6907);
+  }
+
+  .block-center .category-text h2 {
+    position: relative;
+    display: inline-block;
+  }
+
+  .block-center .category-text h2::after {
+    content: "";
+    width: 120px;
+    height: 4px;
+    background: linear-gradient(90deg, #ec6907, #f6b142);
+    position: absolute;
+    bottom: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 2px;
+  }
+
+  @media (max-width: 992px) {
+    .category-block {
+      grid-template-columns: 1fr;
+      padding: 40px 25px;
+      gap: 40px;
+      margin-bottom: 50px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .category-block {
+      padding: 30px 15px;
+      gap: 25px;
+      margin-bottom: 40px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .category-block {
+      padding: 25px 10px;
+      border-radius: 15px;
+    }
+    .category-image {
+      order: -1;
+    }
+    .category-text,
+    .category-text h2,
+    .category-text p,
+    .highlight {
+      text-align: left !important;
+    }
+    .block-left {
+      direction: ltr;
+    }
+  }
+</style>
+<section class="category-section">
+  <div class="category-block block-center">
+    <div class="category-text">
+      <p>
+        Yeni nesil dikey s&uuml;p&uuml;rge modelleri, hem pratikliği hem de
+        y&uuml;ksek performansı nedeniyle &ouml;ne &ccedil;ıkan
+        &uuml;r&uuml;nlerden biridir. Slim formu sayesinde
+        k&uuml;&ccedil;&uuml;k evlerde bile kolaylıkla saklama imkanı sağlayan
+        dikey s&uuml;p&uuml;rge &ccedil;eşitlerinin bir&ccedil;oğu şarjlı olarak
+        tasarlanmıştır ve kablodan bağımsız &ccedil;alıştırılan elektrikli ev
+        aletlerindendir.
+      </p>
+
+      <p class="highlight">
+        Y&uuml;ksek &ccedil;ekiş g&uuml;c&uuml;, torbasız tasarım ve kolay
+        temizleme &ouml;zelliği bulunan dikey s&uuml;p&uuml;rge modelleri,
+        &ccedil;eşitli marka ve fiyatlarla Jebinde &uuml;r&uuml;n
+        koleksiyonlarında sunulur.
+      </p>
+    </div>
+  </div>
+
+  <div class="category-block block-left">
+    <div class="category-text">
+      <h2>Dikey S&uuml;p&uuml;rge Modelleri</h2>
+
+      <p>
+        Yerli ve yabancı bir&ccedil;ok farklı elektrikli ev aletleri markası
+        tarafından tasarlanan dikey
+        <a href="https://www.jebinde.com/kucuk-ev-aletleri/supurge"
+          >s&uuml;p&uuml;rge </a
+        >&ccedil;eşitleri, şıklığı ve konforu bir arada sunan
+        &uuml;r&uuml;nlerdir. Evinizdeki yaşam konforunu artıracak dik
+        s&uuml;p&uuml;rge modelleri, evinizi pratik bir bi&ccedil;imde
+        temizlemenizi sağlar. Marka ve modele g&ouml;re değişiklik g&ouml;steren
+        şarj s&uuml;releri, size istediğiniz temizliği yapabilmeniz i&ccedil;in
+        zaman tanır. Tasarımda yer alan ses seviyesine g&ouml;re maksimum
+        sessizlik ile &ccedil;alışabilen kablosuz dikey s&uuml;p&uuml;rge
+        modelleri olduk&ccedil;a işlevseldir.
+      </p>
+
+      <p>
+        Şarj istasyonunda modelin gerekliliklerine g&ouml;re dolum i&ccedil;in
+        bırakacağınız s&uuml;p&uuml;rgeyi tamamen şarj olduktan sonra dolu
+        batarya halinde de bekletmeye devam edebilirsiniz. Ahşap parke, seramik
+        y&uuml;zeyler ve yumuşak dokulu halı gibi alanları dikey
+        s&uuml;p&uuml;rge modelleri ile kolaylıkla temizleyebilirsiniz. Ana
+        temizlik aparatının yanı sıra bir&ccedil;ok modelde farklı temizleme
+        başlığı da &uuml;r&uuml;nle birlikte gelir. Koltuk temizleme, dar
+        y&uuml;zeyler i&ccedil;in fır&ccedil;a gibi &ccedil;eşitli temizlik
+        başlıkları, size her y&uuml;zeyde rahat bir temizlik yapabilme imkanı
+        sunar.
+      </p>
+    </div>
+
+    <div class="category-image">
+      <div class="image-placeholder">
+        <img alt="" src="/Content/UploadFiles/d6e21104-1.jpg" />
+      </div>
+    </div>
+  </div>
+
+  <div class="category-block block-right">
+    <div class="category-text">
+      <h3>Beko Dikey S&uuml;p&uuml;rge</h3>
+
+      <p>
+        Beko, kablosuz tasarıma sahip şarjlı dikey s&uuml;p&uuml;rge
+        &ccedil;eşitleriyle,
+        <a href="https://www.jebinde.com/supurge/robot-supurge"
+          >robot s&uuml;p&uuml;rge</a
+        >&nbsp;modellerinden geleneksel s&uuml;p&uuml;rge tasarımlarına kadar
+        geniş bir &uuml;r&uuml;n yelpazesine sahiptir. Baza, yatak, koltuk ve
+        dolapların altındaki tozları pratik bir bi&ccedil;imde tasarlanmış
+        katlanabilir dikey s&uuml;p&uuml;rgeler, Beko imzası taşır.
+        &Uuml;r&uuml;nlerin bazı modellerinde yer alan ışıklı temizleme başlığı,
+        en k&uuml;&ccedil;&uuml;k toz ve partik&uuml;lleri bile g&ouml;zden
+        ka&ccedil;ırmadan s&uuml;p&uuml;rge i&ccedil;ine hapsetmenizi sağlar.
+      </p>
+
+      <p>
+        Dik s&uuml;p&uuml;rge modelleri, tutma sapı &uuml;zerinden kontrol
+        edilebilir bi&ccedil;imde tasarlanmıştır. &Uuml;r&uuml;nlerin geniş toz
+        haznesi, temizlik sırasında toz boşaltma işlemini geciktirecek
+        niteliktedir. Toz toplama &uuml;nitesi, kolayca temizlenebilecek
+        bi&ccedil;imde tasarlanmış ve boşaltma sırasında etrafa toz yayılması
+        maksimum d&uuml;zeyde &ouml;nlenmiştir.
+      </p>
+
+      <p class="highlight">
+        Beko kablosuz s&uuml;p&uuml;rge &ouml;nerisi isteyenler i&ccedil;in
+        ayrıcalıklı se&ccedil;imler sunar.
+      </p>
+    </div>
+
+    <div class="category-image">
+      <div class="image-placeholder">
+        <img alt="" src="/Content/UploadFiles/d2c2694f-4.jpg" />
+      </div>
+    </div>
+  </div>
+
+  <div class="category-block block-left">
+    <div class="category-text">
+      <h3>Miele Dikey S&uuml;p&uuml;rge</h3>
+
+      <p>
+        Olağan&uuml;st&uuml; esneklik, konfor ve y&uuml;ksek performans
+        &ouml;zellikleriyle tasarlanan Miele dikey s&uuml;p&uuml;rge modelleri,
+        fonksiyonel elektrikli ev aletlerindendir. Şık tasarımı ve modern
+        teknolojisi ile evinizin demirbaş &uuml;r&uuml;nlerinden biri olacak
+        Miele s&uuml;p&uuml;rgeler, klasik bir s&uuml;p&uuml;rgeden beklenilen
+        temizleme performansından &ccedil;ok daha fazlasını sunar. Miele
+        modellerine &ouml;zel Hygiene Lifetime Filtre, temizlenen y&uuml;zeydeki
+        t&uuml;m toz ve partik&uuml;llerin s&uuml;p&uuml;rge i&ccedil;indeki toz
+        haznesine alınmasına ve hapsedilmesine katkı sağlar.
+      </p>
+
+      <p>
+        &Uuml;r&uuml;nlerdeki uzun s&uuml;re yetebilen şarj &ouml;zelliği,
+        temizliğin yarıda kesilmeden devam etmesine yardımcıdır. Evdeki
+        &ccedil;eşitli mobilya ve eşyaların altına rahatlıkla girebilen dik
+        s&uuml;p&uuml;rge ile temizlenmemiş yer bırakmadan kusursuz bir temizlik
+        elde edebilirsiniz. Hafif, ergonomik ve işlevsel tasarımı sayesinde
+        Miele, temizlik yapmayı keyif haline getirecek &ouml;zelliklere
+        sahiptir.
+      </p>
+
+      <p class="highlight">
+        Miele dikey s&uuml;p&uuml;rge fiyatları, &uuml;r&uuml;nlerin model ve
+        sahip olduğu &ouml;zelliklere g&ouml;re farklılık g&ouml;sterir. Birden
+        fazla model tasarımına sahip olan &uuml;r&uuml;nler arasından
+        ihtiya&ccedil;larınızı belirleyerek ideal bir se&ccedil;im
+        yapabilirsiniz.
+      </p>
+    </div>
+
+    <div class="category-image">
+      <div class="image-placeholder">
+        <img alt="" src="/Content/UploadFiles/bb8636eb-1.png" />
+      </div>
+    </div>
+  </div>
+
+  <div class="category-block block-center">
+    <div class="category-text">
+      <h2>Kablosuz Dikey S&uuml;p&uuml;rge &Ouml;zellikleri</h2>
+
+      <p>
+        Hayatınızı kolaylaştıracak dikey s&uuml;p&uuml;rgeler, hem teknik hem de
+        performans &ouml;zellikleriyle &ouml;ne &ccedil;ıkar. Jebinde
+        &uuml;r&uuml;n se&ccedil;kisinde sunulan farklı markalara ait dikey
+        s&uuml;p&uuml;rgelerin ortak &ouml;zellikleri şu şekilde sıralanabilir:
+      </p>
+
+      <ul>
+        <li>
+          Kablosuz ve ak&uuml;l&uuml; olarak &uuml;retilen dikey
+          s&uuml;p&uuml;rge &ccedil;eşitleri, kablodan bağımsız
+          &ccedil;alışabilmeleri sayesinde geniş bir &ouml;zg&uuml;rl&uuml;k
+          alanı sunar ve temizlik yapmayı kolaylaştırır.
+        </li>
+        <li>
+          Hareketli aparatlarla performansı y&uuml;kseltilen şarjlı dik
+          s&uuml;p&uuml;rge &ccedil;eşitleri, en dar ve sıkışık alanlarda bile
+          temizlik yapmayı kolaylaştıracak hareket kabiliyetine sahiptir.
+        </li>
+        <li>
+          Toz torbasız tasarımı sayesinde, temizlik sonrası torba ile uğraşmak
+          zorunda kalmazsınız. Vakumlanan toz ve par&ccedil;acıklar, toz haznesi
+          i&ccedil;ine &ccedil;ekilerek hapsedilir.
+        </li>
+        <li>
+          &Uuml;r&uuml;nlerin marka ve modeline g&ouml;re farklılık
+          g&ouml;steren şarj kapasitesi, temizlik i&ccedil;in size geniş bir
+          zaman aralığı yaratır.
+        </li>
+        <li>
+          Hafif tasarımı, dikey s&uuml;p&uuml;rgenin tek elle kolaylıkla
+          kullanımını sağlar. Dikey s&uuml;p&uuml;rge modelleri hem temizlik
+          yaparken hem de bir yerden bir yere taşınırken hafifliği sayesinde
+          pratiktir.
+        </li>
+        <li>
+          Duvara monte edilebilen şarj &uuml;nitesi, evinizin herhangi bir
+          k&ouml;şesinde konumlandırılabilir. Dikey şarjlı s&uuml;p&uuml;rgeler,
+          bu sayede gereksiz yer kaplamadan saklanabilir.
+        </li>
+        <li>
+          Dikey s&uuml;p&uuml;rgeler, tasarımları itibariyle tutma sapı
+          &uuml;zerinden el ile kontrol edilebilir. Bu sayede a&ccedil;ma kapama
+          işlemi i&ccedil;in s&uuml;rekli eğilip doğrulmak gerekmeden,
+          s&uuml;p&uuml;rgenizi tek elle kontrol edebilirsiniz.
+        </li>
+        <li>
+          &Ccedil;oklu aparat desteği sayesinde bir&ccedil;ok dik
+          s&uuml;p&uuml;rge modelini koltuk, yatak, perde temizliği gibi farklı
+          alanlarda kullanabilirsiniz.
+        </li>
+        <li>
+          &Uuml;r&uuml;nlerin bir&ccedil;ok modelinde yer verilen filtre
+          tasarımı, akar ve tozların tamamen toz haznesinde tutulmasını sağlar.
+          Bu &ouml;zellik, astım, bronşit gibi kronik nefes alma sorunları
+          yaşayan bireyler i&ccedil;in avantaj sağlayabilir.
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="category-block block-left">
+    <div class="category-text">
+      <h2>Dik S&uuml;p&uuml;rge &amp; Şarjlı S&uuml;p&uuml;rge Alınır mı?</h2>
+
+      <p>
+        Evinizdeki bir&ccedil;ok elektrikli ev aleti gibi dik s&uuml;p&uuml;rge
+        de hayat kurtarıcı cihazlardan biridir. Genel temizlik de dahil olmak
+        &uuml;zere k&uuml;&ccedil;&uuml;k kırıntılar, hızlıca
+        s&uuml;p&uuml;r&uuml;lmesi gereken alanlar i&ccedil;in, dik
+        s&uuml;p&uuml;rge &ccedil;eşitleri mutlaka alınmalıdır. Evde klasik
+        s&uuml;p&uuml;rge &ccedil;eşitlerinden biri varsa, dikey
+        s&uuml;p&uuml;rge edindikten sonra artık daha az kullanabilirsiniz.
+        Gerek geniş toz alma kapasitesi, gerekse tozu yeniden dışarıya vermeden
+        yapılan verimli temizlik, dik s&uuml;p&uuml;rge &ccedil;eşitlerine
+        ayrıcalık kazandıran &ouml;zelliklerdendir. &Ouml;zellikle evde
+        k&uuml;&ccedil;&uuml;k bebek ve &ccedil;ocuklar veya evcil hayvanlarınız
+        varsa, şarjlı dikey s&uuml;p&uuml;rgeler sizin i&ccedil;in &ccedil;ok
+        daha elzem &uuml;r&uuml;nler olabilir.
+      </p>
+
+      <p>
+        Sık sık s&uuml;p&uuml;r&uuml;lmesi gereken alanlar i&ccedil;in her
+        defasında kablolu ve &ccedil;ok yer tutan klasik s&uuml;p&uuml;rgeler
+        yerine pratik dikey s&uuml;p&uuml;rgelerin avantajlarından
+        yararlanabilirsiniz. &Ouml;zel fır&ccedil;aları sayesinde evdeki
+        t&uuml;y ve kıl gibi par&ccedil;acıkları da kolayca i&ccedil;ine
+        hapseden şarjlı dikey s&uuml;p&uuml;rge &ccedil;eşitleri, evcil
+        hayvanlarınız i&ccedil;in de kolaylıktır. Bazı markaların dikey
+        s&uuml;p&uuml;rge modellerinde, evcil hayvanların t&uuml;ylerini daha
+        dikkatlice hazneye alan &ouml;zel tasarımlı başlıklar mevcuttur.
+      </p>
+
+      <p class="highlight">
+        Jebinde s&uuml;p&uuml;rge se&ccedil;kisinden, t&uuml;m modelleri
+        inceleyebilir ve size en uygun tasarımları kolayca satın alabilirsiniz.
+      </p>
+    </div>
+
+    <div class="category-image">
+      <div class="image-placeholder">
+        <img alt="" src="/Content/UploadFiles/9d17a5b0-3.jpg" />
+      </div>
+    </div>
+  </div>
+
+  <div class="category-block block-right">
+    <div class="category-text">
+      <h2>Dikey S&uuml;p&uuml;rge Fiyatları</h2>
+
+      <p>
+        İhtiyacınıza g&ouml;re &ouml;zellikler taşıyan s&uuml;p&uuml;rge
+        modelini tercih etmeniz, hem fiyat hem de performans a&ccedil;ısından
+        &ouml;nemlidir. Se&ccedil;tiğiniz &uuml;r&uuml;n&uuml;n &ccedil;ekiş
+        g&uuml;c&uuml;, ses seviyesi, toz kapasitesi gibi detaylı
+        &ouml;zellikler, s&uuml;p&uuml;rgeden beklentinizin karşılanması adına
+        fark yaratır. Se&ccedil;tiğiniz modelin kablolu ya da şarjlı olması,
+        temizlik yaparken kendinizi ne kadar &ouml;zg&uuml;r hissedeceğinizi
+        belirleyen etkenlerden biridir. Şarjlı s&uuml;p&uuml;rge modelleri,
+        fiyat olarak kablolu modellere oranlara biraz daha farklı
+        g&ouml;zlenebilir. S&uuml;p&uuml;rgenin tasarımında kullanılan
+        ak&uuml;n&uuml;n kapasitesi, şarj dolum s&uuml;resini ve temizlik
+        sırasında şarjın dayanma s&uuml;resini etkiler.
+      </p>
+
+      <p class="highlight">
+        S&uuml;p&uuml;rge fiyatları, d&ouml;nemsel kampanyalar da dahil olmak
+        &uuml;zere bir&ccedil;ok nedenle farklılık g&ouml;sterebilir. Jebinde
+        koleksiyonunda satışa sunulan farklı markalara ait dikey
+        s&uuml;p&uuml;rge fiyatları, ulaşılabilir ve esnek satın alma
+        se&ccedil;eneklerine sahiptir.
+      </p>
+    </div>
+
+    <div class="category-image">
+      <div class="image-placeholder">
+        <img alt="" src="/Content/UploadFiles/9aeba883-6.jpg" />
+      </div>
+    </div>
+  </div>
+
+  <div class="category-block block-center">
+    <div class="category-text">
+      <h3>Dikey S&uuml;p&uuml;rge Alırken Bilinmesi Gerekenler</h3>
+
+      <p>
+        Zamandan ve efordan tasarruf sağlayan dikey s&uuml;p&uuml;rgeleri
+        alırken bazı detaylara dikkat etmek &ouml;nemlidir.
+        &Uuml;r&uuml;n&uuml;n g&uuml;c&uuml;, ses seviyesi, pratik kullanımı
+        gibi konuları araştırarak yeni bir s&uuml;p&uuml;rge edinmeniz,
+        &uuml;r&uuml;nden alacağınız verimi artırabilir. En iyi şarjlı dikey
+        s&uuml;p&uuml;rge araştırması yapılırken &uuml;r&uuml;n&uuml;n fiyat
+        aralığından &ouml;nce teknik detayları ve performans kalitesine dikkat
+        etmeniz gerekir.
+      </p>
+
+      <p>
+        Kalitesini ispatlamış ve elektrikli ev aletleri konusunda kendini
+        kanıtlamış markaların tasarladığı &uuml;r&uuml;nler, satış sonrası
+        servis hizmetine daha kolay ulaşabilmeniz bakımından fark yaratır. Dikey
+        s&uuml;p&uuml;rgeler, g&uuml;venli, fonksiyonel ve performansı
+        y&uuml;ksek &uuml;r&uuml;nlerdir. Hem m&uuml;şteri hizmetleri desteği
+        hem de satış sonrası garantisi veren markaların tasarladığı
+        s&uuml;p&uuml;rge modellerini tercih ederek dikey s&uuml;p&uuml;rge
+        alışverişinizi tamamlayabilirsiniz.
+      </p>
+
+      <h4>Motor G&uuml;c&uuml;</h4>
+
+      <p>
+        Jebinde&rsquo;de sunulan dikey s&uuml;p&uuml;rge &ccedil;eşitleri, yerli
+        ve yabancı markaların tasarladığı kalitesi y&uuml;ksek
+        &uuml;r&uuml;nlerdir. Se&ccedil;tiğiniz dikey s&uuml;p&uuml;rgenin etkin
+        bir performans sunması i&ccedil;in, motor g&uuml;c&uuml;n&uuml;n de
+        yeterli olması &ouml;nemlidir. &Uuml;r&uuml;n&uuml;n sahip olduğu motor
+        g&uuml;c&uuml;, emiş yeteneği &uuml;zerinde etkilidir. Bu nedenle,
+        &ouml;zellikle torbasız s&uuml;p&uuml;rge &ccedil;eşitlerinde motor
+        g&uuml;c&uuml;n&uuml;n y&uuml;ksekliği &ccedil;ok &ouml;nemli bir
+        detaydır.
+      </p>
+
+      <p>
+        Toz torbalı s&uuml;p&uuml;rge modellerinde, torbanın kapasitesi
+        dolduk&ccedil;a emiş g&uuml;c&uuml;n&uuml;n de azaldığı
+        g&ouml;r&uuml;l&uuml;r. Bu sorun, torbasız tasarlanmış
+        s&uuml;p&uuml;rgeler i&ccedil;in de ge&ccedil;erlidir. Torbasız
+        s&uuml;p&uuml;rgelerde, toz haznesini tam olarak dolmadan boşaltır ve
+        yeniden kullanmaya başlarsanız, motorun daha verimli &ccedil;alıştığını
+        ve emiş g&uuml;c&uuml;n&uuml;n arttığını da g&ouml;zlemleyebilirsiniz.
+      </p>
+
+      <h4>Ergonomik Tasarım ve Hafiflik</h4>
+
+      <p>
+        Geleneksel elektrikli s&uuml;p&uuml;rgelerin evde yarattığı fazlalık
+        problemine dikey şarjlı s&uuml;p&uuml;rgeler son noktayı koymuştur.
+        Ergonomik tasarımlı şarjlı dik s&uuml;p&uuml;rge modelleri, her bir
+        marka ve model i&ccedil;in &ouml;zel olarak tasarlanmış şarj
+        &uuml;nitelerinde kullanıma hazır hale gelir. Ak&uuml;n&uuml;n dolmasını
+        sağlayan duvar aparatı, bir&ccedil;ok &uuml;r&uuml;nde esnek bir
+        kullanım &ouml;zelliğine sahiptir. Bu sayede prize en yakın alanda
+        duvara monte edilen şarj istasyonunu fazla alan kaplamaksızın
+        konumlandırabilirsiniz.
+      </p>
+
+      <p>
+        Hafif materyaller kullanılarak tasarlanan şarjlı dikey
+        s&uuml;p&uuml;rgeler, kullanımda ve taşımada kolaylık sağlar. Dikey
+        s&uuml;p&uuml;rge se&ccedil;erken hafif olmasına ve ergonomik
+        detaylarına dikkat etmek gerekir. Dolap ve yatak altı gibi uzanması zor
+        alanlara erişebilmek i&ccedil;in, hareketli aparatlarının olması da
+        &ouml;nemlidir. Ana temizlik başlığının dışında, farklı
+        b&ouml;lgelerdeki tozları toparlamak i&ccedil;in &ouml;zel tasarlanmış
+        başlık &ccedil;eşitlerinin olması da dikey s&uuml;p&uuml;rgenin
+        kullanımını kolaylaştıran unsurlardan biridir.
+      </p>
+
+      <h4>Ses Seviyesi</h4>
+
+      <p>
+        B&uuml;t&uuml;n elektrikli s&uuml;p&uuml;rge modellerinde olduğu gibi,
+        dikey s&uuml;p&uuml;rgelerde de ses seviyesinin makul seviyede olması
+        tercih edilen bir durumdur. S&uuml;p&uuml;rgenin kullanıldığı ortamdaki
+        yaşam konforuna katkı sunan ses detayı, s&uuml;p&uuml;rge tercihi
+        yapılırken dikkat edilmesi gereken konulardan biridir. &Uuml;stelik
+        kısıtlı zamana sahip kişiler i&ccedil;in, sessiz s&uuml;p&uuml;rge
+        &ccedil;eşitleri gece temizlik yapmaya da olanak tanır. Ses seviyesi
+        d&uuml;ş&uuml;k bir s&uuml;p&uuml;rge alarak komşularınızın
+        s&uuml;p&uuml;rge sesinden rahatsız olmasını da &ouml;nleyebilirsiniz.
+      </p>
+
+      <p>
+        D&uuml;ş&uuml;k ses seviyesine sahip s&uuml;p&uuml;rge modelleri
+        sayesinde, evde bebeğiniz uyurken rahat&ccedil;a s&uuml;p&uuml;rme
+        işlemi yapabilir ve zamanı verimli kullanabilirsiniz. Evcil hayvanların
+        bir&ccedil;oğu da s&uuml;p&uuml;rge sesinden rahatsız olabilir. Onların
+        yaşam kalitesi &uuml;zerinde de olumlu katkı sağlayacak bi&ccedil;imde,
+        se&ccedil;tiğiniz s&uuml;p&uuml;rgenin ses seviyesine dikkat
+        edebilirsiniz.
+      </p>
+    </div>
+  </div>
+
+  <div class="category-block block-center">
+    <div class="category-text">
+      <h3>Dikey S&uuml;p&uuml;rge Faydaları</h3>
+
+      <p>
+        Dikey s&uuml;p&uuml;rgelerin pratik kullanım avantajları dışında yaşam
+        kalitesini artıran farklı &ouml;zellikleri de bulunur. Alerjik
+        b&uuml;nyeye sahip kişiler i&ccedil;in, evlerinde bulunan toz, t&uuml;y
+        ve akarlar, &ouml;nemli bir nefes alma sorunu yaratabilir. &Uuml;retici
+        markaların tasarımlarında bulunan &ouml;zel filtreler sayesinde,
+        evinizin en &uuml;cra k&ouml;şelerinde bulunan tozlar, g&ouml;zle
+        g&ouml;r&uuml;lmeyen t&uuml;y ve akarlar bile s&uuml;p&uuml;rge
+        i&ccedil;ine hapsedilebilir.
+      </p>
+
+      <p>
+        Bir&ccedil;ok modelde yer verilen ışıklı b&uuml;y&uuml;k
+        s&uuml;p&uuml;rge başlığı, &ccedil;ıplak g&ouml;zle
+        g&ouml;r&uuml;lemeyen tozları ve partik&uuml;lleri bile rahatlıkla
+        g&ouml;rmenize imkan tanır. Bu sayede yatak ve dolap altlarındaki toz ve
+        t&uuml;yler, tam anlamıyla s&uuml;p&uuml;rge i&ccedil;ine alınabilir.
+        Aşırı titiz ve kusursuz hijyen beklentisi olan kişiler i&ccedil;in
+        tozların yeniden dışarı atılmadan yapılan tam temizlik b&uuml;y&uuml;k
+        fark yaratır.
+      </p>
+
+      <p>
+        Siz de evinizde konforlu ve y&uuml;ksek kalitede bir temizlik
+        performansı elde etmek i&ccedil;in, Jebinde&rsquo;de satışa sunulan
+        dikey s&uuml;p&uuml;rge &ccedil;eşitlerini inceleyebilirsiniz.
+        D&uuml;nyanın en beğenilen markalarının tasarladığı şarjlı dikey
+        s&uuml;p&uuml;rgeleri en uygun fiyatlarla hemen satın almak i&ccedil;in
+        &uuml;r&uuml;nleri sepetinize ekleyin ve Jebinde&rsquo;de g&uuml;venli
+        alışverişin keyfini &ccedil;ıkarmaya başlayın.
+      </p>
+    </div>
+  </div>
+</section>

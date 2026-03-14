@@ -1,0 +1,473 @@
+<style type="text/css">
+  .category-section {
+    padding: 0px 20px !important;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+  }
+
+  .category-block {
+    max-width: 1200px;
+    margin: 0 auto 70px;
+    padding: 40px;
+    border-radius: 25px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+    transition: all 0.3s ease;
+    background-color: white;
+  }
+
+  .category-block:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 18px 60px rgba(0, 0, 0, 0.1);
+  }
+
+  .block-left {
+    direction: rtl;
+  }
+  .block-left > * {
+    direction: ltr;
+  }
+
+  .category-text h2,
+  .category-text h3 {
+    font-weight: 800;
+    color: #2c2f3a;
+    margin-bottom: 20px;
+    position: relative;
+  }
+
+  .category-text h2::after,
+  .category-text h3::after {
+    content: "";
+    display: block;
+    width: 120px;
+    height: 4px;
+    background: linear-gradient(90deg, #ec6907, #f6b142);
+    border-radius: 2px;
+    margin-top: 10px;
+  }
+
+  .category-text h2 {
+    font-size: 34px !important;
+    text-transform: uppercase;
+  }
+  .category-text h3 {
+    font-size: 28px !important;
+  }
+
+  .category-text p {
+    font-size: 17px !important;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 15px;
+  }
+
+  .category-text a {
+    color: #ec6907;
+    font-weight: 600;
+    text-decoration: underline;
+  }
+
+  .highlight {
+    font-size: 19px;
+    font-weight: 600;
+    color: #212121;
+    margin-top: 35px;
+    border-left: 6px solid #ef8434;
+    background: linear-gradient(90deg, #fff9f3 0%, #e3f6ff 100%);
+    padding: 15px 20px 15px 25px;
+    border-radius: 10px;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.05);
+  }
+
+  .category-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .image-placeholder {
+    width: 80%;
+    aspect-ratio: 16 / 9;
+    max-width: 650px;
+    border-radius: 30px;
+    box-shadow: 0 15px 45px rgba(0, 0, 0, 0.15);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    transition: all 0.4s ease;
+  }
+  .image-placeholder:hover {
+    transform: scale(1.05);
+    box-shadow: 0 20px 55px #ec6a07af;
+  }
+  .image-placeholder img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .block-center {
+    grid-template-columns: 1fr;
+    text-align: center;
+    padding: 30px;
+    border: 2px solid #f3f3f3;
+  }
+
+  .block-center .image-placeholder {
+    width: 100%;
+    max-width: 1200px;
+    height: auto;
+    aspect-ratio: auto;
+  }
+
+  .block-center .image-placeholder img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+
+  .block-center .category-text h2 {
+    position: relative;
+    display: inline-block;
+  }
+
+  .block-center .category-text h2::after {
+    content: "";
+    width: 120px;
+    height: 4px;
+    position: absolute;
+    bottom: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 2px;
+  }
+
+  .text-box-container {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    align-items: center;
+  }
+
+  .text-row {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+  }
+
+  .text-box {
+    width: 500px;
+    min-height: auto;
+    background: #ffffff;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+    border-radius: 20px;
+    padding: 25px;
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+  }
+  .text-box p {
+    font-size: 16px !important;
+    color: #444;
+    margin: 0;
+    line-height: 1.6;
+  }
+  .text-box:hover {
+    transform: translateY(-8px);
+    border-color: #ec6907;
+    box-shadow: 0 12px 35px rgba(236, 105, 7, 0.15);
+  }
+
+  @media (max-width: 992px) {
+    .category-block {
+      grid-template-columns: 1fr;
+      padding: 40px 25px;
+      gap: 40px;
+      margin-bottom: 50px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .category-block {
+      padding: 30px 15px;
+      gap: 25px;
+      margin-bottom: 40px;
+    }
+    .text-box {
+      width: 90%;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .category-block {
+      padding: 25px 10px;
+      border-radius: 15px;
+    }
+    .category-image {
+      order: -1;
+    }
+    .category-text,
+    .category-text h2,
+    .category-text p,
+    .highlight {
+      text-align: left !important;
+    }
+    .block-left {
+      direction: ltr;
+    }
+  }
+</style>
+<section class="category-section">
+  <div class="category-block block-center">
+    <div class="category-text">
+      <p>
+        <strong>Mikrodalga Fırın Nedir ve Günlük Hayatta Ne İşe Yarar:</strong>
+        Buzdolabındaki yemeği ısıtmak, sabah yaptığınız kahveyi tekrar sıcak
+        hale getirmek ya da donmuş bir ürünü hızlıca çözdürmek için devreye
+        mutfağın en büyük zaman kazandıran yardımcılarından olan mikrodalga
+        fırın girer. Mikrodalga fırınlar pratikliği ve hızı sayesinde modern
+        mutfakların vazgeçilmez beyaz eşyaları arasında yer alır. Cihazlar
+        sadece yemek ısıtmakla kalmaz. Aynı zamanda çözündürme, pişirme hatta
+        bazı tarifleri baştan sona hazırlama konusunda da oldukça kullanışlı bir
+        rol üstlenir. Doğru kullanıldığında hem zamandan tasarruf etmenizi
+        sağlar hem de mutfaktaki iş yükünüzü ciddi ölçüde hafifletir.
+      </p>
+
+      <p>
+        Ev tipi mikrodalga fırın modelleri yiyecekleri mikrodalga adı verilen
+        elektromanyetik dalgalar yardımıyla ısıtır. Geleneksel fırınlardan
+        farklı olarak ısıyı dışarıdan içeri doğru iletmek yerine yiyeceğin
+        içindeki su moleküllerini harekete geçirerek ısınmayı içeriden başlatır.
+        Bu sayede çok daha kısa sürede sonuç alabilirsiniz. Günlük hayatta
+        kompakt mutfak fırını kullanımı son derece yaygındır. Sabah
+        kahvaltısında soğuyan içecekleri ısıtmak, akşamdan kalan yemeği tekrar
+        servis sıcaklığına getirmek ya da dondurucudan çıkardığınız bir ürünü
+        pişirmeye hazır hale getirmek için sıkça tercih edilir. Özellikle
+        çalışan bireyler, öğrenciler ve yoğun tempoda yaşayan aileler için
+        mikrodalga fırın büyük kolaylık sağlar.
+      </p>
+
+      <p class="highlight">
+        Bu rehberde mikrodalga fırın ne işe yarar, avantajlı özellikleri
+        nelerdir ve hangi donanım ne için kullanılır gibi pek çok detayı bir
+        arada bulabilirsiniz.
+      </p>
+    </div>
+
+    <div class="category-image">
+      <div class="image-placeholder">
+        <img alt="" src="/Content/UploadFiles/63a0c0c4-mikrodalga-1.jpg" />
+      </div>
+    </div>
+  </div>
+
+  <div class="category-block block-right">
+    <div class="category-text">
+      <h2>Mikrodalga ile Pratik Isıtma ve Zaman Tasarrufu</h2>
+
+      <p>
+        Hızlı ısıtma teknolojisi mikrodalga cihazların en büyük avantajıdır.
+        Geleneksel ocakta ya da fırında dakikalar süren ısıtma işlemi
+        mikrodalgalarda çoğu zaman birkaç dakika içinde tamamlanır. Özellikle
+        sabah işe yetişmeye çalışırken veya kısa öğle molasında yemeğinizi
+        ısıtmak istediğinizde bu hız adeta fark yaratır. Yemeğinizi mikrodalga
+        fırın türüne uygun kaba koyup doğru süre ve güç ayarını seçtiğinizde hem
+        eşit hem de hızlı bir ısınma elde edebilirsiniz. Üstelik çoğu modelde
+        bulunan otomatik programlar sayesinde yiyeceğin türüne göre ideal
+        ayarlar kolay şekilde belirlenir. Bu da deneme yanılma yapmadan pratik
+        sonuçlar almanızı sağlar.
+      </p>
+
+      <p>
+        Mutfakta zaman tasarrufu haricinde enerji de önemli bir konudur.
+        Mikrodalga fırın türleri kısa süreli çalıştığı için uzun süre açık kalan
+        fırınlara kıyasla daha az enerji tüketebilir. Dolayısıyla enerji verimli
+        mutfak ürünü olarak da nitelendirilir. Küçük porsiyonlar ya da tek
+        kişilik öğünler için büyük fırını çalıştırmak yerine mikrodalga
+        kullanmak daha mantıklı ve ekonomiktir. Hazır yemek ısıtma konusunda da
+        ürünler oldukça başarılıdır.
+      </p>
+    </div>
+
+    <div class="category-image">
+      <div class="image-placeholder">
+        <img alt="" src="/Content/UploadFiles/836f5dd3-mikrodalga-2.jpg" />
+      </div>
+    </div>
+  </div>
+
+  <div class="category-block block-left">
+    <div class="category-text">
+      <h3>Günlük Kullanımda Mikrodalga Fırın Avantajları</h3>
+
+      <p>
+        Günlük yaşamda mikrodalga kullanmanın pek çok avantajı bulunur.
+        <a href="https://www.jebinde.com/kucuk-ev-aletleri/mutfak"
+          >Mutfak yardımcı ürünleri</a
+        >&nbsp;arasında yer alan cihazlarda öncelikle pratiklik ön plandadır.
+        Kolay kullanım kontrol paneli sayesinde karmaşık ayarlara gerek kalmadan
+        tek tuşla ısıtma işlemi başlatılabilir. Bu durum mutfakta tecrübesi az
+        olan kişiler için dahi büyük kolaylık sağlar.
+      </p>
+
+      <p>
+        Mikrodalga cihazların sunduğu bir diğer avantaj da temizliktir.
+        Mikrodalga fırın çeşitlerinde yemekler genelde kapalı kaplarda
+        ısıtıldığı için sıçrama ya da kirlenme daha az olur. İç yüzeyi nemli
+        bezle silerek kısa sürede temizleyebilirsiniz. Bu da mutfak temizliğine
+        ayırdığınız zamanı azaltır. Ayrıca porsiyon kontrolü yapmak isteyenler
+        için de idealdir. Küçük miktarlardaki yiyecekleri hızlıca ısıtıp
+        gereksiz büyük pişirme işlemlerinden kaçınabilirsiniz. Ofis
+        ortamlarında, yurtlarda ve küçük mutfaklarda yer kaplamadan büyük işlev
+        görmesi de önemli bir avantajdır.
+      </p>
+    </div>
+
+    <div class="category-image">
+      <div class="image-placeholder">
+        <img alt="" src="/Content/UploadFiles/42e12f61-mikrodalga-3.jpg" />
+      </div>
+    </div>
+  </div>
+
+  <div class="category-block block-right">
+    <div class="category-text">
+      <h2>Mikrodalga Fırın Fiyatları Neye Göre Değişir?</h2>
+
+      <p>
+        Mikrodalga fırın fiyatları modelin sahip olduğu teknik özelliklere ve
+        kapasitesine göre değişiklik gösterir. Mikrodalga fırın fiyatları
+        arasındaki temel farklardan biri hacimdir. Litre cinsinden ifade edilen
+        iç hacim arttıkça cihazın fiyatı da genelde yükselir. Kalabalık aileler
+        için büyük hacimli mikrodalga modelleri tercih edilir. Tek yaşayanlar
+        için kompakt seçenekler yeterli olabilir. Güç seviyesi de fiyatı
+        etkileyen önemli faktörlerden biridir. Watt değeri yüksek olan modeller
+        yiyecekleri daha hızlı ısıtır. Bazı pişirme işlemlerinde yüksek
+        performans sunar. Bunun yanında dijital ekran, dokunmatik kontrol
+        paneli, otomatik pişirme programları, gıda çözündürme özelliği ve çocuk
+        kilidi gibi ek donanımlar da fiyat üzerinde belirleyici olur.
+      </p>
+
+      <p>
+        Bazı mikrodalga fırın çeşitleri sadece ısıtma ve çözündürme işlevine
+        sahiptir. Bazıları ızgara özelliği de sunar. Izgaralı modeller
+        yiyeceklerin üzerini kızartma veya hafif çıtır doku kazandırma konusunda
+        avantaj sağlar. Bu tür çok fonksiyonlu modeller genelde standart
+        cihazlara göre daha yüksek fiyat aralığında yer alır. Marka da
+        mikrodalga fırın fiyatları üzerinde etkilidir. Güvenilir ve yaygın
+        servis ağına sahip markalar sundukları kalite avantajı nedeniyle
+        sıklıkla tercih edilir.
+      </p>
+    </div>
+
+    <div class="category-image">
+      <div class="image-placeholder">
+        <img alt="" src="/Content/UploadFiles/f863be16-mikrodalga-4.jpg" />
+      </div>
+    </div>
+  </div>
+
+  <div class="category-block block-left">
+    <div class="category-text">
+      <h2>Beko Mikrodalga Fırın Modelleri</h2>
+
+      <p>
+        Mutfak teknolojileri denildiğinde öne çıkan markalardan olan Beko
+        mikrodalga fırın kategorisinde de son derece geniş bir ürün yelpazesi
+        sunar. Farklı hacim, güç ve tasarım seçenekleri sayesinde ihtiyacınıza
+        uygun model bulmanız kolaylaşır. Beko mikrodalga fırın modelleri
+        arasında solo tezgah üstü kullanım için tasarlanan kompakt ürünler
+        mevcuttur. Ayrıca daha büyük iç hacme sahip mikrodalga fırın seçenekleri
+        de bulunur. Modern mutfaklara uyum sağlayan şık Beko mikrodalga
+        tasarımları sadece işlevsellik değil estetik açıdan da tatmin edici
+        kullanım sunar.
+      </p>
+
+      <p>
+        Günlük ısıtma ihtiyaçları için temel fonksiyonlara sahip mikrodalga
+        fırınlar tercih edilebilir. Daha fazla özellik isteyen kullanıcılar için
+        ızgaralı veya gelişmiş programlara sahip
+        <a href="https://www.jebinde.com/mutfak/yiyecek-hazirlama"
+          >yiyecek hazırlama ürünleri</a
+        >&nbsp;öne çıkar. Böylece basit ve çok yönlü kullanım senaryolarına
+        uygun çözümler bulunur. Küçük mutfaklar için fırın arayanlar Beko’nun
+        kalitesini tercih ederek cazip deneyim yaşayabilir.
+      </p>
+
+      <h3>Beko Mikrodalga Fırınlarda Öne Çıkan Özellikler</h3>
+
+      <p>
+        Beko mikrodalga modellerinde kullanıcı dostu detaylar dikkat çeker.
+        Kolay anlaşılır kontrol panelleri ve otomatik programlar farklı
+        yiyecekler için ideal ayarları hızlıca seçmenizi sağlar. Bu da zamandan
+        kazandırırken tutarlı sonuçlar elde etmenize yardımcı olur. Çözündürme
+        fonksiyonu donmuş gıdaları kısa sürede pişirmeye hazır hale getirir.
+        Ağırlığa ya da zamana göre ayarlanabilen özellik et ve sebze gibi
+        ürünlerde büyük kolaylık sağlar. Ayrıca çocuk kilidi gibi güvenlik
+        özellikleri evde minikler varsa ekstra güvenlik sunar.
+      </p>
+
+      <p>
+        Dayanıklı iç kaplama ve kolay temizlenebilir yüzeyler de Beko mikrodalga
+        çeşitlerinin öne çıkan yönleri arasındadır. Sıçramalara karşı dayanıklı
+        iç yüzey temizlik sürecini zahmetsiz hale getirir. Böylece cihazın uzun
+        süre hijyenik kalmasına yardımcı olur. Günlük kullanım fırını
+        arıyorsanız Beko markasının tasarımlarına yönelebilirsiniz. Beko
+        mikrodalga fırın fiyatları ile de yüz güldürür. Bu sayede her açıdan
+        cazip deneyim elde edebilirsiniz.
+      </p>
+    </div>
+
+    <div class="category-image">
+      <div class="image-placeholder">
+        <img alt="" src="/Content/UploadFiles/bdb9501e-mikrodalga-5.jpg" />
+      </div>
+    </div>
+  </div>
+
+  <div class="category-block block-right">
+    <div class="category-text">
+      <h2>Mikrodalga Fırın Seçerken Nelere Dikkat Edilmeli?</h2>
+
+      <p>
+        Yeni bir mikrodalga fırın almayı planlıyorsanız öncelikle kullanım
+        amacınızı netleştirmeniz gerekir. Kullanım amacı model seçiminizi
+        doğrudan etkiler. İç hacim önemli mikrodalga fırınlar arasında önemli
+        bir faktördür. Ailenizin büyüklüğüne ve genelde ısıttığınız kapların
+        boyutuna göre yeterli litre kapasitesine sahip bir model tercih etmeniz
+        önerilir. Büyük tabakların veya kapların rahatça sığabileceği iç alan
+        kullanım konforunu artırır.
+      </p>
+
+      <p>
+        Güç seviyesi ve program çeşitliliği de seçim sürecinde dikkate
+        alınmalıdır. Farklı yiyecek türleri için otomatik programlar sunan
+        modeller pratik ve güvenli kullanım sağlar. Çocuk kilidi, zamanlayıcı ve
+        dijital ekran gibi detaylar da günlük kullanımda fark yaratır. Servis
+        ağı ve garanti süresi gibi satış sonrası hizmetleri de göz önünde
+        bulundurabilirsiniz. Uzun ömürlü ve sorunsuz kullanım için güvenilir
+        markaları tercih etmek avantaj sağlar.
+      </p>
+
+      <p>
+        Siz de hem güvenilir markaları bir arada görmek hem ihtiyacınıza uygun
+        modeli kolayca karşılaştırmak istiyorsanız Jebinde.com’u ziyaret
+        edebilirsiniz. Farklı hacim ve özelliklere sahip mikrodalga fırın
+        seçeneklerini inceleyip bütçenize uygun alternatifleri
+        değerlendirebilirsiniz. Hızlı teslimat avantajı ve geniş ürün
+        yelpazesiyle mutfağınızdaki pratikliği bir üst seviyeye taşımak
+        sandığınızdan çok daha kolay.
+      </p>
+    </div>
+    <div class="category-image">
+      <div class="image-placeholder">
+        <img alt="" src="/Content/UploadFiles/ed7c1d69-mikrodalga-6.jpg" />
+      </div>
+    </div>
+  </div>
+</section>

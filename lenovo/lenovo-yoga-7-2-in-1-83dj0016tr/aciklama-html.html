@@ -1,0 +1,146 @@
+<style type="text/css">
+  .g-cont {
+    max-width: 100%;
+    font-family: "Segoe UI", Roboto, sans-serif;
+    box-sizing: border-box;
+  }
+  /* Grid min genişliğini artırdım ki kutular çok sıkışmasın */
+  .g-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 15px;
+    margin-bottom: 20px;
+  }
+  /* Kutu padding 15px -> 20px oldu */
+  .g-card {
+    background: #eeeeee;
+    border: 1px solid #333;
+    border-radius: 10px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    transition: all 0.3s ease;
+    color: #fff;
+    position: relative;
+    overflow: hidden;
+  }
+  .g-card:hover {
+    border-color: #253b48;
+    box-shadow: 0 0 20px #253b484d;
+    transform: translateY(-4px) scale(1.02);
+    background: #fff;
+  }
+  /* İkon yuvarlağı 38px -> 54px oldu */
+  .g-icon {
+    width: 54px;
+    height: 54px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    transition: 0.3s;
+    border: 1px solid #253b484d;
+  }
+  .g-card:hover .g-icon {
+    background: #253b484d;
+    border-color: #253b48;
+  }
+  /* İkon görseli 22px -> 32px oldu */
+  .g-icon img {
+    width: 32px;
+    height: 32px;
+    object-fit: contain;
+  }
+  .g-info {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.4;
+  }
+  /* Yazı boyutları artırıldı */
+  .g-lbl {
+    font-size: 12px;
+    color: #16445f;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+  }
+  .g-val {
+    font-size: 16px;
+    font-weight: 800;
+    color: #253b48;
+    text-shadow: 0 0 5px #253b484d;
+  }
+  .g-ban {
+    background: linear-gradient(135deg, #253b48, #16445f);
+    color: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 15px;
+    font-weight: bold;
+    box-shadow: 0 5px 15px #253b484d;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+  }
+</style>
+<div class="g-cont">
+  <div class="g-grid">
+    <div class="g-card">
+      <div class="g-icon">
+        <img alt="CPU" src="/Content/UploadFiles/d55560d8-amd-ryzen.svg" />
+      </div>
+
+      <div class="g-info">
+        <span class="g-lbl">İşlemci</span
+        ><span class="g-val">Intel Core Ultra 5 125U</span>
+      </div>
+    </div>
+
+    <div class="g-card">
+      <div class="g-icon">
+        <img
+          alt="GPU"
+          src="/Content/UploadFiles/b805614f-lenovo-ekran-karti.svg"
+        />
+      </div>
+
+      <div class="g-info">
+        <span class="g-lbl">Ekran Kartı</span
+        ><span class="g-val">Intel Graphics</span>
+      </div>
+    </div>
+
+    <div class="g-card">
+      <div class="g-icon">
+        <img alt="RAM" src="/Content/UploadFiles/784eef36-lenovo-ram.svg" />
+      </div>
+
+      <div class="g-info">
+        <span class="g-lbl">Bellek</span><span class="g-val">16GB DDR5</span>
+      </div>
+    </div>
+
+    <div class="g-card">
+      <div class="g-icon">
+        <img alt="SSD" src="/Content/UploadFiles/a978e501-lenovo-ssd.svg" />
+      </div>
+
+      <div class="g-info">
+        <span class="g-lbl">Depolama</span><span class="g-val">512GB SSD</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="g-ban">
+    <img
+      src="https://jebinde.com/Content/UploadFiles/baac5d95-lenovo-logo.svg"
+    />
+    <span>2 Yıl Lenovo Türkiye Garantili</span>
+    <img src="/Content/UploadFiles/03c1702c-160.svg" />
+  </div>
+</div>

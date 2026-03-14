@@ -1,0 +1,4389 @@
+<section class="section-carousel-1-iu">
+  <style type="text/css">
+    .section-box-iu .container-iu {
+      max-width: 1200px !important;
+      margin: 0 auto;
+      padding: 0 20px;
+      overflow: hidden;
+    }
+
+    .media-evaluation-real-box-iu .media-evaluation-real-item-iu:last-child {
+      margin-right: 0 !important;
+    }
+
+    .media-evaluation-real-iu {
+      display: flex;
+      width: max-content;
+      overflow: hidden;
+    }
+
+    .media-evaluation-real-box-iu {
+      background: #fff;
+      overflow: hidden;
+      padding: 30px 0;
+      position: relative;
+      z-index: 1;
+    }
+
+    .title-diy-iu {
+      text-align: center;
+      padding: 20px;
+      margin: 0 auto;
+    }
+
+    .title-diy-iu p:first-child {
+      font-size: 2em !important;
+      font-weight: 800;
+      line-height: 1.1 !important;
+      margin-bottom: 10px;
+      margin-top: 0;
+    }
+
+    .title-diy-iu p:last-child {
+      font-size: 1.8em !important;
+      font-weight: 600;
+      line-height: 1.3 !important;
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+
+    .media-evaluation-real-box-iu .media-evaluation-real-iu {
+      display: flex;
+      margin-top: 60px;
+    }
+
+    .media-evaluation-real-box-iu .media-evaluation-real-item-iu {
+      width: calc((1200px - 4 * 60px) / 5);
+      margin-right: 60px;
+      background: #fff;
+      display: flex;
+      width: 560px;
+      flex-direction: column;
+      flex-shrink: 0;
+    }
+
+    .media-evaluation-real-box-iu .media-evaluation-real-img-iu {
+      position: relative;
+      display: flex;
+    }
+
+    .media-evaluation-real-box-iu .media-real-img-item-iu {
+      flex: 1;
+      position: relative;
+    }
+
+    .media-evaluation-real-box-iu .media-real-img-item-iu img {
+      display: block;
+      width: 100%;
+      height: 100% !important;
+      margin: 0;
+      position: relative;
+      z-index: 1;
+      object-fit: cover;
+    }
+
+    .media-evaluation-real-box-iu .media-real-tag-iu {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      font-size: 16px;
+      color: #fff;
+      line-height: 1.2;
+      padding: 4px 8px;
+      background: rgba(0, 0, 0, 0.4);
+      z-index: 2;
+    }
+
+    .media-evaluation-real-box-iu
+      .media-real-img-item-iu:last-child
+      .media-real-tag-iu {
+      left: auto;
+      right: 10px;
+    }
+
+    .media-evaluation-real-box-iu .media-evaluation-real-arrow-iu {
+      position: absolute;
+      display: flex;
+      left: 50%;
+      bottom: 40px;
+      transform: translateX(-50%);
+      z-index: 2;
+    }
+
+    .media-evaluation-real-box-iu .media-real-arrow-item-iu {
+      cursor: pointer;
+      margin-right: 18px;
+      overflow: hidden;
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      background: #fff;
+      position: relative;
+      transition: all 0.4s ease;
+    }
+
+    .media-evaluation-real-box-iu .media-real-arrow-item-iu::before {
+      position: absolute;
+      content: "";
+      display: block;
+      width: 12px;
+      height: 12px;
+      border-top: 2px solid #000;
+      border-left: 2px solid #000;
+      top: 50%;
+      left: 50%;
+      margin-left: 2px;
+      transform: translate(-50%, -50%) rotate(-45deg);
+      transition: all 0.4s ease;
+    }
+
+    .media-evaluation-real-box-iu .media-real-arrow-item-iu:nth-child(2) {
+      transform: scale(-1, -1);
+    }
+
+    .media-evaluation-real-box-iu .media-real-arrow-item-iu:hover {
+      background: #000;
+    }
+
+    .media-evaluation-real-box-iu .media-real-arrow-item-iu:hover::before {
+      border-color: #fff;
+    }
+
+    .media-evaluation-real-box-iu .media-real-bottom-iu {
+      display: flex;
+      align-items: center;
+      margin-top: 60px;
+    }
+
+    .media-evaluation-real-box-iu .media-real-dot-iu {
+      display: flex;
+      flex: 1;
+      background: #f1f1f1;
+      height: 2px;
+    }
+
+    .media-evaluation-real-box-iu .media-real-dot-item-iu {
+      flex: 1;
+      height: 2px;
+      position: relative;
+      cursor: pointer;
+    }
+
+    .media-evaluation-real-box-iu .media-real-dot-item-iu::before {
+      position: absolute;
+      content: "";
+      display: block;
+      width: 0;
+      height: 100%;
+      background: #000;
+      left: 0;
+      top: 0;
+    }
+
+    .media-evaluation-real-box-iu .media-real-dot-item-iu::after {
+      position: absolute;
+      content: "";
+      display: block;
+      width: 100%;
+      height: 400%;
+      background: none;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    .media-evaluation-real-box-iu .media-real-dot-item-iu.active::before {
+      width: 100%;
+    }
+
+    .media-evaluation-real-box-iu .media-real-dot-item-iu.active.tra::before {
+      transition: width 0.4s linear;
+    }
+
+    .media-evaluation-real-box-iu .media-real-arrow-iu {
+      display: flex;
+      margin-left: 10px;
+    }
+
+    .media-evaluation-real-box-iu .media-real-bottom-arrow-item-iu {
+      cursor: pointer;
+      margin-left: 20px;
+      overflow: hidden;
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      position: relative;
+      transition: all 0.4s ease;
+    }
+
+    .media-evaluation-real-box-iu .media-real-bottom-arrow-item-iu::before {
+      position: absolute;
+      content: "";
+      display: block;
+      width: 12px;
+      height: 12px;
+      border-top: 2px solid #d5d5d5;
+      border-left: 2px solid #d5d5d5;
+      top: 50%;
+      left: 50%;
+      margin-left: 2px;
+      transform: translate(-50%, -50%) rotate(-45deg);
+      transition: all 0.4s ease;
+    }
+
+    .media-evaluation-real-box-iu
+      .media-real-bottom-arrow-item-iu:nth-child(2) {
+      transform: scale(-1, -1);
+    }
+
+    .media-evaluation-real-box-iu
+      .media-real-bottom-arrow-item-iu:hover::before {
+      border-color: #000;
+    }
+
+    @media (max-width: 890px) {
+      .title-diy-iu {
+        padding: 0px !important;
+      }
+
+      .media-evaluation-real-box-iu .media-evaluation-real-arrow-iu {
+        bottom: 80px !important;
+        left: 47% !important;
+      }
+
+      .media-evaluation-real-box-iu {
+        padding: 50px 0px;
+        overflow: hidden;
+      }
+
+      .media-evaluation-real-box-iu .media-evaluation-real-iu {
+        margin-top: 30px;
+      }
+
+      .media-evaluation-real-box-iu .media-evaluation-real-item-iu {
+        width: 350px !important;
+        margin-bottom: 35px !important;
+      }
+    }
+  </style>
+  <div class="section-carousel-iu" id="section-carousel-iu">
+    <section class="section-box-iu">
+      <div class="media-evaluation-real-box-iu">
+        <div class="container-iu">
+          <div class="title-diy-iu text-top appear">
+            <p><strong>Kendinizi İyi Hissedeceğiniz Cilde Kavuşun.</strong></p>
+
+            <p>Air 3 ile sadece 3 haftada farkı g&ouml;r&uuml;n!</p>
+          </div>
+
+          <div class="media-evaluation-real-iu">
+            <div
+              class="media-evaluation-real-item-iu to-top appear"
+              style="transition-delay: 0.1s"
+            >
+              <div class="media-evaluation-real-img-iu">
+                <div class="media-real-img-item-iu">
+                  <img
+                    alt=""
+                    height="1335"
+                    loading="lazy"
+                    src="/Content/UploadFiles/1a0ef5ca-ulike-air-3-ipl-lazer-1.webp"
+                    width="1031"
+                  />
+                  <div class="media-real-tag-iu">&Ouml;nce</div>
+                </div>
+
+                <div class="media-real-img-item-iu">
+                  <img
+                    alt=""
+                    height="1335"
+                    loading="lazy"
+                    src="/Content/UploadFiles/bb5e192c-ulike-air-3-ipl-lazer-2.webp"
+                    width="1045"
+                  />
+                  <div class="media-real-tag-iu">Sonrasında</div>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="media-evaluation-real-item-iu to-top appear"
+              style="transition-delay: 0.2s"
+            >
+              <div class="media-evaluation-real-img-iu">
+                <div class="media-real-img-item-iu">
+                  <img
+                    alt=""
+                    height="1335"
+                    loading="lazy"
+                    src="/Content/UploadFiles/aee006fb-ulike-air-3-ipl-lazer-3.jpg"
+                    width="1031"
+                  />
+                  <div class="media-real-tag-iu">&Ouml;nce</div>
+                </div>
+
+                <div class="media-real-img-item-iu">
+                  <img
+                    alt=""
+                    height="1335"
+                    loading="lazy"
+                    src="/Content/UploadFiles/7eebcf06-ulike-air-3-ipl-lazer-4.jpg"
+                    width="1045"
+                  />
+                  <div class="media-real-tag-iu">Sonrasında</div>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="media-evaluation-real-item-iu to-top appear"
+              style="transition-delay: 0.3s"
+            >
+              <div class="media-evaluation-real-img-iu">
+                <div class="media-real-img-item-iu">
+                  <img
+                    alt=""
+                    height="1335"
+                    loading="lazy"
+                    src="/Content/UploadFiles/7d14a00d-ulike-air-3-ipl-lazer-5.webp"
+                    width="1031"
+                  />
+                  <div class="media-real-tag-iu">&Ouml;nce</div>
+                </div>
+
+                <div class="media-real-img-item-iu">
+                  <img
+                    alt=""
+                    height="1335"
+                    loading="lazy"
+                    src="/Content/UploadFiles/e1798879-ulike-air-3-ipl-lazer-6.webp"
+                    width="1045"
+                  />
+                  <div class="media-real-tag-iu">Sonrasında</div>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="media-evaluation-real-item-iu to-top appear"
+              style="transition-delay: 0.4s"
+            >
+              <div class="media-evaluation-real-img-iu">
+                <div class="media-real-img-item-iu">
+                  <img
+                    alt=""
+                    height="1335"
+                    loading="lazy"
+                    src="/Content/UploadFiles/98e7841d-ulike-air-3-ipl-lazer-7.webp"
+                    width="1031"
+                  />
+                  <div class="media-real-tag-iu">&Ouml;nce</div>
+                </div>
+
+                <div class="media-real-img-item-iu">
+                  <img
+                    alt=""
+                    height="1335"
+                    loading="lazy"
+                    src="/Content/UploadFiles/86f5442e-ulike-air-3-ipl-lazer-8.webp"
+                    width="1045"
+                  />
+                  <div class="media-real-tag-iu">Sonrasında</div>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="media-evaluation-real-item-iu to-top appear"
+              style="transition-delay: 0.5s"
+            >
+              <div class="media-evaluation-real-img-iu">
+                <div class="media-real-img-item-iu">
+                  <img
+                    alt=""
+                    height="1335"
+                    loading="lazy"
+                    src="/Content/UploadFiles/7cc8928b-ulike-air-3-ipl-lazer-9.webp"
+                    width="1031"
+                  />
+                  <div class="media-real-tag-iu">&Ouml;nce</div>
+                </div>
+
+                <div class="media-real-img-item-iu">
+                  <img
+                    alt=""
+                    height="1335"
+                    loading="lazy"
+                    src="/Content/UploadFiles/40c0460f-ulike-air-3-ipl-lazer-10.webp"
+                    width="1045"
+                  />
+                  <div class="media-real-tag-iu">Sonrasında</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="media-real-bottom-iu">
+            <div class="media-real-dot-iu to-top appear">
+              <div class="media-real-dot-item-iu active">&nbsp;</div>
+
+              <div class="media-real-dot-item-iu active">&nbsp;</div>
+
+              <div class="media-real-dot-item-iu active">&nbsp;</div>
+
+              <div class="media-real-dot-item-iu active">&nbsp;</div>
+
+              <div class="media-real-dot-item-iu active">&nbsp;</div>
+            </div>
+
+            <div class="media-evaluation-real-arrow-iu to-top appear">
+              <div class="media-real-bottom-arrow-item-iu">&nbsp;</div>
+
+              <div class="media-real-bottom-arrow-item-iu">&nbsp;</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+      (function () {
+        function mediaRealSlider(name) {
+          let $p = $(name);
+          let $list = $p.find(".media-evaluation-real-iu");
+          let $dot = $p.find(".media-real-dot-iu");
+          let $bottomArrow = $p.find(".media-evaluation-real-arrow-iu");
+          let length = $list.find(".media-evaluation-real-item-iu").length;
+          let index = -2;
+          let isLeftBtn = 1;
+          let timer = null;
+          let dateTb = 0;
+          if (length < 2) return;
+
+          $list.html(
+            $list.find(".media-evaluation-real-item-iu")[length - 2].outerHTML +
+              $list.find(".media-evaluation-real-item-iu")[length - 1]
+                .outerHTML +
+              $list.html() +
+              $list.find(".media-evaluation-real-item-iu")[0].outerHTML +
+              $list.find(".media-evaluation-real-item-iu")[1].outerHTML,
+          );
+          skewTransform(true);
+          changeDot();
+
+          $p.find(".media-real-bottom-arrow-item-iu").click(function () {
+            let sIndex = $(this).index();
+            if (+new Date() - dateTb < 600) return;
+            dateTb = +new Date();
+            isLeftBtn = sIndex;
+            index += sIndex ? -1 : 1;
+            clearInterval(timer);
+            changeLeft();
+            timer = setInterval(() => {
+              isLeftBtn = 1;
+              index--;
+              changeLeft();
+            }, 5000);
+          });
+
+          $dot.find(".media-real-dot-item-iu").click(function () {
+            index = -$(this).index() - 2;
+            clearInterval(timer);
+            changeLeft();
+            timer = setInterval(() => {
+              isLeftBtn = 1;
+              index--;
+              changeLeft();
+            }, 5000);
+          });
+
+          function skewTransform(auto, tIndex = index, skew = 0) {
+            let width = $list
+              .find(".media-evaluation-real-item-iu")
+              .eq(Math.abs(tIndex) - 1)
+              .width();
+            let translateX = (width + 60) * tIndex;
+            if (auto) {
+              translateX += skew;
+              $list.css({
+                transform: "translateX(" + translateX + "px)",
+                transition: " all 0s ease",
+              });
+            } else {
+              $list.css({
+                transform: "translateX(" + translateX + "px)",
+                transition: " all .6s ease",
+              });
+            }
+          }
+
+          function changeLeft(skew) {
+            if (isLeftBtn && index == -length - 2) {
+              skewTransform(true, -1, skew);
+              index = -2;
+            }
+            if (!isLeftBtn && index == 0) {
+              skewTransform(true, -length - 1, skew);
+              index = -length;
+            }
+            setTimeout(() => {
+              skewTransform();
+            }, 10);
+            changeDot();
+          }
+
+          function changeDot() {
+            $p.find(".media-real-dot-item-iu").each(function () {
+              let $this = $(this);
+              if ($this.index() == Math.abs(index) - 2) {
+                $this.addClass("active");
+              } else {
+                $this.removeClass("active");
+              }
+            });
+          }
+
+          timer = setInterval(() => {
+            isLeftBtn = 1;
+            index--;
+            changeLeft();
+          }, 5000);
+        }
+
+        mediaRealSlider("#section-carousel-iu");
+      })();
+    </script>
+  </div>
+</section>
+
+<section class="section-slide-story-2-iu">
+  <style type="text/css">
+    .brand-story-box-iu {
+      position: relative;
+      z-index: 0;
+      height: 60vh;
+      overflow: hidden;
+      clip-path: inset(0 0 0 0);
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .brand-story-box-iu::before {
+      position: absolute;
+      content: "";
+      display: block;
+      width: 100%;
+      height: auto !important;
+      top: 0;
+      left: 0;
+      z-index: 0;
+      background: rgba(0, 0, 0, 0.1);
+    }
+
+    .brand-story-bg-iu {
+      position: fixed;
+      z-index: -1;
+      display: block;
+      margin: 0;
+      min-width: 100%;
+      height: 100vh;
+      object-fit: cover;
+      top: 0;
+      left: 68.5%;
+      transform: translateX(-50%);
+    }
+
+    .brand-story-bg-iu.mb-box-iu {
+      display: none;
+    }
+
+    .brand-story-top-iu {
+      position: absolute;
+      width: 100%;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 2;
+    }
+
+    .brand-story-play-iu .play-btn-iu {
+      cursor: pointer;
+      position: relative;
+      border-radius: 50%;
+      width: 86px;
+      height: 86px;
+      transition: all 0.4s ease;
+      border: 2px solid #fff;
+      margin: 0 auto;
+    }
+
+    .play-btn-iu .span1-iu {
+      position: absolute;
+      display: block;
+      width: 160%;
+      height: 160%;
+      border: 1px solid #fff;
+      border-radius: 50%;
+      animation: bounce-circle 1.8s infinite;
+      animation-delay: 400ms;
+      left: -30%;
+      top: -30%;
+      pointer-events: none;
+      overflow: hidden;
+    }
+
+    .brand-story-play-iu .play-btn-iu::after {
+      position: absolute;
+      content: "";
+      display: block;
+      width: 0;
+      height: 0;
+      border-top: 16px solid transparent;
+      border-bottom: 16px solid transparent;
+      border-left: 23px solid #fff;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      margin-left: 5px;
+      transition: all 0.4s ease;
+    }
+
+    .brand-story-play-iu .play-btn-iu:before {
+      content: "";
+      position: absolute;
+      display: block;
+      width: 160%;
+      height: 160%;
+      border: 1px solid #fff;
+      border-radius: 50%;
+      z-index: -3;
+      animation: bounce-circle 1.8s infinite;
+      animation-delay: 0s;
+      box-sizing: border-box;
+      left: -30%;
+      top: -30%;
+      pointer-events: none;
+    }
+
+    @keyframes bounce-circle {
+      0% {
+        opacity: 0;
+        transform: scale(0.8);
+      }
+      20% {
+        opacity: 1;
+      }
+      80%,
+      100% {
+        opacity: 0;
+        transform: scale(1.3);
+      }
+    }
+
+    .brand-story-play-iu .play-btn-iu:hover {
+      background: #fff;
+      overflow: hidden;
+    }
+
+    .brand-story-play-iu .play-btn-iu:hover::after {
+      border-left-color: #000;
+    }
+
+    .brand-story-txt-iu {
+      position: relative;
+      text-align: center;
+      margin: 0 auto;
+      margin-top: 40px;
+    }
+
+    .brand-story-title-iu {
+      font-size: 40px;
+      font-family: var(--heading-font-family);
+      color: #fff;
+      line-height: 1.2;
+    }
+
+    .brand-story-popup-iu {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      z-index: 3;
+      background: rgba(0, 0, 0, 0.6);
+      display: none;
+    }
+
+    .brand-story-popup-cont-iu {
+      position: absolute;
+      width: 90%;
+      max-width: 950px;
+      height: 0;
+      padding-top: 28%;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    .brand-story-popup-video-iu {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+    }
+
+    .brand-story-popup-video-iu iframe {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      left: 0;
+      top: 0;
+    }
+
+    .brand-story-popup-close-iu {
+      width: 45px;
+      height: 45px;
+      border-radius: 50%;
+      border: 2px solid #fff;
+      margin: 0 auto;
+      margin-top: 40px;
+      cursor: pointer;
+      position: relative;
+      transition: all 0.6s ease;
+    }
+
+    .brand-story-popup-close-iu:hover {
+      transform: rotate(360deg);
+    }
+
+    .brand-story-popup-close-iu::after,
+    .brand-story-popup-close-iu::before {
+      position: absolute;
+      content: "";
+      display: block;
+      width: 2px;
+      height: 22px;
+      background: #fff;
+      top: 50%;
+      left: 50%;
+    }
+
+    .brand-story-popup-close-iu::after {
+      transform: translate(-50%, -50%) rotate(-45deg);
+    }
+    .brand-story-popup-close-iu::before {
+      transform: translate(-50%, -50%) rotate(45deg);
+    }
+
+    @media (max-width: 767px) {
+      .brand-story-bg-iu {
+        left: 50% !important;
+      }
+      .brand-story-popup-cont-iu {
+        padding-top: 53% !important;
+      }
+    }
+  </style>
+  <section class="section-box-iu">
+    <div class="brand-story-box-iu">
+      <picture class="brand-story-bg-iu pc-box-iu">
+        <source
+          class="brand-story-bg-iu to-opacity appear"
+          height="800"
+          loading="lazy"
+          media="(max-width: 767px)"
+          srcset="
+            /Content/UploadFiles/c6f6bd88-ulike-air-3-ipl-lazer-11-mobile.webp?v=1698118765&amp;width=400 400w,
+            /Content/UploadFiles/c6f6bd88-ulike-air-3-ipl-lazer-11-mobile.webp?v=1698118765&amp;width=600 600w
+          "
+          width="1200"
+        />
+        <img
+          alt=""
+          class="brand-story-bg to-opacity appear"
+          height="800"
+          loading="lazy"
+          src="/Content/UploadFiles/523701ef-ulike-air-3-ipl-lazer-11.webp?v=1698118765&amp;width=1200"
+          srcset="
+            /Content/UploadFiles/523701ef-ulike-air-3-ipl-lazer-11.webp?v=1698118765&amp;width=1200 1200w,
+            /Content/UploadFiles/523701ef-ulike-air-3-ipl-lazer-11.webp?v=1698118765&amp;width=1920 1920w
+          "
+          width="1200"
+        />
+      </picture>
+      <div class="brand-story-top-iu">
+        <div class="container-iu">
+          <div class="brand-story-cont-iu">
+            <div
+              class="brand-story-play-iu to-top appear"
+              data-src="https://player.vimeo.com/video/1142408193?autoplay=1&amp;muted=1&amp;loop=1&amp;autopause=0&amp;badge=0"
+            >
+              <div class="play-btn-iu">&nbsp;</div>
+            </div>
+
+            <video
+              autoplay=""
+              controls=""
+              muted=""
+              playsinline=""
+              src="https://player.vimeo.com/progressive_redirect/playback/871728747/rendition/1080p/file.mp4?loc=external&amp;signature=bd43fa497480bbf71e9edee2f2b8b67a08b52831a9c009dcab5abd90e6f072e2"
+              width="100%"
+            >
+              &nbsp;
+            </video>
+
+            <div class="brand-story-txt-iu" style="transition-delay: 0.3s">
+              &nbsp;
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="brand-story-popup-iu">
+      <div class="brand-story-popup-cont-iu">
+        <div class="brand-story-popup-video-iu">
+          <iframe allow="autoplay; encrypted-media" allowfullscreen=""></iframe>
+        </div>
+
+        <div class="brand-story-popup-close-iu">&nbsp;</div>
+      </div>
+    </div>
+  </section>
+  <script>
+    window.addEventListener("load", function () {
+      document.querySelectorAll(".brand-story-play-iu").forEach(function (btn) {
+        btn.addEventListener("click", function () {
+          const src = this.getAttribute("data-src");
+          document
+            .querySelector(".brand-story-popup-iu iframe")
+            .setAttribute("src", src);
+          document.querySelector(".brand-story-popup-iu").style.display =
+            "block";
+        });
+      });
+
+      document
+        .querySelector(".brand-story-popup-close-iu")
+        .addEventListener("click", function () {
+          document
+            .querySelector(".brand-story-popup-iu iframe")
+            .setAttribute("src", "");
+          document.querySelector(".brand-story-popup-iu").style.display =
+            "none";
+        });
+    });
+  </script>
+</section>
+
+<section class="section-slide-arrow-3-iu">
+  <style type="text/css">
+    .before-after-box {
+      padding: 80px 0;
+    }
+    .before-after-box .before-after-tab {
+      position: relative;
+      display: flex;
+      width: 380px;
+      height: 58px;
+      overflow: hidden;
+      border: 2px solid #000;
+      border-radius: 58px;
+      margin: 0 auto;
+      margin-top: 40px;
+    }
+
+    .before-after-box .container-3-iu {
+      max-width: 1200px;
+      margin: 0 auto;
+      box-sizing: border-box;
+    }
+
+    .before-after-box .before-after-tab-item {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      z-index: 2;
+      font-size: 16px;
+      color: #000;
+      cursor: pointer;
+      transition: all 0.4s ease;
+    }
+    .before-after-box .before-after-tab:hover .before-after-tab-item.active {
+      color: #000;
+    }
+    .before-after-box .before-after-tab-item.active,
+    .before-after-box .before-after-tab .before-after-tab-item.active:hover,
+    .before-after-box .before-after-tab .before-after-tab-item:hover {
+      color: #fff;
+    }
+
+    .before-after-box .before-after-tab-span {
+      position: absolute;
+      width: calc(33.333% + 4px);
+      height: 100%;
+      border-radius: 60px;
+      top: 0;
+      background: #000;
+      z-index: 1;
+      margin-left: -2px;
+    }
+    .before-after-box .before-after-cont {
+      display: flex;
+      align-items: center;
+      margin-top: 60px;
+    }
+    .before-after-box .before-after-text,
+    .before-after-box .before-after-img-wrapper {
+      width: 50%;
+    }
+    .before-after-box .before-after-text {
+      padding-left: 70px;
+    }
+    .before-after-box .before-after-text-item {
+      display: none;
+      max-width: 360px;
+    }
+
+    .before-after-box .before-after-text-item.active {
+      display: block;
+    }
+
+    .before-after-box .before-after-text-title {
+      font-size: 40px;
+      color: #000;
+      line-height: 1.2;
+      font-family: var(--heading-font-family);
+    }
+
+    .before-after-box .before-after-text-sub {
+      color: #b3b3b3;
+      font-size: 30px;
+      margin-top: 10px;
+      line-height: 1.2;
+    }
+
+    .before-after-box .before-after-text-p {
+      font-size: 20px;
+      color: #000;
+      line-height: 1.2;
+      margin-top: 55px;
+    }
+
+    .before-after-box .before-after-text-btn {
+      width: 300px;
+      height: 60px;
+      background: #000;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 16px;
+      margin-top: 55px;
+      cursor: pointer;
+      border: 2px solid #000;
+      line-height: 1;
+      text-align: center;
+    }
+
+    .before-after-box .before-after-img-wrapper {
+      position: relative;
+      --img-width: 0px;
+      --left-num: 100%;
+      --time-num: 1s;
+      overflow: hidden;
+    }
+    .before-after-box .before-after-img-item {
+      position: relative;
+      z-index: 1;
+      pointer-events: none;
+    }
+    .before-after-box .before-after-img-item img {
+      display: none;
+      width: 100%;
+      user-select: none;
+      pointer-events: none;
+      user-drag: none;
+      -moz-user-drag: none;
+      -webkit-user-drag: none;
+    }
+    .before-after-box .before-after-img-item img.active {
+      display: block;
+    }
+    .before-after-box .before-after-img-right {
+      position: absolute;
+      width: calc(100% - var(--left-num));
+      height: 100%;
+      overflow: hidden;
+      z-index: 2;
+      right: 0;
+      top: 0;
+      transition: all var(--time-num) cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
+    }
+    .before-after-box .before-after-img-right img {
+      height: 100%;
+      width: var(--img-width);
+      max-width: none;
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+    .before-after-box .before-after-tag {
+      position: absolute;
+      padding: 5px 15px;
+      font-size: 14px;
+      color: #fff;
+      background: rgba(0, 0, 0, 0.4);
+      top: 15px;
+      left: 15px;
+      z-index: 2;
+      white-space: nowrap;
+    }
+    .before-after-box .before-after-tag span {
+      display: none;
+    }
+    .before-after-box .before-after-tag .active {
+      display: block;
+    }
+    .before-after-box .before-after-img-right .before-after-tag {
+      left: auto;
+      right: 15px;
+    }
+
+    .before-after-box .before-after-img-handle {
+      position: absolute;
+      z-index: 2;
+      top: 0;
+      height: 100%;
+      left: var(--left-num);
+      transition: all var(--time-num) cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
+    }
+    .before-after-box .before-after-img-handle::before,
+    .before-after-box .before-after-img-handle::after {
+      position: absolute;
+      content: "";
+      display: block;
+      width: 2px;
+      height: calc(50% - 25px);
+      left: 50%;
+      transform: translateX(-50%);
+      background: #fff;
+    }
+    .before-after-box .before-after-img-handle::before {
+      top: 0;
+    }
+    .before-after-box .before-after-img-handle::after {
+      bottom: 0;
+    }
+    .before-after-box .before-after-img-handle-btn {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      cursor: col-resize;
+      border-radius: 50%;
+      border: 2px solid #fff;
+      overflow: hidden;
+      width: 50px;
+      height: 50px;
+    }
+
+    .before-after-box .before-after-img-handle-btn span {
+      position: absolute;
+      width: 200%;
+      height: 200%;
+      background: rgba(255, 255, 255, 0.2);
+      z-index: 1;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      backdrop-filter: blur(20px);
+    }
+
+    .before-after-box .before-after-img-handle-btn::before,
+    .before-after-box .before-after-img-handle-btn::after {
+      position: absolute;
+      content: "";
+      display: block;
+      border: 12px solid transparent;
+      border-color: transparent #fff transparent transparent;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 2;
+    }
+    .before-after-box .before-after-img-handle-btn::before {
+      margin-left: -16px;
+    }
+    .before-after-box .before-after-img-handle-btn::after {
+      transform: translate(-50%, -50%) scale(-1, -1);
+      margin-left: 16px;
+    }
+    .before-after-box .before-after-img-text {
+      font-size: 12px;
+      color: #fff;
+      width: 100%;
+      padding: 0 20px;
+      max-width: 510px;
+      left: 50%;
+      transform: translateX(-50%);
+      bottom: 30px;
+      text-align: center;
+      z-index: 2;
+      position: absolute;
+      line-height: 1.2;
+    }
+
+    .before-after-box .bottom-text {
+      display: none;
+    }
+
+    @media (max-width: 1300px) {
+      .before-after-box .before-after-text {
+        padding-left: 100px;
+      }
+    }
+
+    @media (max-width: 1100px) {
+      .before-after-box .before-after-text {
+        padding-left: 60px;
+      }
+    }
+
+    @media (max-width: 991px) {
+      .before-after-box {
+        padding: 40px 0;
+      }
+      .before-after-box .before-after-tab {
+        width: 320px;
+        margin-top: 25px;
+        height: 50px;
+      }
+      .before-after-box .before-after-tab-item {
+        font-size: 14px;
+      }
+      .before-after-box .before-after-cont {
+        flex-direction: column-reverse;
+        align-items: flex-start;
+        margin-top: 30px;
+      }
+      .before-after-box .before-after-text {
+        padding-left: 0;
+        margin-top: 30px;
+      }
+      .before-after-box .before-after-text,
+      .before-after-box .before-after-img-wrapper {
+        width: 100%;
+      }
+      .before-after-box .before-after-text-item {
+        max-width: none;
+      }
+      .before-after-box .before-after-text-title {
+        font-size: 28px;
+      }
+      .before-after-box .before-after-text-sub {
+        font-size: 20px;
+      }
+      .before-after-box .before-after-text-p {
+        font-size: 18px;
+        margin-top: 30px;
+      }
+      .before-after-box .before-after-text-btn {
+        font-size: 14px;
+        margin-top: 30px;
+        width: 100%;
+        height: 50px;
+      }
+      .before-after-box .before-after-img-text {
+        bottom: 30px;
+        display: none;
+      }
+
+      .before-after-box .bottom-text {
+        display: block !important;
+        margin-top: 20px;
+        position: relative;
+        font-size: 12px;
+        color: #b6b6b6;
+        width: 100%;
+        padding: 0;
+        left: 0;
+        transform: translateX(0%);
+        bottom: 0px;
+        text-align: center;
+        z-index: 2;
+        line-height: 1.2;
+      }
+    }
+  </style>
+  <section class="section-box">
+    <div class="before-after-box">
+      <div class="container-3-iu">
+        <div class="title-diy-iu text-top appear">
+          <p>Sadece 4 Haftada %93&rsquo;e Varan T&uuml;y Azalması.</p>
+        </div>
+
+        <div class="before-after-tab to-top appear">
+          <div class="before-after-tab-item active">1&ndash;4 Haftada</div>
+
+          <div class="before-after-tab-item">5&ndash;8 Haftada</div>
+
+          <div class="before-after-tab-item">8&ndash;12 Haftada</div>
+
+          <div class="before-after-tab-span">&nbsp;</div>
+        </div>
+
+        <div class="before-after-cont">
+          <div class="before-after-text to-top appear">
+            <div class="before-after-text-item active">
+              <div class="before-after-text-title">1&ndash;4 Haftada</div>
+
+              <div class="before-after-text-sub">Haftada 3 uygulama</div>
+
+              <div class="before-after-text-p">
+                4 haftadan daha az s&uuml;ren tutarlı uygulamalarla, g&ouml;zle
+                g&ouml;r&uuml;l&uuml;r t&uuml;y b&uuml;y&uuml;mesinde azalma
+                g&ouml;rmeye başlayacaksınız
+              </div>
+            </div>
+
+            <div class="before-after-text-item">
+              <div class="before-after-text-title">5&ndash;8 Haftada</div>
+
+              <div class="before-after-text-sub">
+                İki haftada bir 1 uygulama
+              </div>
+
+              <div class="before-after-text-p">
+                8 hafta boyunca tutarlı bir şekilde iki haftada bir yapılan
+                uygulamalardan sonra, kıl k&ouml;kleri
+                k&uuml;&ccedil;&uuml;lmeye başlar ve kıl k&ouml;kleri
+                d&ouml;k&uuml;lmeye başlar.
+              </div>
+            </div>
+
+            <div class="before-after-text-item">
+              <div class="before-after-text-title">8&ndash;12 Haftada</div>
+
+              <div class="before-after-text-sub">
+                Ayda 1-2 kez idame (koruma) tedavisi
+              </div>
+
+              <div class="before-after-text-p">
+                Bu aşamaya gelindiğinde &ccedil;oğu kişi istediği
+                sonu&ccedil;ları elde etmiş, cildi p&uuml;r&uuml;zs&uuml;z ve
+                t&uuml;ys&uuml;z bir hale gelmiş olacaktır.
+              </div>
+            </div>
+
+            <div class="before-after-text-btn btn-diy show-match-box">
+              <div
+                class="btn-txt"
+                text="IPL Sana Uygun Mu? Hemen Öğrenmek İçin Testi Çöz!"
+              >
+                <span
+                  >IPL Sana Uygun Mu? Hemen &Ouml;ğrenmek İ&ccedil;in Testi
+                  &Ccedil;&ouml;z!</span
+                >
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="before-after-img-wrapper to-top appear"
+            style="--img-width: 760px; --left-num: 50%"
+          >
+            <div class="before-after-img-item">
+              <img
+                alt=""
+                class="img active"
+                height="561"
+                loading="lazy"
+                src="//www.ulike.com/cdn/shop/files/Before_801x.jpg?v=1698978634"
+                srcset="
+                  //www.ulike.com/cdn/shop/files/Before_801x.jpg?v=1698978634 801w
+                "
+                width="801"
+              />
+              <img
+                alt=""
+                class="img"
+                height="561"
+                loading="lazy"
+                src="/Content/UploadFiles/c5a3a9dd-ulike-air-3-ipl-lazer-13.webp?v=1698978702"
+                srcset="
+                  /Content/UploadFiles/c5a3a9dd-ulike-air-3-ipl-lazer-13.webp?v=1698978702 801w
+                "
+                width="801"
+              />
+              <img
+                alt=""
+                class="img"
+                height="561"
+                loading="lazy"
+                src="/Content/UploadFiles/5870af2a-ulike-air-3-ipl-lazer-14.webp?v=1698978756"
+                srcset="
+                  /Content/UploadFiles/5870af2a-ulike-air-3-ipl-lazer-14.webp?v=1698978756 801w
+                "
+                width="801"
+              />
+              <div class="before-after-tag">
+                <span class="active">&Ouml;nce </span><span> Hafta 4 </span
+                ><span> Hafta 8 </span>
+              </div>
+            </div>
+
+            <div class="before-after-img-item before-after-img-right">
+              <img
+                alt=""
+                class="img active"
+                height="561"
+                loading="lazy"
+                src="/Content/UploadFiles/c5a3a9dd-ulike-air-3-ipl-lazer-13.webp?v=1698978634"
+                srcset="
+                  /Content/UploadFiles/c5a3a9dd-ulike-air-3-ipl-lazer-13.webp?v=1698978634 801w
+                "
+                width="801"
+              />
+              <img
+                alt=""
+                class="img"
+                height="561"
+                loading="lazy"
+                src="/Content/UploadFiles/5870af2a-ulike-air-3-ipl-lazer-14.webp?v=1698978702"
+                srcset="
+                  /Content/UploadFiles/5870af2a-ulike-air-3-ipl-lazer-14.webp?v=1698978702 801w
+                "
+                width="801"
+              />
+              <img
+                alt=""
+                class="img"
+                height="561"
+                loading="lazy"
+                src="/Content/UploadFiles/546d2139-ulike-air-3-ipl-lazer-15.webp?v=1698978756"
+                srcset="
+                  /Content/UploadFiles/546d2139-ulike-air-3-ipl-lazer-15.webp?v=1698978756 801w
+                "
+                width="801"
+              />
+              <div class="before-after-tag">
+                <span class="active">Hafta 4 </span><span> Hafta 8 </span
+                ><span> Hafta 12 </span>
+              </div>
+            </div>
+
+            <div class="before-after-img-handle">
+              <div class="before-after-img-handle-btn">&nbsp;</div>
+            </div>
+
+            <div class="before-after-img-text">
+              * Sonu&ccedil;lar kişiden kişiye değişebilir. M&uuml;kemmel
+              sonu&ccedil;lar elde etmek i&ccedil;in ışık seviyesini ve uygulama
+              sıklığını kendi t&uuml;y yapınıza g&ouml;re kolayca
+              ayarlayabilirsiniz.
+            </div>
+          </div>
+        </div>
+
+        <div class="before-after-img-text bottom-text to-top appear">
+          * Sonu&ccedil;lar kişiden kişiye değişebilir. M&uuml;kemmel
+          sonu&ccedil;lar elde etmek i&ccedil;in ışık seviyesini ve uygulama
+          sıklığını kendi t&uuml;y yapınıza g&ouml;re kolayca
+          ayarlayabilirsiniz.
+        </div>
+      </div>
+    </div>
+  </section>
+  <script>
+    window.addEventListener("load", function () {
+      const section = $(".before-after-box");
+
+      const setActiveSpan = () => {
+        let active = section.find(".before-after-tab-item.active");
+        if (active.length) {
+          let left = active[0].offsetLeft;
+          section.find(".before-after-tab-span").css({
+            transform: "translateX(" + left + "px)",
+            transition: "transform .4s",
+          });
+        }
+      };
+
+      setActiveSpan();
+
+      section.find(".before-after-tab-item").hover(
+        function () {
+          let left = this.offsetLeft;
+          $(this)
+            .siblings(".before-after-tab-span")
+            .css({
+              transform: "translateX(" + left + "px)",
+              transition: "transform .4s",
+            });
+        },
+        function () {
+          setActiveSpan();
+        },
+      );
+
+      section.find(".before-after-tab-item").click(function () {
+        let index = $(this).index();
+        let $imgBox = section.find(".before-after-img-wrapper")[0];
+        let width = $imgBox.clientWidth;
+
+        $imgBox.style.setProperty("--img-width", width + "px");
+        $imgBox.style.setProperty("--left-num", "100%");
+        $imgBox.style.setProperty("--time-num", "0s");
+
+        $(this).addClass("active").siblings().removeClass("active");
+
+        section.find(".before-after-text-item").each((i, el) => {
+          $(el).toggleClass("active", i === index);
+        });
+
+        section.find(".before-after-img-item").each((i, el) => {
+          $(el)
+            .find(".img")
+            .each((j, img) => {
+              $(img).toggleClass("active", j === index);
+            });
+        });
+
+        section.find(".before-after-tag").each((i, el) => {
+          $(el)
+            .find("span")
+            .each((j, sp) => {
+              $(sp).toggleClass("active", j === index);
+            });
+        });
+
+        setTimeout(() => {
+          $imgBox.style.setProperty("--left-num", "50%");
+          $imgBox.style.setProperty("--time-num", "1s");
+        }, 100);
+      });
+
+      function initImg() {
+        const $box = section.find(".before-after-img-wrapper")[0];
+        const $hp = section.find(".before-after-img-handle")[0];
+        const $hand = section.find(".before-after-img-handle-btn")[0];
+        const width = $box.clientWidth;
+
+        $box.style.setProperty("--img-width", width + "px");
+        $box.style.setProperty("--left-num", "50%");
+
+        let isDragging = false;
+        let startX = 0;
+        let startLeft = 0;
+
+        $hand.addEventListener(
+          "touchstart",
+          (e) => {
+            isDragging = true;
+            startX = e.touches[0].clientX;
+            startLeft = $hp.offsetLeft;
+            e.preventDefault();
+          },
+          { passive: false },
+        );
+
+        document.addEventListener("touchend", () => (isDragging = false));
+
+        document.addEventListener(
+          "touchmove",
+          (e) => {
+            if (!isDragging) return;
+            e.preventDefault();
+            const width = $box.clientWidth;
+            let newX = startLeft + (e.touches[0].clientX - startX);
+            if (newX <= 10) newX = 10;
+            if (newX >= width - 10) newX = width - 10;
+            $box.style.setProperty("--left-num", (newX / width) * 100 + "%");
+            $box.style.setProperty("--time-num", "0s");
+          },
+          { passive: false },
+        );
+
+        $hand.addEventListener("mousedown", (e) => {
+          isDragging = true;
+          startX = e.clientX;
+          startLeft = $hp.offsetLeft;
+          e.preventDefault();
+        });
+
+        document.addEventListener("mouseup", () => (isDragging = false));
+
+        document.addEventListener("mousemove", (e) => {
+          if (!isDragging) return;
+          const width = $box.clientWidth;
+          let newX = startLeft + (e.clientX - startX);
+          if (newX <= 10) newX = 10;
+          if (newX >= width - 10) newX = width - 10;
+          $box.style.setProperty("--left-num", (newX / width) * 100 + "%");
+          $box.style.setProperty("--time-num", "0s");
+        });
+      }
+
+      initImg();
+      window.addEventListener("resize", initImg);
+    });
+  </script>
+  <style type="text/css">
+    .match-box {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      background: rgba(0, 0, 0, 0.6);
+      z-index: 2;
+      overflow-y: auto;
+      display: none;
+    }
+
+    .match-box .match-cont {
+      position: absolute;
+      width: calc(100% - 80px);
+      max-width: 1000px;
+      background: #fff;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+    .match-box .move-box {
+      margin-top: 120px;
+    }
+    .match-box .match-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .match-box .match-top .match-top-item {
+      width: 45px;
+      height: 45px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+    }
+
+    .match-box .match-top .match-top-item img {
+      width: 22px;
+      display: block;
+    }
+
+    .match-box .match-top .match-back {
+      pointer-events: none;
+      opacity: 0;
+    }
+
+    .match-box .match-top.active .match-back {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    .match-box .match-bottom {
+      padding: 0 60px;
+      margin-top: 10px;
+    }
+
+    .match-box .match-progressbar {
+      display: flex;
+      align-items: center;
+    }
+
+    .match-box .match-progressbar-item {
+      flex: 1;
+      height: 1px;
+      margin-right: 5px;
+      background: #efefef;
+      position: relative;
+    }
+
+    .match-box .match-progressbar-item:last-child {
+      margin-right: 0;
+    }
+
+    .match-box .match-progressbar-item::before {
+      position: absolute;
+      content: "";
+      display: block;
+      height: 100%;
+      width: 0;
+      left: 0;
+      top: 0;
+      background: #000;
+      transition: all 0.4s ease;
+    }
+
+    .match-box .match-progressbar-item.active::before {
+      width: 100%;
+    }
+
+    .match-box .match-step {
+      padding: 90px 0;
+      display: none;
+    }
+
+    .match-box .match-step.active {
+      display: block;
+    }
+
+    .match-box .match-step .match-step-box {
+      display: none;
+    }
+
+    .match-box .match-step .match-step-box.active {
+      display: block;
+    }
+
+    .match-box .match-step .match-step-title {
+      font-family: var(--heading-font-family);
+      font-size: 24px;
+      color: #000;
+      line-height: 1.2;
+    }
+
+    .match-box .match-step .match-bottom {
+      padding: 60px 0;
+    }
+
+    .match-box .match-step-list {
+      display: flex;
+      margin-top: 40px;
+    }
+
+    .match-box .match-step-item {
+      flex: 1;
+      margin-right: 15px;
+      cursor: pointer;
+      position: relative;
+    }
+
+    .match-box .match-step-item img {
+      display: block;
+      width: 100%;
+      border: 1px solid transparent;
+      position: relative;
+      z-index: 1;
+      transition: all 0.4s ease;
+    }
+
+    .match-box .match-step-item:hover img {
+      transform: scale(1.03);
+      border-color: #000;
+    }
+
+    .match-box .match-step-item.active img {
+      border-color: #000;
+    }
+
+    .match-box .match-step-item.active::before {
+      position: absolute;
+      content: "";
+      display: block;
+      width: 20px;
+      height: 20px;
+      background: url(https://cdn.shopify.com/s/files/1/0656/9079/6273/files/suc.svg)
+        no-repeat;
+      background-size: 100% 100%;
+      z-index: 2;
+      left: 50%;
+      top: calc(50% - 8.5px);
+      transform: translate(-50%, -50%);
+    }
+
+    .match-box .match-step-txt {
+      font-size: 16px;
+      color: #000;
+      font-family: var(--heading-font-family);
+      line-height: 1.2;
+      margin-top: 10px;
+    }
+
+    .match-box .match-step-item:last-child {
+      margin-right: 0;
+    }
+
+    @media (max-width: 991px) {
+      .match-box .match-bottom {
+        padding: 0 30px;
+      }
+
+      .match-box .match-step {
+        padding: 60px 0;
+      }
+
+      .match-box .match-step-list {
+        margin-top: 30px;
+      }
+
+      .match-box .match-step .match-step-title {
+        font-size: 21px;
+      }
+
+      .match-box .match-step-txt {
+        font-size: 14px;
+      }
+    }
+
+    @media (max-width: 785px) {
+      .match-box {
+        padding-bottom: 40px;
+      }
+
+      .match-box .match-cont {
+        position: relative;
+        width: calc(100% - 80px);
+        max-width: 1000px;
+        background: #fff;
+        top: 10% !important;
+        left: 0;
+        transform: translate(0, 0);
+        margin: 0 auto;
+        margin-bottom: 100px;
+      }
+
+      .match-box .match-step-list {
+        flex-wrap: wrap;
+      }
+
+      .match-box .match-step-item {
+        width: calc(33.33% - 6.7px);
+        margin-right: 10px;
+        margin-bottom: 23px;
+        flex: none;
+      }
+
+      .match-box .match-step-item:nth-child(3n) {
+        margin-right: 0;
+      }
+
+      .match-box .match-step {
+        padding-bottom: 37px;
+      }
+
+      .match-box .match-step-item.active::before {
+        right: auto;
+        bottom: auto;
+        left: 50%;
+        top: calc(50% - 8.5px);
+        transform: translate(-50%, -50%);
+      }
+    }
+
+    .match-box .match-last {
+      display: none;
+    }
+
+    .match-box .match-last.active {
+      display: block;
+    }
+
+    .match-box .match-result-item {
+      display: none;
+    }
+
+    .match-box .match-result-item.active {
+      display: block;
+    }
+
+    .match-box .match-result-item .img {
+      display: block;
+      margin: 0 auto;
+      max-width: 190px;
+    }
+
+    .match-box .match-result-title {
+      font-size: 24px;
+      line-height: 1.2;
+      text-align: center;
+      color: #000;
+      font-family: var(--heading-font-family);
+      margin-top: 40px;
+      margin-bottom: 15px;
+    }
+
+    .match-box .match-result-p {
+      font-size: 16px;
+      color: #000;
+      line-height: 1.5;
+      text-align: center;
+    }
+
+    .match-box .match-result {
+      padding: 0 40px;
+      padding-top: 60px;
+    }
+
+    .match-box .match-result-flex {
+      display: flex;
+      margin-top: 40px;
+    }
+
+    .match-box .match-result-left {
+      width: 38.5%;
+      margin-right: 30px;
+    }
+
+    .match-box .match-result-left img {
+      width: 100%;
+      display: block;
+    }
+
+    .match-box .match-result-right {
+      flex: 1;
+    }
+
+    .match-box .match-result-right .match-result-p {
+      text-align: left;
+    }
+
+    .match-box .mt-40 {
+      margin-top: 40px;
+    }
+
+    .match-box .match-btn {
+      display: flex;
+      justify-content: center;
+      padding: 40px 0 60px 0;
+    }
+
+    .match-box .match-btn-item {
+      width: 240px;
+      height: 52px;
+      background: #000;
+      color: #fff;
+      font-size: 14px;
+      line-height: 16px;
+      font-family: var(--heading-font-family);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 10px;
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    .show-match-box {
+      cursor: pointer;
+    }
+
+    .match-box .match-btn-item:last-child {
+      margin-right: 0;
+      background: none;
+      border: 1px solid #000;
+      color: #000;
+    }
+
+    @media (max-width: 991px) {
+      .match-box .match-result {
+        padding: 0;
+        padding-top: 50px;
+      }
+
+      .match-box .match-result-p {
+        font-size: 14px;
+      }
+    }
+
+    @media (max-width: 785px) {
+      .match-box .match-result-item .img {
+        max-width: 152px;
+      }
+
+      .match-box .match-result-title {
+        margin-top: 30px;
+        font-size: 21px;
+      }
+
+      .match-box .match-result-flex {
+        display: block;
+        margin-top: 15px;
+      }
+
+      .match-box .match-result-left {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 15px;
+      }
+
+      .match-box .match-result-right .match-result-p {
+        text-align: center;
+      }
+
+      .match-box .mt-40 {
+        margin-top: 20px;
+      }
+
+      .match-box .match-btn {
+        padding-top: 30px;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .match-box .match-btn {
+        display: block;
+      }
+
+      .match-box .match-btn-item {
+        width: 234px;
+        height: 38px;
+        margin: 0 auto;
+        margin-bottom: 10px;
+        padding: 10px !important;
+      }
+
+      .match-box .match-btn-item:last-child {
+        margin: 0 auto;
+      }
+    }
+  </style>
+  <div class="match-box" style="display: none">
+    <div class="match-cont">
+      <div class="match-top">
+        <div class="match-back match-top-item">
+          <img
+            alt=""
+            src="/Content/UploadFiles/6056fc33-ulike-air-3-ipl-lazer-16.png"
+          />
+        </div>
+
+        <div class="match-close match-top-item">
+          <img
+            alt=""
+            src="/Content/UploadFiles/21e979d9-ulike-air-3-ipl-lazer-17.png"
+          />
+        </div>
+      </div>
+
+      <div class="match-bottom">
+        <div class="match-progressbar">
+          <div class="match-progressbar-item active">&nbsp;</div>
+
+          <div class="match-progressbar-item">&nbsp;</div>
+
+          <div class="match-progressbar-item">&nbsp;</div>
+        </div>
+
+        <div class="match-step active">
+          <div class="match-step-box active">
+            <div class="match-step-title">
+              Aşağıdaki Se&ccedil;eneklerden Ten Tonunuzu Se&ccedil;in.
+            </div>
+
+            <div class="match-step-list">
+              <div class="match-step-item" data-index="1">
+                <img
+                  alt="Açık Ten"
+                  loading="lazy"
+                  src="/Content/UploadFiles/ecf3122e-ulike-air-3-ipl-lazer-18.webp"
+                />
+                <div class="match-step-txt">A&ccedil;ık Ten</div>
+              </div>
+
+              <div class="match-step-item" data-index="2">
+                <img
+                  alt="Light"
+                  loading="lazy"
+                  src="/Content/UploadFiles/408a91b9-ulike-air-3-ipl-lazer-19.webp"
+                />
+                <div class="match-step-txt">
+                  Hafif A&ccedil;ık / A&ccedil;ık
+                </div>
+              </div>
+
+              <div class="match-step-item" data-index="3">
+                <img
+                  alt=""
+                  loading="lazy"
+                  src="/Content/UploadFiles/9fb1ddaa-ulike-air-3-ipl-lazer-20.webp"
+                />
+                <div class="match-step-txt">Orta</div>
+              </div>
+
+              <div class="match-step-item" data-index="4">
+                <img
+                  alt="Tan"
+                  loading="lazy"
+                  src="/Content/UploadFiles/b4dac8f6-ulike-air-3-ipl-lazer-21.webp"
+                />
+                <div class="match-step-txt">Bronz / Hafif Koyu</div>
+              </div>
+
+              <div class="match-step-item" data-index="5">
+                <img
+                  alt="Tan-Deep"
+                  loading="lazy"
+                  src="/Content/UploadFiles/5c05c9e1-ulike-air-3-ipl-lazer-22.webp"
+                />
+                <div class="match-step-txt">Koyu Bronz / Koyu</div>
+              </div>
+
+              <div class="match-step-item" data-index="6">
+                <img
+                  alt="Deep"
+                  loading="lazy"
+                  src="/Content/UploadFiles/0a41dccd-ulike-air-3-ipl-lazer-23.webp"
+                />
+                <div class="match-step-txt">&Ccedil;ok Koyu / Derin Koyu</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="match-step-box">
+            <div class="match-step-title">
+              Aşağıdaki Se&ccedil;eneklerden Sa&ccedil; Tipinizi Se&ccedil;in.
+            </div>
+
+            <div class="match-step-list">
+              <div class="match-step-item" data-index="1">
+                <img
+                  alt=""
+                  loading="lazy"
+                  src="/Content/UploadFiles/f334dc5b-ulike-air-3-ipl-lazer-24.jpg"
+                />
+                <div class="match-step-txt">Siyah</div>
+              </div>
+
+              <div class="match-step-item" data-index="2">
+                <img
+                  alt=""
+                  loading="lazy"
+                  src="/Content/UploadFiles/572a31cb-ulike-air-3-ipl-lazer-25.jpg"
+                />
+                <div class="match-step-txt">Koyu Kahverengi</div>
+              </div>
+
+              <div class="match-step-item" data-index="3">
+                <img
+                  alt=""
+                  loading="lazy"
+                  src="/Content/UploadFiles/ed842cdc-ulike-air-3-ipl-lazer-26.jpg"
+                />
+                <div class="match-step-txt">Kahverengi</div>
+              </div>
+
+              <div class="match-step-item" data-index="4">
+                <img
+                  alt=""
+                  loading="lazy"
+                  src="/Content/UploadFiles/d59f0791-ulike-air-3-ipl-lazer-27.jpg"
+                />
+                <div class="match-step-txt">Koyu Sarı</div>
+              </div>
+
+              <div class="match-step-item" data-index="5">
+                <img
+                  alt=""
+                  loading="lazy"
+                  src="/Content/UploadFiles/67106dbf-ulike-air-3-ipl-lazer-28.jpg"
+                />
+                <div class="match-step-txt">Kırmızı</div>
+              </div>
+
+              <div class="match-step-item" data-index="6">
+                <img
+                  alt=""
+                  loading="lazy"
+                  src="/Content/UploadFiles/0f0e456e-ulike-air-3-ipl-lazer-29.jpg"
+                />
+                <div class="match-step-txt">Gri / Beyaz</div>
+              </div>
+
+              <div class="match-step-item" data-index="7">
+                <img
+                  alt=""
+                  loading="lazy"
+                  src="/Content/UploadFiles/741282a9-ulike-air-3-ipl-lazer-30.jpg"
+                />
+                <div class="match-step-txt">A&ccedil;ık Sarı</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="match-last">
+          <div class="match-result">
+            <div class="match-result-item">
+              <img
+                alt=""
+                class="img"
+                loading="lazy"
+                src="/Content/UploadFiles/f7bbbb02-ulike-air-3-ipl-lazer-31.jpg"
+              />
+              <div class="match-result-title">Harika Haber!</div>
+
+              <div class="match-result-p">
+                Verdiğiniz yanıtlara g&ouml;re, IPL t&uuml;y alma y&ouml;ntemi
+                i&ccedil;in ideal bir adaysınız. Gelişmiş IPL cihazımız, ten
+                renginiz ve t&uuml;y renginiz i&ccedil;in m&uuml;kemmel bir uyum
+                sağlıyor. Bu sayede, p&uuml;r&uuml;zs&uuml;z ve t&uuml;ys&uuml;z
+                bir cildin avantajlarını hemen deneyimlemeye başlayabilirsiniz.
+              </div>
+            </div>
+
+            <div class="match-result-item">
+              <img
+                alt=""
+                class="img"
+                loading="lazy"
+                src="/Content/UploadFiles/85f2f3ca-ulike-air-3-ipl-lazer-32.jpg"
+              />
+              <div class="match-result-title">Tavsiye Edilmiyor</div>
+
+              <div class="match-result-p">
+                Verdiğiniz yanıtlara g&ouml;re, IPL t&uuml;y alma y&ouml;ntemi
+                ten renginiz i&ccedil;in uygun olsa da, t&uuml;y renginizde
+                yeterli melanin bulunmaması durumunda etkili olmayabilir.
+              </div>
+
+              <div class="match-result-flex">
+                <div class="match-result-left">
+                  <img
+                    alt=""
+                    loading="lazy"
+                    src="/Content/UploadFiles/66002781-ulike-air-3-ipl-lazer-33.webp"
+                  />
+                </div>
+
+                <div class="match-result-right">
+                  <div class="match-result-p">
+                    Bunun nedeni, IPL&#39;nin kıl k&ouml;klerindeki melanini
+                    hedef alarak &ccedil;alışması ve emilen ışık enerjisiyle
+                    oluşan ısının k&ouml;klere zarar vermesi, bu da zamanla
+                    t&uuml;y b&uuml;y&uuml;mesinde azalmaya yol
+                    a&ccedil;masıdır. Ancak, t&uuml;y rengi &ccedil;ok
+                    a&ccedil;ıksa, IPL&#39;den gelen enerjiyi &ccedil;ekecek
+                    yeterli melanin bulunmayabilir ve bu da herhangi bir etki
+                    g&ouml;r&uuml;lmemesine neden olur.
+                  </div>
+                  &nbsp;
+
+                  <div class="match-result-p">
+                    Size IPL ile t&uuml;y alma konusunda yardımcı olamadığımız
+                    i&ccedil;in &uuml;zg&uuml;n&uuml;z, ancak Ulike bu soruna
+                    bir &ccedil;&ouml;z&uuml;m bulmaya kararlıdır. Araştırma
+                    ekibimiz şu anda bu problemi ele almak i&ccedil;in yeni
+                    t&uuml;y alma teknolojileri geliştirmektedir. L&uuml;tfen en
+                    son g&uuml;ncellemelerimiz ve gelişmelerimiz i&ccedil;in
+                    bizi takip etmeye devam edin.
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="match-result-item">
+              <img
+                alt=""
+                class="img"
+                loading="lazy"
+                src="/Content/UploadFiles/85f2f3ca-ulike-air-3-ipl-lazer-32.jpg"
+              />
+              <div class="match-result-title">Tavsiye Edilmiyor</div>
+
+              <div class="match-result-p">
+                Verdiğiniz yanıtlara g&ouml;re, IPL t&uuml;y alma y&ouml;ntemi
+                ten renginiz i&ccedil;in uygun olsa da, t&uuml;y renginizde
+                yeterli melanin bulunmaması durumunda etkili olmayabilir.
+              </div>
+
+              <div class="match-result-flex">
+                <div class="match-result-left">
+                  <img
+                    alt=""
+                    loading="lazy"
+                    src="/Content/UploadFiles/92e96589-ulike-air-3-ipl-lazer-34.webp"
+                  />
+                </div>
+
+                <div class="match-result-right">
+                  <div class="match-result-p">
+                    Bunun nedeni, IPL&#39;nin kıl k&ouml;klerindeki melanini
+                    hedef alarak &ccedil;alışması ve emilen ışık enerjisiyle
+                    oluşan ısının k&ouml;klere zarar vermesi, bu da zamanla
+                    t&uuml;y b&uuml;y&uuml;mesinde azalmaya yol
+                    a&ccedil;masıdır. Ancak, t&uuml;y rengi &ccedil;ok
+                    a&ccedil;ıksa, IPL&#39;den gelen enerjiyi &ccedil;ekecek
+                    yeterli melanin bulunmayabilir ve bu da herhangi bir etki
+                    g&ouml;r&uuml;lmemesine neden olur.
+                  </div>
+                  &nbsp;
+
+                  <div class="match-result-p">
+                    Size IPL ile t&uuml;y alma konusunda yardımcı olamadığımız
+                    i&ccedil;in &uuml;zg&uuml;n&uuml;z, ancak Ulike bu soruna
+                    bir &ccedil;&ouml;z&uuml;m bulmaya kararlıdır. Araştırma
+                    ekibimiz şu anda bu problemi ele almak i&ccedil;in yeni
+                    t&uuml;y alma teknolojileri geliştirmektedir. L&uuml;tfen en
+                    son g&uuml;ncellemelerimiz ve gelişmelerimiz i&ccedil;in
+                    bizi takip etmeye devam edin.
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="match-result-item">
+              <img
+                alt="Tavsiye Edilmiyor"
+                class="img"
+                loading="lazy"
+                src="/Content/UploadFiles/85f2f3ca-ulike-air-3-ipl-lazer-32.jpg"
+              />
+              <div class="match-result-title">Tavsiye Edilmiyor</div>
+
+              <div class="match-result-p">
+                Verdiğiniz yanıtlara g&ouml;re, IPL t&uuml;y alma y&ouml;ntemi
+                t&uuml;y renginiz i&ccedil;in etkilidir, ancak ten renginiz
+                i&ccedil;in uygun değildir. IPL (Yoğun Atımlı Işık) t&uuml;y
+                alma teknolojisi, kıl k&ouml;klerindeki melanin pigmenti
+                tarafından emilen ışık enerjisi darbeleri yayarak
+                &ccedil;alışır. Bu ışık enerjisi daha sonra ısıya
+                d&ouml;n&uuml;ş&uuml;r; bu da kıl k&ouml;klerine zarar vererek
+                t&uuml;y b&uuml;y&uuml;mesini engeller.
+              </div>
+
+              <div class="match-result-flex">
+                <div class="match-result-left">
+                  <img
+                    alt="However"
+                    loading="lazy"
+                    src="/Content/UploadFiles/92e96589-ulike-air-3-ipl-lazer-34.webp"
+                  />
+                </div>
+
+                <div class="match-result-right">
+                  <div class="match-result-p">
+                    Ancak, daha koyu ten tonuna sahip bireylerin ciltlerinde
+                    daha y&uuml;ksek d&uuml;zeyde melanin pigmenti bulunur ve bu
+                    pigment, kıl k&ouml;kleri i&ccedil;in hedeflenen ışık
+                    enerjisini emebilir. Bu durum, potansiyel cilt hasarına yol
+                    a&ccedil;abilir.
+                  </div>
+                </div>
+              </div>
+
+              <div class="match-result-p mt-40">
+                IPL t&uuml;y alma y&ouml;nteminin sizin i&ccedil;in bir
+                se&ccedil;enek olmamasından dolayı &uuml;zg&uuml;n&uuml;z, ancak
+                bir &ccedil;&ouml;z&uuml;m bulmaya kararlıyız. Araştırma
+                ekibimiz, bu sorunu &ccedil;&ouml;zmek i&ccedil;in aktif olarak
+                yeni t&uuml;y alma teknolojileri geliştirmektedir. Ulike&#39;tan
+                gelecek g&uuml;ncellemeler ve gelişmeler i&ccedil;in bizi
+                takipte kalın.
+              </div>
+            </div>
+          </div>
+
+          <div class="match-btn">
+            <div class="match-btn-item">Hemen Satın Al</div>
+            <a class="match-btn-item" href=""
+              >IPL Hakkında Daha Fazla Bilgi Edinin</a
+            >
+
+            <div class="match-btn-item">Testi Tekrar &Ccedil;&ouml;z</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+    function matchInit() {
+      let $p = $(".match-box");
+      let num1 = 0;
+      let num2 = 0;
+      let lastNum = -1;
+      let currentNum = 0;
+      $p.find(".match-step-item").click(function () {
+        let pIndex = $(this).closest(".match-step-box").index();
+        let num = $(this).data("index");
+        $(this).addClass("active").siblings().removeClass("active");
+        if (pIndex === 0) {
+          num1 = num;
+          currentNum = 1;
+          setTimeout(() => {
+            $(this)
+              .closest(".match-step-box")
+              .removeClass("active")
+              .siblings()
+              .addClass("active");
+            $p.find(".match-progressbar-item").eq(1).addClass("active");
+            $p.find(".match-top").addClass("active");
+            $(this)
+              .closest(".match-step-box")
+              .siblings()
+              .find(".match-step-item")
+              .removeClass("active");
+          }, 500);
+        } else {
+          num2 = num;
+          currentNum = 2;
+          if ([1, 2, 3, 4].includes(num1)) {
+            if ([1, 2, 3, 4].includes(num2)) {
+              lastNum = 0;
+            } else {
+              lastNum = 1;
+            }
+          } else {
+            if ([1, 2, 3, 4].includes(num2)) {
+              lastNum = 2;
+            } else {
+              lastNum = 3;
+            }
+          }
+          setTimeout(() => {
+            if (lastNum != 0) {
+              $p.find(".match-cont").addClass("move-box");
+            }
+            $p.find(".match-progressbar-item").eq(2).addClass("active");
+            $(this).closest(".match-step").removeClass("active");
+            $p.find(".match-last").addClass("active");
+            $p.find(".match-last .match-result-item")
+              .removeClass("active")
+              .eq(lastNum)
+              .addClass("active");
+            if (lastNum === 0) {
+              $p.find(".match-btn-item").eq(0).css({ display: "flex" });
+              $p.find(".match-btn-item").eq(1).css({ display: "none" });
+            } else {
+              $p.find(".match-btn-item").eq(1).css({ display: "flex" });
+              $p.find(".match-btn-item").eq(0).css({ display: "none" });
+            }
+          }, 500);
+        }
+      });
+      $p.find(".match-back,.match-btn-item,.match-close").click(function () {
+        let index = $(this).index();
+        if ($(this).hasClass("match-btn-item") && index === 1) return;
+        $p.find(".match-step").addClass("active");
+        $p.find(".match-last").removeClass("active");
+        $p.find(".match-progressbar-item").eq(2).removeClass("active");
+        $p.find(".match-cont").removeClass("move-box");
+        if (
+          currentNum === 2 &&
+          !$(this).hasClass("match-btn-item") &&
+          !$(this).hasClass("match-close")
+        ) {
+          console.log(1);
+          currentNum = 1;
+        } else {
+          currentNum = 0;
+          $p.find(".match-top").removeClass("active");
+          $p.find(".match-progressbar-item").eq(1).removeClass("active");
+          $p.find(".match-step-box")
+            .removeClass("active")
+            .eq(0)
+            .addClass("active");
+          if ($(this).hasClass("match-btn-item")) {
+            $p.find(".match-step-item").removeClass("active");
+            if (index === 0) {
+              $p.fadeOut(300);
+            }
+          }
+          if ($(this).hasClass("match-close")) {
+            $p.find(".match-step-item").removeClass("active");
+            $p.fadeOut(300);
+          }
+        }
+      });
+      $("html").on("click", ".show-match-box", function (e) {
+        e.preventDefault();
+        $(".match-box").fadeIn(300);
+      });
+    }
+
+    window.addEventListener("load", function () {
+      matchInit();
+    });
+  </script>
+</section>
+
+<section class="section-mid-banner-4-iu">
+  <style type="text/css">
+    .sgs-box {
+      background: #fff;
+      position: relative;
+      z-index: 1;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .sgs-box .sgs-box-cont {
+      position: relative;
+    }
+    .sgs-box .sgs-img {
+      position: relative;
+      z-index: 1;
+      display: block;
+      margin: 0;
+      width: 100%;
+      height: auto !important;
+    }
+
+    .sgs-box .mb-box {
+      display: none;
+    }
+
+    .sgs-box .sgs-text {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      right: 100px;
+      color: #fff;
+      z-index: 2;
+      max-width: 585px;
+    }
+
+    .sgs-box .sgs-sub {
+      font-size: 18px;
+      line-height: 1.2;
+    }
+    .sgs-box .sgs-title {
+      position: relative;
+      font-size: 40px;
+      font-weight: bold;
+      padding-bottom: 25px;
+      margin-bottom: 20px;
+      line-height: 1.2;
+    }
+
+    .sgs-box .sgs-title::before {
+      position: absolute;
+      content: "";
+      display: block;
+      width: 18px;
+      height: 4px;
+      background: #fff;
+      left: 0;
+      bottom: 0;
+    }
+
+    .sgs-box .sgs-p {
+      font-size: 16px;
+      line-height: 1.6;
+      max-width: 435px;
+    }
+    .sgs-box .sgs-icon {
+      display: block;
+      margin-top: 20px;
+    }
+
+    .sgs-box .sgs-txt-box {
+      width: 276px;
+      height: 90px;
+      display: flex;
+      border: 2px solid #fff;
+      border-radius: 6px;
+      margin-top: 30px;
+    }
+    .sgs-box .sgs-txt-box-item {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 20px;
+      color: #fff;
+    }
+
+    .sgs-box .sgs-txt-box-item:first-child {
+      border-right: 2px solid #fff;
+    }
+
+    .sgs-box .sgs-txt-box-item .img {
+      width: 117px;
+      display: block;
+    }
+
+    .sgs-box .sgs-txt-box-item .icon-s {
+      width: 30px;
+      display: block;
+      margin-right: 8px;
+    }
+
+    .sgs-box .big-box {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      left: 0;
+      top: 0;
+      z-index: 2;
+    }
+
+    .sgs-box .big-box .container-4-iu {
+      position: relative;
+      height: 100%;
+    }
+
+    .air10 .sgs-box .sgs-text {
+      color: #190a0a;
+    }
+    .air10 .sgs-box .sgs-sub {
+      color: #6c6ab4;
+      font-size: 20px;
+      margin-bottom: 15px;
+    }
+    .air10 .sgs-box .sgs-title {
+      font-size: 48px;
+    }
+    .air10 .sgs-box .sgs-p {
+      color: #3f3636;
+      font-size: 16px;
+      line-height: 150%;
+    }
+    .air10 .sgs-box .sgs-text {
+      right: auto;
+      left: 50px;
+    }
+
+    .air10_new .sgs-box .sgs-sub {
+      color: #6c6ab4;
+      font-size: 20px;
+      margin-bottom: 15px;
+    }
+    .air10_new .sgs-box .sgs-title {
+      font-size: 48px;
+      color: #3f3636;
+    }
+    .air10_new .sgs-box .sgs-p {
+      color: #3f3636;
+      font-size: 16px;
+      line-height: 150%;
+    }
+    @media (max-width: 1400px) {
+      .sgs-box .sgs-text {
+        max-width: 45%;
+        right: 50px;
+      }
+      .sgs-box .sgs-title {
+        font-size: 32px;
+      }
+      .sgs-box .sgs-txt-num {
+        font-size: 38px;
+      }
+
+      .air10_new .sgs-box .sgs-title {
+        font-size: 32px;
+      }
+      .air10_new .sgs-box .sgs-txt-num {
+        font-size: 38px;
+      }
+      .air10 .sgs-box .sgs-title {
+        font-size: 32px;
+      }
+      .air10 .sgs-box .sgs-txt-num {
+        font-size: 38px;
+      }
+    }
+    @media (max-width: 1200px) {
+      .sgs-box .sgs-text {
+        right: 30px;
+      }
+      .sgs-box .sgs-title {
+        font-size: 28px;
+      }
+      .sgs-box .sgs-txt-num {
+        font-size: 30px;
+      }
+
+      .air10_new .sgs-box .sgs-title {
+        font-size: 28px;
+      }
+      .air10_new .sgs-box .sgs-txt-num {
+        font-size: 30px;
+      }
+      .air10 .sgs-box .sgs-title {
+        font-size: 28px;
+      }
+      .air10 .sgs-box .sgs-txt-num {
+        font-size: 30px;
+      }
+
+      .sgs-box .sgs-txt-item {
+        padding: 0 10px;
+      }
+      .sgs-box .sgs-icon {
+        width: 90px;
+      }
+    }
+
+    @media (max-width: 991px) {
+      .sgs-box {
+        padding: 50px 0;
+      }
+      .sgs-box .sgs-title {
+        font-size: 28px;
+        padding-bottom: 20px;
+        margin-bottom: 15px;
+        margin-top: 10px;
+      }
+      .sgs-box .mb-box {
+        display: block;
+      }
+      .sgs-box .pc-box {
+        display: none;
+      }
+      .sgs-box .sgs-text {
+        max-width: none;
+        width: 100%;
+        right: 0;
+        padding: 0 20px;
+        bottom: 0;
+        top: auto;
+        transform: translateY(0);
+        text-align: center;
+        padding-bottom: 30px;
+      }
+      .sgs-box .sgs-p {
+        max-width: none;
+      }
+      .sgs-box .sgs-title::before {
+        left: 50%;
+        transform: translateX(-50%);
+      }
+
+      .sgs-box .sgs-p {
+        font-size: 14px;
+        line-height: 1.4;
+      }
+      .sgs-box .sgs-sub {
+        font-size: 14px;
+      }
+      .sgs-box .sgs-txt-box {
+        margin: 0 auto;
+        margin-top: 30px;
+        zoom: 0.8;
+      }
+      .air10 .sgs-box .sgs-text {
+        left: 0;
+        top: 70px;
+        color: #190a0a;
+        text-align: left;
+      }
+      .air10_new .sgs-box .sgs-text {
+        left: 0;
+        top: 62px;
+        color: #190a0a;
+        text-align: left;
+      }
+
+      .air10 .sgs-box .sgs-sub {
+        font-size: 14px;
+      }
+      .air10 .sgs-box .sgs-title {
+        font-size: 24px;
+      }
+      .air10 .sgs-box .sgs-p {
+        font-size: 14px;
+      }
+
+      .air10_new .sgs-box .sgs-sub {
+        font-size: 14px;
+      }
+      .air10_new .sgs-box .sgs-title {
+        font-size: 24px;
+      }
+      .air10_new .sgs-box .sgs-p {
+        font-size: 14px;
+      }
+      .air10_new .sgs-box .sgs-title::before,
+      .air10 .sgs-box .sgs-title::before {
+        opacity: 0;
+      }
+    }
+  </style>
+  <section class="section-box">
+    <div class="sgs-box">
+      <div class="sgs-box-cont">
+        <img
+          alt=""
+          class="sgs-img pc-box to-top appear"
+          height="699"
+          loading="lazy"
+          src="/Content/UploadFiles/cfd14657-ulike-air-3-ipl-lazer-35.webp?v=1718334725"
+          srcset="
+            /Content/UploadFiles/cfd14657-ulike-air-3-ipl-lazer-35.webp?v=1718334725 1598w
+          "
+          width="1598"
+        />
+        <img
+          alt=""
+          class="sgs-img mb-box to-top appear"
+          height="1364"
+          loading="lazy"
+          src="/Content/UploadFiles/8a1856b2-ulike-air-3-ipl-lazer-35-mobile.webp?v=1699006773"
+          srcset="
+            /Content/UploadFiles/8a1856b2-ulike-air-3-ipl-lazer-35-mobile.webp?v=1699006773 1125w
+          "
+          width="1125"
+        />
+        <div class="big-box">
+          <div class="container-4-iu">
+            <div class="sgs-text">
+              <div class="sgs-sub to-top appear" style="transition-delay: 0.1s">
+                Uzun S&uuml;reli T&uuml;y Alma
+              </div>
+
+              <div
+                class="sgs-title to-top appear"
+                style="transition-delay: 0.2s"
+              >
+                Rutininiz artık daha kolay.
+              </div>
+
+              <div class="sgs-p to-top appear" style="transition-delay: 0.3s">
+                Nihayet, kalıcı t&uuml;y alma &ccedil;&ouml;z&uuml;m&uuml;. Eski
+                y&ouml;ntemler artık bununla yarışamaz. IPL, size
+                p&uuml;r&uuml;zs&uuml;z bir cilt ve ger&ccedil;ekten &ouml;nemli
+                olan şeylere ayıracak daha fazla zaman sunarak, uzun vadeli bir
+                t&uuml;y alma &ccedil;&ouml;z&uuml;m&uuml; sağlar.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</section>
+
+<section class="section-left-right-left-5-iu">
+  <style type="text/css">
+    .sell-point-box {
+      padding-bottom: 100px;
+      background: #fff;
+      position: relative;
+      z-index: 1;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .sell-point-box .sell-point-item {
+      display: flex;
+    }
+    .sell-point-box .is-reversal {
+      flex-direction: row-reverse;
+    }
+    .sell-point-box .sell-point-img,
+    .sell-point-box .sell-point-text {
+      width: 50%;
+      position: relative;
+      overflow: hidden;
+    }
+    .sell-point-box .sell-point-img img {
+      display: block;
+      margin: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      position: relative;
+      z-index: 1;
+    }
+    .sell-point-box .img-item {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      left: 0;
+      top: 0;
+      opacity: 0;
+      z-index: 1;
+      transition: all 0.4s ease;
+    }
+    .sell-point-box .img-item.active {
+      position: relative;
+      opacity: 1;
+      z-index: 2;
+    }
+    .sell-point-box .img-item-txt {
+      position: absolute;
+      z-index: 2;
+      top: 30px;
+      left: 30px;
+      font-size: 20px;
+      color: #fff;
+      line-height: 1.2;
+    }
+    .sell-point-box .img-item-txt .img-item-p {
+      margin-top: 8px;
+    }
+    .sell-point-box .img-item-txt .img-item-p:not(:first-child) {
+      padding-left: 20px;
+      position: relative;
+    }
+    .sell-point-box .img-item-txt .img-item-p:not(:first-child)::after {
+      position: absolute;
+      content: "";
+      display: block;
+      width: 5px;
+      height: 5px;
+      background: #fff;
+      top: 50%;
+      left: 5px;
+      transform: translateY(-50%);
+    }
+    .sell-point-box .sell-point-text {
+      padding: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .sell-point-box .sell-point-text-cont {
+      max-width: 472px;
+    }
+
+    .sell-point-box .sell-point-sub {
+      font-size: 18px;
+      color: #000;
+      line-height: 1.2;
+    }
+
+    .sell-point-box .sell-point-text .sell-point-icon {
+      display: block;
+      margin-top: 30px;
+    }
+    .sell-point-box .sell-point-title {
+      font-size: 40px;
+      font-family: var(--heading-font-family);
+      font-weight: normal;
+      color: #000;
+      line-height: 1.2;
+      position: relative;
+      padding-bottom: 25px;
+      margin-bottom: 30px;
+    }
+
+    .sell-point-box .sell-point-title::before {
+      position: absolute;
+      content: "";
+      display: block;
+      width: 18px;
+      height: 4px;
+      left: 0;
+      bottom: 0;
+      background: #e1e1e1;
+    }
+
+    .sell-point-box .sell-point-p {
+      font-size: 16px;
+      line-height: 1.6;
+      color: #535353;
+    }
+
+    .sell-point-box .img-item-tab {
+      position: absolute;
+      width: 430px;
+      height: 45px;
+      max-width: 90%;
+      left: 50%;
+      bottom: 50px;
+      z-index: 2;
+      border: 2px solid #fff;
+      border-radius: 45px;
+      display: flex;
+      transform: translateX(-50%);
+    }
+
+    .sell-point-box .img-item-tab-item {
+      position: relative;
+      flex: 1;
+      font-size: 18px;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      z-index: 2;
+      transition: all 0.4s ease;
+    }
+    .sell-point-box .img-item-tab-item.active {
+      color: #000;
+    }
+
+    .sell-point-box .img-item-tab-span {
+      position: absolute;
+      width: calc(33.333% + 2px);
+      height: calc(100% + 4px);
+      border-radius: 45px;
+      margin-left: -1px;
+      top: -2px;
+      background: #fff;
+    }
+    .video-wrapper--native-custom {
+      height: 100%;
+    }
+    .sell_point_dialog.show-match-box {
+      text-decoration: underline;
+      padding-top: 10px;
+    }
+    .seo-diy .sell-point-title {
+      padding-bottom: 0;
+      margin-bottom: 20px;
+    }
+    .seo-diy .sell-point-title::before {
+      display: none;
+    }
+
+    .sell-point-box .sell-point-btn {
+      display: flex;
+      width: 120px;
+      height: 37px;
+      justify-content: center;
+      align-items: center;
+      background: #e0004d;
+      color: #fff;
+      font-size: 16px;
+      line-height: 1.5;
+      cursor: pointer;
+      font-family: var(--heading-font-family);
+      margin-top: 30px;
+    }
+    .seo-diy .sell-point-title {
+      font-size: 30px;
+    }
+    .seo-diy .sell-point-text {
+      padding: 30px 45px;
+      justify-content: flex-start;
+    }
+    .seo-diy .sell-point-p {
+      line-height: 1.2;
+    }
+    @media (max-width: 1300px) {
+      .sell-point-box .sell-point-title {
+        font-size: 28px;
+      }
+      .sell-point-box .img-item-tab-item {
+        font-size: 14px;
+      }
+    }
+
+    @media (max-width: 991px) {
+      .sell-point-box {
+        padding-bottom: 50px;
+      }
+      .sell-point-box .sell-point-title {
+        padding-bottom: 15px;
+        margin-bottom: 20px;
+      }
+      .sell-point-box .sell-point-item {
+        display: block;
+      }
+      .sell-point-box .sell-point-img,
+      .sell-point-box .sell-point-text {
+        width: 100%;
+      }
+      .sell-point-box .sell-point-text {
+        justify-content: flex-start;
+        padding: 30px 20px;
+      }
+      .sell-point-box .img-item-tab-item {
+        font-size: 12px;
+      }
+      .sell-point-box .img-item-tab {
+        height: 35px;
+        bottom: 20px;
+      }
+      .sell-point-box .img-item-txt {
+        top: 15px;
+        left: 15px;
+        font-size: 14px;
+      }
+      .sell-point-box .sell-point-text .sell-point-icon {
+        margin-top: 20px;
+      }
+      .seo-diy.sell-point-box .sell-point-title {
+        font-size: 16px;
+        padding-bottom: 0;
+        margin-bottom: 10px;
+      }
+      .seo-diy.sell-point-box .sell-point-p {
+        font-size: 12px;
+      }
+      .sell-point-box .sell-point-btn {
+        font-size: 12px;
+        margin-top: 15px;
+      }
+      .seo-diy.sell-point-box .sell-point-text {
+        background: #f9f9f9;
+      }
+      .seo-diy.sell-point-box .sell-point-list {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+      }
+      .seo-diy.sell-point-box .sell-point-item {
+        display: flex;
+        flex-direction: column-reverse;
+      }
+    }
+
+    @media (max-width: 740px) {
+      .sell-point-box .sell-point-item {
+        margin: 0 -24px;
+      }
+      .seo-diy.sell-point-box .sell-point-item {
+        margin: 0;
+      }
+    }
+  </style>
+  <section class="section-box">
+    <div class="sell-point-box">
+      <div class="container-5-iu">
+        <div class="sell-point-list">
+          <div class="sell-point-item to-top appear">
+            <div class="sell-point-img">
+              <div class="img-item active">
+                <img
+                  alt=""
+                  height="539"
+                  loading="lazy"
+                  src="/Content/UploadFiles/1b96e274-ulike-air-3-ipl-lazer-36.webp?v=1698824701"
+                  srcset="
+                    /Content/UploadFiles/1b96e274-ulike-air-3-ipl-lazer-36.webp?v=1698824701 800w
+                  "
+                  width="800"
+                />
+              </div>
+            </div>
+
+            <div class="sell-point-text">
+              <div class="sell-point-text-cont">
+                <div
+                  class="sell-point-sub to-top appear"
+                  style="transition-delay: 0.1s"
+                >
+                  Safir Buz Soğutma&trade;
+                </div>
+
+                <h3
+                  class="sell-point-title to-top appear"
+                  style="transition-delay: 0.2s"
+                >
+                  Gelişmiş cilt koruması.
+                </h3>
+
+                <div
+                  class="sell-point-p to-top appear"
+                  style="transition-delay: 0.3s"
+                >
+                  <p>
+                    Uzman onaylı, laboratuvar testli ve on yılı aşkın
+                    s&uuml;redir IPL cilt g&uuml;venliğinde &ccedil;ığır
+                    a&ccedil;an yenilikler sunuyoruz. Buna, yerleşik UV
+                    filtremiz ve neredeyse acısız t&uuml;y alma sağlayan
+                    patentli Safir Buz Soğutma Teknolojimiz&trade; (Sapphire Ice
+                    Cooling Technology&trade;) dahildir.
+                  </p>
+                </div>
+                <img
+                  alt=""
+                  class="sell-point-icon to-top appear"
+                  height="51"
+                  loading="lazy"
+                  src="/Content/UploadFiles/d3bac492-ulike-air-3-ipl-lazer-45.svg?v=1712804682"
+                  srcset="
+                    /Content/UploadFiles/d3bac492-ulike-air-3-ipl-lazer-45.svg?v=1712804682 91w
+                  "
+                  style="transition-delay: 0.4s"
+                  width="91"
+                />
+              </div>
+            </div>
+          </div>
+
+          <div class="sell-point-item is-reversal to-top appear">
+            <div class="sell-point-img">
+              <div class="img-item active">
+                <img
+                  alt=""
+                  height="538"
+                  loading="lazy"
+                  src="/Content/UploadFiles/a14258fc-ulike-air-3-ipl-lazer-37.gif?v=1698912294"
+                  srcset="
+                    /Content/UploadFiles/a14258fc-ulike-air-3-ipl-lazer-37.gif?v=1698912294 800w
+                  "
+                  width="800"
+                />
+              </div>
+            </div>
+
+            <div class="sell-point-text">
+              <div class="sell-point-text-cont">
+                <div
+                  class="sell-point-sub to-top appear"
+                  style="transition-delay: 0.1s"
+                >
+                  AutoGlide Modu
+                </div>
+
+                <h3
+                  class="sell-point-title to-top appear"
+                  style="transition-delay: 0.2s"
+                >
+                  12 dakikalık t&uuml;m v&uuml;cut seansları.&sup2;
+                </h3>
+
+                <div
+                  class="sell-point-p to-top appear"
+                  style="transition-delay: 0.3s"
+                >
+                  <p>
+                    Yenilik&ccedil;i Parmaksız (Thumbs-Free) AutoGlide Modu ile
+                    tanışın! Her 0.7 saniyede bir cildinize uygulanan atım
+                    sayesinde ışık hızında t&uuml;m v&uuml;cut seanslarını
+                    deneyimleyin.&sup3;
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="sell-point-item to-top appear">
+            <div class="sell-point-img">
+              <div class="img-item active">
+                <img
+                  alt=""
+                  height="539"
+                  loading="lazy"
+                  src="/Content/UploadFiles/cdc39677-ulike-air-3-ipl-lazer-38.jpg?v=1698890458"
+                  srcset="
+                    /Content/UploadFiles/cdc39677-ulike-air-3-ipl-lazer-38.jpg?v=1698890458 800w
+                  "
+                  width="800"
+                />
+              </div>
+            </div>
+
+            <div class="sell-point-text">
+              <div class="sell-point-text-cont">
+                <div
+                  class="sell-point-sub to-top appear"
+                  style="transition-delay: 0.1s"
+                >
+                  Evde Salon Benzeri Sonu&ccedil;lar
+                </div>
+
+                <h3
+                  class="sell-point-title to-top appear"
+                  style="transition-delay: 0.2s"
+                >
+                  Jiletlerden daha ucuz, lazer kadar etkili.
+                </h3>
+
+                <div
+                  class="sell-point-p to-top appear"
+                  style="transition-delay: 0.3s"
+                >
+                  <p>
+                    Sonsuz jilet d&ouml;ng&uuml;s&uuml;ne ve kliniğe yapılan
+                    zahmetli yolculuklara veda edin. Air 3 ile evinizin
+                    rahatlığında salon benzeri sonu&ccedil;lar elde edin.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <script>
+    window.addEventListener("load", function () {
+      $(".sell-point-box .img-item-tab-item").click(function () {
+        let index = $(this).index();
+        let width = $(this).width();
+        let translateX = index * width;
+        $(this).addClass("active").siblings().removeClass("active");
+        $(this)
+          .closest(".sell-point-item")
+          .find(".img-item")
+          .removeClass("active")
+          .eq(index)
+          .addClass("active");
+        $(".sell-point-box .img-item-tab-span").css({
+          transform: "translateX(" + translateX + "px)",
+          transition: "transform .4s",
+        });
+      });
+
+      function changeellPointItem($this) {
+        let width = $this.find(".img-item-tab-item").width();
+        setTimeout(function () {
+          let hover = $this.attr("data-hover");
+          if (hover == 1) {
+            return changeellPointItem($this);
+          }
+          let index = $this.find(".img-item.active").index();
+          index++;
+          if (index == 3) index = 0;
+          $this.find(".img-item").removeClass("active");
+          $this.find(".img-item").eq(index).addClass("active");
+          $this
+            .find(".img-item-tab-item")
+            .removeClass("active")
+            .eq(index)
+            .addClass("active");
+          $this.find(".img-item-tab-span").css({
+            transform: "translateX(" + width * index + "px)",
+            transition: "transform .4s",
+          });
+          changeellPointItem($this);
+        }, 2000);
+      }
+      $(".sell-point-img-other").hover(
+        function () {
+          $(this).attr("data-hover", 1);
+        },
+        function () {
+          $(this).attr("data-hover", 0);
+        },
+      );
+      $(".sell-point-img-other").each(function () {
+        $(this).attr("data-hover", 0);
+        changeellPointItem($(this));
+      });
+
+      document
+        .querySelectorAll(".sell-point-box .sell-point-btn")
+        .forEach((item) => {
+          item.addEventListener("click", function () {
+            const link = this.getAttribute("data-link");
+            if (link) {
+              window.open(link, "_blank");
+            } else {
+            }
+          });
+        });
+    });
+  </script>
+</section>
+
+<section class="no-1-section-iu">
+  <style type="text/css">
+    .IPL-no1 {
+      background: #f9f9f9;
+      padding: 50px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .IPL-no1 .IPL-no1-cont {
+      display: flex;
+      gap: 20px;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .IPL-no1 .ipl-logo {
+      display: block;
+      width: 80px;
+    }
+
+    .IPL-no1 .IPL-no1-sub {
+      font-size: 24px;
+      color: #000;
+      font-family: var(--heading-font-family);
+      line-height: 1;
+      margin-top: 10px;
+    }
+
+    .IPL-no1 .IPL-no1-color-title {
+      font-size: 100px;
+      font-family: var(--heading-font-family);
+      color: rgba(0, 0, 0, 0);
+      line-height: 1;
+      background-clip: text;
+      background-repeat: no-repeat;
+      --deg-num: -76deg;
+      background-image: linear-gradient(var(--deg-num), #be0737, #ff5f88);
+      background-size: 100% 100%;
+    }
+
+    .IPL-no1 .IPL-no1-right {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 40px;
+    }
+
+    .IPL-no1 .IPL-no1-item {
+      padding-right: 40px;
+      text-align: center;
+      color: #000;
+      line-height: 1;
+      border-right: 1px solid #ddd;
+    }
+
+    .IPL-no1 .IPL-no1-item:last-child {
+      padding-right: 0;
+      border-right: 0;
+    }
+
+    .IPL-no1 .IPL-no1-num {
+      font-size: 50px;
+      font-family: var(--heading-font-family);
+      display: flex;
+      justify-content: center;
+    }
+
+    .IPL-no1 .IPL-no1-num span {
+      display: block;
+      position: relative;
+      padding-right: 25px;
+    }
+
+    .IPL-no1 .IPL-no1-num span::before {
+      position: absolute;
+      content: "+";
+      color: #000;
+      font-size: 30px;
+      font-weight: bold;
+      line-height: 1;
+      right: 10px;
+      top: 0;
+    }
+
+    .IPL-no1 .IPL-no1-p {
+      font-size: 23px;
+      line-height: 1;
+      margin-top: 15px;
+    }
+    .des_ipl-rt {
+      color: #b3b3b3;
+      font-size: 12px;
+      line-height: 150%;
+      margin-top: 10px;
+    }
+
+    .men-diy .container-no-1-iu {
+      max-width: 1600px;
+    }
+
+    .men-diy .IPL-no1-color-title {
+      filter: grayscale(100%);
+    }
+
+    .men-diy .IPL-no1-num span::before {
+      display: none;
+    }
+
+    .men-diy .IPL-no1-num span {
+      padding-right: 0;
+    }
+
+    @media (max-width: 1400px) {
+      .IPL-no1 .IPL-no1-sub {
+        font-size: 20px;
+      }
+
+      .IPL-no1 .IPL-no1-color-title {
+        font-size: 90px;
+      }
+
+      .IPL-no1 .IPL-no1-num {
+        /* font-size: 65px; */
+      }
+
+      .IPL-no1 .IPL-no1-p {
+        font-size: 20px;
+      }
+    }
+
+    @media (max-width: 1200px) {
+      .IPL-no1 .IPL-no1-sub {
+        font-size: 18px;
+      }
+
+      .IPL-no1 .IPL-no1-color-title {
+        font-size: 70px;
+      }
+
+      .IPL-no1 .IPL-no1-num {
+        font-size: 35px;
+      }
+
+      .IPL-no1 .IPL-no1-num span::before {
+        font-size: 25px;
+      }
+
+      .IPL-no1 .IPL-no1-p {
+        font-size: 18px;
+      }
+      .IPL-no1 .IPL-no1-right {
+        gap: 20px;
+      }
+      .IPL-no1 .IPL-no1-item {
+        padding-right: 20px;
+      }
+    }
+
+    @media (max-width: 991px) {
+      .IPL-no1 {
+        padding: 50px 0;
+      }
+      .IPL-no1 .IPL-no1-cont {
+        flex-direction: column;
+        gap: 40px;
+      }
+      .IPL-no1 .IPL-no1-color-title {
+        font-size: 65px;
+      }
+      .IPL-no1 .IPL-no1-left {
+        text-align: center;
+      }
+
+      .IPL-no1 .ipl-logo {
+        margin: 0 auto;
+      }
+
+      .IPL-no1 .IPL-no1-num span {
+        padding-right: 20px;
+      }
+      .men-diy .IPL-no1-num span {
+        padding-right: 0;
+      }
+      .IPL-no1 .IPL-no1-num span::before {
+        right: 5px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .IPL-no1 .IPL-no1-sub {
+        font-size: 18px;
+      }
+
+      .IPL-no1 .IPL-no1-num {
+        font-size: 28px;
+      }
+
+      .IPL-no1 .IPL-no1-num span::before {
+        font-size: 20px;
+      }
+
+      .IPL-no1 .IPL-no1-p {
+        font-size: 14px;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .IPL-no1 .IPL-no1-right {
+        gap: 10px;
+      }
+
+      .IPL-no1 .IPL-no1-item {
+        padding-right: 10px;
+      }
+
+      .IPL-no1 .IPL-no1-num {
+        font-size: 20px;
+      }
+      .IPL-no1 .IPL-no1-num span {
+        padding-right: 12px;
+      }
+      .men-diy .IPL-no1-num span {
+        padding-right: 0;
+      }
+      .IPL-no1 .IPL-no1-num span::before {
+        font-size: 12px;
+      }
+
+      .IPL-no1 .IPL-no1-p {
+        font-size: 12px;
+        margin-top: 5px;
+        zoom: 0.9;
+      }
+    }
+  </style>
+  <section>
+    <div class="IPL-no1 to-top appear">
+      <div class="container-no-1-iu">
+        <div class="IPL-no1-cont">
+          <div
+            class="IPL-no1-left to-top appear"
+            style="transition-delay: 0.05s"
+          >
+            <img
+              alt=""
+              class="ipl-logo"
+              height="19"
+              loading="lazy"
+              src="/Content/UploadFiles/d971b870-ulike-air-3-ipl-lazer-39.svg?v=1709019644"
+              srcset="
+                /Content/UploadFiles/d971b870-ulike-air-3-ipl-lazer-39.svg?v=1709019644 89w
+              "
+              width="89"
+            />
+            <div class="IPL-no1-sub">
+              D&uuml;nya &Ccedil;apında IPL Cihazı Satışları
+            </div>
+
+            <div class="IPL-no1-color-title" style="--deg-num: 104deg">
+              No. 1
+            </div>
+          </div>
+
+          <div class="IPL-no1-right">
+            <div
+              class="IPL-no1-item to-top appear"
+              style="transition-delay: 0.1s"
+            >
+              <div class="IPL-no1-num"><span>900</span></div>
+
+              <div class="IPL-no1-p">Verilmiş Patentler</div>
+            </div>
+
+            <div
+              class="IPL-no1-item to-top appear"
+              style="transition-delay: 0.2s"
+            >
+              <div class="IPL-no1-num"><span>10</span>Yıl</div>
+
+              <div class="IPL-no1-p">IPL Araştırması</div>
+            </div>
+
+            <div
+              class="IPL-no1-item to-top appear"
+              style="transition-delay: 0.3s"
+            >
+              <div class="IPL-no1-num"><span>7 Milyon</span></div>
+
+              <div class="IPL-no1-p">Satılan &Uuml;r&uuml;nler</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <script>
+    function textAm() {
+      let $box = document.querySelector(".IPL-no1 .IPL-no1-color-title");
+      let num = -76;
+      function step() {
+        num += 1.5;
+        if (num > 284) num = -76;
+        $box.style = "--deg-num:" + num + "deg;";
+        requestAnimationFrame(step);
+      }
+      step();
+    }
+    textAm();
+    function animateNumbersWhenVisible(elements) {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const element = entry.target;
+            const start = 0;
+            const end = parseInt(element.textContent.match(/\d+/)[0]);
+            const duration = Math.max(
+              800,
+              Math.min(2000, Math.abs(end - start) * 20),
+            ); // 根据数字的大小调整动画时间，最小1000毫秒，最大4000毫秒
+            animateNumber(element, start, end, duration);
+            observer.unobserve(element); // 仅触发一次动画后停止观察
+          }
+        });
+      });
+
+      elements.forEach((element) => {
+        observer.observe(element);
+      });
+    }
+
+    function animateNumber(element, start, end, duration) {
+      const initialValue = element.textContent;
+      let startTime = null;
+      const step = (timestamp) => {
+        if (!startTime) startTime = timestamp;
+        const progress = Math.min((timestamp - startTime) / duration, 1);
+        const value = Math.floor(progress * (end - start) + start);
+        const newValue = initialValue.replace(
+          /\d+/,
+          value.toString().padStart(initialValue.match(/\d+/)[0].length, "0"),
+        );
+        element.textContent = newValue;
+        if (progress < 1) {
+          requestAnimationFrame(step);
+        }
+      };
+      requestAnimationFrame(step);
+    }
+
+    document.addEventListener("DOMContentLoaded", function () {
+      const numberContainers = document.querySelectorAll(
+        ".IPL-no1 .IPL-no1-num span",
+      );
+      animateNumbersWhenVisible(numberContainers);
+    });
+  </script>
+</section>
+
+<section class="section-carousel-slide-6-iu">
+  <style type="text/css">
+    .sell-point-slider {
+      padding: 80px 0;
+      background: #000;
+      position: relative;
+      z-index: 1;
+      overflow: hidden;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .sell-point-slider .title-diy {
+      color: #fff;
+    }
+
+    .sell-point-slider .sell-point-slider-p {
+      font-size: 18px;
+      color: #8b8b8b;
+      max-width: 490px;
+      text-align: center;
+      line-height: 1.2;
+      margin: 0 auto;
+      margin-top: 30px;
+    }
+
+    .sell-point-slider .sell-point-slider-cont {
+      width: 45.8%;
+      margin: 0 auto;
+      margin-top: 70px;
+      position: relative;
+    }
+
+    .sell-point-slider .sell-point-slider-list {
+      display: flex;
+    }
+    .sell-point-slider .sell-point-slider-item {
+      position: relative;
+      flex-shrink: 0;
+      margin-right: 30px;
+      width: 100%;
+    }
+    .sell-point-slider .sell-point-slider-video-wrapper {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      left: 0;
+      top: 0;
+      z-index: 2;
+    }
+
+    .sell-point-slider .sell-point-slider-video-wrapper video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      position: absolute;
+    }
+    .sell-point-slider .sell-point-slider-item img {
+      display: block;
+      margin: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      position: relative;
+      z-index: 1;
+    }
+    .sell-point-slider .img-item {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      left: 0;
+      top: 0;
+      opacity: 0;
+      z-index: 1;
+      transition: all 0.4s ease;
+    }
+    .sell-point-slider .img-item.active {
+      position: relative;
+      opacity: 1;
+      z-index: 2;
+    }
+    .sell-point-slider .img-item-txt {
+      position: absolute;
+      z-index: 2;
+      bottom: 30px;
+      left: 0;
+      font-size: 18px;
+      padding: 0 30px;
+      width: 100%;
+      color: #fff;
+      line-height: 1.2;
+      text-align: center;
+      font-weight: bold;
+    }
+
+    .sell-point-slider .img-item-p:nth-child(2) {
+      font-size: 25px;
+    }
+    .sell-point-slider .img-item-p:last-child {
+      margin-top: 8px;
+      font-size: 16px;
+      font-weight: normal;
+    }
+    .sell-point-slider .img-item-tab {
+      position: absolute;
+      width: 430px;
+      height: 45px;
+      max-width: 90%;
+      left: 50%;
+      top: 50px;
+      z-index: 2;
+      border: 2px solid #fff;
+      border-radius: 45px;
+      display: flex;
+      transform: translateX(-50%);
+    }
+
+    .sell-point-slider .img-item-tab-item {
+      position: relative;
+      flex: 1;
+      font-size: 18px;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      z-index: 2;
+      transition: all 0.4s ease;
+    }
+    .sell-point-slider .img-item-tab-item.active {
+      color: #000;
+    }
+
+    .sell-point-slider .img-item-tab-span {
+      position: absolute;
+      width: calc(33.333% + 3px);
+      height: calc(100% + 2px);
+      border-radius: 45px;
+      margin-left: -1px;
+      top: -1px;
+      background: #fff;
+    }
+
+    .sell-point-slider .sell-point-slider-item::before {
+      position: absolute;
+      content: "";
+      display: block;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      z-index: 2;
+      opacity: 1;
+      pointer-events: none;
+      background: rgba(0, 0, 0, 0.4);
+      transition: all 0.4s ease;
+    }
+
+    .sell-point-slider .sell-point-slider-item.active::before {
+      opacity: 0;
+    }
+
+    .sell-point-slider .sell-point-slider-item img {
+      position: relative;
+      z-index: 1;
+      width: 100%;
+    }
+
+    .sell-point-slider .sell-point-slider-txt {
+      position: absolute;
+      padding: 35px 30px;
+      left: 0;
+      bottom: 0;
+      z-index: 2;
+      color: #fff;
+      display: flex;
+    }
+
+    .sell-point-slider .sell-point-slider-num {
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    .sell-point-slider .sell-point-slider-sub {
+      font-size: 18px;
+      line-height: 1.4;
+      border-left: 1px solid #fff;
+      margin-left: 10px;
+      padding-left: 10px;
+      max-width: 560px;
+    }
+
+    .sell-point-slider .sell-point-slider-arraw {
+      display: flex;
+      justify-content: space-between;
+      position: absolute;
+      left: 35px;
+      width: 95%;
+      top: 50%;
+      transform: translateY(-50%);
+      margin-top: -35px;
+      z-index: 2;
+      pointer-events: none;
+    }
+
+    .sell-point-slider .sell-point-slider-arraw-item {
+      background: #fff;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      position: relative;
+      cursor: pointer;
+      transition: all 0.4s ease;
+      pointer-events: all;
+    }
+
+    .sell-point-slider .sell-point-slider-arraw-item:hover {
+      background: #000;
+    }
+
+    .sell-point-slider .sell-point-slider-arraw-item::before {
+      position: absolute;
+      content: "";
+      display: block;
+      width: 12px;
+      height: 12px;
+      border-top: 2px solid #000;
+      border-left: 2px solid #000;
+      top: 50%;
+      left: 50%;
+      margin-left: 2px;
+      transform: translate(-50%, -50%) rotate(-45deg);
+      transition: all 0.4s ease;
+    }
+    .sell-point-slider .sell-point-slider-arraw-item:hover::before {
+      border-color: #fff;
+    }
+    .sell-point-slider .sell-point-slider-arraw-item:last-child {
+      transform: scale(-1, -1);
+    }
+
+    .sell-point-slider .sell-point-slider-dot {
+      display: flex;
+      background: #1a1a1a;
+      height: 2px;
+      margin-top: 70px;
+    }
+    .sell-point-slider .sell-point-slider-dot-item {
+      flex: 1;
+    }
+
+    .sell-point-slider .sell-point-slider-dot-item {
+      flex: 1;
+      height: 2px;
+      position: relative;
+      cursor: pointer;
+    }
+    .sell-point-slider .sell-point-slider-dot-item::before {
+      position: absolute;
+      content: "";
+      display: block;
+      width: 0;
+      height: 100%;
+      background: #fff;
+      left: 0;
+      top: 0;
+    }
+
+    .sell-point-slider .sell-point-slider-dot-item::after {
+      position: absolute;
+      content: "";
+      display: block;
+      width: 100%;
+      height: 400%;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+    }
+
+    .sell-point-slider .sell-point-slider-dot-item.active::before {
+      width: 100%;
+    }
+    .sell-point-slider .sell-point-slider-dot-item.active.tra::before {
+      transition: width 0.4s linear;
+    }
+
+    @media (max-width: 1500px) {
+      .sell-point-slider .sell-point-slider-cont {
+        width: 60%;
+      }
+      .sell-point-slider .sell-point-slider-txt {
+        padding: 30px 20px;
+      }
+    }
+
+    @media (max-width: 991px) {
+      .sell-point-slider .sell-point-slider-p {
+        margin-top: 20px;
+      }
+      .sell-point-slider .sell-point-slider-num {
+        font-size: 16px;
+      }
+      .sell-point-slider .sell-point-slider-sub {
+        font-size: 14px;
+      }
+      .sell-point-slider .img-item-tab-item {
+        font-size: 14px;
+      }
+      .sell-point-slider .img-item-tab {
+        height: 40px;
+        top: 15px;
+      }
+      .sell-point-slider .img-item-txt {
+        font-size: 16px;
+        bottom: 20px;
+      }
+      .sell-point-slider .img-item-p:nth-child(2) {
+        font-size: 20px;
+      }
+      .sell-point-slider .img-item-p:last-child {
+        font-size: 14px;
+      }
+      .sell-point-slider .sell-point-slider-dot {
+        margin-top: 40px;
+      }
+      .sell-point-slider .sell-point-slider-arraw {
+        display: none;
+      }
+    }
+
+    @media (max-width: 740px) {
+      .sell-point-slider {
+        padding: 50px 0;
+      }
+      .sell-point-slider .sell-point-slider-cont {
+        width: 90%;
+        margin-top: 40px;
+      }
+
+      .sell-point-slider .img-item-p:nth-child(1),
+      .sell-point-slider .img-item-p:nth-child(2) {
+        display: none;
+      }
+    }
+  </style>
+  <section class="section-box">
+    <div class="sell-point-slider route-name route-name2" data-route="route2">
+      <div class="container-6-iu">
+        <div class="title-diy-iu text-top appear">
+          <span
+            style="
+              transition-delay: 0s;
+              color: white;
+              font-size: 2em !important;
+              font-weight: 800;
+              line-height: 1.1 !important;
+              margin-bottom: 10px;
+              margin-top: 0;
+            "
+            >IPL Nasıl &Ccedil;alışır?</span
+          >
+        </div>
+      </div>
+
+      <div class="sell-point-slider-cont">
+        <div
+          class="sell-point-slider-list"
+          style="transform: translateX(-2707.45px); transition: 0.6s"
+        >
+          <div
+            class="sell-point-slider-item to-top appear"
+            style="transition-delay: 0.2s"
+          >
+            <img
+              alt=""
+              height="532"
+              loading="lazy"
+              src="/Content/UploadFiles/0030bf3f-ulike-air-3-ipl-lazer-40.gif?v=1698133056"
+              srcset="
+                /Content/UploadFiles/0030bf3f-ulike-air-3-ipl-lazer-40.gif?v=1698133056 882w
+              "
+              width="882"
+            />
+            <div
+              class="sell-point-slider-txt"
+              style="color: rgb(255, 255, 255)"
+            >
+              <div class="sell-point-slider-num">02</div>
+
+              <div class="sell-point-slider-sub">
+                Işık, t&uuml;y b&uuml;y&uuml;me d&ouml;ng&uuml;lerini kesintiye
+                uğratır; bu da t&uuml;ylerin daha ince, daha yavaş uzamasına ve
+                nihayetinde tamamen &ccedil;ıkmayı durdurmasına neden olur.
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="sell-point-slider-item sell-point-slider-other to-top appear active"
+            data-hover="0"
+            style="transition-delay: 0.3s"
+          >
+            <div class="img-item active">
+              <img
+                alt=""
+                height="755"
+                loading="eager"
+                src="/Content/UploadFiles/9b263505-ulike-air-3-ipl-lazer-41.webp?v=1698134395"
+                srcset="
+                  /Content/UploadFiles/9b263505-ulike-air-3-ipl-lazer-41.webp?v=1698134395 1258w
+                "
+                width="1258"
+              />
+              <div class="img-item-txt">
+                <div class="img-item-p">Hafta</div>
+
+                <div class="img-item-p">1&ndash;4</div>
+
+                <div class="img-item-p">
+                  Haftada 3 uygulama ile t&uuml;yler daha ince, daha yumuşak ve
+                  daha yavaş uzayacaktır
+                </div>
+              </div>
+            </div>
+
+            <div class="img-item">
+              <img
+                alt=""
+                height="755"
+                loading="eager"
+                src="/Content/UploadFiles/4bf9fa65-ulike-air-3-ipl-lazer-42.webp?v=1698134395"
+                srcset="
+                  /Content/UploadFiles/4bf9fa65-ulike-air-3-ipl-lazer-42.webp?v=1698134395 1258w
+                "
+                width="1258"
+              />
+              <div class="img-item-txt">
+                <div class="img-item-p">Hafta</div>
+
+                <div class="img-item-p">5&ndash;12</div>
+
+                <div class="img-item-p">
+                  Her t&uuml;y&uuml;n b&uuml;y&uuml;me aşamasında işlem
+                  g&ouml;rd&uuml;ğ&uuml;nden emin olmak i&ccedil;in, iki haftada
+                  bir veya ayda bir kez r&ouml;tuş (tekrar uygulama) yapmanızı
+                  &ouml;neririz.
+                </div>
+              </div>
+            </div>
+
+            <div class="img-item">
+              <img
+                alt=""
+                height="755"
+                loading="eager"
+                src="/Content/UploadFiles/f4e6d612-ulike-air-3-ipl-lazer-43.webp?v=1698134395"
+                srcset="
+                  /Content/UploadFiles/f4e6d612-ulike-air-3-ipl-lazer-43.webp?v=1698134395 1258w
+                "
+                width="1258"
+              />
+              <div class="img-item-txt">
+                <div class="img-item-p">&nbsp;</div>
+
+                <div class="img-item-p">Sonu&ccedil;lar</div>
+
+                <div class="img-item-p">
+                  T&uuml;m d&ouml;ng&uuml; tamamlandıktan sonra, uygulama
+                  yapılan b&ouml;lge t&uuml;ys&uuml;z olmalıdır. IPL&#39;nin
+                  etkinliği kişiden kişiye değişebilir; istediğiniz
+                  sonu&ccedil;ları g&ouml;rmek i&ccedil;in &ouml;nerilen
+                  d&ouml;ng&uuml;ye tutarlı bir şekilde uymak anahtardır.
+                </div>
+              </div>
+            </div>
+
+            <div class="img-item-tab">
+              <div class="img-item-tab-item active">Hafta 1&ndash;4</div>
+
+              <div class="img-item-tab-item">Hafta 5&ndash;12</div>
+
+              <div class="img-item-tab-item">Sonu&ccedil;lar</div>
+
+              <div
+                class="img-item-tab-span"
+                style="transform: translateX(0px); transition: transform 0.4s"
+              >
+                &nbsp;
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="sell-point-slider-item to-top appear"
+            style="transition-delay: 0.1s"
+          >
+            <img
+              alt=""
+              height="532"
+              loading="lazy"
+              src="/Content/UploadFiles/2c259c59-ulike-air-3-ipl-lazer-44.gif?v=1698132867"
+              srcset="
+                /Content/UploadFiles/2c259c59-ulike-air-3-ipl-lazer-44.gif?v=1698132867 882w
+              "
+              width="882"
+            />
+            <div
+              class="sell-point-slider-txt"
+              style="color: rgb(255, 255, 255)"
+            >
+              <div class="sell-point-slider-num">01</div>
+
+              <div class="sell-point-slider-sub">
+                IPL (Intense Pulsed Light = Yoğun Atımlı Işık), kıl
+                k&ouml;klerinin i&ccedil;indeki melanini hedef alan, klinik
+                olarak onaylanmış bir t&uuml;y alma y&ouml;ntemidir.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="sell-point-slider-arraw to-opacity appear">
+        <div class="sell-point-slider-arraw-item">&nbsp;</div>
+
+        <div class="sell-point-slider-arraw-item">&nbsp;</div>
+      </div>
+
+      <div class="sell-point-slider-dot to-top appear">
+        <div class="sell-point-slider-dot-item active tra">&nbsp;</div>
+
+        <div class="sell-point-slider-dot-item active tra">&nbsp;</div>
+
+        <div class="sell-point-slider-dot-item">&nbsp;</div>
+      </div>
+    </div>
+  </section>
+  <script>
+    window.addEventListener("load", function () {
+      $("html").on(
+        "click",
+        ".sell-point-slider .img-item-tab-item",
+        function () {
+          let index = $(this).index();
+          let width = $(this).width();
+          let translateX = index * width;
+          $(this).addClass("active").siblings().removeClass("active");
+          $(this)
+            .closest(".sell-point-slider-item")
+            .find(".img-item")
+            .removeClass("active")
+            .eq(index)
+            .addClass("active");
+          $(".sell-point-slider .img-item-tab-span").css({
+            transform: "translateX(" + translateX + "px)",
+            transition: "transform .4s",
+          });
+        },
+      );
+
+      function mediaRealSlider1(name) {
+        let $p = $(name);
+        let $list = $p.find(".sell-point-slider-list");
+        let $dot = $p.find(".sell-point-slider-dot");
+        let $bottomArrow = $p.find(".sell-point-slider-arraw");
+        let length = $list.find(".sell-point-slider-item").length;
+        let index = -2; //[0,-length-2]
+        let isLeftBtn = 1; //0左 1右
+        let timer = null;
+        let timers = null;
+        let dateTb = 0;
+        let dateTs = 0;
+        if (length < 2) return;
+
+        $list.html(
+          $list.find(".sell-point-slider-item")[length - 2].outerHTML +
+            $list.find(".sell-point-slider-item")[length - 1].outerHTML +
+            $list.html() +
+            $list.find(".sell-point-slider-item")[0].outerHTML +
+            $list.find(".sell-point-slider-item")[1].outerHTML,
+        );
+        skewTransform(true);
+        changeDot();
+        $dot.find(".sell-point-slider-dot-item").click(function () {
+          index = -$(this).index() - 2;
+          clearInterval(timer);
+          changeLeft();
+          timer = setInterval(() => {
+            isLeftBtn = 1;
+            index--;
+            changeLeft();
+          }, 5000);
+        });
+        $p.find(".sell-point-slider-arraw-item").click(function () {
+          let sIndex = $(this).index();
+          if (+new Date() - dateTb < 600) return;
+          dateTb = +new Date();
+          isLeftBtn = sIndex;
+          index += sIndex ? -1 : 1;
+          changeLeft();
+        });
+        function skewTransform(auto, tIndex = index, skew = 0) {
+          let width = $list
+            .find(".sell-point-slider-item")
+            .eq(Math.abs(tIndex) - 1)
+            .width();
+          let translateX = (width + 30) * tIndex;
+          if (auto) {
+            translateX += skew;
+            $list.css({
+              transform: "translateX(" + translateX + "px)",
+              transition: " all 0s ease",
+            });
+          } else {
+            $list.css({
+              transform: "translateX(" + translateX + "px)",
+              transition: " all .6s ease",
+            });
+          }
+          $list.find(".sell-point-slider-item").removeClass("active");
+          $list
+            .find(".sell-point-slider-item")
+            .eq(Math.abs(tIndex))
+            .addClass("active");
+        }
+        function changeLeft(skew) {
+          if (isLeftBtn && index == -length - 2) {
+            skewTransform(true, -1, skew);
+            index = -2;
+          }
+
+          if (!isLeftBtn && index == 0) {
+            skewTransform(true, -length - 1, skew);
+            index = -length;
+          }
+          setTimeout(() => {
+            skewTransform();
+          }, 10);
+          changeDot();
+        }
+        function changeDot() {
+          let realLen = $dot.find(".sell-point-slider-dot-item").length;
+
+          let realIndex = (Math.abs(index) - 2) % realLen;
+          if (realIndex < 0) realIndex += realLen;
+
+          $dot.find(".sell-point-slider-dot-item").removeClass("active tra");
+
+          $dot.find(".sell-point-slider-dot-item").each(function (i) {
+            if (i < realIndex) {
+              $(this).addClass("active");
+            }
+          });
+
+          $dot
+            .find(".sell-point-slider-dot-item")
+            .eq(realIndex)
+            .addClass("active tra");
+        }
+
+        function getTranslateX($element) {
+          var matrix = $element
+            .css("transform")
+            .replace(/[^0-9\-.,]/g, "")
+            .split(",");
+          var translateX = parseFloat(matrix[12] || matrix[4]);
+          return translateX;
+        }
+        function initMobileCarousel() {
+          let startX = 0;
+          let listTar = 0;
+          let startY = 0;
+          let isScrolling = false;
+
+          $list.on("touchstart", function (e) {
+            var touch =
+              e.originalEvent.touches[0] || e.originalEvent.changedTouches[0];
+            startX = touch.clientX;
+            startY = touch.clientY;
+            isScrolling = false;
+            listTar = getTranslateX($list);
+            clearInterval(timer);
+          });
+
+          $list.on("touchmove", function (e) {
+            var touch =
+              e.originalEvent.touches[0] || e.originalEvent.changedTouches[0];
+            var diffX = touch.clientX - startX;
+            var diffY = touch.clientY - startY;
+            var translateX = listTar + diffX;
+            if (!isScrolling) {
+              if (Math.abs(diffX) > Math.abs(diffY)) {
+                isScrolling = true;
+              }
+            }
+
+            if (isScrolling && e.cancelable) {
+              e.preventDefault();
+              $list.css({
+                transform: "translateX(" + translateX + "px)",
+                transition: "all 0s ease",
+              });
+            }
+          });
+
+          $list.on("touchend", function (e) {
+            if (isScrolling) {
+              var touch =
+                e.originalEvent.touches[0] || e.originalEvent.changedTouches[0];
+              var diffX = touch.clientX - startX;
+              if (Math.abs(diffX) > window.innerWidth * 0.05) {
+                if (diffX > 0) {
+                  index = index + 1;
+                  isLeftBtn = 0;
+                } else {
+                  index = index - 1;
+                  isLeftBtn = 1;
+                }
+              }
+              changeLeft(diffX);
+            }
+            isScrolling = false;
+          });
+        }
+        initMobileCarousel();
+        function changeSellPointSlider($this) {
+          let width = $this.find(".img-item-tab-item").width();
+          setTimeout(function () {
+            let hover = $this.attr("data-hover");
+            if (hover == 1) {
+              return changeSellPointSlider($this);
+            }
+            let index = $this.find(".img-item.active").index();
+            index++;
+            if (index == 3) index = 0;
+            $this
+              .find(".img-item")
+              .removeClass("active")
+              .eq(index)
+              .addClass("active");
+            $this
+              .find(".img-item-tab-item")
+              .removeClass("active")
+              .eq(index)
+              .addClass("active");
+            $this.find(".img-item-tab-span").css({
+              transform: "translateX(" + width * index + "px)",
+              transition: "transform .4s",
+            });
+            changeSellPointSlider($this);
+          }, 2300);
+        }
+        $(".sell-point-slider-other").hover(
+          function () {
+            $(this).attr("data-hover", 1);
+          },
+          function () {
+            $(this).attr("data-hover", 0);
+          },
+        );
+        $(".sell-point-slider-other").each(function () {
+          $(this).attr("data-hover", 0);
+          changeSellPointSlider($(this));
+        });
+      }
+      mediaRealSlider1(".sell-point-slider");
+    });
+  </script>
+</section>

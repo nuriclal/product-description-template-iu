@@ -1,121 +1,312 @@
-<style type="text/css">.custom-slider-container {
-  position: relative;
-  width: 100%;
-  max-width: 1200px;
-  margin: 60px auto;
-  overflow: hidden;
-  background: #ffffff;
-  border-radius: 16px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-}
-
-.custom-slider {
-  display: flex;
-  transition: transform 0.8s ease-in-out;
-}
-
-.custom-slide {
-  min-width: 100%;
-  text-align: center;
-  box-sizing: border-box;
-  padding: 20px 30px 60px;
-}
-
-.custom-slide img {
-  width: 1000px;
-  height: 620px;
-  object-fit: cover;
-  border-radius: 14px;
-  display: block;
-  margin: 0 auto 30px auto;
-}
-
-.custom-slide h4 {
-  font-size: 2em;
-  margin-bottom: 15px;
-  color: #111;
-  font-weight: 700;
-}
-
-.custom-slide p {
-  font-size: 1.2em;
-  line-height: 1.7;
-  color: #333;
-  max-width: 950px;
-  margin: 0 auto;
-}
-
-.custom-slider-btn {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background: rgba(40,40,40,0.6);
-  color: #fff;
-  border: none;
-  font-size: 30px;
-  padding: 14px 20px;
-  border-radius: 50%;
-  cursor: pointer;
-  transition: background 0.3s;
-  z-index: 10;
-}
-
-.custom-slider-btn:hover {
-  background: rgba(0,0,0,0.85);
-}
-
-.custom-prev { left: 20px; }
-.custom-next { right: 20px; }
-</style>
-<div class="custom-slider-container">
-<div class="custom-slider">
-<div class="custom-slide"><img alt="" src="1.jpg" />
-<h4>Daha Fazla Ekran Alanı</h4>
-
-<p>4 taraflı ultra ince &ccedil;er&ccedil;eve tasarımıyla geniş g&ouml;r&uuml;ş alanı sağlar. 27 in&ccedil; IPS ekran, modern &ccedil;alışma alanları i&ccedil;in şık bir g&ouml;r&uuml;n&uuml;m sunar.</p>
-</div>
-
-<div class="custom-slide"><img alt="" src="2.jpg" />
-<h4>Kristal Berraklığında G&ouml;rsel Deneyim</h4>
-
-<p>%99 sRGB renk gamı ve IPS panel teknolojisiyle canlı, doğal renkler sunar. Her detayda profesyonel d&uuml;zeyde g&ouml;r&uuml;nt&uuml; netliği elde edin.</p>
-</div>
-
-<div class="custom-slide"><img alt="" src="3.jpg" />
-<h4>Akıcı Performans ve Tepki S&uuml;resi</h4>
-
-<p>100 Hz yenileme hızı ve 1 ms MPRT ile akıcı ve gecikmesiz bir deneyim sağlar. Oyun, film ve işte kusursuz performans sunar.</p>
-</div>
-
-<div class="custom-slide"><img alt="" src="4.jpg" />
-<h4>Etkileyici Ses ve Bağlantı Se&ccedil;enekleri</h4>
-
-<p>Dahili 3W &ccedil;ift hoparl&ouml;r g&uuml;&ccedil;l&uuml; ve net ses sunar. HDMI ve VGA bağlantı se&ccedil;enekleriyle geniş uyumluluk sağlar.</p>
-</div>
-
-<div class="custom-slide"><img alt="" src="5.jpg" />
-<h4>G&ouml;z Konforu ve S&uuml;rd&uuml;r&uuml;lebilir Tasarım</h4>
-
-<p>Doğal D&uuml;ş&uuml;k Mavi Işık teknolojisiyle g&ouml;z yorgunluğunu azaltır. &Ccedil;evre dostu &uuml;retimiyle s&uuml;rd&uuml;r&uuml;lebilir bir teknoloji deneyimi sunar.</p>
-</div>
-</div>
-<button class="custom-slider-btn custom-prev">❮</button><button class="custom-slider-btn custom-next">❯</button></div>
-<script>
-window.addEventListener("load", function() {
-  const slider = document.querySelector('.custom-slider');
-  const slides = document.querySelectorAll('.custom-slide');
-  const next = document.querySelector('.custom-next');
-  const prev = document.querySelector('.custom-prev');
-  let index = 0;
-
-  function showSlide(i) {
-    if (i < 0) index = slides.length - 1;
-    else if (i >= slides.length) index = 0;
-    else index = i;
-    slider.style.transform = `translateX(-${index * 100}%)`;
+<style type="text/css">
+  .custom-slider-container {
+    position: relative;
+    width: 100%;
+    max-width: 1200px;
+    margin: 60px auto;
+    overflow: hidden;
+    background: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   }
 
-  next.addEventListener('click', () => showSlide(index + 1));
-  prev.addEventListener('click', () => showSlide(index - 1));
-});
+  .custom-slider {
+    display: flex;
+    transition: transform 0.8s ease-in-out;
+  }
+
+  .custom-slide {
+    min-width: 100%;
+    text-align: center;
+    box-sizing: border-box;
+    padding: 20px 30px 60px;
+  }
+
+  .custom-slide img {
+    width: 1000px;
+    height: 620px;
+    object-fit: cover;
+    border-radius: 14px;
+    display: block;
+    margin: 0 auto 30px auto;
+  }
+
+  .custom-slide h4 {
+    font-size: 2em;
+    margin-bottom: 15px;
+    color: #111;
+    font-weight: 700;
+  }
+
+  .custom-slide p {
+    font-size: 1.2em;
+    line-height: 1.7;
+    color: #333;
+    max-width: 950px;
+    margin: 0 auto;
+  }
+
+  .custom-slider-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(40, 40, 40, 0.6);
+    color: #fff;
+    border: none;
+    font-size: 30px;
+    padding: 14px 20px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background 0.3s;
+    z-index: 10;
+  }
+
+  .custom-slider-btn:hover {
+    background: rgba(0, 0, 0, 0.85);
+  }
+
+  .custom-prev {
+    left: 20px;
+  }
+  .custom-next {
+    right: 20px;
+  }
+</style>
+<div class="custom-slider-container">
+  <div class="custom-slider">
+    <div class="custom-slide">
+      <img alt="" src="1.jpg" />
+      <h4>Daha Fazla Ekran Alanı</h4>
+
+      <p>
+        4 taraflı ultra ince &ccedil;er&ccedil;eve tasarımıyla geniş
+        g&ouml;r&uuml;ş alanı sağlar. 27 in&ccedil; IPS ekran, modern
+        &ccedil;alışma alanları i&ccedil;in şık bir g&ouml;r&uuml;n&uuml;m
+        sunar.
+      </p>
+    </div>
+
+    <div class="custom-slide">
+      <img alt="" src="2.jpg" />
+      <h4>Kristal Berraklığında G&ouml;rsel Deneyim</h4>
+
+      <p>
+        %99 sRGB renk gamı ve IPS panel teknolojisiyle canlı, doğal renkler
+        sunar. Her detayda profesyonel d&uuml;zeyde g&ouml;r&uuml;nt&uuml;
+        netliği elde edin.
+      </p>
+    </div>
+
+    <div class="custom-slide">
+      <img alt="" src="3.jpg" />
+      <h4>Akıcı Performans ve Tepki S&uuml;resi</h4>
+
+      <p>
+        100 Hz yenileme hızı ve 1 ms MPRT ile akıcı ve gecikmesiz bir deneyim
+        sağlar. Oyun, film ve işte kusursuz performans sunar.
+      </p>
+    </div>
+
+    <div class="custom-slide">
+      <img alt="" src="4.jpg" />
+      <h4>Etkileyici Ses ve Bağlantı Se&ccedil;enekleri</h4>
+
+      <p>
+        Dahili 3W &ccedil;ift hoparl&ouml;r g&uuml;&ccedil;l&uuml; ve net ses
+        sunar. HDMI ve VGA bağlantı se&ccedil;enekleriyle geniş uyumluluk
+        sağlar.
+      </p>
+    </div>
+
+    <div class="custom-slide">
+      <img alt="" src="5.jpg" />
+      <h4>G&ouml;z Konforu ve S&uuml;rd&uuml;r&uuml;lebilir Tasarım</h4>
+
+      <p>
+        Doğal D&uuml;ş&uuml;k Mavi Işık teknolojisiyle g&ouml;z yorgunluğunu
+        azaltır. &Ccedil;evre dostu &uuml;retimiyle
+        s&uuml;rd&uuml;r&uuml;lebilir bir teknoloji deneyimi sunar.
+      </p>
+    </div>
+  </div>
+  <button class="custom-slider-btn custom-prev">❮</button
+  ><button class="custom-slider-btn custom-next">❯</button>
+</div>
+<script>
+  window.addEventListener("load", function () {
+    const slider = document.querySelector(".custom-slider");
+    const slides = document.querySelectorAll(".custom-slide");
+    const next = document.querySelector(".custom-next");
+    const prev = document.querySelector(".custom-prev");
+    let index = 0;
+
+    function showSlide(i) {
+      if (i < 0) index = slides.length - 1;
+      else if (i >= slides.length) index = 0;
+      else index = i;
+      slider.style.transform = `translateX(-${index * 100}%)`;
+    }
+
+    next.addEventListener("click", () => showSlide(index + 1));
+    prev.addEventListener("click", () => showSlide(index - 1));
+  });
 </script>
+
+<style type="text/css">
+  .jeb-section-1 {
+    display: flex;
+    justify-content: center;
+    height: auto;
+    padding: 20px 0;
+    box-sizing: border-box;
+  }
+
+  .container-jeb {
+    width: 100%;
+    max-width: 1000px;
+  }
+
+  .features-grid-jeb {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 15px;
+    margin-bottom: 15px;
+  }
+
+  .feature-card-jeb {
+    background: #f4f6ff;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    transition: 0.3s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .feature-card-jeb:hover {
+    transform: translateY(-3px);
+    background: #f4f6ffad;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+  }
+
+  .card-content-jeb {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .card-icon-jeb {
+    width: 42px;
+    height: 42px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+
+  .card-icon-jeb img {
+    width: 35px;
+    height: 35px;
+    object-fit: contain;
+  }
+
+  .card-text-jeb {
+    font-weight: 500;
+    font-size: 1rem;
+    color: #34495e;
+  }
+
+  .warranty-banner-jeb {
+    background: linear-gradient(135deg, #e67e22, #d35400);
+    color: #fff;
+    border-radius: 12px;
+    text-align: center;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    box-shadow: 0 4px 10px rgba(230, 126, 34, 0.4);
+    padding: 15px;
+  }
+
+  /* YENİ EKLENEN CSS: Sevkiyat Notu */
+  .service-note-jeb {
+    margin-top: 10px;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #555;
+    background-color: #fcfcfc;
+    border: 1px dashed #dcdcdc; /* Bilgi notu olduğu belli olsun diye kesik çizgi */
+    padding: 10px;
+    border-radius: 8px;
+    font-weight: 500;
+  }
+</style>
+<div class="jeb-section-1">
+  <div class="container-jeb">
+    <div class="features-grid-jeb">
+      <div class="feature-card-jeb">
+        <div class="card-content-jeb">
+          <div class="card-icon-jeb">
+            <img src="/Content/UploadFiles/7533945d-ekran-inc.svg" />
+          </div>
+          <span class="card-text-jeb"
+            >Ekran Boyutu: 60.5 cm / 23.8 in&ccedil;</span
+          >
+        </div>
+      </div>
+
+      <div class="feature-card-jeb">
+        <div class="card-content-jeb">
+          <div class="card-icon-jeb">
+            <img
+              src="/Content/UploadFiles/c0974f63-islemci-2.svg"
+              style="width: 40px; height: 40px"
+            />
+          </div>
+          <span class="card-text-jeb">İşlemci Tipi: Intel Core i5</span>
+        </div>
+      </div>
+
+      <div class="feature-card-jeb">
+        <div class="card-content-jeb">
+          <div class="card-icon-jeb">
+            <img src="/Content/UploadFiles/344041e4-ram-bellek.svg" />
+          </div>
+          <span class="card-text-jeb">Ram: 8 GB</span>
+        </div>
+      </div>
+
+      <div class="feature-card-jeb">
+        <div class="card-content-jeb">
+          <div class="card-icon-jeb">
+            <img
+              src="/Content/UploadFiles/926b7cde-ssd.svg"
+              style="width: 40px; height: 40px"
+            />
+          </div>
+          <span class="card-text-jeb">Depolama: 512 GB NVMe SSD</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="warranty-banner-jeb">
+      <img src="/Content/UploadFiles/baac5d95-lenovo-logo.svg" /> 2 Yıl
+      Lenovo&nbsp;T&uuml;rkiye Garantili
+      <img src="/Content/UploadFiles/74b4ea61-garanti.svg" />
+    </div>
+
+    <div class="service-note-jeb">
+      <a
+        href="https://psref.lenovo.com/Detail/Lenovo_L24i_4A?M=67BCKAC6TK"
+        rel="nofollow"
+        target="_blank"
+        >Lenovo Teknik Detay Sayfasını <strong>İncele</strong></a
+      >
+    </div>
+  </div>
+</div>

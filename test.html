@@ -1,170 +1,342 @@
-(function () {
-    var canvas = document.createElement("canvas");
-    canvas.id = "jb-heavy-snow-canvas";
-    document.body.appendChild(canvas);
-
-    var ctx = canvas.getContext("2d");
-    var w, h;
-    var flakes = [];
-    var maxFlakes = 250; // KAR YOĞUNLUĞU
-
-    function resize() {
-        w = window.innerWidth;
-        h = window.innerHeight;
-        canvas.width = w;
-        canvas.height = h;
-    }
-
-    window.addEventListener("resize", resize);
-    resize();
-
-    canvas.style.position = "fixed";
-    canvas.style.top = "0";
-    canvas.style.left = "0";
-    canvas.style.pointerEvents = "none";
-    canvas.style.zIndex = "999999";
-
-    function createFlake() {
-        return {
-            x: Math.random() * w,
-            y: Math.random() * h,
-            r: Math.random() * 2.5 + 1,
-            vy: Math.random() * 2 + 1.2,   // daha hızlı düşüş
-            vx: Math.random() * 1 - 0.5,  // rüzgâr
-            a: Math.random() * 0.5 + 0.5  // opaklık
-        };
-    }
-
-    for (var i = 0; i < maxFlakes; i++) {
-        flakes.push(createFlake());
-    }
-
-    function draw() {
-        ctx.clearRect(0, 0, w, h);
-        flakes.forEach(function (f) {
-            ctx.beginPath();
-            ctx.fillStyle = "rgba(255,255,255," + f.a + ")";
-            ctx.arc(f.x, f.y, f.r, 0, Math.PI * 2);
-            ctx.fill();
-        });
-    }
-
-    function update() {
-        flakes.forEach(function (f) {
-            f.y += f.vy;
-            f.x += f.vx + Math.sin(f.y * 0.01) * 0.3;
-
-            if (f.y > h) {
-                f.y = -10;
-                f.x = Math.random() * w;
-            }
-
-            if (f.x > w) f.x = 0;
-            if (f.x < 0) f.x = w;
-        });
-    }
-
-    function loop() {
-        draw();
-        update();
-        requestAnimationFrame(loop);
-    }
-
-    loop();
-})();
-
-// 1️⃣ Image element oluştur
-var tree = document.createElement("img");
-tree.src = "https://w7.pngwing.com/pngs/1024/134/png-transparent-christmas-tree-christmas-decoration-party-christmas-tree-child-holidays-decor.png"; // Örnek PNG
-tree.style.position = "fixed";
-tree.style.bottom = "20px";  // sayfanın altından 20px yukarı
-tree.style.right = "20px";   // sağdan 20px içeride
-tree.style.width = "80px";   // boyut ayarlama
-tree.style.height = "auto";
-tree.style.zIndex = "100000"; // kar efektinin üstünde görünmesi için yüksek değer
-
-document.body.appendChild(tree);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-(function () {
-    var canvas = document.createElement("canvas");
-    canvas.id = "jb-snowfx-canvas";
-    document.body.appendChild(canvas);
-
-    var ctx = canvas.getContext("2d");
-    var w, h;
-    var flakes = [];
-
-    function resize() {
-        w = window.innerWidth;
-        h = window.innerHeight;
-        canvas.width = w;
-        canvas.height = h;
-    }
-
-    window.addEventListener("resize", resize);
-    resize();
-
-    canvas.style.position = "fixed";
-    canvas.style.top = "0";
-    canvas.style.left = "0";
-    canvas.style.pointerEvents = "none";
-    canvas.style.zIndex = "999999";
-
-    function createFlake() {
-        return {
-            x: Math.random() * w,
-            y: Math.random() * h,
-            r: Math.random() * 3 + 1,
-            vy: Math.random() * 1 + 0.5,
-            vx: Math.random() * 0.5 - 0.25
-        };
-    }
-
-    for (var i = 0; i < 150; i++) {
-        flakes.push(createFlake());
-    }
-
-    function draw() {
-        ctx.clearRect(0, 0, w, h);
-        ctx.fillStyle = "#fff";
-        flakes.forEach(function (f) {
-            ctx.beginPath();
-            ctx.arc(f.x, f.y, f.r, 0, Math.PI * 2);
-            ctx.fill();
-        });
-    }
-
-    function update() {
-        flakes.forEach(function (f) {
-            f.y += f.vy;
-            f.x += f.vx;
-            if (f.y > h) {
-                f.y = -10;
-                f.x = Math.random() * w;
-            }
-        });
-    }
-
-    function loop() {
-        draw();
-        update();
-        requestAnimationFrame(loop);
-    }
-
-    loop();
-})();
+<p>
+  Yeni nesil dikey s&uuml;p&uuml;rge modelleri, hem pratikli&#287;i hem de
+  y&uuml;ksek performans&#305; nedeniyle &ouml;ne &ccedil;&#305;kan
+  &uuml;r&uuml;nlerden biridir. Slim formu sayesinde k&uuml;&ccedil;&uuml;k
+  evlerde bile kolayl&#305;kla saklama imkan&#305; sa&#287;layan dikey
+  s&uuml;p&uuml;rge &ccedil;e&#351;itlerinin bir&ccedil;o&#287;u
+  &#351;arjl&#305; olarak tasarlanm&#305;&#351;t&#305;r ve kablodan
+  ba&#287;&#305;ms&#305;z &ccedil;al&#305;&#351;t&#305;r&#305;lan elektrikli ev
+  aletlerindendir. Y&uuml;ksek &ccedil;eki&#351; g&uuml;c&uuml;, torbas&#305;z
+  tasar&#305;m ve kolay temizleme &ouml;zelli&#287;i bulunan dikey
+  s&uuml;p&uuml;rge modelleri, &ccedil;e&#351;itli marka ve fiyatlarla Jebinde
+  &uuml;r&uuml;n koleksiyonlar&#305;nda sunulur.
+</p>
+<h2>Dikey S&uuml;p&uuml;rge Modelleri</h2>
+<p>
+  Yerli ve yabanc&#305; bir&ccedil;ok farkl&#305; elektrikli ev aletleri
+  markas&#305; taraf&#305;ndan tasarlanan dikey
+  <a href="https://www.jebinde.com/kucuk-ev-aletleri/supurge"
+    >s&uuml;p&uuml;rge </a
+  >&ccedil;e&#351;itleri, &#351;&#305;kl&#305;&#287;&#305; ve konforu bir arada
+  sunan &uuml;r&uuml;nlerdir. Evinizdeki ya&#351;am konforunu art&#305;racak dik
+  s&uuml;p&uuml;rge modelleri, evinizi pratik bir bi&ccedil;imde temizlemenizi
+  sa&#287;lar. Marka ve modele g&ouml;re de&#287;i&#351;iklik g&ouml;steren
+  &#351;arj s&uuml;releri, size istedi&#287;iniz temizli&#287;i yapabilmeniz
+  i&ccedil;in zaman tan&#305;r. Tasar&#305;mda yer alan ses seviyesine g&ouml;re
+  maksimum sessizlik ile &ccedil;al&#305;&#351;abilen kablosuz dikey
+  s&uuml;p&uuml;rge modelleri olduk&ccedil;a i&#351;levseldir.
+</p>
+<p>
+  &#350;arj istasyonunda modelin gerekliliklerine g&ouml;re dolum i&ccedil;in
+  b&#305;rakaca&#287;&#305;n&#305;z s&uuml;p&uuml;rgeyi tamamen &#351;arj
+  olduktan sonra dolu batarya halinde de bekletmeye devam edebilirsiniz.
+  Ah&#351;ap parke, seramik y&uuml;zeyler ve yumu&#351;ak dokulu hal&#305; gibi
+  alanlar&#305; dikey s&uuml;p&uuml;rge modelleri ile kolayl&#305;kla
+  temizleyebilirsiniz. Ana temizlik aparat&#305;n&#305;n yan&#305; s&#305;ra
+  bir&ccedil;ok modelde farkl&#305; temizleme ba&#351;l&#305;&#287;&#305; da
+  &uuml;r&uuml;nle birlikte gelir. Koltuk temizleme, dar y&uuml;zeyler
+  i&ccedil;in f&#305;r&ccedil;a gibi &ccedil;e&#351;itli temizlik
+  ba&#351;l&#305;klar&#305;, size her y&uuml;zeyde rahat bir temizlik yapabilme
+  imkan&#305; sunar.
+</p>
+<h3>Beko Dikey S&uuml;p&uuml;rge</h3>
+<p>
+  Beko, kablosuz tasar&#305;ma sahip &#351;arjl&#305; dikey s&uuml;p&uuml;rge
+  &ccedil;e&#351;itleriyle,
+  <a href="https://www.jebinde.com/supurge/robot-supurge"
+    >robot s&uuml;p&uuml;rge</a
+  >&nbsp;modellerinden geleneksel s&uuml;p&uuml;rge tasar&#305;mlar&#305;na
+  kadar geni&#351; bir &uuml;r&uuml;n yelpazesine sahiptir. Baza, yatak, koltuk
+  ve dolaplar&#305;n alt&#305;ndaki tozlar&#305; pratik bir bi&ccedil;imde
+  tasarlanm&#305;&#351; katlanabilir dikey s&uuml;p&uuml;rgeler, Beko
+  imzas&#305; ta&#351;&#305;r. &Uuml;r&uuml;nlerin baz&#305; modellerinde yer
+  alan &#305;&#351;&#305;kl&#305; temizleme ba&#351;l&#305;&#287;&#305;, en
+  k&uuml;&ccedil;&uuml;k toz ve partik&uuml;lleri bile g&ouml;zden
+  ka&ccedil;&#305;rmadan s&uuml;p&uuml;rge i&ccedil;ine hapsetmenizi
+  sa&#287;lar.
+</p>
+<p>
+  Dik s&uuml;p&uuml;rge modelleri, tutma sap&#305; &uuml;zerinden kontrol
+  edilebilir bi&ccedil;imde tasarlanm&#305;&#351;t&#305;r. &Uuml;r&uuml;nlerin
+  geni&#351; toz haznesi, temizlik s&#305;ras&#305;nda toz bo&#351;altma
+  i&#351;lemini geciktirecek niteliktedir. Toz toplama &uuml;nitesi, kolayca
+  temizlenebilecek bi&ccedil;imde tasarlanm&#305;&#351; ve bo&#351;altma
+  s&#305;ras&#305;nda etrafa toz yay&#305;lmas&#305; maksimum d&uuml;zeyde
+  &ouml;nlenmi&#351;tir. Beko kablosuz s&uuml;p&uuml;rge &ouml;nerisi isteyenler
+  i&ccedil;in ayr&#305;cal&#305;kl&#305; se&ccedil;imler sunar.
+</p>
+<h3>Miele Dikey S&uuml;p&uuml;rge</h3>
+<p>
+  Ola&#287;an&uuml;st&uuml; esneklik, konfor ve y&uuml;ksek performans
+  &ouml;zellikleriyle tasarlanan Miele dikey s&uuml;p&uuml;rge modelleri,
+  fonksiyonel elektrikli ev aletlerindendir. &#350;&#305;k tasar&#305;m&#305; ve
+  modern teknolojisi ile evinizin demirba&#351; &uuml;r&uuml;nlerinden biri
+  olacak Miele s&uuml;p&uuml;rgeler, klasik bir s&uuml;p&uuml;rgeden beklenilen
+  temizleme performans&#305;ndan &ccedil;ok daha fazlas&#305;n&#305; sunar.
+  Miele modellerine &ouml;zel Hygiene Lifetime Filtre, temizlenen y&uuml;zeydeki
+  t&uuml;m toz ve partik&uuml;llerin s&uuml;p&uuml;rge i&ccedil;indeki toz
+  haznesine al&#305;nmas&#305;na ve hapsedilmesine katk&#305; sa&#287;lar.
+</p>
+<p>
+  &Uuml;r&uuml;nlerdeki uzun s&uuml;re yetebilen &#351;arj &ouml;zelli&#287;i,
+  temizli&#287;in yar&#305;da kesilmeden devam etmesine
+  yard&#305;mc&#305;d&#305;r. Evdeki &ccedil;e&#351;itli mobilya ve
+  e&#351;yalar&#305;n alt&#305;na rahatl&#305;kla girebilen dik
+  s&uuml;p&uuml;rge ile temizlenmemi&#351; yer b&#305;rakmadan kusursuz bir
+  temizlik elde edebilirsiniz. Hafif, ergonomik ve i&#351;levsel
+  tasar&#305;m&#305; sayesinde Miele, temizlik yapmay&#305; keyif haline
+  getirecek &ouml;zelliklere sahiptir. Miele dikey s&uuml;p&uuml;rge
+  fiyatlar&#305;, &uuml;r&uuml;nlerin model ve sahip oldu&#287;u
+  &ouml;zelliklere g&ouml;re farkl&#305;l&#305;k g&ouml;sterir. Birden fazla
+  model tasar&#305;m&#305;na sahip olan &uuml;r&uuml;nler aras&#305;ndan
+  ihtiya&ccedil;lar&#305;n&#305;z&#305; belirleyerek ideal bir se&ccedil;im
+  yapabilirsiniz.
+</p>
+<h2>Kablosuz Dikey S&uuml;p&uuml;rge &Ouml;zellikleri</h2>
+<p>
+  Hayat&#305;n&#305;z&#305; kolayla&#351;t&#305;racak dikey
+  s&uuml;p&uuml;rgeler, hem teknik hem de performans &ouml;zellikleriyle
+  &ouml;ne &ccedil;&#305;kar. Jebinde &uuml;r&uuml;n se&ccedil;kisinde sunulan
+  farkl&#305; markalara ait dikey s&uuml;p&uuml;rgelerin ortak &ouml;zellikleri
+  &#351;u &#351;ekilde s&#305;ralanabilir:
+</p>
+<ul>
+  <li>
+    Kablosuz ve ak&uuml;l&uuml; olarak &uuml;retilen dikey s&uuml;p&uuml;rge
+    &ccedil;e&#351;itleri, kablodan ba&#287;&#305;ms&#305;z
+    &ccedil;al&#305;&#351;abilmeleri sayesinde geni&#351; bir
+    &ouml;zg&uuml;rl&uuml;k alan&#305; sunar ve temizlik yapmay&#305;
+    kolayla&#351;t&#305;r&#305;r.
+  </li>
+  <li>
+    Hareketli aparatlarla performans&#305; y&uuml;kseltilen &#351;arjl&#305; dik
+    s&uuml;p&uuml;rge &ccedil;e&#351;itleri, en dar ve
+    s&#305;k&#305;&#351;&#305;k alanlarda bile temizlik yapmay&#305;
+    kolayla&#351;t&#305;racak hareket kabiliyetine sahiptir.
+  </li>
+  <li>
+    Toz torbas&#305;z tasar&#305;m&#305; sayesinde, temizlik sonras&#305; torba
+    ile u&#287;ra&#351;mak zorunda kalmazs&#305;n&#305;z. Vakumlanan toz ve
+    par&ccedil;ac&#305;klar, toz haznesi i&ccedil;ine &ccedil;ekilerek
+    hapsedilir.
+  </li>
+  <li>
+    &Uuml;r&uuml;nlerin marka ve modeline g&ouml;re farkl&#305;l&#305;k
+    g&ouml;steren &#351;arj kapasitesi, temizlik i&ccedil;in size geni&#351; bir
+    zaman aral&#305;&#287;&#305; yarat&#305;r.
+  </li>
+  <li>
+    Hafif tasar&#305;m&#305;, dikey s&uuml;p&uuml;rgenin tek elle
+    kolayl&#305;kla kullan&#305;m&#305;n&#305; sa&#287;lar. Dikey
+    s&uuml;p&uuml;rge modelleri hem temizlik yaparken hem de bir yerden bir yere
+    ta&#351;&#305;n&#305;rken hafifli&#287;i sayesinde pratiktir.
+  </li>
+  <li>
+    Duvara monte edilebilen &#351;arj &uuml;nitesi, evinizin herhangi bir
+    k&ouml;&#351;esinde konumland&#305;r&#305;labilir. Dikey &#351;arjl&#305;
+    s&uuml;p&uuml;rgeler, bu sayede gereksiz yer kaplamadan saklanabilir.
+  </li>
+  <li>
+    Dikey s&uuml;p&uuml;rgeler, tasar&#305;mlar&#305; itibariyle tutma sap&#305;
+    &uuml;zerinden el ile kontrol edilebilir. Bu sayede a&ccedil;ma kapama
+    i&#351;lemi i&ccedil;in s&uuml;rekli e&#287;ilip do&#287;rulmak gerekmeden,
+    s&uuml;p&uuml;rgenizi tek elle kontrol edebilirsiniz.
+  </li>
+  <li>
+    &Ccedil;oklu aparat deste&#287;i sayesinde bir&ccedil;ok dik
+    s&uuml;p&uuml;rge modelini koltuk, yatak, perde temizli&#287;i gibi
+    farkl&#305; alanlarda kullanabilirsiniz.
+  </li>
+  <li>
+    &Uuml;r&uuml;nlerin bir&ccedil;ok modelinde yer verilen filtre
+    tasar&#305;m&#305;, akar ve tozlar&#305;n tamamen toz haznesinde
+    tutulmas&#305;n&#305; sa&#287;lar. Bu &ouml;zellik, ast&#305;m, bron&#351;it
+    gibi kronik nefes alma sorunlar&#305; ya&#351;ayan bireyler i&ccedil;in
+    avantaj sa&#287;layabilir.
+  </li>
+</ul>
+<h2>
+  Dik S&uuml;p&uuml;rge &amp; &#350;arjl&#305; S&uuml;p&uuml;rge
+  Al&#305;n&#305;r m&#305;?
+</h2>
+<p>
+  Evinizdeki bir&ccedil;ok elektrikli ev aleti gibi dik s&uuml;p&uuml;rge de
+  hayat kurtar&#305;c&#305; cihazlardan biridir. Genel temizlik de dahil olmak
+  &uuml;zere k&uuml;&ccedil;&uuml;k k&#305;r&#305;nt&#305;lar, h&#305;zl&#305;ca
+  s&uuml;p&uuml;r&uuml;lmesi gereken alanlar i&ccedil;in, dik s&uuml;p&uuml;rge
+  &ccedil;e&#351;itleri mutlaka al&#305;nmal&#305;d&#305;r. Evde klasik
+  s&uuml;p&uuml;rge &ccedil;e&#351;itlerinden biri varsa, dikey
+  s&uuml;p&uuml;rge edindikten sonra art&#305;k daha az kullanabilirsiniz. Gerek
+  geni&#351; toz alma kapasitesi, gerekse tozu yeniden d&#305;&#351;ar&#305;ya
+  vermeden yap&#305;lan verimli temizlik, dik s&uuml;p&uuml;rge
+  &ccedil;e&#351;itlerine ayr&#305;cal&#305;k kazand&#305;ran
+  &ouml;zelliklerdendir. &Ouml;zellikle evde k&uuml;&ccedil;&uuml;k bebek ve
+  &ccedil;ocuklar veya evcil hayvanlar&#305;n&#305;z varsa, &#351;arjl&#305;
+  dikey s&uuml;p&uuml;rgeler sizin i&ccedil;in &ccedil;ok daha elzem
+  &uuml;r&uuml;nler olabilir.
+</p>
+<p>
+  S&#305;k s&#305;k s&uuml;p&uuml;r&uuml;lmesi gereken alanlar i&ccedil;in her
+  defas&#305;nda kablolu ve &ccedil;ok yer tutan klasik s&uuml;p&uuml;rgeler
+  yerine pratik dikey s&uuml;p&uuml;rgelerin avantajlar&#305;ndan
+  yararlanabilirsiniz. &Ouml;zel f&#305;r&ccedil;alar&#305; sayesinde evdeki
+  t&uuml;y ve k&#305;l gibi par&ccedil;ac&#305;klar&#305; da kolayca
+  i&ccedil;ine hapseden &#351;arjl&#305; dikey s&uuml;p&uuml;rge
+  &ccedil;e&#351;itleri, evcil hayvanlar&#305;n&#305;z i&ccedil;in de
+  kolayl&#305;kt&#305;r. Baz&#305; markalar&#305;n dikey s&uuml;p&uuml;rge
+  modellerinde, evcil hayvanlar&#305;n t&uuml;ylerini daha dikkatlice hazneye
+  alan &ouml;zel tasar&#305;ml&#305; ba&#351;l&#305;klar mevcuttur. Jebinde
+  s&uuml;p&uuml;rge se&ccedil;kisinden, t&uuml;m modelleri inceleyebilir ve size
+  en uygun tasar&#305;mlar&#305; kolayca sat&#305;n alabilirsiniz.
+</p>
+<h2>Dikey S&uuml;p&uuml;rge Fiyatlar&#305;</h2>
+<p>
+  &#304;htiyac&#305;n&#305;za g&ouml;re &ouml;zellikler ta&#351;&#305;yan
+  s&uuml;p&uuml;rge modelini tercih etmeniz, hem fiyat hem de performans
+  a&ccedil;&#305;s&#305;ndan &ouml;nemlidir. Se&ccedil;ti&#287;iniz
+  &uuml;r&uuml;n&uuml;n &ccedil;eki&#351; g&uuml;c&uuml;, ses seviyesi, toz
+  kapasitesi gibi detayl&#305; &ouml;zellikler, s&uuml;p&uuml;rgeden
+  beklentinizin kar&#351;&#305;lanmas&#305; ad&#305;na fark yarat&#305;r.
+  Se&ccedil;ti&#287;iniz modelin kablolu ya da &#351;arjl&#305; olmas&#305;,
+  temizlik yaparken kendinizi ne kadar &ouml;zg&uuml;r hissedece&#287;inizi
+  belirleyen etkenlerden biridir. &#350;arjl&#305; s&uuml;p&uuml;rge modelleri,
+  fiyat olarak kablolu modellere oranlara biraz daha farkl&#305;
+  g&ouml;zlenebilir. S&uuml;p&uuml;rgenin tasar&#305;m&#305;nda kullan&#305;lan
+  ak&uuml;n&uuml;n kapasitesi, &#351;arj dolum s&uuml;resini ve temizlik
+  s&#305;ras&#305;nda &#351;arj&#305;n dayanma s&uuml;resini etkiler.
+</p>
+<p>
+  S&uuml;p&uuml;rge fiyatlar&#305;, d&ouml;nemsel kampanyalar da dahil olmak
+  &uuml;zere bir&ccedil;ok nedenle farkl&#305;l&#305;k g&ouml;sterebilir.
+  Jebinde koleksiyonunda sat&#305;&#351;a sunulan farkl&#305; markalara ait
+  dikey s&uuml;p&uuml;rge fiyatlar&#305;, ula&#351;&#305;labilir ve esnek
+  sat&#305;n alma se&ccedil;eneklerine sahiptir.
+</p>
+<h3>Dikey S&uuml;p&uuml;rge Al&#305;rken Bilinmesi Gerekenler</h3>
+<p>
+  Zamandan ve efordan tasarruf sa&#287;layan dikey s&uuml;p&uuml;rgeleri
+  al&#305;rken baz&#305; detaylara dikkat etmek &ouml;nemlidir.
+  &Uuml;r&uuml;n&uuml;n g&uuml;c&uuml;, ses seviyesi, pratik kullan&#305;m&#305;
+  gibi konular&#305; ara&#351;t&#305;rarak yeni bir s&uuml;p&uuml;rge edinmeniz,
+  &uuml;r&uuml;nden alaca&#287;&#305;n&#305;z verimi art&#305;rabilir. En iyi
+  &#351;arjl&#305; dikey s&uuml;p&uuml;rge ara&#351;t&#305;rmas&#305;
+  yap&#305;l&#305;rken &uuml;r&uuml;n&uuml;n fiyat aral&#305;&#287;&#305;ndan
+  &ouml;nce teknik detaylar&#305; ve performans kalitesine dikkat etmeniz
+  gerekir.
+</p>
+<p>
+  Kalitesini ispatlam&#305;&#351; ve elektrikli ev aletleri konusunda kendini
+  kan&#305;tlam&#305;&#351; markalar&#305;n tasarlad&#305;&#287;&#305;
+  &uuml;r&uuml;nler, sat&#305;&#351; sonras&#305; servis hizmetine daha kolay
+  ula&#351;abilmeniz bak&#305;m&#305;ndan fark yarat&#305;r. Dikey
+  s&uuml;p&uuml;rgeler, g&uuml;venli, fonksiyonel ve performans&#305;
+  y&uuml;ksek &uuml;r&uuml;nlerdir. Hem m&uuml;&#351;teri hizmetleri
+  deste&#287;i hem de sat&#305;&#351; sonras&#305; garantisi veren
+  markalar&#305;n tasarlad&#305;&#287;&#305; s&uuml;p&uuml;rge modellerini
+  tercih ederek dikey s&uuml;p&uuml;rge al&#305;&#351;veri&#351;inizi
+  tamamlayabilirsiniz.
+</p>
+<h4>Motor G&uuml;c&uuml;</h4>
+<p>
+  Jebinde&rsquo;de sunulan dikey s&uuml;p&uuml;rge &ccedil;e&#351;itleri, yerli
+  ve yabanc&#305; markalar&#305;n tasarlad&#305;&#287;&#305; kalitesi
+  y&uuml;ksek &uuml;r&uuml;nlerdir. Se&ccedil;ti&#287;iniz dikey
+  s&uuml;p&uuml;rgenin etkin bir performans sunmas&#305; i&ccedil;in, motor
+  g&uuml;c&uuml;n&uuml;n de yeterli olmas&#305; &ouml;nemlidir.
+  &Uuml;r&uuml;n&uuml;n sahip oldu&#287;u motor g&uuml;c&uuml;, emi&#351;
+  yetene&#287;i &uuml;zerinde etkilidir. Bu nedenle, &ouml;zellikle
+  torbas&#305;z s&uuml;p&uuml;rge &ccedil;e&#351;itlerinde motor
+  g&uuml;c&uuml;n&uuml;n y&uuml;ksekli&#287;i &ccedil;ok &ouml;nemli bir
+  detayd&#305;r.
+</p>
+<p>
+  Toz torbal&#305; s&uuml;p&uuml;rge modellerinde, torban&#305;n kapasitesi
+  dolduk&ccedil;a emi&#351; g&uuml;c&uuml;n&uuml;n de azald&#305;&#287;&#305;
+  g&ouml;r&uuml;l&uuml;r. Bu sorun, torbas&#305;z tasarlanm&#305;&#351;
+  s&uuml;p&uuml;rgeler i&ccedil;in de ge&ccedil;erlidir. Torbas&#305;z
+  s&uuml;p&uuml;rgelerde, toz haznesini tam olarak dolmadan bo&#351;alt&#305;r
+  ve yeniden kullanmaya ba&#351;larsan&#305;z, motorun daha verimli
+  &ccedil;al&#305;&#351;t&#305;&#287;&#305;n&#305; ve emi&#351;
+  g&uuml;c&uuml;n&uuml;n artt&#305;&#287;&#305;n&#305; da
+  g&ouml;zlemleyebilirsiniz.
+</p>
+<h4>Ergonomik Tasar&#305;m ve Hafiflik</h4>
+<p>
+  Geleneksel elektrikli s&uuml;p&uuml;rgelerin evde yaratt&#305;&#287;&#305;
+  fazlal&#305;k problemine dikey &#351;arjl&#305; s&uuml;p&uuml;rgeler son
+  noktay&#305; koymu&#351;tur. Ergonomik tasar&#305;ml&#305; &#351;arjl&#305;
+  dik s&uuml;p&uuml;rge modelleri, her bir marka ve model i&ccedil;in &ouml;zel
+  olarak tasarlanm&#305;&#351; &#351;arj &uuml;nitelerinde kullan&#305;ma
+  haz&#305;r hale gelir. Ak&uuml;n&uuml;n dolmas&#305;n&#305; sa&#287;layan
+  duvar aparat&#305;, bir&ccedil;ok &uuml;r&uuml;nde esnek bir kullan&#305;m
+  &ouml;zelli&#287;ine sahiptir. Bu sayede prize en yak&#305;n alanda duvara
+  monte edilen &#351;arj istasyonunu fazla alan kaplamaks&#305;z&#305;n
+  konumland&#305;rabilirsiniz.
+</p>
+<p>
+  Hafif materyaller kullan&#305;larak tasarlanan &#351;arjl&#305; dikey
+  s&uuml;p&uuml;rgeler, kullan&#305;mda ve ta&#351;&#305;mada kolayl&#305;k
+  sa&#287;lar. Dikey s&uuml;p&uuml;rge se&ccedil;erken hafif olmas&#305;na ve
+  ergonomik detaylar&#305;na dikkat etmek gerekir. Dolap ve yatak alt&#305; gibi
+  uzanmas&#305; zor alanlara eri&#351;ebilmek i&ccedil;in, hareketli
+  aparatlar&#305;n&#305;n olmas&#305; da &ouml;nemlidir. Ana temizlik
+  ba&#351;l&#305;&#287;&#305;n&#305;n d&#305;&#351;&#305;nda, farkl&#305;
+  b&ouml;lgelerdeki tozlar&#305; toparlamak i&ccedil;in &ouml;zel
+  tasarlanm&#305;&#351; ba&#351;l&#305;k &ccedil;e&#351;itlerinin olmas&#305; da
+  dikey s&uuml;p&uuml;rgenin kullan&#305;m&#305;n&#305; kolayla&#351;t&#305;ran
+  unsurlardan biridir.
+</p>
+<h4>Ses Seviyesi</h4>
+<p>
+  B&uuml;t&uuml;n elektrikli s&uuml;p&uuml;rge modellerinde oldu&#287;u gibi,
+  dikey s&uuml;p&uuml;rgelerde de ses seviyesinin makul seviyede olmas&#305;
+  tercih edilen bir durumdur. S&uuml;p&uuml;rgenin
+  kullan&#305;ld&#305;&#287;&#305; ortamdaki ya&#351;am konforuna katk&#305;
+  sunan ses detay&#305;, s&uuml;p&uuml;rge tercihi yap&#305;l&#305;rken dikkat
+  edilmesi gereken konulardan biridir. &Uuml;stelik k&#305;s&#305;tl&#305;
+  zamana sahip ki&#351;iler i&ccedil;in, sessiz s&uuml;p&uuml;rge
+  &ccedil;e&#351;itleri gece temizlik yapmaya da olanak tan&#305;r. Ses seviyesi
+  d&uuml;&#351;&uuml;k bir s&uuml;p&uuml;rge alarak
+  kom&#351;ular&#305;n&#305;z&#305;n s&uuml;p&uuml;rge sesinden rahats&#305;z
+  olmas&#305;n&#305; da &ouml;nleyebilirsiniz.
+</p>
+<p>
+  D&uuml;&#351;&uuml;k ses seviyesine sahip s&uuml;p&uuml;rge modelleri
+  sayesinde, evde bebe&#287;iniz uyurken rahat&ccedil;a s&uuml;p&uuml;rme
+  i&#351;lemi yapabilir ve zaman&#305; verimli kullanabilirsiniz. Evcil
+  hayvanlar&#305;n bir&ccedil;o&#287;u da s&uuml;p&uuml;rge sesinden
+  rahats&#305;z olabilir. Onlar&#305;n ya&#351;am kalitesi &uuml;zerinde de
+  olumlu katk&#305; sa&#287;layacak bi&ccedil;imde, se&ccedil;ti&#287;iniz
+  s&uuml;p&uuml;rgenin ses seviyesine dikkat edebilirsiniz.
+</p>
+<h3>Dikey S&uuml;p&uuml;rge Faydalar&#305;</h3>
+<p>
+  Dikey s&uuml;p&uuml;rgelerin pratik kullan&#305;m avantajlar&#305;
+  d&#305;&#351;&#305;nda ya&#351;am kalitesini art&#305;ran farkl&#305;
+  &ouml;zellikleri de bulunur. Alerjik b&uuml;nyeye sahip ki&#351;iler
+  i&ccedil;in, evlerinde bulunan toz, t&uuml;y ve akarlar, &ouml;nemli bir nefes
+  alma sorunu yaratabilir. &Uuml;retici markalar&#305;n tasar&#305;mlar&#305;nda
+  bulunan &ouml;zel filtreler sayesinde, evinizin en &uuml;cra
+  k&ouml;&#351;elerinde bulunan tozlar, g&ouml;zle g&ouml;r&uuml;lmeyen t&uuml;y
+  ve akarlar bile s&uuml;p&uuml;rge i&ccedil;ine hapsedilebilir.
+</p>
+<p>
+  Bir&ccedil;ok modelde yer verilen &#305;&#351;&#305;kl&#305; b&uuml;y&uuml;k
+  s&uuml;p&uuml;rge ba&#351;l&#305;&#287;&#305;, &ccedil;&#305;plak g&ouml;zle
+  g&ouml;r&uuml;lemeyen tozlar&#305; ve partik&uuml;lleri bile rahatl&#305;kla
+  g&ouml;rmenize imkan tan&#305;r. Bu sayede yatak ve dolap altlar&#305;ndaki
+  toz ve t&uuml;yler, tam anlam&#305;yla s&uuml;p&uuml;rge i&ccedil;ine
+  al&#305;nabilir. A&#351;&#305;r&#305; titiz ve kusursuz hijyen beklentisi olan
+  ki&#351;iler i&ccedil;in tozlar&#305;n yeniden d&#305;&#351;ar&#305;
+  at&#305;lmadan yap&#305;lan tam temizlik b&uuml;y&uuml;k fark yarat&#305;r.
+</p>
+<p>
+  Siz de evinizde konforlu ve y&uuml;ksek kalitede bir temizlik performans&#305;
+  elde etmek i&ccedil;in, Jebinde&rsquo;de sat&#305;&#351;a sunulan dikey
+  s&uuml;p&uuml;rge &ccedil;e&#351;itlerini inceleyebilirsiniz.
+  D&uuml;nyan&#305;n en be&#287;enilen markalar&#305;n&#305;n
+  tasarlad&#305;&#287;&#305; &#351;arjl&#305; dikey s&uuml;p&uuml;rgeleri en
+  uygun fiyatlarla hemen sat&#305;n almak i&ccedil;in &uuml;r&uuml;nleri
+  sepetinize ekleyin ve Jebinde&rsquo;de g&uuml;venli al&#305;&#351;veri&#351;in
+  keyfini &ccedil;&#305;karmaya ba&#351;lay&#305;n.
+</p>

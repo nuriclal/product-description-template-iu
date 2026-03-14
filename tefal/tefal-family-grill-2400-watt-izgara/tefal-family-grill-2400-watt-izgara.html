@@ -1,0 +1,147 @@
+<style type="text/css">
+  .carousel-iu {
+    max-width: 1280px;
+    margin: 0 auto;
+  }
+
+  .carousel-content-iu {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 25px;
+  }
+
+  .card-iu {
+    background-color: #fff;
+    border-radius: 16px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+    transition: all 0.35s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+    text-align: center;
+    padding: 15px;
+  }
+
+  .card-iu:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+  }
+
+  .icon-iu {
+    width: 85%;
+    height: auto;
+    border-radius: 12px;
+    transition: transform 0.4s ease;
+  }
+
+  .card-iu:hover .icon-iu {
+    transform: scale(1.05);
+  }
+
+  .card-iu h4 {
+    font-size: 0.85rem !important;
+    margin: 15px 0 8px;
+    font-weight: 600;
+  }
+
+  .card-iu p {
+    font-size: 0.8rem !important;
+    line-height: 1.5 !important;
+    opacity: 0;
+    max-height: 0;
+    transition: all 0.4s ease;
+  }
+
+  .card-iu:hover p {
+    opacity: 1;
+    max-height: 200px;
+    margin-top: 5px;
+  }
+
+  .card-iu.active p {
+    opacity: 1;
+    max-height: 200px;
+    margin-top: 10px;
+  }
+
+  @media (max-width: 780px) {
+    .carousel-content-iu {
+      grid-template-columns: repeat(1, 1fr);
+    }
+
+    .card-iu p {
+      opacity: 1 !important;
+      max-height: none !important;
+      margin-top: 8px;
+    }
+  }
+</style>
+
+<div class="carousel-iu">
+  <div class="carousel-content-iu">
+    <div class="card-iu">
+      <img alt="" class="icon-iu" src="/Content/UploadFiles/9be09c20-1.jpg" />
+      <h4>Bağımsız Pişirme Yüzeyleri</h4>
+
+      <p>
+        Tamamen bağımsız iki pişirme yüzeyi, bireysel olarak ayarlanabilir
+        termostatları sayesinde her türlü tarifi pişirmenizi sağlar.
+      </p>
+    </div>
+
+    <div class="card-iu">
+      <img alt="" class="icon-iu" src="/Content/UploadFiles/14406c13-2.jpg" />
+      <h4>Çıkarılabilir Plakalar</h4>
+
+      <p>
+        Bulaşık makinesinde yıkanabilen yapışmaz plakalar, yağ tepsisi ve
+        sıçrama koruyucu sayesinde kolay temizliğin keyfini çıkarın.
+      </p>
+    </div>
+
+    <div class="card-iu">
+      <img alt="" class="icon-iu" src="/Content/UploadFiles/be4674b8-3.jpg" />
+      <h4>Mükemmel Pişirme Sonuçları</h4>
+
+      <p>
+        Güçlü watt değeri, optimum sıcaklığa kolayca ulaşmanızı sağlayarak
+        yüksek performanslı mühürleme ve olağanüstü sonuçlar sunar.
+      </p>
+    </div>
+
+    <div class="card-iu">
+      <img alt="" class="icon-iu" src="/Content/UploadFiles/baa75d20-4.jpg" />
+      <h4>XL Yüzey</h4>
+
+      <p>
+        Geniş 1500 cm² pişirme alanı sayesinde 10 kişiye kadar büyük porsiyonlar
+        pişirin. Aile ve arkadaş buluşmaları için ideal.
+      </p>
+    </div>
+
+    <div class="card-iu">
+      <img alt="" class="icon-iu" src="/Content/UploadFiles/fca468ae-5.jpg" />
+      <h4>Yağ Eklemeden Pişirme</h4>
+
+      <p>
+        Yapışmaz plakalar ve geniş yağ toplama haznesi sayesinde ekstra yağ veya
+        sıvı eklemeden pişirin.
+      </p>
+    </div>
+  </div>
+</div>
+<script>
+  document.querySelectorAll(".card-iu").forEach((card) => {
+    card.addEventListener("click", () => {
+      if (card.classList.contains("active")) {
+        card.classList.remove("active");
+      } else {
+        document
+          .querySelectorAll(".card-iu")
+          .forEach((c) => c.classList.remove("active"));
+        card.classList.add("active");
+      }
+    });
+  });
+</script>

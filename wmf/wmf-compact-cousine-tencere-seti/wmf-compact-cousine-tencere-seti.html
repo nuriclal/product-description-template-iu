@@ -1,0 +1,474 @@
+<style type="text/css">
+  .carousel-wrap-iu {
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    isolation: isolate !important;
+  }
+
+  .carousel-iu {
+    position: relative;
+    overflow: hidden;
+    padding: 20px 10px;
+    background: transparent;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .track-iu {
+    display: flex;
+    gap: 28px;
+    align-items: stretch;
+    flex-wrap: nowrap;
+    transition: transform 600ms cubic-bezier(0.22, 0.9, 0.28, 1);
+  }
+
+  .slide-iu {
+    min-height: 400px;
+    background: #fff;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 24px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    flex-shrink: 0;
+    width: 320px;
+    max-width: 400px;
+  }
+
+  .badge-iu {
+    width: 240px;
+    height: 240px;
+    border-radius: 50%;
+    background: #ffc490;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: clamp(28px, 2.5vw, 28px) !important;
+    margin-bottom: 16px;
+    color: #1e2a44;
+    text-align: center;
+    box-shadow: 0 4px 16px rgba(240, 123, 16, 0.2);
+  }
+
+  .img-square-iu {
+    width: 100%;
+    aspect-ratio: 1/1;
+    border-radius: 12px;
+    object-fit: cover;
+    margin-bottom: 16px;
+  }
+
+  .nav-iu {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.35);
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    z-index: 10;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 75%;
+    transition: background 0.3s ease;
+  }
+
+  .nav-iu:hover {
+    background: rgba(0, 0, 0, 0.55);
+  }
+
+  .nav-iu.prev-iu {
+    left: 5px;
+  }
+  .nav-iu.next-iu {
+    right: 5px;
+  }
+
+  .dots-iu {
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+    margin-top: 14px;
+  }
+
+  .dot-iu {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #e2e8f0;
+    transition: all 0.3s ease;
+    cursor: pointer;
+  }
+
+  .dot-iu.active-iu {
+    background: #f07b10;
+    transform: scale(1.2);
+  }
+</style>
+<div class="carousel-wrap-iu">
+  <div aria-label="Ürün özellikleri karuseli" class="carousel-iu">
+    <button aria-label="Önceki" class="nav-iu prev-iu">
+      <svg height="24" viewbox="0 0 24 24" width="24">
+        <path
+          d="M15 18l-6-6 6-6"
+          fill="none"
+          stroke="#fff"
+          stroke-linecap="round"
+          stroke-width="2"
+        ></path>
+      </svg>
+    </button>
+    <div class="track-iu" id="track">
+      <div class="slide-iu clone-iu" style="width: 380px; flex: 0 0 380px">
+        <img
+          alt="Pratik Ölçüm"
+          class="img-square-iu"
+          src="/Content/UploadFiles/e424a8c5-7.png"
+        />
+        <h4>Son derece dayanıklı</h4>
+
+        <p>
+          Konstrüksiyonun ekstra ağır hizmet kalitesi, kalın malzemesi ve
+          sağlam, titiz işçiliği, şeklin zamanla korunmasını sağlar.
+        </p>
+      </div>
+
+      <div class="slide-iu" style="width: 380px; flex: 0 0 380px">
+        <img
+          alt=""
+          class="img-square-iu"
+          src="/Content/UploadFiles/9d698ba0-1.png"
+        />
+        <h4>Yerden tasarruf sağlayan tasarım</h4>
+
+        <p>
+          İstiflenebilir tasarım sayesinde %30'a kadar daha fazla alan kazanın.
+          Aynı boyutta 4 adede kadar pişirme tenceresini üst üste koyun.
+        </p>
+      </div>
+
+      <div class="slide-iu" style="width: 380px; flex: 0 0 380px">
+        <img
+          alt=""
+          class="img-square-iu"
+          src="/Content/UploadFiles/a7af1548-2.png"
+        />
+        <h4>Çok işlevli setler</h4>
+
+        <p>
+          Buharlı pişirme parçası ve karıştırma kabı dahil olmak üzere mevcut ek
+          aksesuarlar sayesinde çok işlevli pişirmenin keyfini çıkarın.
+        </p>
+      </div>
+
+      <div class="slide-iu" style="width: 380px; flex: 0 0 380px">
+        <img
+          alt=""
+          class="img-square-iu"
+          src="/Content/UploadFiles/4388087d-3.png"
+        />
+        <h4>Düşük ısı kolları</h4>
+
+        <p>
+          İçi boş kulplar, daha soğuk kulplar için tencereden sapa ısı
+          transferini azaltır.* *Fırında kullanıldığında uygulanamaz
+        </p>
+      </div>
+
+      <div class="slide-iu" style="width: 380px; flex: 0 0 380px">
+        <img
+          alt=""
+          class="img-square-iu"
+          src="/Content/UploadFiles/74f3393f-4.png"
+        />
+        <h4>Kullanışlı özellikler</h4>
+
+        <p>
+          Tencerelerin içindeki entegre ölçüm işaretleri hassas ölçümleri
+          zahmetsiz hale getirirken, geniş dökme kenarları daha kolay dökme ve
+          daha az damlama sağlar.
+        </p>
+      </div>
+
+      <div class="slide-iu" style="width: 380px; flex: 0 0 380px">
+        <img
+          alt=""
+          class="img-square-iu"
+          src="/Content/UploadFiles/cd47a52d-5.png"
+        />
+        <h4>TransTherm® evrensel taban</h4>
+
+        <p>
+          Yüksek kaliteli TransTherm® üniversal taban, optimum ısı dağılımı ve
+          tutma sayesinde pişirme sırasında enerji tasarrufu sağlar. İndüksiyon
+          dahil tüm set üstü ocaklarla uyumludur.
+        </p>
+      </div>
+
+      <div class="slide-iu" style="width: 380px; flex: 0 0 380px">
+        <img
+          alt="Pratik Ölçüm"
+          class="img-square-iu"
+          src="/Content/UploadFiles/a3e6c7ac-6.png"
+        />
+        <h4>Cromargan®</h4>
+
+        <p>
+          Sağlam, şık Cromargan®'dan üretilmiştir: olağanüstü dayanıklılık ve
+          bulaşık makinesinde yıkanabilir hijyen için 18/10 paslanmaz çelik.
+        </p>
+      </div>
+
+      <div class="slide-iu" style="width: 380px; flex: 0 0 380px">
+        <img
+          alt="Pratik Ölçüm"
+          class="img-square-iu"
+          src="/Content/UploadFiles/e424a8c5-7.png"
+        />
+        <h4>Son derece dayanıklı</h4>
+
+        <p>
+          Konstrüksiyonun ekstra ağır hizmet kalitesi, kalın malzemesi ve
+          sağlam, titiz işçiliği, şeklin zamanla korunmasını sağlar.
+        </p>
+      </div>
+    </div>
+    <button aria-label="Sonraki" class="nav-iu next-iu">
+      <svg height="24" viewbox="0 0 24 24" width="24">
+        <path
+          d="M9 6l6 6-6 6"
+          fill="none"
+          stroke="#fff"
+          stroke-linecap="round"
+          stroke-width="2"
+        ></path>
+      </svg>
+    </button>
+
+    <div aria-hidden="true" class="dots-iu" id="dots">
+      <div class="dot-iu active-iu" data-i="0">&nbsp;</div>
+
+      <div class="dot-iu" data-i="1">&nbsp;</div>
+
+      <div class="dot-iu" data-i="2">&nbsp;</div>
+
+      <div class="dot-iu" data-i="3">&nbsp;</div>
+
+      <div class="dot-iu" data-i="4">&nbsp;</div>
+
+      <div class="dot-iu" data-i="5">&nbsp;</div>
+    </div>
+  </div>
+</div>
+<script>
+  (function () {
+    let slidesToShow, slideWidth, index, track, dotsWrap, carousel;
+    let originalSlides = [],
+      realCount = 0;
+    let isDragging = false,
+      startX = 0,
+      startY = 0,
+      currentTranslate = 0,
+      prevTranslate = 0;
+
+    function initCarousel() {
+      track = document.getElementById("track");
+      dotsWrap = document.getElementById("dots");
+      carousel = document.querySelector(".carousel-iu");
+      if (!track || !dotsWrap || !carousel) return;
+
+      originalSlides = Array.from(track.children).filter(
+        (n) => !n.classList.contains("clone-iu"),
+      );
+      realCount = originalSlides.length;
+      slidesToShow = getSlidesToShow();
+
+      buildClones();
+      setSizes();
+      attachEvents();
+
+      index = slidesToShow;
+      setTranslate(-index * slideWidth, false);
+      updateDots();
+    }
+
+    function getSlidesToShow() {
+      const w = window.innerWidth;
+      if (w <= 540) return 1;
+      if (w <= 1000) return 2;
+      return 3;
+    }
+
+    function buildClones() {
+      track.querySelectorAll(".clone-iu").forEach((n) => n.remove());
+      for (let i = 0; i < slidesToShow; i++) {
+        const firstClone = originalSlides[i % realCount].cloneNode(true);
+        firstClone.classList.add("clone-iu");
+        track.appendChild(firstClone);
+
+        const lastClone =
+          originalSlides[realCount - 1 - (i % realCount)].cloneNode(true);
+        lastClone.classList.add("clone-iu");
+        track.insertBefore(lastClone, track.firstChild);
+      }
+    }
+
+    function setSizes() {
+      const gap = 28;
+      const containerWidth = carousel.offsetWidth - 20;
+      let perSlideWidth =
+        (containerWidth - gap * (slidesToShow - 1)) / slidesToShow;
+      perSlideWidth = Math.max(220, Math.min(perSlideWidth, 400));
+
+      track.querySelectorAll(".slide-iu, .clone-iu").forEach((s) => {
+        s.style.width = `${perSlideWidth}px`;
+        s.style.flex = `0 0 ${perSlideWidth}px`;
+      });
+
+      slideWidth = perSlideWidth + gap;
+      currentTranslate = -index * slideWidth;
+      track.style.transition = "none";
+      track.style.transform = `translate3d(${currentTranslate}px,0,0)`;
+      buildDots();
+    }
+
+    function attachEvents() {
+      const prevBtn = carousel.querySelector(".nav-iu.prev-iu");
+      const nextBtn = carousel.querySelector(".nav-iu.next-iu");
+      prevBtn.onclick = movePrev;
+      nextBtn.onclick = moveNext;
+
+      track.onmousedown = pointerDown;
+      track.ontouchstart = pointerDown;
+      window.onmouseup = pointerUp;
+      window.ontouchend = pointerUp;
+      window.onmousemove = pointerMove;
+      window.ontouchmove = pointerMove;
+
+      window.onkeydown = (e) => {
+        if (e.key === "ArrowLeft") movePrev();
+        if (e.key === "ArrowRight") moveNext();
+      };
+
+      window.addEventListener(
+        "resize",
+        debounce(() => {
+          slidesToShow = getSlidesToShow();
+          buildClones();
+          setSizes();
+          setTranslate(-index * slideWidth, false);
+        }),
+      );
+    }
+
+    function buildDots() {
+      dotsWrap.innerHTML = "";
+      for (let i = 0; i < realCount; i++) {
+        const d = document.createElement("div");
+        d.className = "dot-iu";
+        d.dataset.i = i;
+        d.onclick = () => {
+          index = parseInt(d.dataset.i) + slidesToShow;
+          slideMove();
+        };
+        dotsWrap.appendChild(d);
+      }
+      updateDots();
+    }
+
+    function updateDots() {
+      const dots = Array.from(dotsWrap.children);
+      let realIndex = (index - slidesToShow) % realCount;
+      if (realIndex < 0) realIndex += realCount;
+      dots.forEach((d) => d.classList.remove("active-iu"));
+      if (dots[realIndex]) dots[realIndex].classList.add("active-iu");
+    }
+
+    function setTranslate(x, animate = true) {
+      track.style.transition = animate
+        ? "transform 600ms cubic-bezier(.22,.9,.28,1)"
+        : "none";
+      track.style.transform = `translate3d(${x}px,0,0)`;
+      currentTranslate = x;
+    }
+
+    function moveNext() {
+      index++;
+      slideMove();
+    }
+
+    function movePrev() {
+      index--;
+      slideMove();
+    }
+
+    function slideMove() {
+      setTranslate(-index * slideWidth, true);
+      track.addEventListener(
+        "transitionend",
+        () => {
+          if (index >= realCount + slidesToShow) index = slidesToShow;
+          if (index < slidesToShow) index = realCount + slidesToShow - 1;
+          setTranslate(-index * slideWidth, false);
+          updateDots();
+        },
+        { once: true },
+      );
+      updateDots();
+    }
+
+    function pointerDown(e) {
+      isDragging = true;
+      startX = e.type.includes("mouse") ? e.pageX : e.touches[0].clientX;
+      startY = e.type.includes("mouse") ? e.pageY : e.touches[0].clientY;
+      prevTranslate = currentTranslate;
+      track.style.transition = "none";
+    }
+
+    function pointerMove(e) {
+      if (!isDragging) return;
+      const currentX = e.type.includes("mouse")
+        ? e.pageX
+        : e.touches[0].clientX;
+      const currentY = e.type.includes("mouse")
+        ? e.pageY
+        : e.touches[0].clientY;
+      const dx = currentX - startX;
+      const dy = currentY - startY;
+      if (Math.abs(dx) > Math.abs(dy)) {
+        setTranslate(prevTranslate + dx, false);
+        e.preventDefault();
+      }
+    }
+
+    function pointerUp() {
+      if (!isDragging) return;
+      isDragging = false;
+      const moved = currentTranslate - prevTranslate;
+      if (Math.abs(moved) > slideWidth / 3) {
+        if (moved < 0) moveNext();
+        else movePrev();
+      } else {
+        setTranslate(-index * slideWidth, true);
+      }
+    }
+
+    function debounce(fn, d = 150) {
+      let t;
+      return (...a) => {
+        clearTimeout(t);
+        t = setTimeout(() => fn.apply(null, a), d);
+      };
+    }
+
+    window.addEventListener("load", initCarousel);
+  })();
+</script>

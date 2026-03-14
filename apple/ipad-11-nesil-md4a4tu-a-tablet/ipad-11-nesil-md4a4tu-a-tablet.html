@@ -1,0 +1,719 @@
+<style>
+      /* ————— Genel Yapı ————— */
+
+      .jeb-container-iu {
+        max-width: 1280px;
+        margin: 0 auto;
+        padding: 0 16px;
+      }
+
+      .jeb-container-iu img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+      }
+
+      .jeb-icon-row {
+        display: flex;
+        justify-content: center; /* ortada dursun */
+        align-items: center;
+        gap: 20%; /* iconlar arası boşluk */
+        flex-wrap: wrap; /* mobilde alta düşebilir */
+      }
+
+      .jeb-icon-row img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+      }
+
+      /* ————— Banner (Section 1) ————— */
+
+      .jeb-section-banner {
+        position: relative;
+      }
+
+      .jeb-section-banner-text {
+          margin: 0 auto;
+          max-width: 50%;
+      }
+
+      .jeb-section-banner h2 {
+        font-size: 3rem;
+        font-weight: 700;
+        color: black;
+      }
+
+      .jeb-section-banner p {
+        color: black;
+        font-size: 1.2rem;
+      }
+
+      .jeb-banner-img {
+        width: 70%;
+      }
+
+      .jeb-banner-content {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translateY(-50%);
+        text-align: right;
+        color: #ffffff;
+      }
+
+      .jeb-banner-title {
+        font-size: 3rem;
+        font-weight: 700;
+        margin-bottom: 8px;
+        color: black;
+        max-width: 60%;
+      }
+
+      .jeb-banner-label {
+        color: black;
+        max-width: 60%;
+        font-size: 1.2rem;
+      }
+
+      .jeb-banner-icon {
+        max-width: 80%;
+        margin: 0 40% auto;
+      }
+
+      /* ————— Section 2 ————— */
+
+      .jeb-section-two {
+        display: flex;
+        gap: 32px;
+        align-items: center;
+        margin: 60px 0;
+      }
+
+      .jeb-two-left {
+        flex: 1;
+      }
+
+      .jeb-two-right {
+        flex: 1;
+      }
+
+      .jeb-two-title {
+        font-size: 3rem;
+        font-weight: 700;
+        margin-bottom: 12px;
+      }
+
+      .jeb-two-text {
+        font-size: 1.5rem;
+        margin-bottom: 16px;
+      }
+
+      .jeb-two-info {
+        display: flex;
+        align-items: flex-start;
+        gap: 12px;
+      }
+
+      .jeb-two-info-icon {
+        max-width: 40px;
+      }
+
+      .jeb-two-info-text {
+        font-size: 0.95rem;
+      }
+
+      /* ————— Section 3 (Simetrik yapı) ————— */
+
+      .jeb-section-three {
+        display: flex;
+        gap: 32px;
+        align-items: center;
+        margin: 60px 0;
+      }
+
+      .jeb-three-left {
+        flex: 1;
+      }
+
+      .jeb-three-right {
+        flex: 1;
+      }
+
+      .jeb-three-title {
+        font-size: 3rem;
+        font-weight: 700;
+        margin-bottom: 12px;
+      }
+
+      .jeb-three-text {
+        font-size: 1.5rem;
+        margin-bottom: 16px;
+      }
+
+      .jeb-three-info {
+        display: flex;
+        align-items: flex-start;
+        gap: 12px;
+      }
+
+      .jeb-three-info-icon {
+        max-width: 40px;
+      }
+
+      .jeb-three-info-text {
+        font-size: 0.95rem;
+      }
+
+      /* ————— Section 4 ————— */
+
+      .jeb-section-four {
+        text-align: center;
+        margin: 60px 0;
+      }
+
+      .jeb-four-center-img {
+        margin: 0 auto 32px;
+      }
+
+      .jeb-four-bottom-wrap {
+        display: flex;
+        justify-content: space-between;
+        gap: 40px;
+        flex-wrap: wrap;
+      }
+
+      .jeb-four-left,
+      .jeb-four-right {
+        flex: 1 1 300px;
+      }
+
+      .jeb-four-info {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 12px;
+      }
+
+      .jeb-four-left-icon {
+        max-width: 50px;
+        margin-bottom: 12px;
+      }
+
+      .jeb-four-info-text {
+        font-size: 0.95rem;
+      }
+
+      .jeb-four-left-title {
+        font-size: 2rem;
+        font-weight: 700;
+        margin-bottom: 12px;
+      }
+
+      .jeb-four-left-text {
+        font-size: 1.5rem;
+      }
+
+      .jeb-four-right-img {
+        margin: 0 auto;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="jeb-container-iu">
+      <!-- Section 1: Banner -->
+      <section class="jeb-section-banner">
+        <img src="hero-1.webp" class="jeb-banner-img" />
+
+        <div class="jeb-banner-content">
+          <h2 class="jeb-banner-title">
+            Harika renkler. Yaratıcı çizimler. İyi eğlenceler.
+          </h2>
+          <p class="jeb-banner-label">
+            İster el yazınızla not alın ister klavyeyle yazın. Yanınızdan
+            ayırmayın. iPad, yapmayı sevdiğiniz her şey için tasarlandı.
+          </p>
+          <img src="hero-icon-1.webp" class="jeb-banner-icon" />
+        </div>
+      </section>
+
+      <!-- Section Sol Metin Sağ Görsel -->
+      <section class="jeb-section-two">
+        <div class="jeb-two-left">
+          <h2 class="jeb-two-title">Eğlenceye daha da yer açın.</h2>
+          <p class="jeb-two-text">
+            Şimdi A16 çiple süper hız. Öncekinden iki kat fazla, en az <strong>128 GB
+            depolama alanı</strong>. Yasal açıklama dipnotuna bakın Renkli tam ekran
+            tasarımıyla 11 inç Liquid Retina ekran. Yasal açıklama dipnotuna
+            bakın Magic Keyboard Folio, Apple Pencil (USB‑C) ve Apple Pencil (1.
+            nesil) desteği.
+          </p>
+
+          <div class="jeb-two-info">
+            <img src="hero-icon-2.webp" class="jeb-two-info-icon" />
+            <p class="jeb-two-info-text">Dört çarpıcı renk</p>
+          </div>
+        </div>
+
+        <div class="jeb-two-right">
+          <img src="hero-2.webp" class="jeb-two-img" />
+        </div>
+      </section>
+
+      <!-- Section Sağ Metin Sol Görsel -->
+      <section class="jeb-section-three">
+        <div class="jeb-three-left">
+          <img src="img-10.jpg" class="jeb-three-img" />
+        </div>
+
+        <div class="jeb-three-right">
+          <h2 class="jeb-three-title">İşleri bir çırpıda halledin.</h2>
+          <p class="jeb-three-text">
+            Süper hızlı <strong>A16 çip</strong> ile tek bir aygıtta çalışmak ve işlerinizi halletmek her zamankinden daha kolay. <strong>Not alın, iş birliği yapın ve farklı uygulamalarda aynı anda kusursuz bir şekilde çalışın</strong>. Pasta grafiklerden pasta tariflerine kadar, üretkenlik neredeyse iPad orada.
+          </p>
+
+          <div class="jeb-three-info">
+            <img src="img-icon-5.png" class="jeb-three-info-icon" />
+          </div>
+        </div>
+      </section>
+
+      <!-- Section Ortada Görsel Altında Solda Metin Sağda Görsel -->
+      <section class="jeb-section-four">
+        <img src="hero-3a.webp" class="jeb-four-center-img" />
+
+        <div class="jeb-four-bottom-wrap">
+          <div class="jeb-four-left">
+            <div class="jeb-four-info">
+              <img src="img-icon-8.png" class="jeb-four-left-icon" />
+              <p class="jeb-four-info-text">12 MP Geniş arka kamera</p>
+            </div>
+            <h3 class="jeb-four-left-title">
+              Kalbinizden geçenleri hayata geçirin.
+            </h3>
+            <p class="jeb-four-left-text">
+              <strong>Apple Pencil</strong> ile etkileyici bir ekranda kendinizi ifade etmenin,
+              çizim ve beyin fırtınası yapmanın keyfini çıkarın. iPad ile
+              dilediğinizi çekin, düzenleyin ve paylaşın. Yüksek kaliteli
+              yerleşik mikrofonlar ve yatay modda stereo ses sunan hoparlörlerle
+              ses projeleri oluşturun.
+            </p>
+          </div>
+
+          <div class="jeb-four-right">
+            <div class="jeb-icon-row">
+              <img src="hero-2-label-1.png" alt="icon" />
+            </div>
+            <img
+              src="img-little-8.jpg"
+              alt="Görsel"
+              class="jeb-four-right-img"
+            />
+          </div>
+        </div>
+      </section>
+
+      <!-- Section Ortada Görsel Altında Solda Metin Sağda Görsel Altında Label -->
+      <section class="jeb-section-four">
+        <img src="img-1.jpg" class="jeb-four-center-img" />
+
+        <div class="jeb-four-bottom-wrap">
+          <div class="jeb-four-left">
+            <div class="jeb-four-info">
+              <img src="img-icon-1.png" class="jeb-four-left-icon" />
+            </div>
+            <p class="jeb-four-left-text">
+              <strong>Apple Pencil</strong> ile not alın, çizim ve resim yapın. <strong>Magic Keyboard
+              Folio</strong>’nun çok yönlü iki parçalı tasarımıyla rahatça yazın,
+              trackpad’i kullanın ve sevdiğiniz içeriklerin keyfini çıkarın.2
+              İster tanıdık klavye kestirmelerini isterseniz herhangi bir yerine
+              tıklanabilen trackpad’i kullanın. Ve harika bir yazma deneyimiyle
+              tanışın.
+            </p>
+          </div>
+
+          <div class="jeb-four-right">
+            <img
+              src="img-little-1.jpg"
+              alt="Görsel"
+              class="jeb-four-right-img"
+            />
+            <img
+              src="img-label-1.png"
+              style="display: block; margin-left: 50%"
+            />
+          </div>
+        </div>
+      </section>
+
+      <!-- Section Sol Metin üstünde İcon Altında Label Sağ Görsel -->
+      <section class="jeb-section-two">
+        <div class="jeb-two-left">
+          <div class="jeb-two-info">
+            <img src="img-icon-2.png" class="jeb-two-info-icon" />
+          </div>
+          <p class="jeb-two-text">
+            Aradığınız her şeyi size bir arada sunan <strong>iPadOS</strong>, iPad’de kusursuz ve
+            kolay bir kullanım deneyimi sağlıyor. Akıllı Yazı özelliği, el
+            yazısıyla aldığınız notları daha akıcı, esnek ve okunaklı hale
+            getiriyor. Ve Matematik Notları ile karmaşık denklemleri Apple
+            Pencil kullanarak çözebiliyorsunuz.
+          </p>
+
+          <div>
+            <img
+              src="img-label-2.png"
+              style="display: block; margin-left: auto; margin-top: 10%"
+            />
+          </div>
+        </div>
+
+        <div class="jeb-two-right">
+          <img src="img-2.jpg" class="jeb-two-img" />
+        </div>
+      </section>
+    
+      <!-- Section Middle -->
+      <section class="jeb-section-banner">
+        <img src="img-3.jpg" class="jeb-banner-img" />
+        <img src="hero-2-label-3.png" class="jeb-icon-row" style="display: block; margin-left: 50%; margin-top: 5%;"/>
+      </section>
+
+      <!-- Section Middle -->
+      <section class="jeb-section-banner">
+        <img src="img-4.jpg" class="jeb-banner-img" style="margin: auto;" />
+        <img src="img-label-4.png" class="jeb-icon-row" style="display: block; margin-left: 60%; margin-top: 5%;"/>
+      </section>
+
+      <!-- Section Middle -->
+      <section class="jeb-section-banner">
+        <img src="img-5.jpg" class="jeb-banner-img" style="margin-left: auto;" />
+      </section>
+
+      <!-- Section Ortada Görsel Altında Solda Metin Sağda Görsel -->
+      <section class="jeb-section-four">
+        <img src="img-6.jpg" class="jeb-four-center-img" />
+
+        <div class="jeb-four-bottom-wrap">
+          <div class="jeb-four-left">
+            <div class="jeb-four-info">
+              <img src="img-icon-6.png" class="jeb-four-left-icon" />
+            </div>
+            <p class="jeb-four-left-text">
+              Hesap tablolarını düzenleyin, Keynote sunumlarını elden geçirin ve muhteşem notlar alın. Magic Keyboard Folio konforlu bir <strong>klavye</strong> deneyiminin yanı sıra hassasiyet gerektiren işlere uygun bir <strong>trackpad</strong> de sunuyor.
+            </p>
+          </div>
+
+          <div class="jeb-four-right">
+            <img
+              src="img-little-6.jpg"
+              alt="Görsel"
+              class="jeb-four-right-img"
+            />
+          </div>
+        </div>
+      </section>
+
+      <!-- Section Ortada Görsel Altında Solda Metin Sağda Görsel Altında Label -->
+      <section class="jeb-section-four">
+        <img src="img-mid-banner-1.jpg" class="jeb-four-center-img" />
+
+        <div class="jeb-four-bottom-wrap">
+          <div class="jeb-four-left">
+            <h3 class="jeb-four-left-title">
+              İçinizden geldiği kadar içerik yaratın.
+            </h3>
+            <p class="jeb-four-left-text">
+              <strong>Kendinizi ifade etmek, çizimler ve beyin fırtınaları yapmak</strong> için elinizin altında esnek ve yaratıcı bir güç merkezi var. Etkileyici 11 inç Liquid Retina ekran size inanılmaz bir tuval sunuyor. Bu tuvalde Apple Pencil ile istediğinizi çizebiliyor, not alabiliyor, belgeleri işaretleyebiliyor ve çok daha fazlasını yapabiliyorsunuz.
+            </p>
+          </div>
+
+          <div class="jeb-four-right">
+            <img
+              src="img-mid-banner-label-1.png"
+              style="display: block; margin-left: 30%"
+            />
+          </div>
+        </div>
+      </section>    
+
+      <!-- Section Sağ Metin Sol Görsel -->
+      <section class="jeb-section-three">
+        <div class="jeb-three-left">
+          <img src="img-7.jpg" class="jeb-three-img" />
+        </div>        
+
+        <div class="jeb-three-right">
+          <div class="jeb-three-info">
+            <img src="img-icon-7.png" class="jeb-three-info-icon" />
+          </div>
+          <p class="jeb-three-text">
+            Yüksek kaliteli yerleşik <strong>mikrofonlar</strong> ve <strong>yatay modda stereo ses sunan hoparlörler</strong> ile her yerde kayıt yapın ve sesleri düzenleyin. İster bir podcast başlatın ister bir ritim oluşturun veya film müziği yapın. Yaratıcı projelerinizdeki sesler muhteşem olacak.
+          </p>
+        </div>
+      </section>
+
+      <!-- Section Sol Metin üstünde İcon Altında Label Sağ Görsel -->
+      <section class="jeb-section-two">
+        <div class="jeb-two-left">
+          <div class="jeb-two-info">
+            <img src="img-icon-8.png" class="jeb-two-info-icon" />
+          </div>
+          <p class="jeb-two-text">
+            Çekimlerinizi <strong>12 MP Geniş arka kamera</strong> ile yapın. Fotoğraf rötuşlayın, video düzenleyin, belgeleri tarayıp işaretleyin. Görsel Araştır özelliğiyle fotoğraf ve videolarınızdaki nesneleri tespit edin. Hepsini iPad ile yapmanın kolaylığını keşfedin.
+          </p>
+
+          <div>
+            <img
+              src="img-label-8.png"
+              style="display: block; margin-left: auto; margin-top: 10%"
+            />
+          </div>
+        </div>
+
+        <div class="jeb-two-right">
+          <img src="img-2.jpg" class="jeb-two-img" />
+        </div>
+      </section>
+
+      <!-- Section Ortada Görsel Altında Solda Metin Sağda Görsel Altında Label -->
+      <section class="jeb-section-four">
+        <img src="img-9.webp" class="jeb-four-center-img" />
+
+        <div class="jeb-four-bottom-wrap">
+          <div class="jeb-four-left">
+            <h3 class="jeb-four-left-title">
+              Hem kalplerinde olun hem de görüntünün merkezinde.
+            </h3>
+            <p class="jeb-four-left-text">
+              <strong>12MP Center Stage kamera</strong> ile FaceTime aramalarında, video konferanslarda veya selfie’lerde her zaman kadrajın içindesiniz. Üstelik <strong>Akıllı HDR 4</strong> ile fotoğraflarınız daha da doğal ve göz alıcı.
+            </p>
+          </div>
+
+          <div class="jeb-four-right">
+            <img
+              src="img-little-mid-label-1.png"
+              style="display: block; margin-left: 30%"
+            />
+            <div class="jeb-four-info" style="margin-top: 5%;">
+              <img src="img-icon-9.webp" class="jeb-four-left-icon" />
+              <p class="jeb-four-info-text">12MP Center Stage kamera</p>
+            </div>
+            <div class="jeb-four-info" style="margin-top: 5%;">
+              <img src="img-icon-9a.webp" class="jeb-four-left-icon" />
+              <p class="jeb-four-info-text">Işık hızında hücresel bağlantı ve Wi‑Fi 6</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section Ortada Görsel Altında Solda Metin Sağda Görsel Altında Label -->
+      <section class="jeb-section-four">
+
+        <div class="jeb-four-bottom-wrap">
+          <div class="jeb-four-left">
+            <img
+              src="img-little-mid-1.jpg"
+              alt="Görsel"
+              class="jeb-four-right-img"
+            />
+            <img
+              src="img-little-mid-label-2.png"
+              style="display: block; margin-left: 50%"
+            />
+          </div>
+
+          <div class="jeb-four-right">
+            
+                        <div class="jeb-four-info">
+              <img src="img-icon-10.png" class="jeb-four-left-icon" />
+            </div>
+            <p class="jeb-four-left-text">
+              <strong>Işık hızında Wi-Fi</strong> ile bağlantıda kalın. Ayrıca Wi Fi + Cellular modellerinin <strong>hücresel bağlantı</strong> özellikleriyle ihtiyacınız olduğunda esnek bir veri tarifesi ekleyerek internette gezinin, oyun oynayın, online film izleyin ve çok daha fazlasını yapın.4
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section Sağ Metin Sol Görsel -->
+      <section class="jeb-section-three">
+        <div class="jeb-three-left">
+          <img src="img-16.webp" class="jeb-three-img" />
+        </div>
+
+        <div class="jeb-three-right">
+          <h2 class="jeb-three-title">İzleyin. Öğrenin. Üst seviyeye geçin.</h2>
+          <p class="jeb-three-text">
+            Muhteşem bir ekranda online film izleyin, profesyonellerden öğrenin ve çok oyunculu oyunlar oynayın. Etkileyici AR dünyasının derinliklerine dalın. Göz alıcı 11 inç Liquid Retina ekran ile en sevdiğiniz dizi ve filmlerin tadını ister evinizde ister seyahat ederken çıkarın.1 Ve <strong>True Tone</strong> teknolojisiyle her ışıkta rahat bir görüntüleme deneyimi yaşayın.
+          </p>
+
+          <div class="jeb-three-info">
+            <img src="img-icon-16.webp" class="jeb-three-info-icon" />
+          </div>
+        </div>
+      </section>
+
+      <!-- Section Sol Metin üstünde İcon Altında Label Sağ Görsel -->
+      <section class="jeb-section-two">
+        <div class="jeb-two-left">
+          <div class="jeb-two-info">
+            <img src="img-icon-11.png" class="jeb-two-info-icon" />
+          </div>
+          <p class="jeb-two-text">
+            Etkileyici <strong>AR deneyimleriyle</strong> derslerinizi yeni bir seviyeye taşıyın. Evreni keşfedin, müzelerin içinde dolaşın ve harika uygulamalarla merak ettiğiniz daha pek çok şeyi öğrenin.
+          </p>
+
+          <div>
+            <img
+              src="img-label-11.png"
+              style="display: block; margin-left: auto; margin-top: 10%"
+            />
+          </div>
+        </div>
+
+        <div class="jeb-two-right">
+          <img src="img-11.jpg" class="jeb-two-img" />
+        </div>
+      </section>
+
+      <!-- Section Sağ Metin Sol Görsel -->
+      <section class="jeb-section-three">
+        <div class="jeb-three-left">
+          <img src="img-12.jpg" class="jeb-three-img" />
+        </div>
+
+        <div class="jeb-three-right">
+          <div class="jeb-three-info">
+            <img src="img-icon-12.png" class="jeb-three-info-icon" />
+          </div>
+          <p class="jeb-three-text">
+            <strong>Oyun Modu</strong> özelliğiyle yoğun grafiklere sahip oyunları daha tutarlı kare hızlarında oynayın. SharePlay ile arkadaşlarınızı oyuna katılmaya ya da sizi oynarken izlemeye davet edin. Ve dilerseniz favori oyun kumandanızı iPad ile eşleştirin.
+          </p>
+
+        </div>
+      </section>      
+
+      <!-- Section Ortada Metin -->
+      <section class="jeb-section-banner">
+        <div class="jeb-section-banner-text">
+        <h2>Aksesuarlarıyla harika bir ekip.</h2>
+        <p><strong>Apple Pencil</strong> ve <strong>Magic Keyboard Folio</strong> gibi sadece iPad’e özel tasarlanan vazgeçilmez aksesuarlarla yapabileceklerinizin sınırlarını zorlayın. Aygıtınızın ön ve arka yüzeyini korumak için renkli bir <strong>Smart Folio</strong> kullanın. Ve USB-C teknolojisiyle sürücülere, dock’lara, kameralara ve daha fazlasına bağlanın.</p>
+        </div>
+      </section>
+
+      <!-- Section Sağ Metin üstünde İcon Altında Label Sol Görsel -->
+      <section class="jeb-section-two">
+        <div class="jeb-two-left">
+          <img src="img-13.jpg" class="jeb-two-img" />
+        </div>
+
+        <div class="jeb-two-right">
+
+          <div class="jeb-two-info">
+            <img src="img-icon-13.png" class="jeb-two-info-icon"/>
+          </div>
+          <p class="jeb-two-text">
+            <strong>Apple Pencil</strong> not almak, günlük tutmak, çeşitli çizim ve illüstrasyonlar yapmak için harika bir aygıt. Mükemmel piksel hassasiyetine ve düşük gecikme süresine sahip. Kısacası Apple Pencil, kalem kullanmak kadar doğal bir his veriyor.
+          </p>
+
+          <div>
+            <img
+              src="img-label-13.png"
+              style="display: block; margin-right: auto; margin-top: 10%"
+            />
+          </div>
+        </div>
+      </section>      
+
+      <!-- Section Sağ Metin üstünde İcon Altında Label Sol Görsel -->
+      <section class="jeb-section-two">
+        <div class="jeb-two-left">
+          <img src="img-14.png" class="jeb-two-img" />
+        </div>
+
+        <div class="jeb-two-right">
+
+          <div class="jeb-two-info">
+            <img
+              src="img-little-14.jpg"
+              class="jeb-four-right-img"
+            />
+          </div>
+
+          <div>
+            <img
+              src="img-label-14.png"
+              style="display: block; margin-left: 10%; margin-top: 10%"
+            />
+          </div>
+        </div>
+      </section>    
+      
+      <!-- Section Sağ Metin üstünde İcon Altında Label Sol Görsel -->
+      <section class="jeb-section-two">
+        <div class="jeb-two-left">
+          <img src="img-15-b.jpg" class="jeb-two-img" />
+        </div>
+
+        <div class="jeb-two-right">
+
+          <div class="jeb-two-info">
+            <img src="img-icon-15.png" class="jeb-two-info-icon"/>
+          </div>
+          <p class="jeb-two-text">
+            <strong>Magic Keyboard Folio</strong>, iPad için mükemmel bir yol arkadaşı. Hassas görevler için tasarlanmış yerleşik trackpad ve 14 tuşlu işlev tuşu sırası ile muhteşem bir yazma deneyimi sunuyor. Çok yönlü tasarımında manyetik olarak yapışan iki parça bulunuyor: çıkarılabilir bir klavye ve esnek görüntüleme imkanı sunan ayarlanabilir standa sahip koruyucu arka panel.
+          </p>
+
+          <div>
+            <img
+              src="img-label-15.png"
+              style="display: block; margin-right: auto; margin-top: 10%"
+            />
+          </div>
+        </div>
+      </section>   
+
+      <!-- Section Ortada Metin -->
+      <section class="jeb-section-banner">
+        <div class="jeb-section-banner-text">
+        <h2>Hayallerinizi uygulamaya geçirin.</h2>
+        <p>Fotoğraflar, Harita, Mesajlar, Mail ve Safari gibi güçlü ve yetenekli uygulamalar iPad’de yerleşik olarak sunuluyor. Ve iPad’e özel tasarlanmış, sayısı 1 milyonu geçen <strong>App Store uygulamaları sayesinde</strong> yapmak istediğiniz her şey için en doğru uygulamayı bulabiliyorsunuz. Trello ile projeleri yönetin, Freeform’un sonsuz tuvali üzerinde birlikte çalışın veya Microsoft Word ile dönem ödevinizi bitirin.</p>
+        </div>
+      </section>
+
+      <!-- Section Sağ Metin üstünde İcon Altında Label Sol Görsel -->
+      <section class="jeb-section-two">
+        <div class="jeb-two-left">
+          <img src="img-17.webp" class="jeb-two-img" />
+        </div>
+
+        <div class="jeb-two-right">
+
+          <div class="jeb-two-info">
+            <img src="img-icon-15a.webp" class="jeb-two-info-icon"/>
+          </div>
+          <h2 class="jeb-three-title">iPadOS ve yerleşik uygulamalar.Yasal açıklama dipnotuna bakın Ve çok daha fazlası var.</h2>
+          <p class="jeb-three-text">
+            Mesajlar uygulamasında arkadaşlarınızla birlikte çalışın, ailenizle fotoğraf ve video paylaşın veya SharePlay’i kullanarak birlikte film izleyip oyun oynayın. Güçlü ve kullanımı kolay iPadOS, iPad’i çok yönlü hale getirecek şekilde tasarlandı. Muhteşem yerleşik uygulamalar, App Store’da iPad için geliştirilmiş 1 milyonun üzerinde uygulama ve daha fazlası.
+          </p>
+
+          <div class="jeb-two-info">
+            <img src="img-icon-15b.webp" class="jeb-two-info-icon"/>
+          </div>
+
+        </div>
+      </section>   
+
+      <!-- Section 1: Banner -->
+      <section class="jeb-section-banner">
+        <img src="img-mid-banner-2.jpg" class="jeb-banner-img" />
+
+        <div class="jeb-banner-content" style="left: 80%;">
+          <p class="jeb-banner-label">
+            Yanda gösterilen uygulamalar: Freeform, Procreate, Apple Books, iMovie, Microsoft Excel ile Webex Meetings
+          </p>
+          <img src="img-icon-17.webp" class="jeb-banner-icon"/>
+        </div>
+      </section>
+
+</div>
